@@ -41,6 +41,7 @@ struct Event {
     uint32_t time;
 
 	bool operator < (const Event& e) const {
+		//Processes with a smaller time value are higher up in the queue
 		return this->time > e.time;
 	}
 
@@ -49,3 +50,4 @@ struct Event {
 };
 
 typedef std::priority_queue<Event> EventQueue;
+typedef std::queue<Event> ComponentQueue;

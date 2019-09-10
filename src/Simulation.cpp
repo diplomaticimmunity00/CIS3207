@@ -30,14 +30,14 @@ void Simulation::generate_components() {
 
 	//Generate disks
 	for(int i=0;i<this->numDisks;i++) {
-        this->disks.push_back(new Disk(i));
-    }
+		this->disks.push_back(new Disk(i));
+	}
 }
 
 int Simulation::get_first_free_core() {
 	//Returns -1 if all cores are occupied
 	for(int i=0;i<this->numCores;i++) {
-		if(this->cores.at(i)->isFree()) {
+		if(this->cores.at(i)->is_free()) {
 			return i;
 		}
 	}
@@ -49,24 +49,35 @@ void Simulation::start() {
 	debug("Simulation starting");
 }
 
-void Simulation::handle_event_arrival(Event e) {
-	e.time = this->clock->get_ticks();
+void Simulation::dispatch_job(Event e,int coreID) {
+	//Creates a new event for process arrival at CPU
+
+	//Prevent core from scheduling subsequent jobs	
+	this->get_core(coreID)->lock();
+
+	//Create event for process arriving to cpu
+	Event _e = Event(PROCESS_ARRIVE_CPU);
+	_e.process = e.process;
+	_e.process->targetCore = coreID;
+	_e.time = e.time;
+	this->enqueue(_e);
+
+	debug("PID "+std::to_string(_e.process->id)+" queued for core "+std::to_string(coreID));
+}
+
+void Simulation::handle_system_arrival(Event e) {
+	//e.time = this->clock->get_ticks();
+
+	debug("PID "+std::to_string(e.process->id)+" enters system");
 
 	//Check queues and cores
 	int freecore = this->get_first_free_core();
 	if(freecore >= 0 and this->cpuQueue.empty()) {
 		
-		//Prevent core from scheduling subsequent jobs	
-		this->cores.at(freecore)->free = false;
+		this->dispatch_job(e,freecore);
 
-		//Create event for process arriving to cpu
-		Event _e = Event(PROCESS_ARRIVE_CPU);
-		_e.process = e.process;
-		_e.process->targetCore = freecore;
-		_e.time = this->clock->get_ticks();
-		this->enqueue(_e);
 	} else {
-		debug("Pushed job "+std::to_string(e.process->id)+" to CPU queue");
+		debug("Pushed PID "+std::to_string(e.process->id)+" to CPU queue");
 		this->cpuQueue.push(e);
 	}
 
@@ -76,38 +87,43 @@ void Simulation::handle_event_arrival(Event e) {
 
 void Simulation::handle_cpu_arrival(Event e) {
 
-
 	//Send job to target core 
+	//Target core ensured free as it was locked when this process was queued for arrival
 	this->cores.at(e.process->targetCore)->receive_job(e);
 	
 	//Create event for process ending on cpu
 	Event _e = Event(PROCESS_FINISH_CPU);
 	_e.process = e.process;
-	_e.time = this->clock->get_ticks() + rand()%30;
+
+	//Advancing time here presumes threading
+	//Advance time here for other components
+	//_e.time = this->clock->get_ticks() + rand()%30;
+	
+	//Set to highest possible priority
+	_e.time = this->clock->get_ticks();
+	//_e.time = e.time;
 	this->enqueue(_e);
 }
 
 void Simulation::handle_cpu_exit(Event e) {
 
+	//Simulate CPU running some program (time placeholder)
+	this->clock->step(rand()%34);
+
 	this->cores.at(e.process->targetCore)->finish_job();
 	debug("Killing process "+std::to_string(e.process->id)+" for now...\n");
 
 	if(!this->cpuQueue.empty()) {
+
 		//When cpu finishes, pull next process off queue
-		Event nextProcessInQueue = cpuQueue.top();
+		Event nextProcessInQueue = cpuQueue.front();
 		cpuQueue.pop();
 
-		int freecore = nextProcessInQueue.process->targetCore;
+		debug("Pulling PID "+std::to_string(nextProcessInQueue.process->id)+" off of CPU queue...");
 
-		//Prevent target core from schedule subsequent tasks
-		this->cores.at(freecore)->free = false;
+		int freecore = this->get_first_free_core();//nextProcessInQueue.process->targetCore;
 
-		Event _e = Event(PROCESS_ARRIVE_CPU);
-        _e.process = nextProcessInQueue.process;
-        _e.process->targetCore = freecore;
-        _e.time = this->clock->get_ticks();
-        this->enqueue(_e);
-
+		this->dispatch_job(nextProcessInQueue,freecore);
 	}
 
 }
@@ -120,16 +136,19 @@ void Simulation::process_from_queue() {
 	this->eventQueue.pop();
 	switch(e.type) {
 		case PROCESS_ARRIVAL:
-			this->handle_event_arrival(e);
+			//Process enters system
+			this->handle_system_arrival(e);
 			break;
 		case PROCESS_ARRIVE_CPU:
+			//Process arrives at a core
 			this->handle_cpu_arrival(e);
 			break;
 		case PROCESS_FINISH_CPU:
+			//Process finishes running on a core
 			this->handle_cpu_exit(e);
 			break;
 		default:
 			debug("Unhandled case for event type "+std::to_string(e.type));
 	}
-	this->clock->step(1);
+	this->clock->step();
 }

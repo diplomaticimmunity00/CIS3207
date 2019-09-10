@@ -24,8 +24,20 @@ int main() {
 	sim.enqueue(PROCESS_ARRIVAL);
 	sim.enqueue(PROCESS_ARRIVAL);
 	sim.enqueue(PROCESS_ARRIVAL);
+
 	sim.start();
-	
+
+/*
+ * Queue priority debug
+	sim.debug(sim.eventQueue.top().time);
+	sim.eventQueue.pop();
+	sim.debug(sim.eventQueue.top().time);
+    sim.eventQueue.pop();
+	sim.debug(sim.eventQueue.top().time);
+    sim.eventQueue.pop();
+	exit(0);
+*/
+
 	int i = 0;
 	while(sim.running) {
 		sim.process_from_queue();

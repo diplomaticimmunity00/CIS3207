@@ -1,4 +1,6 @@
 SERC 358 OFFICE HOURS
+Q:
+Queueing CPU arrivals in event queue vs sending directly to core after system arrival event
 
 SEED
 INIT_TIME

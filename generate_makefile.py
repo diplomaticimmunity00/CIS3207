@@ -4,11 +4,13 @@ makestr = ""
 binstr = ""
 
 bins = []
-
+'''
 for src in os.listdir("src/"):
     if ".swp" in src:
         continue
     bins.append(src.split(".")[0])
+'''
+bins = [src.split(".")[0] for src in os.listdir("src/") if ".swp" not in src]
 
 for filename in bins:
     hasheader = False

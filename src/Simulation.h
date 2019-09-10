@@ -14,18 +14,18 @@ struct Simulation {
 
 	bool running;
 
-	int pids = 0;
+	unsigned short pids = 0;
 
 	Clock* clock = new Clock(0);
 
 	std::vector<CPU*> cores;
 	std::vector<Disk*> disks;
 
-	EventQueue cpuQueue;
+	ComponentQueue cpuQueue;
 	EventQueue eventQueue;
 
-	int numCores = 3;
-	int numDisks = 2;
+	int numCores;
+	int numDisks;
 
 	void start();
 
@@ -36,16 +36,22 @@ struct Simulation {
 
 	//Components
 	void generate_components();
+	inline CPU* get_core(int i) {return this->cores.at(i); }
 	int get_first_free_core();
 
-	void handle_event_arrival(Event);
+	void handle_system_arrival(Event);
 	void handle_cpu_arrival(Event);
+	void dispatch_job(Event,int);
 	void handle_cpu_exit(Event);
 	void process_from_queue();
 
 	template <class T>
-	void debug(T info) {
-    	std::cout << "Time " << this->clock->get_ticks() << ": " << info << std::endl;
+	void debug(T info,bool timestamp = true) {
+		if(timestamp) {
+   			std::cout << "Time " << this->clock->get_ticks() << ": " << info << std::endl;
+		} else {
+			std::cout << "Time " << this->clock->get_ticks() << ": " << info << std::endl;
+		}
 	}
 
 	Simulation(int,int);

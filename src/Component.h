@@ -22,9 +22,11 @@ struct CPU {
 	int id;
 	bool free;
 	
+	//Job that is currently running, superfluous
 	Event job;
 
-	bool inline isFree() {return this->free;}
+	bool inline is_free() {return this->free;}
+	bool inline lock() {this->free = false;}
 
 	bool receive_job(Event);
 	bool finish_job();
