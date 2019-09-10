@@ -1,12 +1,10 @@
 #pragma once
 
+#define DEF_CORES 1
+#define DEF_DISKS 2
+
 #include <iostream>
 #include <queue>
-
-template <class T>
-void debug(T info) {
-    std::cout << info << std::endl;
-}
 
 #include "Component.h"
 #include "Event.h"
@@ -26,7 +24,7 @@ struct Simulation {
 	EventQueue cpuQueue;
 	EventQueue eventQueue;
 
-	int numCores = 1;
+	int numCores = 3;
 	int numDisks = 2;
 
 	void start();
@@ -45,5 +43,11 @@ struct Simulation {
 	void handle_cpu_exit(Event);
 	void process_from_queue();
 
+	template <class T>
+	void debug(T info) {
+    	std::cout << "Time " << this->clock->get_ticks() << ": " << info << std::endl;
+	}
+
+	Simulation(int,int);
 	Simulation();
 };

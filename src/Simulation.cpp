@@ -1,7 +1,12 @@
 #include "Simulation.h"
 #include "Clock.h"
 
-Simulation::Simulation() {
+Simulation::Simulation(int cores=DEF_CORES,int disks=DEF_DISKS): numCores(cores), numDisks(disks) {
+	this->generate_components();
+	this->running = true;
+}
+
+Simulation::Simulation(): numCores(DEF_CORES), numDisks(DEF_DISKS) {
 	this->generate_components();
 	this->running = true;
 }
@@ -13,7 +18,6 @@ void Simulation::enqueue(EventType e) {
 	Event _e = Event(e);
 												//Placeholder
 	_e.time = this->clock->get_ticks() + rand()%30;
-	this->clock->step();
 	this->eventQueue.push(_e);
 }
 
@@ -37,6 +41,7 @@ int Simulation::get_first_free_core() {
 			return i;
 		}
 	}
+	//debug("ERROR: All cores are occupied");
 	return -1;
 }
 
@@ -61,6 +66,7 @@ void Simulation::handle_event_arrival(Event e) {
 		_e.time = this->clock->get_ticks();
 		this->enqueue(_e);
 	} else {
+		debug("Pushed job "+std::to_string(e.process->id)+" to CPU queue");
 		this->cpuQueue.push(e);
 	}
 
@@ -79,13 +85,31 @@ void Simulation::handle_cpu_arrival(Event e) {
 	_e.process = e.process;
 	_e.time = this->clock->get_ticks() + rand()%30;
 	this->enqueue(_e);
-
 }
 
 void Simulation::handle_cpu_exit(Event e) {
 
 	this->cores.at(e.process->targetCore)->finish_job();
-	debug("Killing process "+std::to_string(e.process->id)+" for now...");
+	debug("Killing process "+std::to_string(e.process->id)+" for now...\n");
+
+	if(!this->cpuQueue.empty()) {
+		//When cpu finishes, pull next process off queue
+		Event nextProcessInQueue = cpuQueue.top();
+		cpuQueue.pop();
+
+		int freecore = nextProcessInQueue.process->targetCore;
+
+		//Prevent target core from schedule subsequent tasks
+		this->cores.at(freecore)->free = false;
+
+		Event _e = Event(PROCESS_ARRIVE_CPU);
+        _e.process = nextProcessInQueue.process;
+        _e.process->targetCore = freecore;
+        _e.time = this->clock->get_ticks();
+        this->enqueue(_e);
+
+	}
+
 }
 
 void Simulation::process_from_queue() {
@@ -107,4 +131,5 @@ void Simulation::process_from_queue() {
 		default:
 			debug("Unhandled case for event type "+std::to_string(e.type));
 	}
+	this->clock->step(1);
 }

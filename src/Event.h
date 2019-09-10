@@ -41,7 +41,7 @@ struct Event {
     uint32_t time;
 
 	bool operator < (const Event& e) const {
-		return this->time < e.time;
+		return this->time > e.time;
 	}
 
 	Event(EventType);
