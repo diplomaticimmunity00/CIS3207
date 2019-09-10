@@ -1,5 +1,8 @@
 #include <iostream>
+#include <ctime>
+
 #include "Common.h"
+
 
 /*
  *	enum EventType 
@@ -16,16 +19,31 @@
 
 int main() {
 
-	Simulation sim = Simulation();
+	srand(time(NULL));
 
-	sim.add_event(PROCESS_ARRIVAL);
-
+	sim.enqueue(PROCESS_ARRIVAL);
+	sim.enqueue(PROCESS_ARRIVAL);
+	sim.enqueue(PROCESS_ARRIVAL);
+	sim.enqueue(PROCESS_ARRIVAL);
+    sim.enqueue(PROCESS_ARRIVAL);
+    sim.enqueue(PROCESS_ARRIVAL);
 	sim.start();
+	
+	debug(sim.eventQueue.top().time);
+    sim.eventQueue.pop();
+    debug(sim.eventQueue.top().time);
+    sim.eventQueue.pop();
+	debug(sim.eventQueue.top().time);
+	sim.eventQueue.pop();
+	debug(sim.eventQueue.top().time);
+	sim.eventQueue.pop();
+    debug(sim.eventQueue.top().time);
+	
+	exit(0);
 
 	int i = 0;
-
 	while(sim.running) {
-		sim.process_event();
+		sim.process_from_queue();
 		i++;
 		if(i > 100) sim.running = false;
 	}
