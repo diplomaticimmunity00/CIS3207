@@ -64,7 +64,7 @@ struct Simulation {
 		if(timestamp) {
    			std::cout << "Time " << this->clock->get_ticks() << ": " << info << std::endl;
 		} else {
-			std::cout << "Time " << this->clock->get_ticks() << ": " << info << std::endl;
+			std::cout << info << std::endl;
 		}
 	}
 

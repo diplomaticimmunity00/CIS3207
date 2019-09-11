@@ -20,7 +20,7 @@ void Simulation::enqueue(EventType e) {
 
 void Simulation::assign_control_core(int coreID) {
 	this->controlCore = this->cores.at(coreID);
-	debug("Assigned event handling to core "+std::to_string(coreID));
+	debug("Assigned event handling to core "+std::to_string(coreID),false);
 }
 
 void Simulation::generate_components() {
@@ -86,7 +86,7 @@ int Simulation::get_best_disk_queue() {
 }
 
 void Simulation::start() {
-	debug("Simulation starting");
+	debug("Simulation starting",false);
 }
 
 void Simulation::dispatch_job(Event e,ComponentType type,int id) {
@@ -182,14 +182,13 @@ void Simulation::handle_cpu_arrival(Event e) {
 void Simulation::handle_cpu_exit(Event e) {
 
 	//Simulate CPU running some program (time placeholder)
-	
-	this->get_core(e.process->targetComponentID)->complete_job();
-
 	//Only advance clock artificially if job ran on control core
-	//Otherwise time is advanced naturally by the control core
-	if(this->get_control_core_id() == e.process->targetComponentID) {
-		this->clock->step(e.process->cpuTime);
-	}
+    //Otherwise time is advanced naturally by the control core
+    if(this->get_control_core_id() == e.process->targetComponentID) {
+        this->clock->step(e.process->cpuTime);
+    }
+
+	this->get_core(e.process->targetComponentID)->complete_job();
 
 	Event _e;
 
