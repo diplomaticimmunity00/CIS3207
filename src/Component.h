@@ -1,18 +1,39 @@
 #pragma once
 
 #include <iostream>
+#include <map>
 
 #include "Event.h"
 
-struct Disk {
+enum ComponentType {
+		COMPONENT_CPU,
+		COMPONENT_DISK
+};
 
-	int id;	
+extern std::map<ComponentType,std::string> componentMap;
+
+struct Component {
+
+	ComponentType type;
+	
+	int id;
 	bool free;
+
+	Event job;
+
+	bool inline is_free() {return this->free;}
+	void inline lock() {this->free = false;}
+
+	virtual void receive_job(Event);
+	virtual void complete_job();
+
+	Component(ComponentType,int);
+};
+
+struct Disk : Component {
 
 	ComponentQueue queue;
 
-	bool inline isFree() {return this->free;}
-	
 	bool operator < (const Disk& disk) const {
 		return this->queue.size() > disk.queue.size();
 	}
@@ -23,19 +44,8 @@ struct Disk {
 
 typedef std::priority_queue<Disk> DiskPriority;
 
-struct CPU {
-
-	int id;
-	bool free;
-	
-	//Job that is currently running, superfluous
-	Event job;
-
-	bool inline is_free() {return this->free;}
-	bool inline lock() {this->free = false;}
-
-	bool receive_job(Event);
-	bool finish_job();
+struct CPU : Component {
 
 	CPU(int);
+
 };
