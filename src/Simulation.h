@@ -45,7 +45,9 @@ struct Simulation {
 
 	void handle_disk_arrival(Event);
 	void handle_disk_exit(Event);
-	int get_best_disk();
+	int get_first_free_disk();
+	int get_best_disk_queue();
+	inline Disk* get_disk(int i) {return this->disks.at(i);}
 
 	//SYSTEM
 	void handle_system_arrival(Event);
@@ -53,7 +55,7 @@ struct Simulation {
 
 	//CPU
 	void handle_cpu_arrival(Event);
-	void dispatch_job(Event,int);
+	void dispatch_job(Event,ComponentType,int);
 	void handle_cpu_exit(Event);
 	void process_from_queue();
 

@@ -39,11 +39,9 @@ int main() {
 	exit(0);
 */
 
-	int i = 0;
 	while(sim.running) {
 		sim.process_from_queue();
-		i++;
-		if(i > 100) sim.running = false;
+		if(sim.clock->get_ticks() > 200) sim.running = false;
 	}
 
 	return 0;

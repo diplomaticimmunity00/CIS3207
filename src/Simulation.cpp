@@ -6,9 +6,7 @@ Simulation::Simulation(int cores=DEF_CORES,int disks=DEF_DISKS): numCores(cores)
 	this->running = true;
 }
 
-Simulation::Simulation(): numCores(DEF_CORES), numDisks(DEF_DISKS) {
-	this->generate_components();
-	this->running = true;
+Simulation::Simulation(): Simulation(DEF_CORES,DEF_DISKS) {
 }
 
 void Simulation::enqueue(Event e) {
@@ -68,7 +66,18 @@ int Simulation::get_first_free_core() {
 	return -1;
 }
 
-int Simulation::get_best_disk() {
+int Simulation::get_first_free_disk() { 
+	//Returns -1 if all disks are occupied
+	for(int i=0;i<this->numDisks;i++) {
+		if(this->get_disk(i)->is_free()) {
+			return i;
+		}
+	}
+	return -1;
+}
+
+int Simulation::get_best_disk_queue() {
+	//Sets best_queue to id of disk with smallest queue
 	DiskPriority diskPriority;
 	for(int i=0;i<this->numDisks;i++) {
 		diskPriority.push(*this->disks.at(i));
@@ -80,30 +89,48 @@ void Simulation::start() {
 	debug("Simulation starting");
 }
 
-void Simulation::dispatch_job(Event e,int coreID) {
+void Simulation::dispatch_job(Event e,ComponentType type,int id) {
 	//Creates a new event for process arrival at CPU
 
-	//Prevent core from scheduling subsequent jobs	
-	this->get_core(coreID)->lock();
-
-	//Create event for process arriving to cpu
-	Event _e = Event(PROCESS_ARRIVE_CPU);
-	_e.process = e.process;
-	_e.process->targetCore = coreID;
-
-	//If job is assigned to control core, suspend ALL event handling until job is finished
-	//Basically just set this job to highest possible priority
-	if( (char*)this->get_core(coreID) == (char*)this->controlCore) {
-		_e.time = 0;
-	} else {
-		//Otherwise, process can be executed in parallel with event handling
-		//Which makes it possible but not guaranteed that other events will be processed before
-		//Event e finishes executing
-		_e.time = 0;//this->clock->get_ticks();
+	switch(type) {
+		case COMPONENT_CPU: {
+			//Prevent core from scheduling subsequent jobs	
+			this->get_core(id)->lock();
+		
+			//Create event for process arriving to cpu
+			Event _e = Event(PROCESS_ARRIVE_CPU);
+			_e.process = e.process;
+			_e.process->targetComponentID = id;
+		
+			//If job is assigned to control core, suspend ALL event handling until job is finished
+			//Basically just set this job to highest possible priority
+			if( id == this->get_control_core_id()) {
+				_e.time = 0;
+			} else {
+				//Otherwise, process can be executed in parallel with event handling
+				//Which makes it possible but not guaranteed that other events will be processed before
+				//Event e finishes executing
+				_e.time = this->clock->get_ticks();
+			}
+			this->enqueue(_e);
+		
+			debug("Sent PID "+std::to_string(_e.process->id)+" to CORE "+std::to_string(id));
+			break;
+		}
+		case COMPONENT_DISK: {
+			//Create disk arrival event
+			this->get_disk(id)->lock();
+			Event _e = Event(PROCESS_ARRIVE_DISK);
+			_e.process = e.process;
+			_e.process->targetComponentID = id;
+			_e.time = this->clock->get_ticks();
+			//Basically just set this job to highest possible priority
+			this->enqueue(_e);
+			debug("Sent PID "+std::to_string(_e.process->id)+" to DISK "+std::to_string(id));
+			break;
+		}
+		
 	}
-	this->enqueue(_e);
-
-	debug("PID "+std::to_string(_e.process->id)+" queued for CORE "+std::to_string(coreID));
 }
 
 void Simulation::handle_system_arrival(Event e) {
@@ -115,7 +142,7 @@ void Simulation::handle_system_arrival(Event e) {
 	int freecore = this->get_first_free_core();
 	if(freecore >= 0 and this->cpuQueue.empty()) {
 		
-		this->dispatch_job(e,freecore);
+		this->dispatch_job(e,COMPONENT_CPU,freecore);
 
 	} else {
 		debug("Pushed PID "+std::to_string(e.process->id)+" to CPU queue");
@@ -131,28 +158,23 @@ void Simulation::handle_cpu_arrival(Event e) {
 	//Send job to target core 
 	//Target core ensured free as it was locked when this process was queued for arrival
 	//From this point until arrival of PROCESS_FINISH_CPU this core will be occupied
-	this->cores.at(e.process->targetCore)->receive_job(e);
+	this->cores.at(e.process->targetComponentID)->receive_job(e);
 	
 	//Create event for process ending on cpu
 	Event _e = Event(PROCESS_FINISH_CPU);
 	_e.process = e.process;
 
-	//Advancing time here presumes threading
-	//Advance time here for other components
-	//_e.time = this->clock->get_ticks() + rand()%30;
-	
-	//Set to highest possible priority
-	//_e.time = 1+rand()%30;//this->clock->get_ticks()+1+rand()%30;
-	//_e.time = e.time;
-	_e.process->time = 1+rand()%30;
-	if( (char*)this->get_core(e.process->targetCore) == (char*)this->controlCore) {
-        _e.time = e.time;
-    } else {
-        //Otherwise, process can be executed in parallel with event handling
-        //Which makes it possible that other events will be processed before
-        //Event e finishes executing
-        _e.time = this->clock->get_ticks()+_e.process->time;
-    }
+	_e.process->cpuTime = 1+rand()%30; //Placeholder
+	if(e.process->targetComponentID == this->get_control_core_id()) {
+		//If process is running on control core
+		//Send it to CPU immediately
+		_e.time = e.time;
+	} else {
+		//Otherwise, process can be executed in parallel with event handling
+		//Which makes it possible that other events will be processed before
+		//Event e finishes executing
+		_e.time = this->clock->get_ticks()+_e.process->cpuTime;
+	}
 	this->enqueue(_e);
 
 }
@@ -161,22 +183,32 @@ void Simulation::handle_cpu_exit(Event e) {
 
 	//Simulate CPU running some program (time placeholder)
 	
-	this->get_core(e.process->targetCore)->finish_job();
+	this->get_core(e.process->targetComponentID)->complete_job();
 
 	//Only advance clock artificially if job ran on control core
 	//Otherwise time is advanced naturally by the control core
-	if(this->get_control_core_id() == e.process->targetCore) {
-    	this->clock->step(e.process->time);
+	if(this->get_control_core_id() == e.process->targetComponentID) {
+		this->clock->step(e.process->cpuTime);
 	}
 
-	if(rand()%10 < 3) {
-		Event _e = Event(PROCESS_EXIT);
-		_e.time = this->clock->get_ticks();
-		_e.process = e.process;
-		this->enqueue(_e);
-	} else {
-		Event _e = Event(PROCESS_ARRIVE_DISK);
+	Event _e;
 
+	if(rand()%10 < 3) {
+		//Set process to system exit
+		_e = Event(PROCESS_EXIT);
+		_e.time = this->clock->get_ticks();
+   		_e.process = e.process;
+   		this->enqueue(_e);
+	} else {
+		//Set process to begin IO
+		//IO time is assigned in handle_arrive_disk
+    	int bestDisk = this->get_first_free_disk();
+		if(bestDisk >= 0) {
+    		this->dispatch_job(e,COMPONENT_DISK,bestDisk);
+		} else {
+			debug("Pushed PID "+std::to_string(e.process->id)+" to DISK "+std::to_string(this->get_disk(this->get_best_disk_queue())->id)+" queue");
+			this->get_disk(this->get_best_disk_queue())->queue.push(e);
+		}
 	}
 
 	if(!this->cpuQueue.empty()) {
@@ -187,18 +219,40 @@ void Simulation::handle_cpu_exit(Event e) {
 
 		debug("Pulling PID "+std::to_string(nextProcessInQueue.process->id)+" off of CPU queue...");
 
-		int freecore = this->get_first_free_core();//nextProcessInQueue.process->targetCore;
+		int freecore = this->get_first_free_core();//nextProcessInQueue.process->targetComponentID;
 
-		this->dispatch_job(nextProcessInQueue,freecore);
+		this->dispatch_job(nextProcessInQueue,COMPONENT_CPU,freecore);
 	}
 
 }
 
 void Simulation::handle_disk_arrival(Event e) {
-		
+	//Create disk finish event
+	//Execution does not wait for IO to finish
+	this->get_disk(e.process->targetComponentID)->receive_job(e);
+
+	Event _e = Event(PROCESS_FINISH_DISK);
+	_e.process = e.process;
+	_e.process->ioTime = rand()%10; //Placeholder
+	_e.time = this->clock->get_ticks() + _e.process->ioTime;
+	this->enqueue(_e);
 }
 void Simulation::handle_disk_exit(Event e) {
+	this->get_disk(e.process->targetComponentID)->complete_job();
 
+	Event _e = Event(PROCESS_ARRIVAL);
+	_e.time = e.time;
+	_e.process = e.process;
+	
+	this->enqueue(_e);
+
+	if(!this->get_disk(e.process->targetComponentID)->queue.empty()) {
+		Event nextProcessInQueue = this->get_disk(e.process->targetComponentID)->queue.front();
+		this->get_disk(e.process->targetComponentID)->queue.pop();
+
+		debug("Pulling PID "+std::to_string(nextProcessInQueue.process->id)+" off of DISK "+std::to_string(e.process->targetComponentID)+" queue...");
+		this->dispatch_job(nextProcessInQueue,COMPONENT_DISK,e.process->targetComponentID);
+	}
 }
 
 void Simulation::handle_system_exit(Event e) {
@@ -231,6 +285,9 @@ void Simulation::process_from_queue() {
 			break;
 		case PROCESS_ARRIVE_DISK:
 			this->handle_disk_arrival(e);
+			break;
+		case PROCESS_FINISH_DISK:
+			this->handle_disk_exit(e);
 			break;
 		default:
 			debug("Unhandled case for event type "+std::to_string(e.type));

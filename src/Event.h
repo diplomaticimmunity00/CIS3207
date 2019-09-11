@@ -25,8 +25,9 @@ enum ProcessStatus {
 struct Process {
 
     int id;
-	int targetCore;
-	int time;
+	int targetComponentID;
+	int cpuTime;
+	int ioTime;
 	ProcessStatus status;
 
 	Process();
