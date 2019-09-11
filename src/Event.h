@@ -8,12 +8,11 @@
 enum EventType {
 
 		PROCESS_ARRIVAL,
+		PROCESS_EXIT,
 		PROCESS_ARRIVE_CPU,
 		PROCESS_FINISH_CPU,
-		PROCESS_ARRIVE_DISK1,
-		PROCESS_ARRIVE_DISK2,
-		PROCESS_FINISH_DISK1,
-		PROCESS_FINISH_DISK2,
+		PROCESS_ARRIVE_DISK,
+		PROCESS_FINISH_DISK,
 		SIMULATION_FINISH,
 };
 
@@ -27,6 +26,7 @@ struct Process {
 
     int id;
 	int targetCore;
+	int time;
 	ProcessStatus status;
 
 	Process();

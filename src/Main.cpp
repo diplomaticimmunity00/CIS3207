@@ -7,6 +7,7 @@
 /*
  *	enum EventType 
  *      PROCESS_ARRIVAL,
+ *      PROCESS_EXIT,
  *      PROCESS_ARRIVE_CPU,
  *      PROCESS_FINISH_CPU,
  *      PROCESS_ARRIVE_DISK1,

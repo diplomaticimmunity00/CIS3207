@@ -9,13 +9,19 @@ struct Disk {
 	int id;	
 	bool free;
 
-	EventQueue queue;
+	ComponentQueue queue;
 
 	bool inline isFree() {return this->free;}
+	
+	bool operator < (const Disk& disk) const {
+		return this->queue.size() > disk.queue.size();
+	}
 
 	Disk(int);
 
 };
+
+typedef std::priority_queue<Disk> DiskPriority;
 
 struct CPU {
 

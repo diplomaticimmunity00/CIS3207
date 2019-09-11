@@ -24,6 +24,8 @@ struct Simulation {
 	ComponentQueue cpuQueue;
 	EventQueue eventQueue;
 
+	CPU* controlCore;
+
 	int numCores;
 	int numDisks;
 
@@ -34,12 +36,22 @@ struct Simulation {
 	//Creates new job with specified type
 	void enqueue(EventType);
 
-	//Components
+	//COMPONENTS
 	void generate_components();
+	void assign_control_core(int);
+	int get_control_core_id();
 	inline CPU* get_core(int i) {return this->cores.at(i); }
 	int get_first_free_core();
 
+	void handle_disk_arrival(Event);
+	void handle_disk_exit(Event);
+	int get_best_disk();
+
+	//SYSTEM
 	void handle_system_arrival(Event);
+	void handle_system_exit(Event);
+
+	//CPU
 	void handle_cpu_arrival(Event);
 	void dispatch_job(Event,int);
 	void handle_cpu_exit(Event);
