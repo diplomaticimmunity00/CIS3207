@@ -36,12 +36,14 @@ struct Simulation {
 	void enqueue(EventType);
 
 	//COMPONENTS
+	//* CPU
 	void generate_components();
 	void assign_control_core(int);
 	int get_control_core_id();
 	inline CPU* get_core(int i) {return this->cores.at(i); }
 	int get_first_free_core();
 
+	//* DISK
 	void handle_disk_arrival(Event);
 	void handle_disk_exit(Event);
 	int get_first_free_disk();
