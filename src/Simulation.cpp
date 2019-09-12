@@ -1,12 +1,24 @@
 #include "Simulation.h"
 #include "Clock.h"
 
-Simulation::Simulation(int cores=DEF_CORES,int disks=DEF_DISKS): numCores(cores), numDisks(disks) {
+Simulation::Simulation() {
+	this->config->import_config_from_file("config.ini");
+	this->numCores = this->config->get_config_value(CORES);
+	this->numDisks = this->config->get_config_value(DISKS);
+
+	this->clock->set_time(this->config->get_config_value(INIT_TIME));
+
 	this->generate_components();
-	this->running = true;
+    this->running = true;
 }
 
-Simulation::Simulation(): Simulation(DEF_CORES,DEF_DISKS) {
+Simulation::Simulation(int cores,int disks): numCores(cores), numDisks(disks) {
+    this->config->import_config_from_file("config.ini");
+
+	this->clock->set_time(this->config->get_config_value(INIT_TIME));
+
+    this->generate_components();
+    this->running = true;
 }
 
 void Simulation::enqueue(Event e) {
@@ -14,7 +26,7 @@ void Simulation::enqueue(Event e) {
 }
 void Simulation::enqueue(EventType e) {
 	Event _e = Event(e);
-	_e.time = this->clock->get_ticks() + rand()%30; //Placeholder
+	_e.time = this->clock->get_ticks() + this->config->get_range(ARRIVE_MIN,ARRIVE_MAX); //Placeholder
 	this->eventQueue.push(_e);
 }
 
@@ -86,7 +98,7 @@ int Simulation::get_best_disk_queue() {
 }
 
 void Simulation::start() {
-	debug("Simulation starting",false);
+	debug("Simulation starting with "+std::to_string(this->numCores)+" cores and "+std::to_string(this->numDisks)+" disks",false);
 }
 
 void Simulation::dispatch_job(Event e,ComponentType type,int id) {
@@ -119,11 +131,12 @@ void Simulation::dispatch_job(Event e,ComponentType type,int id) {
 		}
 		case COMPONENT_DISK: {
 			//Create disk arrival event
+			//Lock disk to prevent process conflicts
 			this->get_disk(id)->lock();
 			Event _e = Event(PROCESS_ARRIVE_DISK);
 			_e.process = e.process;
 			_e.process->targetComponentID = id;
-			_e.time = this->clock->get_ticks();
+			_e.time = 0;//this->clock->get_ticks();
 			//Basically just set this job to highest possible priority
 			this->enqueue(_e);
 			debug("Sent PID "+std::to_string(_e.process->id)+" to DISK "+std::to_string(id));
@@ -151,6 +164,7 @@ void Simulation::handle_system_arrival(Event e) {
 
 	//Create new process
 	this->enqueue(PROCESS_ARRIVAL);
+
 }
 
 void Simulation::handle_cpu_arrival(Event e) {
@@ -164,7 +178,7 @@ void Simulation::handle_cpu_arrival(Event e) {
 	Event _e = Event(PROCESS_FINISH_CPU);
 	_e.process = e.process;
 
-	_e.process->cpuTime = 1+rand()%30; //Placeholder
+	_e.process->cpuTime = this->config->get_range(CPU_MIN,CPU_MAX);
 	if(e.process->targetComponentID == this->get_control_core_id()) {
 		//If process is running on control core
 		//Send it to CPU immediately
@@ -192,7 +206,7 @@ void Simulation::handle_cpu_exit(Event e) {
 
 	Event _e;
 
-	if(rand()%10 < 3) {
+	if(rand()%100 < this->config->get_config_value(QUIT_PROB)) {
 		//Set process to system exit
 		_e = Event(PROCESS_EXIT);
 		_e.time = this->clock->get_ticks();
@@ -232,7 +246,7 @@ void Simulation::handle_disk_arrival(Event e) {
 
 	Event _e = Event(PROCESS_FINISH_DISK);
 	_e.process = e.process;
-	_e.process->ioTime = rand()%10; //Placeholder
+	_e.process->ioTime = this->config->get_range(DISK_MIN,DISK_MAX); //Placeholder
 	_e.time = this->clock->get_ticks() + _e.process->ioTime;
 	this->enqueue(_e);
 }

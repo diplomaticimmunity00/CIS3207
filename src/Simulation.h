@@ -1,14 +1,12 @@
 #pragma once
 
-#define DEF_CORES 1
-#define DEF_DISKS 2
-
 #include <iostream>
 #include <queue>
 
 #include "Component.h"
 #include "Event.h"
 #include "Clock.h"
+#include "Config.h"
 
 struct Simulation {
 
@@ -16,7 +14,8 @@ struct Simulation {
 
 	unsigned short pids = 0;
 
-	Clock* clock = new Clock(0);
+	Clock* clock = new Clock();
+	Config* config = new Config();
 
 	std::vector<CPU*> cores;
 	std::vector<Disk*> disks;
@@ -70,4 +69,10 @@ struct Simulation {
 
 	Simulation(int,int);
 	Simulation();
+
+	~Simulation() {
+		delete this->config;
+		this->debug("Exiting simulation");
+		delete this->clock;
+	}
 };

@@ -41,7 +41,7 @@ int main() {
 
 	while(sim.running) {
 		sim.process_from_queue();
-		if(sim.clock->get_ticks() > 200) sim.running = false;
+		if(sim.clock->get_ticks() > sim.config->get_config_value(FIN_TIME)) sim.running = false;
 	}
 
 	return 0;

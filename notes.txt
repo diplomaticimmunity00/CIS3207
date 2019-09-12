@@ -2,7 +2,7 @@ SERC 358 OFFICE HOURS
 Q:
 Queueing CPU arrivals in event queue vs sending directly to core after system arrival event
 Disk IO in background or foreground
-processor status?
+process status?
 Stat clarifications
 
 SEED

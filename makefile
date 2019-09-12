@@ -1,5 +1,8 @@
-DES: bin/Component.o bin/Main.o bin/Clock.o bin/Event.o bin/Simulation.o bin/Common.o
-	g++ -std=c++11 bin/Component.o bin/Main.o bin/Clock.o bin/Event.o bin/Simulation.o bin/Common.o -o DES
+DES: bin/Config.o bin/Component.o bin/Main.o bin/Clock.o bin/Event.o bin/Simulation.o bin/Common.o
+	g++ -std=c++11 bin/Config.o bin/Component.o bin/Main.o bin/Clock.o bin/Event.o bin/Simulation.o bin/Common.o -o DES
+
+bin/Config.o: src/Config.cpp src/Config.h
+	g++ -std=c++11 -c src/Config.cpp -o bin/Config.o
 
 bin/Component.o: src/Component.cpp src/Component.h
 	g++ -std=c++11 -c src/Component.cpp -o bin/Component.o
