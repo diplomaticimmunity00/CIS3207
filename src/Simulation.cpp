@@ -1,8 +1,10 @@
 #include "Simulation.h"
 #include "Clock.h"
+#include <chrono>
+#include <thread>
 
 Simulation::Simulation() {
-	this->config->import_config_from_file("config.ini");
+	this->config->import_config_from_file("config.txt");
 	this->numCores = this->config->get_config_value(CORES);
 	this->numDisks = this->config->get_config_value(DISKS);
 
@@ -13,7 +15,7 @@ Simulation::Simulation() {
 }
 
 Simulation::Simulation(int cores,int disks): numCores(cores), numDisks(disks) {
-    this->config->import_config_from_file("config.ini");
+    this->config->import_config_from_file("config.txt");
 
 	this->clock->set_time(this->config->get_config_value(INIT_TIME));
 
@@ -36,6 +38,13 @@ void Simulation::assign_control_core(int coreID) {
 }
 
 void Simulation::generate_components() {
+
+	if(!(this->numCores) or !(this->numDisks)) {
+        debug("Critical component configuration error, exiting",false);
+		debug("Cores: "+std::to_string(numCores),false);
+		debug("Disks: "+std::to_string(numDisks),false);
+		exit(0);
+    }
 
 	//Generate cores
 	for(int i=0;i<this->numCores;i++) {
@@ -98,6 +107,10 @@ int Simulation::get_best_disk_queue() {
 }
 
 void Simulation::start() {
+	if(this->config->get_config_value(REALTIME)) {
+        this->clock->realtime = true;
+        this->clock->tickrate = this->config->get_config_value(TICKRATE);
+    }
 	debug("Simulation starting with "+std::to_string(this->numCores)+" cores and "+std::to_string(this->numDisks)+" disks",false);
 }
 
@@ -278,7 +291,7 @@ void Simulation::process_from_queue() {
 	}
 	Event e = this->eventQueue.top();
 	this->eventQueue.pop();
-	//this->clock->step(e.time);
+	//this->clock->step();
 	switch(e.type) {
 		case PROCESS_ARRIVAL:
 			//Process enters system
