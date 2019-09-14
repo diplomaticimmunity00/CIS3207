@@ -32,6 +32,10 @@ struct Component {
 		return this->queueAccesses*1.0f/this->totalEventsSeen;
 	}
 
+	float get_utilization_at(uint32_t time) {
+		return 100.0f*this->totalUsageTime/time;
+	}
+
 	Event job;
 
 	int inline get_avg_response_time() {
@@ -50,6 +54,7 @@ struct Component {
 	virtual void complete_job();
 
 	Component(ComponentType,int);
+
 };
 
 struct Disk : Component {

@@ -26,6 +26,8 @@ int find(const std::string&, char);
 	
 struct Config {
 
+	std::string filename;
+
 	std::vector<int> configValues;
 
 	int get_config_value(ConfigElement e) {
@@ -38,13 +40,29 @@ struct Config {
 		return time_min+rand()%(time_max-time_min+1);
 	}
 
+	std::string to_string() {
+		std::string confString;
+		std::string line;
+		std::ifstream config(this->filename);
+
+		if(config.is_open()) {
+			while(getline(config,line)) {
+				confString += line + "\n";
+			}
+			return confString;
+		} else {
+			return "Error opening log file";
+		}
+	}
+
 	bool import_config_from_file(const std::string& filename) {
+		this->filename = filename;
 		std::string line;
 		std::ifstream f(filename);
-		//Order in config matters!!! Must match order in enum
+		//order in config file matters - must match order in enum
 		if(f.is_open()) {
 			while(getline(f,line)) {
-				if(find(line,'#') > 0) {
+				if(find(line,'#') == 0) {
 					continue;
 				}
 				this->configValues.push_back(std::stoi(line.substr(find(line,' '),line.size())));

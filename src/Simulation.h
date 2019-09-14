@@ -14,6 +14,8 @@ struct Simulation {
 
 	unsigned short pids = 0;
 
+	unsigned short pidsCompleted = 0;
+
 	Clock* clock = new Clock();
 	Config* config = new Config();
 
@@ -75,6 +77,7 @@ struct Simulation {
 	//SYSTEM
 	void handle_system_arrival(Event);
 	void handle_system_exit(Event);
+	std::string logString;
 
 	//CPU
 	void handle_cpu_arrival(Event);
@@ -82,16 +85,18 @@ struct Simulation {
 	void handle_cpu_exit(Event);
 	void process_from_queue();
 
-	template <class T>
-	void debug(T info,bool timestamp = true) {
+	void debug(const std::string &info,bool timestamp = true) {
+		std::string newLine;
 		if(timestamp) {
-			std::cout << "Time " << this->clock->get_ticks() << ": " << info << std::endl;
+			newLine = "Time " + std::to_string(this->clock->get_ticks()) + ": " + info + "\n";
 		} else {
-			std::cout << info << std::endl;
+			newLine = info + "\n";
 		}
+		std::cout << newLine;
+        this->logString += newLine;
 	}
 
-	void get_stats() {
+	void write_stats() {
 		CPU* testCore;
 		Disk* testDisk;
 		
@@ -102,6 +107,7 @@ struct Simulation {
 		debug("\n==Simulation==",false);
         debug("Exit time: "+std::to_string(this->clock->get_ticks()),false);
         debug("Processes introduced: "+std::to_string(this->pids),false);
+		debug("Processes killed: "+std::to_string(this->pidsCompleted),false);
 
 		debug("\n==Utilization==",false);
 
@@ -109,12 +115,12 @@ struct Simulation {
 
 		for(int i=0;i<this->numCores;i++) {
 			testCore = this->get_core(i);
-			debug("CORE "+std::to_string(testCore->id) + ": "+std::to_string(1.0f*testCore->totalUsageTime/totalTime),false);
+			debug("CORE "+std::to_string(testCore->id) + ": "+std::to_string(testCore->get_utilization_at(totalTime))+"%",false);
 		}
 		debug("",false);
 		for(int i=0;i<this->numDisks;i++) {
 			testDisk = this->get_disk(i);
-			debug("DISK "+std::to_string(testDisk->id) + ": "+std::to_string(1.0f*testDisk->totalUsageTime/totalTime),false);
+			debug("DISK "+std::to_string(testDisk->id) + ": "+std::to_string(testDisk->get_utilization_at(totalTime))+"%",false);
 		}
 
 		debug("\n==Response Time==",false);
@@ -141,7 +147,7 @@ struct Simulation {
 			debug("DISK "+std::to_string(testDisk->id) + ": "+std::to_string(1.0f*testDisk->totalJobs/totalTime),false);
 		}
 
-		debug("\n==Queue Sizes==",false);
+		debug("\n==Queue Sizes== (Avg. per access)",false);
 		debug("Event: Max "+std::to_string(this->maxQueueSize) + ", Avg: "+std::to_string(this->get_average_queue_size()),false);
 		debug("CPU: Max "+std::to_string(this->CPUmaxQueueSize) + ", Avg: "+std::to_string(this->get_average_cpu_queue_size()),false);
 		
@@ -151,12 +157,25 @@ struct Simulation {
 		}
 	}
 
-	Simulation(int,int);
+	void write_log() {
+		std::ofstream f("latest.log", std::ofstream::trunc);
+		f << this->logString;
+		f.close();
+	}
+
+	void write_config() {
+		std::ofstream f("latest.log",std::ios_base::app);
+        f << "\n==========\n==CONFIG==\n==========\n" << this->config->to_string();
+        f.close();
+	}
+
 	Simulation();
 
 	~Simulation() {
 		this->debug("Exiting simulation");
-		this->get_stats();
+		this->write_stats();
+		this->write_log();
+		this->write_config();
 		delete this->config;
 		delete this->clock;
 	}
