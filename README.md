@@ -1,9 +1,10 @@
 # CIS3207 Assignment 1: Discrete Event Simulator
 
-*Overview:
+Overview:
 	This program simulates the way processes are handled by a computer system
-	comprised of a combination of a CPUs and storage disks. The arrivals and departures of these processes
-	to and from each component are abstracted into structs called events. The random arrival of events
+	comprised of a combination of a CPUs and storage disks. The arrivals and departures
+	of these processes	to and from each component are abstracted into structs
+ 	called events. The random arrival of events
 	drive the simulation as they would in a real computer system.
 
 Code detail/data structures:
