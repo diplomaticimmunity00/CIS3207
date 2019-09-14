@@ -4,6 +4,7 @@ Queueing CPU arrivals in event queue vs sending directly to core after system ar
 Disk IO in background or foreground
 process status?
 Stat clarifications
+Event queue is not part of sim
 
 SEED
 INIT_TIME

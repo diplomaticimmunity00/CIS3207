@@ -1,33 +1,64 @@
 #include "Simulation.h"
 #include "Clock.h"
+
+#include <random>
 #include <chrono>
 #include <thread>
 
 Simulation::Simulation() {
-	this->config->import_config_from_file("config.txt");
+	this->config->import_config_from_file("config.ini");
 	this->numCores = this->config->get_config_value(CORES);
 	this->numDisks = this->config->get_config_value(DISKS);
 
 	this->clock->set_time(this->config->get_config_value(INIT_TIME));
 
 	this->generate_components();
-    this->running = true;
+	this->running = true;
 }
 
 Simulation::Simulation(int cores,int disks): numCores(cores), numDisks(disks) {
-    this->config->import_config_from_file("config.txt");
+	this->config->import_config_from_file("config.ini");
 
 	this->clock->set_time(this->config->get_config_value(INIT_TIME));
 
-    this->generate_components();
-    this->running = true;
+	this->generate_components();
+	this->running = true;
 }
 
 void Simulation::enqueue(Event e) {
 	this->eventQueue.push(e);
+	this->queueAccesses++;
+    this->totalEventsSeen++;
+    if(this->eventQueue.size() > this->maxQueueSize) {
+        this->maxQueueSize = this->eventQueue.size();
+    }
 }
+
+void Simulation::CPUenqueue(Event e) {
+	this->CPUqueueAccesses++;
+	this->cpuQueue.push(e);
+	this->CPUtotalEventsSeen++;
+	if(this->cpuQueue.size() > this->CPUmaxQueueSize) {
+		this->CPUmaxQueueSize = this->cpuQueue.size();
+	}
+}
+
+void Simulation::dequeue() {
+	this->queueAccesses++;
+	this->eventQueue.pop();
+}
+void Simulation::CPUdequeue() {
+    this->CPUqueueAccesses++;
+    this->cpuQueue.pop();
+}
+
 void Simulation::enqueue(EventType e) {
 	Event _e = Event(e);
+    this->queueAccesses++;
+    this->totalEventsSeen++;
+    if(this->eventQueue.size() > this->maxQueueSize) {
+        this->maxQueueSize = this->eventQueue.size();
+    }
 	_e.time = this->clock->get_ticks() + this->config->get_range(ARRIVE_MIN,ARRIVE_MAX); //Placeholder
 	this->eventQueue.push(_e);
 }
@@ -40,11 +71,11 @@ void Simulation::assign_control_core(int coreID) {
 void Simulation::generate_components() {
 
 	if(!(this->numCores) or !(this->numDisks)) {
-        debug("Critical component configuration error, exiting",false);
+		debug("Critical component configuration error, exiting",false);
 		debug("Cores: "+std::to_string(numCores),false);
 		debug("Disks: "+std::to_string(numDisks),false);
 		exit(0);
-    }
+	}
 
 	//Generate cores
 	for(int i=0;i<this->numCores;i++) {
@@ -74,11 +105,11 @@ int Simulation::get_first_free_core() {
 	int controlCoreID = this->get_control_core_id();
 
 	if(this->numCores == 1 and this->controlCore->is_free()) {
-		return controlCoreID;
+		//return controlCoreID;
 	}
 
 	for(int i=0;i<this->numCores;i++) {
-		if(this->cores.at(i)->is_free() and i != controlCoreID) {
+		if(this->cores.at(i)->is_free()) {
 			return i;
 		}
 	}
@@ -108,9 +139,11 @@ int Simulation::get_best_disk_queue() {
 
 void Simulation::start() {
 	if(this->config->get_config_value(REALTIME)) {
-        this->clock->realtime = true;
-        this->clock->tickrate = this->config->get_config_value(TICKRATE);
-    }
+		this->clock->realtime = true;
+		this->clock->tickrate = this->config->get_config_value(TICKRATE);
+	}
+	srand(this->config->get_config_value(SEED));
+
 	debug("Simulation starting with "+std::to_string(this->numCores)+" cores and "+std::to_string(this->numDisks)+" disks",false);
 }
 
@@ -130,7 +163,7 @@ void Simulation::dispatch_job(Event e,ComponentType type,int id) {
 			//If job is assigned to control core, suspend ALL event handling until job is finished
 			//Basically just set this job to highest possible priority
 			if( id == this->get_control_core_id()) {
-				_e.time = 0;
+				_e.time = this->clock->get_ticks();
 			} else {
 				//Otherwise, process can be executed in parallel with event handling
 				//Which makes it possible but not guaranteed that other events will be processed before
@@ -172,7 +205,7 @@ void Simulation::handle_system_arrival(Event e) {
 
 	} else {
 		debug("Pushed PID "+std::to_string(e.process->id)+" to CPU queue");
-		this->cpuQueue.push(e);
+		this->CPUenqueue(e);
 	}
 
 	//Create new process
@@ -210,10 +243,10 @@ void Simulation::handle_cpu_exit(Event e) {
 
 	//Simulate CPU running some program (time placeholder)
 	//Only advance clock artificially if job ran on control core
-    //Otherwise time is advanced naturally by the control core
-    if(this->get_control_core_id() == e.process->targetComponentID) {
-        this->clock->step(e.process->cpuTime);
-    }
+	//Otherwise time is advanced naturally by the control core
+	if(this->get_control_core_id() == e.process->targetComponentID) {
+		this->clock->step(e.process->cpuTime);
+	}
 
 	this->get_core(e.process->targetComponentID)->complete_job();
 
@@ -223,17 +256,17 @@ void Simulation::handle_cpu_exit(Event e) {
 		//Set process to system exit
 		_e = Event(PROCESS_EXIT);
 		_e.time = this->clock->get_ticks();
-   		_e.process = e.process;
-   		this->enqueue(_e);
+		_e.process = e.process;
+		this->enqueue(_e);
 	} else {
 		//Set process to begin IO
 		//IO time is assigned in handle_arrive_disk
-    	int bestDisk = this->get_first_free_disk();
+		int bestDisk = this->get_first_free_disk();
 		if(bestDisk >= 0) {
-    		this->dispatch_job(e,COMPONENT_DISK,bestDisk);
+			this->dispatch_job(e,COMPONENT_DISK,bestDisk);
 		} else {
 			debug("Pushed PID "+std::to_string(e.process->id)+" to DISK "+std::to_string(this->get_disk(this->get_best_disk_queue())->id)+" queue");
-			this->get_disk(this->get_best_disk_queue())->queue.push(e);
+			this->get_disk(this->get_best_disk_queue())->enqueue(e);
 		}
 	}
 
@@ -241,7 +274,7 @@ void Simulation::handle_cpu_exit(Event e) {
 
 		//When cpu finishes, pull next process off queue
 		Event nextProcessInQueue = cpuQueue.front();
-		cpuQueue.pop();
+		this->CPUdequeue();
 
 		debug("Pulling PID "+std::to_string(nextProcessInQueue.process->id)+" off of CPU queue...");
 
@@ -274,7 +307,7 @@ void Simulation::handle_disk_exit(Event e) {
 
 	if(!this->get_disk(e.process->targetComponentID)->queue.empty()) {
 		Event nextProcessInQueue = this->get_disk(e.process->targetComponentID)->queue.front();
-		this->get_disk(e.process->targetComponentID)->queue.pop();
+		this->get_disk(e.process->targetComponentID)->dequeue();
 
 		debug("Pulling PID "+std::to_string(nextProcessInQueue.process->id)+" off of DISK "+std::to_string(e.process->targetComponentID)+" queue...");
 		this->dispatch_job(nextProcessInQueue,COMPONENT_DISK,e.process->targetComponentID);
@@ -290,7 +323,7 @@ void Simulation::process_from_queue() {
 		return;
 	}
 	Event e = this->eventQueue.top();
-	this->eventQueue.pop();
+	this->dequeue();
 	//this->clock->step();
 	switch(e.type) {
 		case PROCESS_ARRIVAL:
@@ -319,6 +352,6 @@ void Simulation::process_from_queue() {
 			debug("Unhandled case for event type "+std::to_string(e.type));
 	}
 	//Simulate passage of time
-	this->clock->step();
+	//this->clock->step();
 	//this->clock->step(e.time);
 }
