@@ -283,7 +283,7 @@ QUIT_PROB 10		<- (40)
 CPU_MIN 1
 CPU_MAX 13
 DISK_MIN 5
-DISK_MAX 20			<- (37)
+DISK_MAX 20		<- (37)
 
 In trial 5 we observed increases in disk utilization, throughput, and queue sizes between all 
 components, as well as a dramatic increase in the total number of events introduced. It seems that
