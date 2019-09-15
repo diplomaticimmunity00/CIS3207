@@ -45,8 +45,8 @@ DISK 1: 0.034895
 ==Queue Sizes== (Avg. per access)
 Event: Max 103, Avg: 1.920891
 CPU: Max 534, Avg: 1.194864
-DISK 0: 2.000000
-DISK 1: 2.000000
+DISK 0: Max 103, Avg 2.000000
+DISK 1: Max 103, Avg 2.000000
 
 ==========
 ==CONFIG==
@@ -155,8 +155,8 @@ DISK 1: 0.012770		<-
 ==Queue Sizes== (Avg. per access)
 Event: Max 54, Avg: 1.991266
 CPU: Max 5722, Avg: 1.015488	<-
-DISK 0: 2.000000
-DISK 1: 2.000000
+DISK 0: Max 99, Avg 2.000000
+DISK 1: Max 99, Avg 2.000000
 
 ==========
 ==CONFIG==
@@ -225,7 +225,7 @@ QUIT_PROB 40
 CPU_MIN 1
 CPU_MAX 13
 DISK_MIN 5
-DISK_MAX 37 	<- (23)
+DISK_MAX 37 	<- (20)
 
 In trial 4, we flooded the system with events and increased the average response time of the disks.
 Relevant statistics such as utilization, and maximum queue size are all significantly impacted.
@@ -283,7 +283,7 @@ QUIT_PROB 10		<- (40)
 CPU_MIN 1
 CPU_MAX 13
 DISK_MIN 5
-DISK_MAX 20
+DISK_MAX 20			<- (37)
 
 In trial 5 we observed increases in disk utilization, throughput, and queue sizes between all 
 components, as well as a dramatic increase in the total number of events introduced. It seems that
