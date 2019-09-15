@@ -21,8 +21,8 @@
 int main() {
 
 	sim.enqueue(PROCESS_ARRIVAL);
-	sim.enqueue(PROCESS_ARRIVAL);
-	sim.enqueue(PROCESS_ARRIVAL);
+	//sim.enqueue(PROCESS_ARRIVAL);
+	//sim.enqueue(PROCESS_ARRIVAL);
 
 	sim.start();
 

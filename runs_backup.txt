@@ -1,0 +1,293 @@
+=========================================================
+CIS3207 Section 04
+Assignment 1: Discrete Event Simulator
+Author: Garrett Bowser
+Due date: 16 September 2019
+=========================================================
+
+Testing Overview:
+	This program was tested by modifying config values and recording changes in the 
+	program's output. For example, interarrival time can be decreased to emulate 
+	a greater traffic of events entering the system before events can be processed
+	and moved to other components. Multiple trials were conducted and their results can be
+	found below. Config values that are irrelevant to the assignment will not be modified.
+	Full logs can be found in the "runs" directory distributed with this program.
+
+Data:
+
+**********
+ Trial 1
+**********
+
+==Simulation==
+Exit time: 1003
+Processes introduced: 1302
+Processes killed: 43
+
+==Utilization==
+CORE 0: 100.000000%
+
+DISK 0: 76.470589%
+DISK 1: 46.360916%
+
+==Response Time==
+CORE 0: Max 13, Avg 7
+
+DISK 0: Max 20, Avg 12
+DISK 1: Max 20, Avg 13
+
+==Throughput== (jobs per tick)
+CORE 0: 0.141575
+
+DISK 0: 0.062812
+DISK 1: 0.034895
+
+==Queue Sizes== (Avg. per access)
+Event: Max 103, Avg: 1.920891
+CPU: Max 534, Avg: 1.194864
+DISK 0: Max 103, Avg 2.000000
+DISK 1: Max 103, Avg 2.000000
+
+==========
+==CONFIG==
+==========
+SEED 1100
+INIT_TIME 0
+FIN_TIME 1000
+ARRIVE_MIN 20
+ARRIVE_MAX 150
+QUIT_PROB 40
+CPU_MIN 1
+CPU_MAX 13
+DISK_MIN 5
+DISK_MAX 20
+
+For our purposes we shall consider this trial a baseline. In trial 2, we will 
+decrease the interarrival time to increase the flow of events into the system.
+We suspect that this will increase the Max CPU queue size and the total number
+of events that enter the system.
+
+**********
+ Trial 2
+**********
+
+==Simulation==
+Exit time: 1009
+Processes introduced: 6577 	<-
+Processes killed: 64
+
+==Utilization==
+CORE 0: 100.000000%
+
+DISK 0: 72.348862%			<-
+DISK 1: 42.913776%			<-
+
+==Response Time==
+CORE 0: Max 13, Avg 6
+
+DISK 0: Max 20, Avg 12
+DISK 1: Max 20, Avg 11
+
+==Throughput== (jobs per tick)
+CORE 0: 0.157582
+
+DISK 0: 0.056492
+DISK 1: 0.036670
+
+==Queue Sizes== (Avg. per access)
+Event: Max 99, Avg: 1.984948		<-
+CPU: Max 5749, Avg: 1.026423		<-
+DISK 0: 2.000000
+DISK 1: 2.000000
+
+==========
+==CONFIG==
+==========
+SEED 1100
+INIT_TIME 0
+FIN_TIME 1000
+ARRIVE_MIN 1	<- (20)
+ARRIVE_MAX 25	<- (150)
+QUIT_PROB 40
+CPU_MIN 1
+CPU_MAX 13
+DISK_MIN 5
+DISK_MAX 20
+
+We see that despite inundating the system with events, the disk utilizations,
+the maximum size of the event queue, and the number of processes killed remain
+relatively unchanged. This is due to the fact that these are the parts of the system
+that are bottlenecked by the power of the CPU, or for our purposes, the average 
+amount of time that each process spends on the CPU. Each time an event enters the system
+before the CPU has had the time to complete at least one other process, the CPU must
+push an event to the CPU queue. This is why we see a significant increase in the amount
+of jobs in the CPU queue. 
+
+In trials 3 and 4, we will increase the average response times of each component type.
+
+**********
+ Trial 3
+**********
+
+==Simulation==
+Exit time: 1018
+Processes introduced: 6183
+Processes killed: 40
+
+==Utilization==
+CORE 0: 100.000000%
+
+DISK 0: 44.302555%		<-
+DISK 1: 15.127702%		<-
+
+==Response Time==
+CORE 0: Max 23, Avg 11
+
+DISK 0: Max 20, Avg 12
+DISK 1: Max 19, Avg 11
+
+==Throughput== (jobs per tick)
+CORE 0: 0.088409
+
+DISK 0: 0.034381		<-
+DISK 1: 0.012770		<-
+
+==Queue Sizes== (Avg. per access)
+Event: Max 54, Avg: 1.991266
+CPU: Max 5722, Avg: 1.015488	<-
+DISK 0: Max 99, Avg 2.000000
+DISK 1: Max 99, Avg 2.000000
+
+==========
+==CONFIG==
+==========
+SEED 1100
+INIT_TIME 0
+FIN_TIME 1000
+ARRIVE_MIN 1
+ARRIVE_MAX 25
+QUIT_PROB 40
+CPU_MIN 1
+CPU_MAX 23	<- (13)
+DISK_MIN 5
+DISK_MAX 20
+
+We observe that increasing the amount of time that it takes for the CPU to complete
+each process effects the amount of jobs that each disk is able to process. Consequently,
+utilization, queue sizes, and throughput of the disks, as well as the CPU's throughput
+are all decreased substantially.
+The CPU in this regard is a bottleneck for all aspects in the system.
+
+In trial 4 we will increase the average response time of the disks but revert the CPU response time to its value in trial 2. 
+
+**********
+ Trial 4
+**********
+
+==Simulation==
+Exit time: 1005
+Processes introduced: 6331
+Processes killed: 44
+
+==Utilization==
+CORE 0: 100.000000%
+
+DISK 0: 98.905472% 		<-
+DISK 1: 76.815918%		<-
+
+==Response Time==
+CORE 0: Max 13, Avg 7
+
+DISK 0: Max 37, Avg 19
+DISK 1: Max 37, Avg 20
+
+==Throughput== (jobs per tick)
+CORE 0: 0.133333
+
+DISK 0: 0.049751		<-
+DISK 1: 0.037811		<-
+
+==Queue Sizes== (Avg. per access)
+Event: Max 94, Avg: 1.985152
+CPU: Max 5614, Avg: 1.022636
+DISK 0: Max 94, Avg: 2.000000		<-
+DISK 1: Max 94, Avg: 2.000000		<-
+
+==========
+==CONFIG==
+==========
+SEED 1100
+INIT_TIME 0
+FIN_TIME 1000
+ARRIVE_MIN 1
+ARRIVE_MAX 25
+QUIT_PROB 40
+CPU_MIN 1
+CPU_MAX 13
+DISK_MIN 5
+DISK_MAX 37 	<- (20)
+
+In trial 4, we flooded the system with events and increased the average response time of the disks.
+Relevant statistics such as utilization, and maximum queue size are all significantly impacted.
+It is important to note that as a consequence of taking more time to service processes, the disks are
+able to service fewer total processes which causes a decline in throughput for both devices.
+
+In the final trial we will modify the quit probability.
+
+**********
+ Trial 5
+**********
+
+=========
+==STATS==
+=========
+
+==Simulation==
+Exit time: 1001
+Processes introduced: 8858
+Processes killed: 8
+
+==Utilization==
+CORE 0: 100.000000%
+
+DISK 0: 99.500496%		<-
+DISK 1: 69.330666%		<-
+
+==Response Time==
+CORE 0: Max 13, Avg 6
+
+DISK 0: Max 20, Avg 12
+DISK 1: Max 20, Avg 12
+
+==Throughput== (jobs per tick)
+CORE 0: 0.144855
+
+DISK 0: 0.080919			<-
+DISK 1: 0.053946			<-
+
+==Queue Sizes== (Avg. per access)
+Event: Max 141, Avg: 1.984082
+CPU: Max 8003, Avg: 1.017436
+DISK 0: Max 141, Avg: 2.000000
+DISK 1: Max 141, Avg: 2.000000
+
+==========
+==CONFIG==
+==========
+SEED 1100
+INIT_TIME 0
+FIN_TIME 1000
+ARRIVE_MIN 1
+ARRIVE_MAX 25
+QUIT_PROB 10		<- (40)
+CPU_MIN 1
+CPU_MAX 13
+DISK_MIN 5
+DISK_MAX 20			<- (37)
+
+In trial 5 we observed increases in disk utilization, throughput, and queue sizes between all 
+components, as well as a dramatic increase in the total number of events introduced. It seems that
+preventing processes from exiting the system contributes most heavily to an inundation of events
+in the system.
+
+Note: Past tense was used because this report seemed suited for it. By "we" I mean myself.
