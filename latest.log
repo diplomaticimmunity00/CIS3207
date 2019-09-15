@@ -3,2148 +3,2316 @@ Time 0: Simulation starting
 Time 0: PID 2 enters system
 Time 0: Sent PID 2 to CORE 0
 Time 0: Received PID 2 on CORE 0
-Time 2: Finished PID 2 on CORE 0
-Time 2: Sent PID 2 to DISK 0
-Time 2: Received PID 2 on DISK 0
-Time 2: Finished PID 2 on DISK 0
-Time 2: PID 2 enters system
-Time 2: Sent PID 2 to CORE 0
-Time 2: Received PID 2 on CORE 0
-Time 13: Finished PID 2 on CORE 0
-Time 13: PID 2 exits system
-Time 13: PID 5 enters system
-Time 13: Sent PID 5 to CORE 0
-Time 13: Received PID 5 on CORE 0
-Time 19: Finished PID 5 on CORE 0
-Time 19: Sent PID 5 to DISK 0
-Time 19: Received PID 5 on DISK 0
-Time 19: Finished PID 5 on DISK 0
-Time 19: PID 5 enters system
-Time 19: Sent PID 5 to CORE 0
-Time 19: Received PID 5 on CORE 0
-Time 32: Finished PID 5 on CORE 0
-Time 32: Sent PID 5 to DISK 0
-Time 32: Received PID 5 on DISK 0
-Time 32: Finished PID 5 on DISK 0
-Time 32: PID 5 enters system
-Time 32: Sent PID 5 to CORE 0
-Time 32: Received PID 5 on CORE 0
-Time 36: Finished PID 5 on CORE 0
-Time 36: PID 5 exits system
-Time 36: PID 15 enters system
-Time 36: Sent PID 15 to CORE 0
-Time 36: Received PID 15 on CORE 0
-Time 40: Finished PID 15 on CORE 0
-Time 40: Sent PID 15 to DISK 0
-Time 40: Received PID 15 on DISK 0
-Time 40: Finished PID 15 on DISK 0
-Time 40: PID 15 enters system
-Time 40: Sent PID 15 to CORE 0
-Time 40: Received PID 15 on CORE 0
-Time 41: Finished PID 15 on CORE 0
-Time 41: PID 15 exits system
-Time 41: PID 1 enters system
-Time 41: Sent PID 1 to CORE 0
-Time 41: Received PID 1 on CORE 0
-Time 53: Finished PID 1 on CORE 0
-Time 53: PID 1 exits system
-Time 53: PID 3 enters system
-Time 53: Sent PID 3 to CORE 0
-Time 53: Received PID 3 on CORE 0
-Time 65: Finished PID 3 on CORE 0
-Time 65: Sent PID 3 to DISK 0
-Time 65: Received PID 3 on DISK 0
-Time 65: PID 37 enters system
-Time 65: Sent PID 37 to CORE 0
-Time 65: Received PID 37 on CORE 0
-Time 67: Finished PID 37 on CORE 0
-Time 67: Sent PID 37 to DISK 1
-Time 67: Received PID 37 on DISK 1
-Time 67: Finished PID 37 on DISK 1
-Time 67: PID 37 enters system
-Time 67: Sent PID 37 to CORE 0
-Time 67: Received PID 37 on CORE 0
-Time 72: Finished PID 37 on CORE 0
-Time 72: Sent PID 37 to DISK 1
-Time 72: Received PID 37 on DISK 1
-Time 72: Finished PID 37 on DISK 1
-Time 72: PID 37 enters system
-Time 72: Sent PID 37 to CORE 0
-Time 72: Received PID 37 on CORE 0
-Time 75: Finished PID 37 on CORE 0
-Time 75: PID 37 exits system
-Time 75: Finished PID 3 on DISK 0
-Time 75: PID 3 enters system
-Time 75: Sent PID 3 to CORE 0
-Time 75: Received PID 3 on CORE 0
-Time 82: Finished PID 3 on CORE 0
-Time 82: Sent PID 3 to DISK 0
-Time 82: Received PID 3 on DISK 0
-Time 82: PID 27 enters system
-Time 82: Sent PID 27 to CORE 0
-Time 82: Received PID 27 on CORE 0
-Time 93: Finished PID 27 on CORE 0
-Time 93: Sent PID 27 to DISK 1
-Time 93: Received PID 27 on DISK 1
-Time 93: Finished PID 3 on DISK 0
-Time 93: PID 3 enters system
-Time 93: Sent PID 3 to CORE 0
-Time 93: Received PID 3 on CORE 0
-Time 93: PID 11 enters system
-Time 93: Pushed PID 11 to CPU queue
-Time 99: Finished PID 3 on CORE 0
-Time 99: Pulling PID 11 off of CPU queue...
-Time 99: Sent PID 11 to CORE 0
-Time 99: PID 3 exits system
-Time 99: Received PID 11 on CORE 0
-Time 101: Finished PID 11 on CORE 0
-Time 101: Sent PID 11 to DISK 0
-Time 101: Received PID 11 on DISK 0
-Time 101: PID 41 enters system
-Time 101: Sent PID 41 to CORE 0
-Time 101: Received PID 41 on CORE 0
-Time 101: Finished PID 27 on DISK 1
-Time 101: PID 27 enters system
-Time 101: Pushed PID 27 to CPU queue
-Time 101: Finished PID 11 on DISK 0
-Time 101: PID 11 enters system
-Time 101: Pushed PID 11 to CPU queue
-Time 114: Finished PID 41 on CORE 0
-Time 114: Sent PID 41 to DISK 0
-Time 114: Pulling PID 27 off of CPU queue...
-Time 114: Sent PID 27 to CORE 0
-Time 114: Received PID 41 on DISK 0
-Time 114: Received PID 27 on CORE 0
-Time 114: Finished PID 41 on DISK 0
-Time 114: PID 41 enters system
-Time 114: Pushed PID 41 to CPU queue
-Time 123: Finished PID 27 on CORE 0
-Time 123: Sent PID 27 to DISK 0
-Time 123: Pulling PID 11 off of CPU queue...
-Time 123: Sent PID 11 to CORE 0
-Time 123: Received PID 27 on DISK 0
-Time 123: Received PID 11 on CORE 0
-Time 123: PID 62 enters system
-Time 123: Pushed PID 62 to CPU queue
-Time 134: Finished PID 11 on CORE 0
-Time 134: Sent PID 11 to DISK 1
-Time 134: Pulling PID 41 off of CPU queue...
-Time 134: Sent PID 41 to CORE 0
-Time 134: Received PID 11 on DISK 1
-Time 134: Received PID 41 on CORE 0
-Time 137: Finished PID 41 on CORE 0
-Time 137: Pushed PID 41 to DISK 0 queue
-Time 137: Pulling PID 62 off of CPU queue...
-Time 137: Sent PID 62 to CORE 0
-Time 137: Received PID 62 on CORE 0
-Time 138: Finished PID 62 on CORE 0
-Time 138: Pushed PID 62 to DISK 1 queue
-Time 138: Finished PID 27 on DISK 0
-Time 138: Pulling PID 41 off of DISK 0 queue...
-Time 138: Sent PID 41 to DISK 0
-Time 138: Received PID 41 on DISK 0
-Time 138: PID 27 enters system
-Time 138: Sent PID 27 to CORE 0
-Time 138: Received PID 27 on CORE 0
-Time 145: Finished PID 27 on CORE 0
-Time 145: Pushed PID 27 to DISK 0 queue
-Time 145: PID 31 enters system
-Time 145: Sent PID 31 to CORE 0
-Time 145: Received PID 31 on CORE 0
-Time 145: Finished PID 11 on DISK 1
-Time 145: Pulling PID 62 off of DISK 1 queue...
-Time 145: Sent PID 62 to DISK 1
-Time 145: Received PID 62 on DISK 1
-Time 145: PID 11 enters system
-Time 145: Pushed PID 11 to CPU queue
-Time 153: Finished PID 31 on CORE 0
-Time 153: Pulling PID 11 off of CPU queue...
-Time 153: Sent PID 11 to CORE 0
-Time 153: PID 31 exits system
-Time 153: Received PID 11 on CORE 0
-Time 153: PID 45 enters system
-Time 153: Pushed PID 45 to CPU queue
-Time 153: Finished PID 41 on DISK 0
-Time 153: Pulling PID 27 off of DISK 0 queue...
-Time 153: Sent PID 27 to DISK 0
-Time 153: Received PID 27 on DISK 0
-Time 153: PID 41 enters system
-Time 153: Pushed PID 41 to CPU queue
-Time 153: PID 78 enters system
-Time 153: Pushed PID 78 to CPU queue
-Time 158: Finished PID 11 on CORE 0
-Time 158: Pushed PID 11 to DISK 0 queue
-Time 158: Pulling PID 45 off of CPU queue...
-Time 158: Sent PID 45 to CORE 0
-Time 158: Received PID 45 on CORE 0
-Time 158: Finished PID 27 on DISK 0
-Time 158: Pulling PID 11 off of DISK 0 queue...
-Time 158: Sent PID 11 to DISK 0
-Time 158: Received PID 11 on DISK 0
-Time 158: PID 27 enters system
-Time 158: Pushed PID 27 to CPU queue
-Time 158: PID 103 enters system
-Time 158: Pushed PID 103 to CPU queue
-Time 158: Finished PID 62 on DISK 1
-Time 158: PID 62 enters system
-Time 158: Pushed PID 62 to CPU queue
-Time 166: Finished PID 45 on CORE 0
-Time 166: Sent PID 45 to DISK 1
-Time 166: Pulling PID 41 off of CPU queue...
-Time 166: Sent PID 41 to CORE 0
-Time 166: Received PID 45 on DISK 1
-Time 166: Received PID 41 on CORE 0
-Time 166: PID 80 enters system
-Time 166: Pushed PID 80 to CPU queue
-Time 166: PID 21 enters system
-Time 166: Pushed PID 21 to CPU queue
-Time 166: Finished PID 11 on DISK 0
-Time 166: PID 11 enters system
-Time 166: Pushed PID 11 to CPU queue
-Time 178: Finished PID 41 on CORE 0
-Time 178: Sent PID 41 to DISK 0
-Time 178: Pulling PID 78 off of CPU queue...
-Time 178: Sent PID 78 to CORE 0
-Time 178: Received PID 41 on DISK 0
-Time 178: Received PID 78 on CORE 0
-Time 178: PID 87 enters system
-Time 178: Pushed PID 87 to CPU queue
-Time 178: Finished PID 45 on DISK 1
-Time 178: PID 45 enters system
-Time 178: Pushed PID 45 to CPU queue
-Time 183: Finished PID 78 on CORE 0
-Time 183: Pulling PID 27 off of CPU queue...
-Time 183: Sent PID 27 to CORE 0
-Time 183: PID 78 exits system
-Time 183: Received PID 27 on CORE 0
-Time 183: PID 56 enters system
-Time 183: Pushed PID 56 to CPU queue
-Time 183: PID 122 enters system
-Time 183: Pushed PID 122 to CPU queue
-Time 183: PID 67 enters system
-Time 183: Pushed PID 67 to CPU queue
-Time 183: Finished PID 41 on DISK 0
-Time 183: PID 41 enters system
-Time 183: Pushed PID 41 to CPU queue
-Time 196: Finished PID 27 on CORE 0
-Time 196: Sent PID 27 to DISK 0
-Time 196: Pulling PID 103 off of CPU queue...
-Time 196: Sent PID 103 to CORE 0
-Time 196: Received PID 27 on DISK 0
-Time 196: Received PID 103 on CORE 0
-Time 196: PID 145 enters system
-Time 196: Pushed PID 145 to CPU queue
-Time 198: Finished PID 103 on CORE 0
-Time 198: Pulling PID 62 off of CPU queue...
-Time 198: Sent PID 62 to CORE 0
-Time 198: PID 103 exits system
-Time 198: Received PID 62 on CORE 0
-Time 198: PID 98 enters system
-Time 198: Pushed PID 98 to CPU queue
-Time 198: PID 131 enters system
-Time 198: Pushed PID 131 to CPU queue
-Time 198: Finished PID 27 on DISK 0
-Time 198: PID 27 enters system
-Time 198: Pushed PID 27 to CPU queue
-Time 209: Finished PID 62 on CORE 0
-Time 209: Pulling PID 80 off of CPU queue...
-Time 209: Sent PID 80 to CORE 0
-Time 209: PID 62 exits system
-Time 209: Received PID 80 on CORE 0
-Time 209: PID 72 enters system
-Time 209: Pushed PID 72 to CPU queue
-Time 209: PID 50 enters system
-Time 209: Pushed PID 50 to CPU queue
-Time 209: PID 153 enters system
-Time 209: Pushed PID 153 to CPU queue
-Time 219: Finished PID 80 on CORE 0
-Time 219: Pulling PID 21 off of CPU queue...
-Time 219: Sent PID 21 to CORE 0
-Time 219: PID 146 enters system
-Time 219: Pushed PID 146 to CPU queue
-Time 219: PID 80 exits system
-Time 219: Received PID 21 on CORE 0
-Time 219: PID 155 enters system
-Time 219: Pushed PID 155 to CPU queue
-Time 219: PID 173 enters system
-Time 219: Pushed PID 173 to CPU queue
-Time 219: PID 92 enters system
-Time 219: Pushed PID 92 to CPU queue
-Time 219: PID 168 enters system
-Time 219: Pushed PID 168 to CPU queue
-Time 219: PID 148 enters system
-Time 219: Pushed PID 148 to CPU queue
-Time 232: Finished PID 21 on CORE 0
-Time 232: Pulling PID 11 off of CPU queue...
-Time 232: Sent PID 11 to CORE 0
-Time 232: PID 90 enters system
-Time 232: Pushed PID 90 to CPU queue
-Time 232: PID 21 exits system
-Time 232: Received PID 11 on CORE 0
-Time 232: PID 140 enters system
-Time 232: Pushed PID 140 to CPU queue
-Time 239: Finished PID 11 on CORE 0
-Time 239: Pulling PID 87 off of CPU queue...
-Time 239: Sent PID 87 to CORE 0
-Time 239: PID 11 exits system
-Time 239: Received PID 87 on CORE 0
-Time 244: Finished PID 87 on CORE 0
-Time 244: Sent PID 87 to DISK 0
-Time 244: Pulling PID 45 off of CPU queue...
-Time 244: Sent PID 45 to CORE 0
-Time 244: Received PID 87 on DISK 0
-Time 244: Received PID 45 on CORE 0
-Time 244: PID 163 enters system
-Time 244: Pushed PID 163 to CPU queue
-Time 244: Finished PID 87 on DISK 0
-Time 244: PID 87 enters system
-Time 244: Pushed PID 87 to CPU queue
-Time 255: Finished PID 45 on CORE 0
-Time 255: Sent PID 45 to DISK 0
-Time 255: Pulling PID 56 off of CPU queue...
-Time 255: Sent PID 56 to CORE 0
-Time 255: Received PID 45 on DISK 0
-Time 255: Received PID 56 on CORE 0
-Time 255: PID 186 enters system
-Time 255: Pushed PID 186 to CPU queue
-Time 255: PID 117 enters system
-Time 255: Pushed PID 117 to CPU queue
-Time 255: PID 138 enters system
-Time 255: Pushed PID 138 to CPU queue
-Time 263: Finished PID 56 on CORE 0
-Time 263: Pulling PID 122 off of CPU queue...
-Time 263: Sent PID 122 to CORE 0
-Time 263: PID 56 exits system
-Time 263: Received PID 122 on CORE 0
-Time 263: Finished PID 45 on DISK 0
-Time 263: PID 45 enters system
-Time 263: Pushed PID 45 to CPU queue
-Time 263: PID 126 enters system
-Time 263: Pushed PID 126 to CPU queue
-Time 263: PID 137 enters system
-Time 263: Pushed PID 137 to CPU queue
-Time 275: Finished PID 122 on CORE 0
-Time 275: Sent PID 122 to DISK 0
-Time 275: Pulling PID 67 off of CPU queue...
-Time 275: Sent PID 67 to CORE 0
-Time 275: Received PID 122 on DISK 0
-Time 275: Received PID 67 on CORE 0
-Time 277: Finished PID 67 on CORE 0
-Time 277: Sent PID 67 to DISK 1
-Time 277: Pulling PID 41 off of CPU queue...
-Time 277: Sent PID 41 to CORE 0
-Time 277: Received PID 67 on DISK 1
-Time 277: Received PID 41 on CORE 0
-Time 277: PID 180 enters system
-Time 277: Pushed PID 180 to CPU queue
-Time 277: PID 190 enters system
-Time 277: Pushed PID 190 to CPU queue
-Time 277: PID 114 enters system
-Time 277: Pushed PID 114 to CPU queue
-Time 277: Finished PID 67 on DISK 1
-Time 277: PID 67 enters system
-Time 277: Pushed PID 67 to CPU queue
-Time 277: PID 130 enters system
-Time 277: Pushed PID 130 to CPU queue
-Time 285: Finished PID 41 on CORE 0
-Time 285: Sent PID 41 to DISK 1
-Time 285: Pulling PID 145 off of CPU queue...
-Time 285: Sent PID 145 to CORE 0
-Time 285: Received PID 41 on DISK 1
-Time 285: PID 211 enters system
-Time 285: Pushed PID 211 to CPU queue
-Time 285: Received PID 145 on CORE 0
-Time 285: PID 189 enters system
-Time 285: Pushed PID 189 to CPU queue
-Time 285: PID 159 enters system
-Time 285: Pushed PID 159 to CPU queue
-Time 285: PID 195 enters system
-Time 285: Pushed PID 195 to CPU queue
-Time 285: PID 184 enters system
-Time 285: Pushed PID 184 to CPU queue
-Time 295: Finished PID 145 on CORE 0
-Time 295: Pushed PID 145 to DISK 0 queue
-Time 295: Pulling PID 98 off of CPU queue...
-Time 295: Sent PID 98 to CORE 0
-Time 295: Finished PID 122 on DISK 0
-Time 295: Pulling PID 145 off of DISK 0 queue...
-Time 295: Sent PID 145 to DISK 0
-Time 295: Received PID 145 on DISK 0
-Time 295: Received PID 98 on CORE 0
-Time 295: PID 122 enters system
-Time 295: Pushed PID 122 to CPU queue
-Time 302: Finished PID 98 on CORE 0
-Time 302: Pushed PID 98 to DISK 0 queue
-Time 302: Pulling PID 131 off of CPU queue...
-Time 302: Sent PID 131 to CORE 0
-Time 302: Received PID 131 on CORE 0
-Time 302: Finished PID 41 on DISK 1
-Time 302: PID 41 enters system
-Time 302: Pushed PID 41 to CPU queue
-Time 302: Finished PID 145 on DISK 0
-Time 302: Pulling PID 98 off of DISK 0 queue...
-Time 302: Sent PID 98 to DISK 0
-Time 302: Received PID 98 on DISK 0
-Time 302: PID 145 enters system
-Time 302: Pushed PID 145 to CPU queue
-Time 302: PID 218 enters system
-Time 302: Pushed PID 218 to CPU queue
-Time 309: Finished PID 131 on CORE 0
-Time 309: Sent PID 131 to DISK 1
-Time 309: Pulling PID 27 off of CPU queue...
-Time 309: Sent PID 27 to CORE 0
-Time 309: Received PID 131 on DISK 1
-Time 309: Finished PID 98 on DISK 0
-Time 309: Received PID 27 on CORE 0
-Time 309: PID 98 enters system
-Time 309: Pushed PID 98 to CPU queue
-Time 309: PID 161 enters system
-Time 309: Pushed PID 161 to CPU queue
-Time 309: PID 241 enters system
-Time 309: Pushed PID 241 to CPU queue
-Time 309: PID 219 enters system
-Time 309: Pushed PID 219 to CPU queue
-Time 309: PID 193 enters system
-Time 309: Pushed PID 193 to CPU queue
-Time 309: PID 212 enters system
-Time 309: Pushed PID 212 to CPU queue
-Time 309: PID 181 enters system
-Time 309: Pushed PID 181 to CPU queue
-Time 309: PID 160 enters system
-Time 309: Pushed PID 160 to CPU queue
-Time 309: Finished PID 131 on DISK 1
-Time 309: PID 131 enters system
-Time 309: Pushed PID 131 to CPU queue
-Time 318: Finished PID 27 on CORE 0
-Time 318: Sent PID 27 to DISK 0
-Time 318: Pulling PID 72 off of CPU queue...
-Time 318: Sent PID 72 to CORE 0
-Time 318: Received PID 27 on DISK 0
-Time 318: PID 179 enters system
-Time 318: Pushed PID 179 to CPU queue
-Time 318: Received PID 72 on CORE 0
-Time 318: PID 205 enters system
-Time 318: Pushed PID 205 to CPU queue
-Time 318: PID 248 enters system
-Time 318: Pushed PID 248 to CPU queue
-Time 318: Finished PID 27 on DISK 0
-Time 318: PID 27 enters system
-Time 318: Pushed PID 27 to CPU queue
-Time 318: PID 233 enters system
-Time 318: Pushed PID 233 to CPU queue
-Time 318: PID 187 enters system
-Time 318: Pushed PID 187 to CPU queue
-Time 318: PID 266 enters system
-Time 318: Pushed PID 266 to CPU queue
-Time 330: Finished PID 72 on CORE 0
-Time 330: Sent PID 72 to DISK 0
-Time 330: Pulling PID 50 off of CPU queue...
-Time 330: Sent PID 50 to CORE 0
-Time 330: Received PID 72 on DISK 0
-Time 330: Received PID 50 on CORE 0
-Time 330: PID 175 enters system
-Time 330: Pushed PID 175 to CPU queue
-Time 330: PID 268 enters system
-Time 330: Pushed PID 268 to CPU queue
-Time 336: Finished PID 50 on CORE 0
-Time 336: Pulling PID 153 off of CPU queue...
-Time 336: Sent PID 153 to CORE 0
-Time 336: PID 50 exits system
-Time 336: Received PID 153 on CORE 0
-Time 336: PID 270 enters system
-Time 336: Pushed PID 270 to CPU queue
-Time 336: PID 188 enters system
-Time 336: Pushed PID 188 to CPU queue
-Time 336: PID 240 enters system
-Time 336: Pushed PID 240 to CPU queue
-Time 336: Finished PID 72 on DISK 0
-Time 336: PID 72 enters system
-Time 336: Pushed PID 72 to CPU queue
-Time 339: Finished PID 153 on CORE 0
-Time 339: Sent PID 153 to DISK 0
-Time 339: Pulling PID 146 off of CPU queue...
-Time 339: Sent PID 146 to CORE 0
-Time 339: Received PID 153 on DISK 0
-Time 339: Received PID 146 on CORE 0
-Time 339: PID 228 enters system
-Time 339: Pushed PID 228 to CPU queue
-Time 339: PID 172 enters system
-Time 339: Pushed PID 172 to CPU queue
-Time 339: PID 279 enters system
-Time 339: Pushed PID 279 to CPU queue
-Time 339: PID 232 enters system
-Time 339: Pushed PID 232 to CPU queue
-Time 339: PID 210 enters system
-Time 339: Pushed PID 210 to CPU queue
-Time 339: PID 281 enters system
-Time 339: Pushed PID 281 to CPU queue
-Time 347: Finished PID 146 on CORE 0
-Time 347: Sent PID 146 to DISK 1
-Time 347: Pulling PID 155 off of CPU queue...
-Time 347: Sent PID 155 to CORE 0
-Time 347: Received PID 146 on DISK 1
-Time 347: Received PID 155 on CORE 0
-Time 347: Finished PID 153 on DISK 0
-Time 347: PID 153 enters system
-Time 347: Pushed PID 153 to CPU queue
-Time 347: PID 217 enters system
-Time 347: Pushed PID 217 to CPU queue
-Time 347: Finished PID 146 on DISK 1
-Time 347: PID 146 enters system
-Time 347: Pushed PID 146 to CPU queue
-Time 347: PID 276 enters system
-Time 347: Pushed PID 276 to CPU queue
-Time 357: Finished PID 155 on CORE 0
-Time 357: Sent PID 155 to DISK 0
-Time 357: Pulling PID 173 off of CPU queue...
-Time 357: Sent PID 173 to CORE 0
-Time 357: Received PID 155 on DISK 0
-Time 357: Received PID 173 on CORE 0
-Time 362: Finished PID 173 on CORE 0
-Time 362: Sent PID 173 to DISK 1
-Time 362: Pulling PID 92 off of CPU queue...
-Time 362: Sent PID 92 to CORE 0
-Time 362: Received PID 173 on DISK 1
-Time 362: Received PID 92 on CORE 0
-Time 362: Finished PID 155 on DISK 0
-Time 362: PID 155 enters system
-Time 362: Pushed PID 155 to CPU queue
-Time 370: Finished PID 92 on CORE 0
-Time 370: Sent PID 92 to DISK 0
-Time 370: Pulling PID 168 off of CPU queue...
-Time 370: Sent PID 168 to CORE 0
-Time 370: Received PID 92 on DISK 0
-Time 370: Received PID 168 on CORE 0
-Time 370: PID 267 enters system
-Time 370: Pushed PID 267 to CPU queue
-Time 370: Finished PID 173 on DISK 1
-Time 370: PID 173 enters system
-Time 370: Pushed PID 173 to CPU queue
-Time 370: PID 252 enters system
-Time 370: Pushed PID 252 to CPU queue
-Time 370: PID 303 enters system
-Time 370: Pushed PID 303 to CPU queue
-Time 370: PID 272 enters system
-Time 370: Pushed PID 272 to CPU queue
-Time 382: Finished PID 168 on CORE 0
-Time 382: Sent PID 168 to DISK 1
-Time 382: Pulling PID 148 off of CPU queue...
-Time 382: Sent PID 148 to CORE 0
-Time 382: Received PID 168 on DISK 1
-Time 382: Received PID 148 on CORE 0
-Time 382: PID 290 enters system
-Time 382: Pushed PID 290 to CPU queue
-Time 382: PID 306 enters system
-Time 382: Pushed PID 306 to CPU queue
-Time 382: PID 294 enters system
-Time 382: Pushed PID 294 to CPU queue
-Time 388: Finished PID 148 on CORE 0
-Time 388: Pulling PID 90 off of CPU queue...
-Time 388: Sent PID 90 to CORE 0
-Time 388: PID 148 exits system
-Time 388: Received PID 90 on CORE 0
-Time 388: PID 229 enters system
-Time 388: Pushed PID 229 to CPU queue
-Time 388: PID 304 enters system
-Time 388: Pushed PID 304 to CPU queue
-Time 388: Finished PID 92 on DISK 0
-Time 388: PID 92 enters system
-Time 388: Pushed PID 92 to CPU queue
-Time 388: PID 203 enters system
-Time 388: Pushed PID 203 to CPU queue
-Time 388: PID 230 enters system
-Time 388: Pushed PID 230 to CPU queue
-Time 394: Finished PID 90 on CORE 0
-Time 394: Pulling PID 140 off of CPU queue...
-Time 394: Sent PID 140 to CORE 0
-Time 394: PID 90 exits system
-Time 394: Received PID 140 on CORE 0
-Time 394: PID 295 enters system
-Time 394: Pushed PID 295 to CPU queue
-Time 394: PID 317 enters system
-Time 394: Pushed PID 317 to CPU queue
-Time 398: Finished PID 140 on CORE 0
-Time 398: Sent PID 140 to DISK 0
-Time 398: Pulling PID 163 off of CPU queue...
-Time 398: Sent PID 163 to CORE 0
-Time 398: Received PID 140 on DISK 0
-Time 398: Received PID 163 on CORE 0
-Time 398: Finished PID 168 on DISK 1
-Time 398: PID 168 enters system
-Time 398: Pushed PID 168 to CPU queue
-Time 398: PID 338 enters system
-Time 398: Pushed PID 338 to CPU queue
-Time 404: Finished PID 163 on CORE 0
-Time 404: Pulling PID 87 off of CPU queue...
-Time 404: Sent PID 87 to CORE 0
-Time 404: PID 163 exits system
-Time 404: Received PID 87 on CORE 0
-Time 410: Finished PID 87 on CORE 0
-Time 410: Sent PID 87 to DISK 1
-Time 410: Pulling PID 186 off of CPU queue...
-Time 410: Sent PID 186 to CORE 0
-Time 410: Received PID 87 on DISK 1
-Time 410: Received PID 186 on CORE 0
-Time 410: PID 237 enters system
-Time 410: Pushed PID 237 to CPU queue
-Time 410: PID 263 enters system
-Time 410: Pushed PID 263 to CPU queue
-Time 416: Finished PID 186 on CORE 0
-Time 416: Pulling PID 117 off of CPU queue...
-Time 416: Sent PID 117 to CORE 0
-Time 416: PID 186 exits system
-Time 416: Received PID 117 on CORE 0
-Time 416: Finished PID 140 on DISK 0
-Time 416: PID 140 enters system
-Time 416: Pushed PID 140 to CPU queue
-Time 416: PID 265 enters system
-Time 416: Pushed PID 265 to CPU queue
-Time 416: PID 350 enters system
-Time 416: Pushed PID 350 to CPU queue
-Time 416: PID 269 enters system
-Time 416: Pushed PID 269 to CPU queue
-Time 416: PID 298 enters system
-Time 416: Pushed PID 298 to CPU queue
-Time 416: PID 239 enters system
-Time 416: Pushed PID 239 to CPU queue
-Time 416: Finished PID 87 on DISK 1
-Time 416: PID 87 enters system
-Time 416: Pushed PID 87 to CPU queue
-Time 416: PID 343 enters system
-Time 416: Pushed PID 343 to CPU queue
-Time 425: Finished PID 117 on CORE 0
-Time 425: Pulling PID 138 off of CPU queue...
-Time 425: Sent PID 138 to CORE 0
-Time 425: PID 117 exits system
-Time 425: Received PID 138 on CORE 0
-Time 425: PID 333 enters system
-Time 425: Pushed PID 333 to CPU queue
-Time 425: PID 242 enters system
-Time 425: Pushed PID 242 to CPU queue
-Time 425: PID 296 enters system
-Time 425: Pushed PID 296 to CPU queue
-Time 425: PID 385 enters system
-Time 425: Pushed PID 385 to CPU queue
-Time 438: Finished PID 138 on CORE 0
-Time 438: Sent PID 138 to DISK 0
-Time 438: Pulling PID 45 off of CPU queue...
-Time 438: Sent PID 45 to CORE 0
-Time 438: Received PID 138 on DISK 0
-Time 438: Received PID 45 on CORE 0
-Time 438: PID 359 enters system
-Time 438: Pushed PID 359 to CPU queue
-Time 438: PID 257 enters system
-Time 438: Pushed PID 257 to CPU queue
-Time 448: Finished PID 45 on CORE 0
-Time 448: Pulling PID 126 off of CPU queue...
-Time 448: Sent PID 126 to CORE 0
-Time 448: PID 45 exits system
-Time 448: Received PID 126 on CORE 0
-Time 449: Finished PID 126 on CORE 0
-Time 449: Pulling PID 137 off of CPU queue...
-Time 449: Sent PID 137 to CORE 0
-Time 449: PID 126 exits system
-Time 449: Received PID 137 on CORE 0
-Time 449: PID 256 enters system
-Time 449: Pushed PID 256 to CPU queue
-Time 449: PID 284 enters system
-Time 449: Pushed PID 284 to CPU queue
-Time 449: Finished PID 138 on DISK 0
-Time 449: PID 138 enters system
-Time 449: Pushed PID 138 to CPU queue
-Time 452: Finished PID 137 on CORE 0
-Time 452: Pulling PID 180 off of CPU queue...
-Time 452: Sent PID 180 to CORE 0
-Time 452: PID 137 exits system
-Time 452: Received PID 180 on CORE 0
-Time 452: PID 278 enters system
-Time 452: Pushed PID 278 to CPU queue
-Time 452: PID 264 enters system
-Time 452: Pushed PID 264 to CPU queue
-Time 452: PID 388 enters system
-Time 452: Pushed PID 388 to CPU queue
-Time 452: PID 344 enters system
-Time 452: Pushed PID 344 to CPU queue
-Time 452: PID 282 enters system
-Time 452: Pushed PID 282 to CPU queue
-Time 452: PID 335 enters system
-Time 452: Pushed PID 335 to CPU queue
-Time 452: PID 289 enters system
-Time 452: Pushed PID 289 to CPU queue
-Time 452: PID 336 enters system
-Time 452: Pushed PID 336 to CPU queue
-Time 464: Finished PID 180 on CORE 0
-Time 464: Sent PID 180 to DISK 0
-Time 464: Pulling PID 190 off of CPU queue...
-Time 464: Sent PID 190 to CORE 0
-Time 464: Received PID 180 on DISK 0
-Time 464: Received PID 190 on CORE 0
-Time 464: PID 283 enters system
-Time 464: Pushed PID 283 to CPU queue
-Time 464: PID 352 enters system
-Time 464: Pushed PID 352 to CPU queue
-Time 464: PID 345 enters system
-Time 464: Pushed PID 345 to CPU queue
-Time 464: PID 305 enters system
-Time 464: Pushed PID 305 to CPU queue
-Time 464: PID 381 enters system
-Time 464: Pushed PID 381 to CPU queue
-Time 464: PID 349 enters system
-Time 464: Pushed PID 349 to CPU queue
-Time 464: PID 401 enters system
-Time 464: Pushed PID 401 to CPU queue
-Time 470: Finished PID 190 on CORE 0
-Time 470: Pulling PID 114 off of CPU queue...
-Time 470: Sent PID 114 to CORE 0
-Time 470: PID 190 exits system
-Time 470: Received PID 114 on CORE 0
-Time 470: PID 315 enters system
-Time 470: Pushed PID 315 to CPU queue
-Time 470: PID 314 enters system
-Time 470: Pushed PID 314 to CPU queue
-Time 470: PID 416 enters system
-Time 470: Pushed PID 416 to CPU queue
-Time 470: PID 409 enters system
-Time 470: Pushed PID 409 to CPU queue
-Time 470: Finished PID 180 on DISK 0
-Time 470: PID 180 enters system
-Time 470: Pushed PID 180 to CPU queue
-Time 481: Finished PID 114 on CORE 0
-Time 481: Pulling PID 67 off of CPU queue...
-Time 481: Sent PID 67 to CORE 0
-Time 481: PID 114 exits system
-Time 481: Received PID 67 on CORE 0
-Time 481: PID 422 enters system
-Time 481: Pushed PID 422 to CPU queue
-Time 481: PID 318 enters system
-Time 481: Pushed PID 318 to CPU queue
-Time 481: PID 308 enters system
-Time 481: Pushed PID 308 to CPU queue
-Time 485: Finished PID 67 on CORE 0
-Time 485: Pulling PID 130 off of CPU queue...
-Time 485: Sent PID 130 to CORE 0
-Time 485: PID 67 exits system
-Time 485: Received PID 130 on CORE 0
-Time 485: PID 328 enters system
-Time 485: Pushed PID 328 to CPU queue
-Time 485: PID 387 enters system
-Time 485: Pushed PID 387 to CPU queue
-Time 487: Finished PID 130 on CORE 0
-Time 487: Sent PID 130 to DISK 0
-Time 487: Pulling PID 211 off of CPU queue...
-Time 487: Sent PID 211 to CORE 0
-Time 487: Received PID 130 on DISK 0
-Time 487: Received PID 211 on CORE 0
-Time 487: PID 307 enters system
-Time 487: Pushed PID 307 to CPU queue
-Time 487: Finished PID 130 on DISK 0
-Time 487: PID 130 enters system
-Time 487: Pushed PID 130 to CPU queue
-Time 494: Finished PID 211 on CORE 0
-Time 494: Sent PID 211 to DISK 0
-Time 494: Pulling PID 189 off of CPU queue...
-Time 494: Sent PID 189 to CORE 0
-Time 494: Received PID 211 on DISK 0
-Time 494: Received PID 189 on CORE 0
-Time 494: PID 420 enters system
-Time 494: Pushed PID 420 to CPU queue
-Time 499: Finished PID 189 on CORE 0
-Time 499: Sent PID 189 to DISK 1
-Time 499: Pulling PID 159 off of CPU queue...
-Time 499: Sent PID 159 to CORE 0
-Time 499: Received PID 189 on DISK 1
-Time 499: Received PID 159 on CORE 0
-Time 499: PID 415 enters system
-Time 499: Pushed PID 415 to CPU queue
-Time 499: PID 393 enters system
-Time 499: Pushed PID 393 to CPU queue
-Time 499: PID 382 enters system
-Time 499: Pushed PID 382 to CPU queue
-Time 499: Finished PID 211 on DISK 0
-Time 499: PID 211 enters system
-Time 499: Pushed PID 211 to CPU queue
-Time 499: PID 446 enters system
-Time 499: Pushed PID 446 to CPU queue
-Time 499: PID 337 enters system
-Time 499: Pushed PID 337 to CPU queue
-Time 504: Finished PID 159 on CORE 0
-Time 504: Sent PID 159 to DISK 0
-Time 504: Pulling PID 195 off of CPU queue...
-Time 504: Sent PID 195 to CORE 0
-Time 504: Received PID 159 on DISK 0
-Time 504: Received PID 195 on CORE 0
-Time 504: PID 448 enters system
-Time 504: Pushed PID 448 to CPU queue
-Time 504: Finished PID 189 on DISK 1
-Time 504: PID 189 enters system
-Time 504: Pushed PID 189 to CPU queue
-Time 504: PID 394 enters system
-Time 504: Pushed PID 394 to CPU queue
-Time 509: Finished PID 195 on CORE 0
-Time 509: Pulling PID 184 off of CPU queue...
-Time 509: Sent PID 184 to CORE 0
-Time 509: PID 195 exits system
-Time 509: Received PID 184 on CORE 0
-Time 509: PID 365 enters system
-Time 509: Pushed PID 365 to CPU queue
-Time 509: PID 430 enters system
-Time 509: Pushed PID 430 to CPU queue
-Time 509: PID 419 enters system
-Time 509: Pushed PID 419 to CPU queue
-Time 509: PID 353 enters system
-Time 509: Pushed PID 353 to CPU queue
-Time 518: Finished PID 184 on CORE 0
-Time 518: Sent PID 184 to DISK 1
-Time 518: Pulling PID 122 off of CPU queue...
-Time 518: Sent PID 122 to CORE 0
-Time 518: Received PID 184 on DISK 1
-Time 518: PID 447 enters system
-Time 518: Pushed PID 447 to CPU queue
-Time 518: Received PID 122 on CORE 0
-Time 518: PID 452 enters system
-Time 518: Pushed PID 452 to CPU queue
-Time 518: Finished PID 159 on DISK 0
-Time 518: PID 159 enters system
-Time 518: Pushed PID 159 to CPU queue
-Time 518: PID 392 enters system
-Time 518: Pushed PID 392 to CPU queue
-Time 518: PID 374 enters system
-Time 518: Pushed PID 374 to CPU queue
-Time 524: Finished PID 122 on CORE 0
-Time 524: Pulling PID 41 off of CPU queue...
-Time 524: Sent PID 41 to CORE 0
-Time 524: PID 358 enters system
-Time 524: Pushed PID 358 to CPU queue
-Time 524: PID 122 exits system
-Time 524: Received PID 41 on CORE 0
-Time 524: PID 366 enters system
-Time 524: Pushed PID 366 to CPU queue
-Time 524: PID 354 enters system
-Time 524: Pushed PID 354 to CPU queue
-Time 524: Finished PID 184 on DISK 1
-Time 524: PID 184 enters system
-Time 524: Pushed PID 184 to CPU queue
-Time 527: Finished PID 41 on CORE 0
-Time 527: Pulling PID 145 off of CPU queue...
-Time 527: Sent PID 145 to CORE 0
-Time 527: PID 41 exits system
-Time 527: Received PID 145 on CORE 0
-Time 527: PID 411 enters system
-Time 527: Pushed PID 411 to CPU queue
-Time 527: PID 375 enters system
-Time 527: Pushed PID 375 to CPU queue
-Time 530: Finished PID 145 on CORE 0
-Time 530: Pulling PID 218 off of CPU queue...
-Time 530: Sent PID 218 to CORE 0
-Time 530: PID 145 exits system
-Time 530: Received PID 218 on CORE 0
-Time 530: PID 384 enters system
-Time 530: Pushed PID 384 to CPU queue
-Time 530: PID 472 enters system
-Time 530: Pushed PID 472 to CPU queue
-Time 533: Finished PID 218 on CORE 0
-Time 533: Sent PID 218 to DISK 0
-Time 533: Pulling PID 98 off of CPU queue...
-Time 533: Sent PID 98 to CORE 0
-Time 533: Received PID 218 on DISK 0
-Time 533: Received PID 98 on CORE 0
-Time 533: PID 439 enters system
-Time 533: Pushed PID 439 to CPU queue
-Time 533: PID 380 enters system
-Time 533: Pushed PID 380 to CPU queue
-Time 533: PID 489 enters system
-Time 533: Pushed PID 489 to CPU queue
-Time 533: PID 481 enters system
-Time 533: Pushed PID 481 to CPU queue
-Time 545: Finished PID 98 on CORE 0
-Time 545: Sent PID 98 to DISK 1
-Time 545: Pulling PID 161 off of CPU queue...
-Time 545: Sent PID 161 to CORE 0
-Time 545: Received PID 98 on DISK 1
-Time 545: PID 408 enters system
-Time 545: Pushed PID 408 to CPU queue
-Time 545: Received PID 161 on CORE 0
-Time 545: Finished PID 218 on DISK 0
-Time 545: PID 218 enters system
-Time 545: Pushed PID 218 to CPU queue
-Time 546: Finished PID 161 on CORE 0
-Time 546: Sent PID 161 to DISK 0
-Time 546: Pulling PID 241 off of CPU queue...
-Time 546: Sent PID 241 to CORE 0
-Time 546: Received PID 161 on DISK 0
-Time 546: PID 497 enters system
-Time 546: Pushed PID 497 to CPU queue
-Time 546: Received PID 241 on CORE 0
-Time 547: Finished PID 241 on CORE 0
-Time 547: Pushed PID 241 to DISK 0 queue
-Time 547: Pulling PID 219 off of CPU queue...
-Time 547: Sent PID 219 to CORE 0
-Time 547: Received PID 219 on CORE 0
-Time 547: PID 431 enters system
-Time 547: Pushed PID 431 to CPU queue
-Time 547: Finished PID 98 on DISK 1
-Time 547: PID 98 enters system
-Time 547: Pushed PID 98 to CPU queue
-Time 547: PID 490 enters system
-Time 547: Pushed PID 490 to CPU queue
-Time 547: PID 474 enters system
-Time 547: Pushed PID 474 to CPU queue
-Time 555: Finished PID 219 on CORE 0
-Time 555: Sent PID 219 to DISK 1
-Time 555: Pulling PID 193 off of CPU queue...
-Time 555: Sent PID 193 to CORE 0
-Time 555: Received PID 219 on DISK 1
-Time 555: Received PID 193 on CORE 0
-Time 555: PID 526 enters system
-Time 555: Pushed PID 526 to CPU queue
-Time 556: Finished PID 193 on CORE 0
-Time 556: Pushed PID 193 to DISK 1 queue
-Time 556: Pulling PID 212 off of CPU queue...
-Time 556: Sent PID 212 to CORE 0
-Time 556: Received PID 212 on CORE 0
-Time 557: Finished PID 212 on CORE 0
-Time 557: Pushed PID 212 to DISK 0 queue
-Time 557: Pulling PID 181 off of CPU queue...
-Time 557: Sent PID 181 to CORE 0
-Time 557: Received PID 181 on CORE 0
-Time 557: PID 383 enters system
-Time 557: Pushed PID 383 to CPU queue
-Time 557: PID 440 enters system
-Time 557: Pushed PID 440 to CPU queue
-Time 557: PID 395 enters system
-Time 557: Pushed PID 395 to CPU queue
-Time 557: Finished PID 161 on DISK 0
-Time 557: Pulling PID 241 off of DISK 0 queue...
-Time 557: Sent PID 241 to DISK 0
-Time 557: Received PID 241 on DISK 0
-Time 557: PID 161 enters system
-Time 557: Pushed PID 161 to CPU queue
-Time 557: PID 458 enters system
-Time 557: Pushed PID 458 to CPU queue
-Time 557: PID 417 enters system
-Time 557: Pushed PID 417 to CPU queue
-Time 557: Finished PID 219 on DISK 1
-Time 557: Pulling PID 193 off of DISK 1 queue...
-Time 557: Sent PID 193 to DISK 1
-Time 557: Received PID 193 on DISK 1
-Time 557: PID 219 enters system
-Time 557: Pushed PID 219 to CPU queue
-Time 568: Finished PID 181 on CORE 0
-Time 568: Pushed PID 181 to DISK 1 queue
-Time 568: Pulling PID 160 off of CPU queue...
-Time 568: Sent PID 160 to CORE 0
-Time 568: Received PID 160 on CORE 0
-Time 568: PID 470 enters system
-Time 568: Pushed PID 470 to CPU queue
-Time 568: Finished PID 193 on DISK 1
-Time 568: Pulling PID 181 off of DISK 1 queue...
-Time 568: Sent PID 181 to DISK 1
-Time 568: Received PID 181 on DISK 1
-Time 568: PID 193 enters system
-Time 568: Pushed PID 193 to CPU queue
-Time 568: Finished PID 181 on DISK 1
-Time 568: PID 181 enters system
-Time 568: Pushed PID 181 to CPU queue
-Time 568: Finished PID 241 on DISK 0
-Time 568: Pulling PID 212 off of DISK 0 queue...
-Time 568: Sent PID 212 to DISK 0
-Time 568: Received PID 212 on DISK 0
-Time 568: PID 241 enters system
-Time 568: Pushed PID 241 to CPU queue
-Time 568: PID 460 enters system
-Time 568: Pushed PID 460 to CPU queue
-Time 568: PID 568 enters system
-Time 568: Pushed PID 568 to CPU queue
-Time 568: PID 558 enters system
-Time 568: Pushed PID 558 to CPU queue
-Time 580: Finished PID 160 on CORE 0
-Time 580: Pulling PID 131 off of CPU queue...
-Time 580: Sent PID 131 to CORE 0
-Time 580: PID 160 exits system
-Time 580: Received PID 131 on CORE 0
-Time 580: PID 556 enters system
-Time 580: Pushed PID 556 to CPU queue
-Time 580: PID 495 enters system
-Time 580: Pushed PID 495 to CPU queue
-Time 580: Finished PID 212 on DISK 0
-Time 580: PID 212 enters system
-Time 580: Pushed PID 212 to CPU queue
-Time 580: PID 453 enters system
-Time 580: Pushed PID 453 to CPU queue
-Time 580: PID 400 enters system
-Time 580: Pushed PID 400 to CPU queue
-Time 586: Finished PID 131 on CORE 0
-Time 586: Sent PID 131 to DISK 0
-Time 586: Pulling PID 179 off of CPU queue...
-Time 586: Sent PID 179 to CORE 0
-Time 586: Received PID 131 on DISK 0
-Time 586: Received PID 179 on CORE 0
-Time 586: PID 531 enters system
-Time 586: Pushed PID 531 to CPU queue
-Time 586: PID 509 enters system
-Time 586: Pushed PID 509 to CPU queue
-Time 586: PID 575 enters system
-Time 586: Pushed PID 575 to CPU queue
-Time 586: PID 427 enters system
-Time 586: Pushed PID 427 to CPU queue
-Time 586: PID 524 enters system
-Time 586: Pushed PID 524 to CPU queue
-Time 586: PID 432 enters system
-Time 586: Pushed PID 432 to CPU queue
-Time 586: PID 433 enters system
-Time 586: Pushed PID 433 to CPU queue
-Time 592: Finished PID 179 on CORE 0
-Time 592: Sent PID 179 to DISK 1
-Time 592: Pulling PID 205 off of CPU queue...
-Time 592: Sent PID 205 to CORE 0
-Time 592: Received PID 179 on DISK 1
-Time 592: Received PID 205 on CORE 0
-Time 592: PID 471 enters system
-Time 592: Pushed PID 471 to CPU queue
-Time 592: PID 525 enters system
-Time 592: Pushed PID 525 to CPU queue
-Time 592: PID 538 enters system
-Time 592: Pushed PID 538 to CPU queue
-Time 596: Finished PID 205 on CORE 0
-Time 596: Pushed PID 205 to DISK 0 queue
-Time 596: Pulling PID 248 off of CPU queue...
-Time 596: Sent PID 248 to CORE 0
-Time 596: Received PID 248 on CORE 0
-Time 596: PID 429 enters system
-Time 596: Pushed PID 429 to CPU queue
-Time 596: PID 544 enters system
-Time 596: Pushed PID 544 to CPU queue
-Time 596: PID 475 enters system
-Time 596: Pushed PID 475 to CPU queue
-Time 596: PID 437 enters system
-Time 596: Pushed PID 437 to CPU queue
-Time 596: Finished PID 131 on DISK 0
-Time 596: Pulling PID 205 off of DISK 0 queue...
-Time 596: Sent PID 205 to DISK 0
-Time 596: Received PID 205 on DISK 0
-Time 596: PID 131 enters system
-Time 596: Pushed PID 131 to CPU queue
-Time 596: PID 418 enters system
-Time 596: Pushed PID 418 to CPU queue
-Time 596: PID 546 enters system
-Time 596: Pushed PID 546 to CPU queue
-Time 596: PID 534 enters system
-Time 596: Pushed PID 534 to CPU queue
-Time 596: PID 421 enters system
-Time 596: Pushed PID 421 to CPU queue
-Time 596: Finished PID 179 on DISK 1
-Time 596: PID 179 enters system
-Time 596: Pushed PID 179 to CPU queue
-Time 596: PID 542 enters system
-Time 596: Pushed PID 542 to CPU queue
-Time 596: PID 557 enters system
-Time 596: Pushed PID 557 to CPU queue
-Time 608: Finished PID 248 on CORE 0
-Time 608: Pulling PID 27 off of CPU queue...
-Time 608: Sent PID 27 to CORE 0
-Time 608: PID 248 exits system
-Time 608: Received PID 27 on CORE 0
-Time 608: PID 551 enters system
-Time 608: Pushed PID 551 to CPU queue
-Time 608: PID 483 enters system
-Time 608: Pushed PID 483 to CPU queue
-Time 608: PID 527 enters system
-Time 608: Pushed PID 527 to CPU queue
-Time 608: Finished PID 205 on DISK 0
-Time 608: PID 205 enters system
-Time 608: Pushed PID 205 to CPU queue
-Time 608: PID 428 enters system
-Time 608: Pushed PID 428 to CPU queue
-Time 608: PID 604 enters system
-Time 608: Pushed PID 604 to CPU queue
-Time 608: PID 484 enters system
-Time 608: Pushed PID 484 to CPU queue
-Time 608: PID 442 enters system
-Time 608: Pushed PID 442 to CPU queue
-Time 608: PID 603 enters system
-Time 608: Pushed PID 603 to CPU queue
-Time 608: PID 506 enters system
-Time 608: Pushed PID 506 to CPU queue
-Time 608: PID 588 enters system
-Time 608: Pushed PID 588 to CPU queue
-Time 615: Finished PID 27 on CORE 0
-Time 615: Sent PID 27 to DISK 0
-Time 615: Pulling PID 233 off of CPU queue...
-Time 615: Sent PID 233 to CORE 0
-Time 615: Received PID 27 on DISK 0
-Time 615: PID 599 enters system
-Time 615: Pushed PID 599 to CPU queue
-Time 615: Received PID 233 on CORE 0
-Time 615: PID 438 enters system
-Time 615: Pushed PID 438 to CPU queue
-Time 615: PID 593 enters system
-Time 615: Pushed PID 593 to CPU queue
-Time 615: PID 564 enters system
-Time 615: Pushed PID 564 to CPU queue
-Time 615: PID 571 enters system
-Time 615: Pushed PID 571 to CPU queue
-Time 622: Finished PID 233 on CORE 0
-Time 622: Sent PID 233 to DISK 1
-Time 622: Pulling PID 187 off of CPU queue...
-Time 622: Sent PID 187 to CORE 0
-Time 622: Received PID 233 on DISK 1
-Time 622: Received PID 187 on CORE 0
-Time 622: PID 519 enters system
-Time 622: Pushed PID 519 to CPU queue
-Time 622: PID 513 enters system
-Time 622: Pushed PID 513 to CPU queue
-Time 622: PID 623 enters system
-Time 622: Pushed PID 623 to CPU queue
-Time 622: PID 609 enters system
-Time 622: Pushed PID 609 to CPU queue
-Time 622: PID 625 enters system
-Time 622: Pushed PID 625 to CPU queue
-Time 622: PID 488 enters system
-Time 622: Pushed PID 488 to CPU queue
-Time 622: Finished PID 233 on DISK 1
-Time 622: PID 233 enters system
-Time 622: Pushed PID 233 to CPU queue
-Time 622: PID 563 enters system
-Time 622: Pushed PID 563 to CPU queue
-Time 622: Finished PID 27 on DISK 0
-Time 622: PID 27 enters system
-Time 622: Pushed PID 27 to CPU queue
-Time 634: Finished PID 187 on CORE 0
-Time 634: Pulling PID 266 off of CPU queue...
-Time 634: Sent PID 266 to CORE 0
-Time 634: PID 187 exits system
-Time 634: Received PID 266 on CORE 0
-Time 634: PID 637 enters system
-Time 634: Pushed PID 637 to CPU queue
-Time 634: PID 500 enters system
-Time 634: Pushed PID 500 to CPU queue
-Time 634: PID 622 enters system
-Time 634: Pushed PID 622 to CPU queue
-Time 634: PID 504 enters system
-Time 634: Pushed PID 504 to CPU queue
-Time 638: Finished PID 266 on CORE 0
-Time 638: Pulling PID 175 off of CPU queue...
-Time 638: Sent PID 175 to CORE 0
-Time 638: PID 266 exits system
-Time 638: Received PID 175 on CORE 0
-Time 638: PID 465 enters system
-Time 638: Pushed PID 465 to CPU queue
-Time 638: PID 640 enters system
-Time 638: Pushed PID 640 to CPU queue
-Time 638: PID 476 enters system
-Time 638: Pushed PID 476 to CPU queue
-Time 638: PID 610 enters system
-Time 638: Pushed PID 610 to CPU queue
-Time 638: PID 491 enters system
-Time 638: Pushed PID 491 to CPU queue
-Time 638: PID 629 enters system
-Time 638: Pushed PID 629 to CPU queue
-Time 638: PID 562 enters system
-Time 638: Pushed PID 562 to CPU queue
-Time 638: PID 634 enters system
-Time 638: Pushed PID 634 to CPU queue
-Time 638: PID 591 enters system
-Time 638: Pushed PID 591 to CPU queue
-Time 638: PID 668 enters system
-Time 638: Pushed PID 668 to CPU queue
-Time 649: Finished PID 175 on CORE 0
-Time 649: Pulling PID 268 off of CPU queue...
-Time 649: Sent PID 268 to CORE 0
-Time 649: PID 545 enters system
-Time 649: Pushed PID 545 to CPU queue
-Time 649: PID 175 exits system
-Time 649: Received PID 268 on CORE 0
-Time 649: PID 611 enters system
-Time 649: Pushed PID 611 to CPU queue
-Time 649: PID 514 enters system
-Time 649: Pushed PID 514 to CPU queue
-Time 649: PID 581 enters system
-Time 649: Pushed PID 581 to CPU queue
-Time 649: PID 602 enters system
-Time 649: Pushed PID 602 to CPU queue
-Time 649: PID 643 enters system
-Time 649: Pushed PID 643 to CPU queue
-Time 649: PID 518 enters system
-Time 649: Pushed PID 518 to CPU queue
-Time 649: PID 652 enters system
-Time 649: Pushed PID 652 to CPU queue
-Time 661: Finished PID 268 on CORE 0
-Time 661: Pulling PID 270 off of CPU queue...
-Time 661: Sent PID 270 to CORE 0
-Time 661: PID 499 enters system
-Time 661: Pushed PID 499 to CPU queue
-Time 661: PID 268 exits system
-Time 661: Received PID 270 on CORE 0
-Time 661: PID 577 enters system
-Time 661: Pushed PID 577 to CPU queue
-Time 661: PID 628 enters system
-Time 661: Pushed PID 628 to CPU queue
-Time 664: Finished PID 270 on CORE 0
-Time 664: Sent PID 270 to DISK 0
-Time 664: Pulling PID 188 off of CPU queue...
-Time 664: Sent PID 188 to CORE 0
-Time 664: Received PID 270 on DISK 0
-Time 664: Received PID 188 on CORE 0
-Time 664: PID 651 enters system
-Time 664: Pushed PID 651 to CPU queue
-Time 664: PID 501 enters system
-Time 664: Pushed PID 501 to CPU queue
-Time 670: Finished PID 188 on CORE 0
-Time 670: Sent PID 188 to DISK 1
-Time 670: Pulling PID 240 off of CPU queue...
-Time 670: Sent PID 240 to CORE 0
-Time 670: Received PID 188 on DISK 1
-Time 670: PID 648 enters system
-Time 670: Pushed PID 648 to CPU queue
-Time 670: Received PID 240 on CORE 0
-Time 670: PID 686 enters system
-Time 670: Pushed PID 686 to CPU queue
-Time 670: PID 660 enters system
-Time 670: Pushed PID 660 to CPU queue
-Time 670: PID 600 enters system
-Time 670: Pushed PID 600 to CPU queue
-Time 670: PID 507 enters system
-Time 670: Pushed PID 507 to CPU queue
-Time 670: PID 592 enters system
-Time 670: Pushed PID 592 to CPU queue
-Time 670: PID 598 enters system
-Time 670: Pushed PID 598 to CPU queue
-Time 677: Finished PID 240 on CORE 0
-Time 677: Pulling PID 72 off of CPU queue...
-Time 677: Sent PID 72 to CORE 0
-Time 677: PID 240 exits system
-Time 677: Received PID 72 on CORE 0
-Time 677: Finished PID 270 on DISK 0
-Time 677: PID 270 enters system
-Time 677: Pushed PID 270 to CPU queue
-Time 677: PID 699 enters system
-Time 677: Pushed PID 699 to CPU queue
-Time 677: PID 627 enters system
-Time 677: Pushed PID 627 to CPU queue
-Time 677: PID 688 enters system
-Time 677: Pushed PID 688 to CPU queue
-Time 677: Finished PID 188 on DISK 1
-Time 677: PID 188 enters system
-Time 677: Pushed PID 188 to CPU queue
-Time 684: Finished PID 72 on CORE 0
-Time 684: Sent PID 72 to DISK 0
-Time 684: Pulling PID 228 off of CPU queue...
-Time 684: Sent PID 228 to CORE 0
-Time 684: Received PID 72 on DISK 0
-Time 684: Received PID 228 on CORE 0
-Time 684: PID 662 enters system
-Time 684: Pushed PID 662 to CPU queue
-Time 684: PID 601 enters system
-Time 684: Pushed PID 601 to CPU queue
-Time 691: Finished PID 228 on CORE 0
-Time 691: Pulling PID 172 off of CPU queue...
-Time 691: Sent PID 172 to CORE 0
-Time 691: PID 228 exits system
-Time 691: Received PID 172 on CORE 0
-Time 691: PID 615 enters system
-Time 691: Pushed PID 615 to CPU queue
-Time 691: Finished PID 72 on DISK 0
-Time 691: PID 72 enters system
-Time 691: Pushed PID 72 to CPU queue
-Time 691: PID 693 enters system
-Time 691: Pushed PID 693 to CPU queue
-Time 691: PID 658 enters system
-Time 691: Pushed PID 658 to CPU queue
-Time 691: PID 682 enters system
-Time 691: Pushed PID 682 to CPU queue
-Time 691: PID 635 enters system
-Time 691: Pushed PID 635 to CPU queue
-Time 691: PID 687 enters system
-Time 691: Pushed PID 687 to CPU queue
-Time 691: PID 683 enters system
-Time 691: Pushed PID 683 to CPU queue
-Time 691: PID 584 enters system
-Time 691: Pushed PID 584 to CPU queue
-Time 691: PID 633 enters system
-Time 691: Pushed PID 633 to CPU queue
-Time 691: PID 621 enters system
-Time 691: Pushed PID 621 to CPU queue
-Time 691: PID 698 enters system
-Time 691: Pushed PID 698 to CPU queue
-Time 691: PID 673 enters system
-Time 691: Pushed PID 673 to CPU queue
-Time 703: Finished PID 172 on CORE 0
-Time 703: Sent PID 172 to DISK 0
-Time 703: Pulling PID 279 off of CPU queue...
-Time 703: Sent PID 279 to CORE 0
-Time 703: Received PID 172 on DISK 0
-Time 703: Received PID 279 on CORE 0
-Time 703: PID 583 enters system
-Time 703: Pushed PID 583 to CPU queue
-Time 703: PID 702 enters system
-Time 703: Pushed PID 702 to CPU queue
-Time 703: PID 661 enters system
-Time 703: Pushed PID 661 to CPU queue
-Time 703: Finished PID 172 on DISK 0
-Time 703: PID 172 enters system
-Time 703: Pushed PID 172 to CPU queue
-Time 709: Finished PID 279 on CORE 0
-Time 709: Sent PID 279 to DISK 0
-Time 709: Pulling PID 232 off of CPU queue...
-Time 709: Sent PID 232 to CORE 0
-Time 709: Received PID 279 on DISK 0
-Time 709: Received PID 232 on CORE 0
-Time 709: PID 679 enters system
-Time 709: Pushed PID 679 to CPU queue
-Time 709: PID 720 enters system
-Time 709: Pushed PID 720 to CPU queue
-Time 709: PID 748 enters system
-Time 709: Pushed PID 748 to CPU queue
-Time 709: PID 582 enters system
-Time 709: Pushed PID 582 to CPU queue
-Time 709: PID 589 enters system
-Time 709: Pushed PID 589 to CPU queue
-Time 709: PID 717 enters system
-Time 709: Pushed PID 717 to CPU queue
-Time 709: PID 705 enters system
-Time 709: Pushed PID 705 to CPU queue
-Time 709: PID 744 enters system
-Time 709: Pushed PID 744 to CPU queue
-Time 709: PID 663 enters system
-Time 709: Pushed PID 663 to CPU queue
-Time 720: Finished PID 232 on CORE 0
-Time 720: Sent PID 232 to DISK 1
-Time 720: Pulling PID 210 off of CPU queue...
-Time 720: Sent PID 210 to CORE 0
-Time 720: Received PID 232 on DISK 1
-Time 720: Received PID 210 on CORE 0
-Time 720: PID 624 enters system
-Time 720: Pushed PID 624 to CPU queue
-Time 720: PID 653 enters system
-Time 720: Pushed PID 653 to CPU queue
-Time 720: PID 616 enters system
-Time 720: Pushed PID 616 to CPU queue
-Time 720: Finished PID 279 on DISK 0
-Time 720: PID 279 enters system
-Time 720: Pushed PID 279 to CPU queue
-Time 720: PID 696 enters system
-Time 720: Pushed PID 696 to CPU queue
-Time 720: PID 642 enters system
-Time 720: Pushed PID 642 to CPU queue
-Time 720: PID 715 enters system
-Time 720: Pushed PID 715 to CPU queue
-Time 720: PID 638 enters system
-Time 720: Pushed PID 638 to CPU queue
-Time 729: Finished PID 210 on CORE 0
-Time 729: Sent PID 210 to DISK 0
-Time 729: Pulling PID 281 off of CPU queue...
-Time 729: Sent PID 281 to CORE 0
-Time 729: Received PID 210 on DISK 0
-Time 729: Received PID 281 on CORE 0
-Time 729: PID 675 enters system
-Time 729: Pushed PID 675 to CPU queue
-Time 729: PID 732 enters system
-Time 729: Pushed PID 732 to CPU queue
-Time 729: PID 754 enters system
-Time 729: Pushed PID 754 to CPU queue
-Time 729: PID 617 enters system
-Time 729: Pushed PID 617 to CPU queue
-Time 729: PID 697 enters system
-Time 729: Pushed PID 697 to CPU queue
-Time 729: PID 665 enters system
-Time 729: Pushed PID 665 to CPU queue
-Time 729: PID 672 enters system
-Time 729: Pushed PID 672 to CPU queue
-Time 729: PID 614 enters system
-Time 729: Pushed PID 614 to CPU queue
-Time 729: Finished PID 232 on DISK 1
-Time 729: PID 232 enters system
-Time 729: Pushed PID 232 to CPU queue
-Time 739: Finished PID 281 on CORE 0
-Time 739: Pulling PID 153 off of CPU queue...
-Time 739: Sent PID 153 to CORE 0
-Time 739: PID 281 exits system
-Time 739: Received PID 153 on CORE 0
-Time 739: PID 691 enters system
-Time 739: Pushed PID 691 to CPU queue
-Time 739: PID 650 enters system
-Time 739: Pushed PID 650 to CPU queue
-Time 739: PID 641 enters system
-Time 739: Pushed PID 641 to CPU queue
-Time 739: PID 770 enters system
-Time 739: Pushed PID 770 to CPU queue
-Time 744: Finished PID 153 on CORE 0
-Time 744: Sent PID 153 to DISK 1
-Time 744: Pulling PID 217 off of CPU queue...
-Time 744: Sent PID 217 to CORE 0
-Time 744: Received PID 153 on DISK 1
-Time 744: Received PID 217 on CORE 0
-Time 744: PID 747 enters system
-Time 744: Pushed PID 747 to CPU queue
-Time 744: PID 644 enters system
-Time 744: Pushed PID 644 to CPU queue
-Time 744: PID 681 enters system
-Time 744: Pushed PID 681 to CPU queue
-Time 744: Finished PID 210 on DISK 0
-Time 744: PID 210 enters system
-Time 744: Pushed PID 210 to CPU queue
-Time 744: PID 776 enters system
-Time 744: Pushed PID 776 to CPU queue
-Time 744: PID 750 enters system
-Time 744: Pushed PID 750 to CPU queue
-Time 744: PID 728 enters system
-Time 744: Pushed PID 728 to CPU queue
-Time 744: PID 711 enters system
-Time 744: Pushed PID 711 to CPU queue
-Time 744: PID 710 enters system
-Time 744: Pushed PID 710 to CPU queue
-Time 744: PID 738 enters system
-Time 744: Pushed PID 738 to CPU queue
-Time 744: PID 639 enters system
-Time 744: Pushed PID 639 to CPU queue
-Time 744: Finished PID 153 on DISK 1
-Time 744: PID 153 enters system
-Time 744: Pushed PID 153 to CPU queue
-Time 744: PID 802 enters system
-Time 744: Pushed PID 802 to CPU queue
-Time 744: PID 659 enters system
-Time 744: Pushed PID 659 to CPU queue
-Time 744: PID 680 enters system
-Time 744: Pushed PID 680 to CPU queue
-Time 755: Finished PID 217 on CORE 0
-Time 755: Pulling PID 146 off of CPU queue...
-Time 755: Sent PID 146 to CORE 0
-Time 755: PID 217 exits system
-Time 755: Received PID 146 on CORE 0
-Time 755: PID 797 enters system
-Time 755: Pushed PID 797 to CPU queue
-Time 755: PID 737 enters system
-Time 755: Pushed PID 737 to CPU queue
-Time 755: PID 704 enters system
-Time 755: Pushed PID 704 to CPU queue
-Time 755: PID 764 enters system
-Time 755: Pushed PID 764 to CPU queue
-Time 755: PID 782 enters system
-Time 755: Pushed PID 782 to CPU queue
-Time 755: PID 666 enters system
-Time 755: Pushed PID 666 to CPU queue
-Time 755: PID 826 enters system
-Time 755: Pushed PID 826 to CPU queue
-Time 755: PID 831 enters system
-Time 755: Pushed PID 831 to CPU queue
-Time 755: PID 674 enters system
-Time 755: Pushed PID 674 to CPU queue
-Time 755: PID 730 enters system
-Time 755: Pushed PID 730 to CPU queue
-Time 767: Finished PID 146 on CORE 0
-Time 767: Pulling PID 276 off of CPU queue...
-Time 767: Sent PID 276 to CORE 0
-Time 767: PID 146 exits system
-Time 767: Received PID 276 on CORE 0
-Time 767: PID 718 enters system
-Time 767: Pushed PID 718 to CPU queue
-Time 767: PID 799 enters system
-Time 767: Pushed PID 799 to CPU queue
-Time 767: PID 727 enters system
-Time 767: Pushed PID 727 to CPU queue
-Time 767: PID 777 enters system
-Time 767: Pushed PID 777 to CPU queue
-Time 767: PID 755 enters system
-Time 767: Pushed PID 755 to CPU queue
-Time 776: Finished PID 276 on CORE 0
-Time 776: Sent PID 276 to DISK 0
-Time 776: Pulling PID 155 off of CPU queue...
-Time 776: Sent PID 155 to CORE 0
-Time 776: Received PID 276 on DISK 0
-Time 776: Received PID 155 on CORE 0
-Time 776: PID 745 enters system
-Time 776: Pushed PID 745 to CPU queue
-Time 776: PID 685 enters system
-Time 776: Pushed PID 685 to CPU queue
-Time 776: PID 774 enters system
-Time 776: Pushed PID 774 to CPU queue
-Time 776: PID 719 enters system
-Time 776: Pushed PID 719 to CPU queue
-Time 776: PID 749 enters system
-Time 776: Pushed PID 749 to CPU queue
-Time 776: PID 695 enters system
-Time 776: Pushed PID 695 to CPU queue
-Time 776: PID 800 enters system
-Time 776: Pushed PID 800 to CPU queue
-Time 776: PID 823 enters system
-Time 776: Pushed PID 823 to CPU queue
-Time 776: PID 821 enters system
-Time 776: Pushed PID 821 to CPU queue
-Time 776: PID 822 enters system
-Time 776: Pushed PID 822 to CPU queue
-Time 786: Finished PID 155 on CORE 0
-Time 786: Pulling PID 267 off of CPU queue...
-Time 786: Sent PID 267 to CORE 0
-Time 786: PID 155 exits system
-Time 786: Received PID 267 on CORE 0
-Time 786: PID 684 enters system
-Time 786: Pushed PID 684 to CPU queue
-Time 786: Finished PID 276 on DISK 0
-Time 786: PID 276 enters system
-Time 786: Pushed PID 276 to CPU queue
-Time 786: PID 721 enters system
-Time 786: Pushed PID 721 to CPU queue
-Time 786: PID 769 enters system
-Time 786: Pushed PID 769 to CPU queue
-Time 786: PID 694 enters system
-Time 786: Pushed PID 694 to CPU queue
-Time 786: PID 817 enters system
-Time 786: Pushed PID 817 to CPU queue
-Time 794: Finished PID 267 on CORE 0
-Time 794: Pulling PID 173 off of CPU queue...
-Time 794: Sent PID 173 to CORE 0
-Time 794: PID 267 exits system
-Time 794: Received PID 173 on CORE 0
-Time 794: PID 773 enters system
-Time 794: Pushed PID 773 to CPU queue
-Time 794: PID 830 enters system
-Time 794: Pushed PID 830 to CPU queue
-Time 794: PID 789 enters system
-Time 794: Pushed PID 789 to CPU queue
-Time 794: PID 860 enters system
-Time 794: Pushed PID 860 to CPU queue
-Time 794: PID 801 enters system
-Time 794: Pushed PID 801 to CPU queue
-Time 794: PID 786 enters system
-Time 794: Pushed PID 786 to CPU queue
-Time 794: PID 729 enters system
-Time 794: Pushed PID 729 to CPU queue
-Time 807: Finished PID 173 on CORE 0
-Time 807: Sent PID 173 to DISK 0
-Time 807: Pulling PID 252 off of CPU queue...
-Time 807: Sent PID 252 to CORE 0
-Time 807: Received PID 173 on DISK 0
-Time 807: Received PID 252 on CORE 0
-Time 807: PID 853 enters system
-Time 807: Pushed PID 853 to CPU queue
-Time 807: PID 827 enters system
-Time 807: Pushed PID 827 to CPU queue
-Time 807: PID 843 enters system
-Time 807: Pushed PID 843 to CPU queue
-Time 807: PID 760 enters system
-Time 807: Pushed PID 760 to CPU queue
-Time 807: PID 862 enters system
-Time 807: Pushed PID 862 to CPU queue
-Time 807: Finished PID 173 on DISK 0
-Time 807: PID 173 enters system
-Time 807: Pushed PID 173 to CPU queue
-Time 807: PID 875 enters system
-Time 807: Pushed PID 875 to CPU queue
-Time 807: PID 810 enters system
-Time 807: Pushed PID 810 to CPU queue
-Time 807: PID 865 enters system
-Time 807: Pushed PID 865 to CPU queue
-Time 807: PID 886 enters system
-Time 807: Pushed PID 886 to CPU queue
-Time 807: PID 787 enters system
-Time 807: Pushed PID 787 to CPU queue
-Time 807: PID 722 enters system
-Time 807: Pushed PID 722 to CPU queue
-Time 818: Finished PID 252 on CORE 0
-Time 818: Sent PID 252 to DISK 0
-Time 818: Pulling PID 303 off of CPU queue...
-Time 818: Sent PID 303 to CORE 0
-Time 818: Received PID 252 on DISK 0
-Time 818: Received PID 303 on CORE 0
-Time 818: PID 798 enters system
-Time 818: Pushed PID 798 to CPU queue
-Time 818: PID 752 enters system
-Time 818: Pushed PID 752 to CPU queue
-Time 821: Finished PID 303 on CORE 0
-Time 821: Pulling PID 272 off of CPU queue...
-Time 821: Sent PID 272 to CORE 0
-Time 821: PID 303 exits system
-Time 821: Received PID 272 on CORE 0
-Time 821: PID 849 enters system
-Time 821: Pushed PID 849 to CPU queue
-Time 821: PID 845 enters system
-Time 821: Pushed PID 845 to CPU queue
-Time 821: PID 783 enters system
-Time 821: Pushed PID 783 to CPU queue
-Time 821: PID 775 enters system
-Time 821: Pushed PID 775 to CPU queue
-Time 821: PID 820 enters system
-Time 821: Pushed PID 820 to CPU queue
-Time 821: Finished PID 252 on DISK 0
-Time 821: PID 252 enters system
-Time 821: Pushed PID 252 to CPU queue
-Time 821: PID 761 enters system
-Time 821: Pushed PID 761 to CPU queue
-Time 821: PID 795 enters system
-Time 821: Pushed PID 795 to CPU queue
-Time 821: PID 753 enters system
-Time 821: Pushed PID 753 to CPU queue
-Time 821: PID 751 enters system
-Time 821: Pushed PID 751 to CPU queue
-Time 833: Finished PID 272 on CORE 0
-Time 833: Sent PID 272 to DISK 0
-Time 833: Pulling PID 290 off of CPU queue...
-Time 833: Sent PID 290 to CORE 0
-Time 833: Received PID 272 on DISK 0
-Time 833: Received PID 290 on CORE 0
-Time 833: PID 844 enters system
-Time 833: Pushed PID 844 to CPU queue
-Time 833: PID 840 enters system
-Time 833: Pushed PID 840 to CPU queue
-Time 833: PID 858 enters system
-Time 833: Pushed PID 858 to CPU queue
-Time 833: PID 861 enters system
-Time 833: Pushed PID 861 to CPU queue
-Time 833: PID 841 enters system
-Time 833: Pushed PID 841 to CPU queue
+Time 4: Finished PID 2 on CORE 0
+Time 4: PID 2 exits system
+Time 4: PID 1 enters system
+Time 4: Sent PID 1 to CORE 0
+Time 4: Received PID 1 on CORE 0
+Time 7: Finished PID 1 on CORE 0
+Time 7: Sent PID 1 to DISK 0
+Time 7: Received PID 1 on DISK 0
+Time 7: Finished PID 1 on DISK 0
+Time 7: PID 1 enters system
+Time 7: Sent PID 1 to CORE 0
+Time 7: Received PID 1 on CORE 0
+Time 10: Finished PID 1 on CORE 0
+Time 10: Sent PID 1 to DISK 0
+Time 10: Received PID 1 on DISK 0
+Time 10: Finished PID 1 on DISK 0
+Time 10: PID 1 enters system
+Time 10: Sent PID 1 to CORE 0
+Time 10: Received PID 1 on CORE 0
+Time 21: Finished PID 1 on CORE 0
+Time 21: PID 1 exits system
+Time 21: PID 9 enters system
+Time 21: Sent PID 9 to CORE 0
+Time 21: Received PID 9 on CORE 0
+Time 25: Finished PID 9 on CORE 0
+Time 25: PID 9 exits system
+Time 25: PID 15 enters system
+Time 25: Sent PID 15 to CORE 0
+Time 25: Received PID 15 on CORE 0
+Time 31: Finished PID 15 on CORE 0
+Time 31: PID 15 exits system
+Time 31: PID 29 enters system
+Time 31: Sent PID 29 to CORE 0
+Time 31: Received PID 29 on CORE 0
+Time 41: Finished PID 29 on CORE 0
+Time 41: Sent PID 29 to DISK 0
+Time 41: Received PID 29 on DISK 0
+Time 41: Finished PID 29 on DISK 0
+Time 41: PID 29 enters system
+Time 41: Sent PID 29 to CORE 0
+Time 41: Received PID 29 on CORE 0
+Time 47: Finished PID 29 on CORE 0
+Time 47: Sent PID 29 to DISK 0
+Time 47: Received PID 29 on DISK 0
+Time 47: Finished PID 29 on DISK 0
+Time 47: PID 29 enters system
+Time 47: Sent PID 29 to CORE 0
+Time 47: Received PID 29 on CORE 0
+Time 56: Finished PID 29 on CORE 0
+Time 56: Sent PID 29 to DISK 0
+Time 56: Received PID 29 on DISK 0
+Time 56: Finished PID 29 on DISK 0
+Time 56: PID 29 enters system
+Time 56: Sent PID 29 to CORE 0
+Time 56: Received PID 29 on CORE 0
+Time 62: Finished PID 29 on CORE 0
+Time 62: Sent PID 29 to DISK 0
+Time 62: Received PID 29 on DISK 0
+Time 62: Finished PID 29 on DISK 0
+Time 62: PID 29 enters system
+Time 62: Sent PID 29 to CORE 0
+Time 62: Received PID 29 on CORE 0
+Time 72: Finished PID 29 on CORE 0
+Time 72: Sent PID 29 to DISK 0
+Time 72: Received PID 29 on DISK 0
+Time 72: PID 3 enters system
+Time 72: Sent PID 3 to CORE 0
+Time 72: Received PID 3 on CORE 0
+Time 74: Finished PID 3 on CORE 0
+Time 74: Sent PID 3 to DISK 1
+Time 74: Received PID 3 on DISK 1
+Time 74: PID 45 enters system
+Time 74: Sent PID 45 to CORE 0
+Time 74: Received PID 45 on CORE 0
+Time 74: Finished PID 29 on DISK 0
+Time 74: PID 29 enters system
+Time 74: Pushed PID 29 to CPU queue
+Time 86: Finished PID 45 on CORE 0
+Time 86: Sent PID 45 to DISK 0
+Time 86: Pulling PID 29 off of CPU queue...
+Time 86: Sent PID 29 to CORE 0
+Time 86: Received PID 45 on DISK 0
+Time 86: Received PID 29 on CORE 0
+Time 88: Finished PID 29 on CORE 0
+Time 88: Pushed PID 29 to DISK 0 queue
+Time 88: Finished PID 3 on DISK 1
+Time 88: PID 3 enters system
+Time 88: Sent PID 3 to CORE 0
+Time 88: Received PID 3 on CORE 0
+Time 88: PID 51 enters system
+Time 88: Pushed PID 51 to CPU queue
+Time 88: PID 67 enters system
+Time 88: Pushed PID 67 to CPU queue
+Time 100: Finished PID 3 on CORE 0
+Time 100: Sent PID 3 to DISK 1
+Time 100: Pulling PID 51 off of CPU queue...
+Time 100: Sent PID 51 to CORE 0
+Time 100: Received PID 3 on DISK 1
+Time 100: Received PID 51 on CORE 0
+Time 101: Finished PID 51 on CORE 0
+Time 101: Pushed PID 51 to DISK 1 queue
+Time 101: Pulling PID 67 off of CPU queue...
+Time 101: Sent PID 67 to CORE 0
+Time 101: Received PID 67 on CORE 0
+Time 101: Finished PID 45 on DISK 0
+Time 101: Pulling PID 29 off of DISK 0 queue...
+Time 101: Sent PID 29 to DISK 0
+Time 101: Received PID 29 on DISK 0
+Time 101: PID 45 enters system
+Time 101: Pushed PID 45 to CPU queue
+Time 101: PID 21 enters system
+Time 101: Pushed PID 21 to CPU queue
+Time 110: Finished PID 67 on CORE 0
+Time 110: Pulling PID 45 off of CPU queue...
+Time 110: Sent PID 45 to CORE 0
+Time 110: PID 25 enters system
+Time 110: Pushed PID 25 to CPU queue
+Time 110: PID 67 exits system
+Time 110: Received PID 45 on CORE 0
+Time 110: Finished PID 3 on DISK 1
+Time 110: Pulling PID 51 off of DISK 1 queue...
+Time 110: Sent PID 51 to DISK 1
+Time 110: Received PID 51 on DISK 1
+Time 110: PID 3 enters system
+Time 110: Pushed PID 3 to CPU queue
+Time 110: PID 57 enters system
+Time 110: Pushed PID 57 to CPU queue
+Time 110: Finished PID 29 on DISK 0
+Time 110: PID 29 enters system
+Time 110: Pushed PID 29 to CPU queue
+Time 114: Finished PID 45 on CORE 0
+Time 114: Sent PID 45 to DISK 0
+Time 114: Pulling PID 21 off of CPU queue...
+Time 114: Sent PID 21 to CORE 0
+Time 114: Received PID 45 on DISK 0
+Time 114: Received PID 21 on CORE 0
+Time 114: PID 5 enters system
+Time 114: Pushed PID 5 to CPU queue
+Time 114: PID 79 enters system
+Time 114: Pushed PID 79 to CPU queue
+Time 114: Finished PID 51 on DISK 1
+Time 114: PID 51 enters system
+Time 114: Pushed PID 51 to CPU queue
+Time 121: Finished PID 21 on CORE 0
+Time 121: Pulling PID 25 off of CPU queue...
+Time 121: Sent PID 25 to CORE 0
+Time 121: PID 21 exits system
+Time 121: Received PID 25 on CORE 0
+Time 121: Finished PID 45 on DISK 0
+Time 121: PID 45 enters system
+Time 121: Pushed PID 45 to CPU queue
+Time 132: Finished PID 25 on CORE 0
+Time 132: Sent PID 25 to DISK 0
+Time 132: Pulling PID 3 off of CPU queue...
+Time 132: Sent PID 3 to CORE 0
+Time 132: Received PID 25 on DISK 0
+Time 132: Received PID 3 on CORE 0
+Time 133: Finished PID 3 on CORE 0
+Time 133: Sent PID 3 to DISK 1
+Time 133: Pulling PID 57 off of CPU queue...
+Time 133: Sent PID 57 to CORE 0
+Time 133: Received PID 3 on DISK 1
+Time 133: Received PID 57 on CORE 0
+Time 133: Finished PID 25 on DISK 0
+Time 133: PID 25 enters system
+Time 133: Pushed PID 25 to CPU queue
+Time 139: Finished PID 57 on CORE 0
+Time 139: Sent PID 57 to DISK 0
+Time 139: Pulling PID 29 off of CPU queue...
+Time 139: Sent PID 29 to CORE 0
+Time 139: Received PID 57 on DISK 0
+Time 139: Received PID 29 on CORE 0
+Time 139: PID 94 enters system
+Time 139: Pushed PID 94 to CPU queue
+Time 139: PID 102 enters system
+Time 139: Pushed PID 102 to CPU queue
+Time 139: PID 80 enters system
+Time 139: Pushed PID 80 to CPU queue
+Time 139: PID 62 enters system
+Time 139: Pushed PID 62 to CPU queue
+Time 139: Finished PID 57 on DISK 0
+Time 139: PID 57 enters system
+Time 139: Pushed PID 57 to CPU queue
+Time 152: Finished PID 29 on CORE 0
+Time 152: Pulling PID 5 off of CPU queue...
+Time 152: Sent PID 5 to CORE 0
+Time 152: PID 29 exits system
+Time 152: Received PID 5 on CORE 0
+Time 152: Finished PID 3 on DISK 1
+Time 152: PID 3 enters system
+Time 152: Pushed PID 3 to CPU queue
+Time 152: PID 70 enters system
+Time 152: Pushed PID 70 to CPU queue
+Time 162: Finished PID 5 on CORE 0
+Time 162: Sent PID 5 to DISK 0
+Time 162: Pulling PID 79 off of CPU queue...
+Time 162: Sent PID 79 to CORE 0
+Time 162: Received PID 5 on DISK 0
+Time 162: Received PID 79 on CORE 0
+Time 162: PID 33 enters system
+Time 162: Pushed PID 33 to CPU queue
+Time 162: PID 132 enters system
+Time 162: Pushed PID 132 to CPU queue
+Time 162: PID 90 enters system
+Time 162: Pushed PID 90 to CPU queue
+Time 162: PID 131 enters system
+Time 162: Pushed PID 131 to CPU queue
+Time 162: PID 99 enters system
+Time 162: Pushed PID 99 to CPU queue
+Time 170: Finished PID 79 on CORE 0
+Time 170: Sent PID 79 to DISK 1
+Time 170: Pulling PID 51 off of CPU queue...
+Time 170: Sent PID 51 to CORE 0
+Time 170: Received PID 79 on DISK 1
+Time 170: Received PID 51 on CORE 0
+Time 175: Finished PID 51 on CORE 0
+Time 175: Pulling PID 45 off of CPU queue...
+Time 175: Sent PID 45 to CORE 0
+Time 175: PID 51 exits system
+Time 175: Received PID 45 on CORE 0
+Time 175: Finished PID 5 on DISK 0
+Time 175: PID 5 enters system
+Time 175: Pushed PID 5 to CPU queue
+Time 175: PID 100 enters system
+Time 175: Pushed PID 100 to CPU queue
+Time 181: Finished PID 45 on CORE 0
+Time 181: Pulling PID 25 off of CPU queue...
+Time 181: Sent PID 25 to CORE 0
+Time 181: PID 45 exits system
+Time 181: Received PID 25 on CORE 0
+Time 181: Finished PID 79 on DISK 1
+Time 181: PID 79 enters system
+Time 181: Pushed PID 79 to CPU queue
+Time 190: Finished PID 25 on CORE 0
+Time 190: Sent PID 25 to DISK 0
+Time 190: Pulling PID 94 off of CPU queue...
+Time 190: Sent PID 94 to CORE 0
+Time 190: Received PID 25 on DISK 0
+Time 190: Received PID 94 on CORE 0
+Time 190: PID 39 enters system
+Time 190: Pushed PID 39 to CPU queue
+Time 194: Finished PID 94 on CORE 0
+Time 194: Sent PID 94 to DISK 1
+Time 194: Pulling PID 102 off of CPU queue...
+Time 194: Sent PID 102 to CORE 0
+Time 194: Received PID 94 on DISK 1
+Time 194: Received PID 102 on CORE 0
+Time 196: Finished PID 102 on CORE 0
+Time 196: Pushed PID 102 to DISK 0 queue
+Time 196: Pulling PID 80 off of CPU queue...
+Time 196: Sent PID 80 to CORE 0
+Time 196: Received PID 80 on CORE 0
+Time 196: PID 149 enters system
+Time 196: Pushed PID 149 to CPU queue
+Time 196: PID 146 enters system
+Time 196: Pushed PID 146 to CPU queue
+Time 201: Finished PID 80 on CORE 0
+Time 201: Pulling PID 62 off of CPU queue...
+Time 201: Sent PID 62 to CORE 0
+Time 201: PID 80 exits system
+Time 201: Received PID 62 on CORE 0
+Time 201: Finished PID 25 on DISK 0
+Time 201: Pulling PID 102 off of DISK 0 queue...
+Time 201: Sent PID 102 to DISK 0
+Time 201: Received PID 102 on DISK 0
+Time 201: PID 25 enters system
+Time 201: Pushed PID 25 to CPU queue
+Time 201: PID 77 enters system
+Time 201: Pushed PID 77 to CPU queue
+Time 204: Finished PID 62 on CORE 0
+Time 204: Pushed PID 62 to DISK 0 queue
+Time 204: Pulling PID 57 off of CPU queue...
+Time 204: Sent PID 57 to CORE 0
+Time 204: Received PID 57 on CORE 0
+Time 204: Finished PID 94 on DISK 1
+Time 204: PID 94 enters system
+Time 204: Pushed PID 94 to CPU queue
+Time 204: Finished PID 102 on DISK 0
+Time 204: Pulling PID 62 off of DISK 0 queue...
+Time 204: Sent PID 62 to DISK 0
+Time 204: Received PID 62 on DISK 0
+Time 204: PID 102 enters system
+Time 204: Pushed PID 102 to CPU queue
+Time 209: Finished PID 57 on CORE 0
+Time 209: Sent PID 57 to DISK 1
+Time 209: Pulling PID 3 off of CPU queue...
+Time 209: Sent PID 3 to CORE 0
+Time 209: Received PID 57 on DISK 1
+Time 209: Finished PID 62 on DISK 0
+Time 209: Received PID 3 on CORE 0
+Time 209: PID 62 enters system
+Time 209: Pushed PID 62 to CPU queue
+Time 213: Finished PID 3 on CORE 0
+Time 213: Sent PID 3 to DISK 0
+Time 213: Pulling PID 70 off of CPU queue...
+Time 213: Sent PID 70 to CORE 0
+Time 213: Received PID 3 on DISK 0
+Time 213: Received PID 70 on CORE 0
+Time 213: PID 159 enters system
+Time 213: Pushed PID 159 to CPU queue
+Time 213: PID 130 enters system
+Time 213: Pushed PID 130 to CPU queue
+Time 213: PID 165 enters system
+Time 213: Pushed PID 165 to CPU queue
+Time 221: Finished PID 70 on CORE 0
+Time 221: Pulling PID 33 off of CPU queue...
+Time 221: Sent PID 33 to CORE 0
+Time 221: PID 185 enters system
+Time 221: Pushed PID 185 to CPU queue
+Time 221: PID 70 exits system
+Time 221: Received PID 33 on CORE 0
+Time 221: PID 170 enters system
+Time 221: Pushed PID 170 to CPU queue
+Time 221: PID 91 enters system
+Time 221: Pushed PID 91 to CPU queue
+Time 221: Finished PID 57 on DISK 1
+Time 221: PID 57 enters system
+Time 221: Pushed PID 57 to CPU queue
+Time 221: Finished PID 3 on DISK 0
+Time 221: PID 3 enters system
+Time 221: Pushed PID 3 to CPU queue
+Time 221: PID 125 enters system
+Time 221: Pushed PID 125 to CPU queue
+Time 221: PID 115 enters system
+Time 221: Pushed PID 115 to CPU queue
+Time 221: PID 110 enters system
+Time 221: Pushed PID 110 to CPU queue
+Time 221: PID 200 enters system
+Time 221: Pushed PID 200 to CPU queue
+Time 234: Finished PID 33 on CORE 0
+Time 234: Pulling PID 132 off of CPU queue...
+Time 234: Sent PID 132 to CORE 0
+Time 234: PID 33 exits system
+Time 234: Received PID 132 on CORE 0
+Time 237: Finished PID 132 on CORE 0
+Time 237: Pulling PID 90 off of CPU queue...
+Time 237: Sent PID 90 to CORE 0
+Time 237: PID 132 exits system
+Time 237: Received PID 90 on CORE 0
+Time 237: PID 140 enters system
+Time 237: Pushed PID 140 to CPU queue
+Time 246: Finished PID 90 on CORE 0
+Time 246: Pulling PID 131 off of CPU queue...
+Time 246: Sent PID 131 to CORE 0
+Time 246: PID 90 exits system
+Time 246: Received PID 131 on CORE 0
+Time 246: PID 108 enters system
+Time 246: Pushed PID 108 to CPU queue
+Time 246: PID 178 enters system
+Time 246: Pushed PID 178 to CPU queue
+Time 248: Finished PID 131 on CORE 0
+Time 248: Pulling PID 99 off of CPU queue...
+Time 248: Sent PID 99 to CORE 0
+Time 248: PID 131 exits system
+Time 248: Received PID 99 on CORE 0
+Time 248: PID 219 enters system
+Time 248: Pushed PID 219 to CPU queue
+Time 260: Finished PID 99 on CORE 0
+Time 260: Pulling PID 5 off of CPU queue...
+Time 260: Sent PID 5 to CORE 0
+Time 260: PID 99 exits system
+Time 260: Received PID 5 on CORE 0
+Time 261: Finished PID 5 on CORE 0
+Time 261: Sent PID 5 to DISK 0
+Time 261: Pulling PID 100 off of CPU queue...
+Time 261: Sent PID 100 to CORE 0
+Time 261: Received PID 5 on DISK 0
+Time 261: Received PID 100 on CORE 0
+Time 261: PID 107 enters system
+Time 261: Pushed PID 107 to CPU queue
+Time 261: PID 133 enters system
+Time 261: Pushed PID 133 to CPU queue
+Time 261: PID 190 enters system
+Time 261: Pushed PID 190 to CPU queue
+Time 269: Finished PID 100 on CORE 0
+Time 269: Sent PID 100 to DISK 1
+Time 269: Pulling PID 79 off of CPU queue...
+Time 269: Sent PID 79 to CORE 0
+Time 269: Received PID 100 on DISK 1
+Time 269: Received PID 79 on CORE 0
+Time 269: Finished PID 5 on DISK 0
+Time 269: PID 5 enters system
+Time 269: Pushed PID 5 to CPU queue
+Time 269: PID 160 enters system
+Time 269: Pushed PID 160 to CPU queue
+Time 273: Finished PID 79 on CORE 0
+Time 273: Pulling PID 39 off of CPU queue...
+Time 273: Sent PID 39 to CORE 0
+Time 273: PID 79 exits system
+Time 273: Received PID 39 on CORE 0
+Time 273: PID 135 enters system
+Time 273: Pushed PID 135 to CPU queue
+Time 273: Finished PID 100 on DISK 1
+Time 273: PID 100 enters system
+Time 273: Pushed PID 100 to CPU queue
+Time 273: PID 218 enters system
+Time 273: Pushed PID 218 to CPU queue
+Time 273: PID 177 enters system
+Time 273: Pushed PID 177 to CPU queue
+Time 273: PID 150 enters system
+Time 273: Pushed PID 150 to CPU queue
+Time 273: PID 206 enters system
+Time 273: Pushed PID 206 to CPU queue
+Time 273: PID 148 enters system
+Time 273: Pushed PID 148 to CPU queue
+Time 285: Finished PID 39 on CORE 0
+Time 285: Sent PID 39 to DISK 0
+Time 285: Pulling PID 149 off of CPU queue...
+Time 285: Sent PID 149 to CORE 0
+Time 285: Received PID 39 on DISK 0
+Time 285: Received PID 149 on CORE 0
+Time 285: PID 147 enters system
+Time 285: Pushed PID 147 to CPU queue
+Time 285: PID 210 enters system
+Time 285: Pushed PID 210 to CPU queue
+Time 285: PID 186 enters system
+Time 285: Pushed PID 186 to CPU queue
+Time 293: Finished PID 149 on CORE 0
+Time 293: Sent PID 149 to DISK 1
+Time 293: Pulling PID 146 off of CPU queue...
+Time 293: Sent PID 146 to CORE 0
+Time 293: Received PID 149 on DISK 1
+Time 293: Received PID 146 on CORE 0
+Time 293: PID 254 enters system
+Time 293: Pushed PID 254 to CPU queue
+Time 293: PID 194 enters system
+Time 293: Pushed PID 194 to CPU queue
+Time 293: PID 141 enters system
+Time 293: Pushed PID 141 to CPU queue
+Time 299: Finished PID 146 on CORE 0
+Time 299: Pulling PID 25 off of CPU queue...
+Time 299: Sent PID 25 to CORE 0
+Time 299: PID 146 exits system
+Time 299: Received PID 25 on CORE 0
+Time 299: Finished PID 149 on DISK 1
+Time 299: PID 149 enters system
+Time 299: Pushed PID 149 to CPU queue
+Time 299: Finished PID 39 on DISK 0
+Time 299: PID 39 enters system
+Time 299: Pushed PID 39 to CPU queue
+Time 299: PID 220 enters system
+Time 299: Pushed PID 220 to CPU queue
+Time 308: Finished PID 25 on CORE 0
+Time 308: Pulling PID 77 off of CPU queue...
+Time 308: Sent PID 77 to CORE 0
+Time 308: PID 25 exits system
+Time 308: Received PID 77 on CORE 0
+Time 308: PID 265 enters system
+Time 308: Pushed PID 265 to CPU queue
+Time 308: PID 205 enters system
+Time 308: Pushed PID 205 to CPU queue
+Time 308: PID 245 enters system
+Time 308: Pushed PID 245 to CPU queue
+Time 308: PID 221 enters system
+Time 308: Pushed PID 221 to CPU queue
+Time 319: Finished PID 77 on CORE 0
+Time 319: Sent PID 77 to DISK 0
+Time 319: Pulling PID 94 off of CPU queue...
+Time 319: Sent PID 94 to CORE 0
+Time 319: Received PID 77 on DISK 0
+Time 319: Received PID 94 on CORE 0
+Time 319: PID 286 enters system
+Time 319: Pushed PID 286 to CPU queue
+Time 319: Finished PID 77 on DISK 0
+Time 319: PID 77 enters system
+Time 319: Pushed PID 77 to CPU queue
+Time 319: PID 247 enters system
+Time 319: Pushed PID 247 to CPU queue
+Time 319: PID 228 enters system
+Time 319: Pushed PID 228 to CPU queue
+Time 329: Finished PID 94 on CORE 0
+Time 329: Sent PID 94 to DISK 0
+Time 329: Pulling PID 102 off of CPU queue...
+Time 329: Sent PID 102 to CORE 0
+Time 329: Received PID 94 on DISK 0
+Time 329: Received PID 102 on CORE 0
+Time 329: PID 215 enters system
+Time 329: Pushed PID 215 to CPU queue
+Time 329: PID 279 enters system
+Time 329: Pushed PID 279 to CPU queue
+Time 329: Finished PID 94 on DISK 0
+Time 329: PID 94 enters system
+Time 329: Pushed PID 94 to CPU queue
+Time 329: PID 207 enters system
+Time 329: Pushed PID 207 to CPU queue
+Time 329: PID 264 enters system
+Time 329: Pushed PID 264 to CPU queue
+Time 329: PID 258 enters system
+Time 329: Pushed PID 258 to CPU queue
+Time 329: PID 261 enters system
+Time 329: Pushed PID 261 to CPU queue
+Time 342: Finished PID 102 on CORE 0
+Time 342: Pulling PID 62 off of CPU queue...
+Time 342: Sent PID 62 to CORE 0
+Time 342: PID 102 exits system
+Time 342: Received PID 62 on CORE 0
+Time 342: PID 237 enters system
+Time 342: Pushed PID 237 to CPU queue
+Time 342: PID 212 enters system
+Time 342: Pushed PID 212 to CPU queue
+Time 342: PID 303 enters system
+Time 342: Pushed PID 303 to CPU queue
+Time 342: PID 260 enters system
+Time 342: Pushed PID 260 to CPU queue
+Time 355: Finished PID 62 on CORE 0
+Time 355: Pulling PID 159 off of CPU queue...
+Time 355: Sent PID 159 to CORE 0
+Time 355: PID 62 exits system
+Time 355: Received PID 159 on CORE 0
+Time 355: PID 294 enters system
+Time 355: Pushed PID 294 to CPU queue
+Time 355: PID 287 enters system
+Time 355: Pushed PID 287 to CPU queue
+Time 355: PID 293 enters system
+Time 355: Pushed PID 293 to CPU queue
+Time 355: PID 213 enters system
+Time 355: Pushed PID 213 to CPU queue
+Time 364: Finished PID 159 on CORE 0
+Time 364: Pulling PID 130 off of CPU queue...
+Time 364: Sent PID 130 to CORE 0
+Time 364: PID 159 exits system
+Time 364: Received PID 130 on CORE 0
+Time 364: PID 321 enters system
+Time 364: Pushed PID 321 to CPU queue
+Time 366: Finished PID 130 on CORE 0
+Time 366: Sent PID 130 to DISK 0
+Time 366: Pulling PID 165 off of CPU queue...
+Time 366: Sent PID 165 to CORE 0
+Time 366: Received PID 130 on DISK 0
+Time 366: Received PID 165 on CORE 0
+Time 366: PID 217 enters system
+Time 366: Pushed PID 217 to CPU queue
+Time 366: PID 278 enters system
+Time 366: Pushed PID 278 to CPU queue
+Time 366: PID 246 enters system
+Time 366: Pushed PID 246 to CPU queue
+Time 366: PID 263 enters system
+Time 366: Pushed PID 263 to CPU queue
+Time 366: PID 233 enters system
+Time 366: Pushed PID 233 to CPU queue
+Time 366: Finished PID 130 on DISK 0
+Time 366: PID 130 enters system
+Time 366: Pushed PID 130 to CPU queue
+Time 366: PID 292 enters system
+Time 366: Pushed PID 292 to CPU queue
+Time 366: PID 309 enters system
+Time 366: Pushed PID 309 to CPU queue
+Time 377: Finished PID 165 on CORE 0
+Time 377: Sent PID 165 to DISK 0
+Time 377: Pulling PID 185 off of CPU queue...
+Time 377: Sent PID 185 to CORE 0
+Time 377: Received PID 165 on DISK 0
+Time 377: Received PID 185 on CORE 0
+Time 377: PID 232 enters system
+Time 377: Pushed PID 232 to CPU queue
+Time 377: PID 284 enters system
+Time 377: Pushed PID 284 to CPU queue
+Time 377: PID 320 enters system
+Time 377: Pushed PID 320 to CPU queue
+Time 377: PID 322 enters system
+Time 377: Pushed PID 322 to CPU queue
+Time 377: PID 329 enters system
+Time 377: Pushed PID 329 to CPU queue
+Time 377: Finished PID 165 on DISK 0
+Time 377: PID 165 enters system
+Time 377: Pushed PID 165 to CPU queue
+Time 384: Finished PID 185 on CORE 0
+Time 384: Pulling PID 170 off of CPU queue...
+Time 384: Sent PID 170 to CORE 0
+Time 384: PID 185 exits system
+Time 384: Received PID 170 on CORE 0
+Time 388: Finished PID 170 on CORE 0
+Time 388: Sent PID 170 to DISK 0
+Time 388: Pulling PID 91 off of CPU queue...
+Time 388: Sent PID 91 to CORE 0
+Time 388: Received PID 170 on DISK 0
+Time 388: Received PID 91 on CORE 0
+Time 388: PID 302 enters system
+Time 388: Pushed PID 302 to CPU queue
+Time 397: Finished PID 91 on CORE 0
+Time 397: Pulling PID 57 off of CPU queue...
+Time 397: Sent PID 57 to CORE 0
+Time 397: PID 91 exits system
+Time 397: Received PID 57 on CORE 0
+Time 399: Finished PID 57 on CORE 0
+Time 399: Sent PID 57 to DISK 1
+Time 399: Pulling PID 3 off of CPU queue...
+Time 399: Sent PID 3 to CORE 0
+Time 399: Received PID 57 on DISK 1
+Time 399: Received PID 3 on CORE 0
+Time 399: PID 253 enters system
+Time 399: Pushed PID 253 to CPU queue
+Time 399: PID 315 enters system
+Time 399: Pushed PID 315 to CPU queue
+Time 399: PID 346 enters system
+Time 399: Pushed PID 346 to CPU queue
+Time 399: Finished PID 170 on DISK 0
+Time 399: PID 170 enters system
+Time 399: Pushed PID 170 to CPU queue
+Time 399: PID 328 enters system
+Time 399: Pushed PID 328 to CPU queue
+Time 410: Finished PID 3 on CORE 0
+Time 410: Sent PID 3 to DISK 0
+Time 410: Pulling PID 125 off of CPU queue...
+Time 410: Sent PID 125 to CORE 0
+Time 410: Received PID 3 on DISK 0
+Time 410: Received PID 125 on CORE 0
+Time 410: PID 271 enters system
+Time 410: Pushed PID 271 to CPU queue
+Time 410: Finished PID 57 on DISK 1
+Time 410: PID 57 enters system
+Time 410: Pushed PID 57 to CPU queue
+Time 410: PID 340 enters system
+Time 410: Pushed PID 340 to CPU queue
+Time 410: Finished PID 3 on DISK 0
+Time 410: PID 3 enters system
+Time 410: Pushed PID 3 to CPU queue
+Time 410: PID 262 enters system
+Time 410: Pushed PID 262 to CPU queue
+Time 410: PID 314 enters system
+Time 410: Pushed PID 314 to CPU queue
+Time 410: PID 301 enters system
+Time 410: Pushed PID 301 to CPU queue
+Time 410: PID 270 enters system
+Time 410: Pushed PID 270 to CPU queue
+Time 410: PID 375 enters system
+Time 410: Pushed PID 375 to CPU queue
+Time 423: Finished PID 125 on CORE 0
+Time 423: Pulling PID 115 off of CPU queue...
+Time 423: Sent PID 115 to CORE 0
+Time 423: PID 125 exits system
+Time 423: Received PID 115 on CORE 0
+Time 423: PID 327 enters system
+Time 423: Pushed PID 327 to CPU queue
+Time 423: PID 344 enters system
+Time 423: Pushed PID 344 to CPU queue
+Time 427: Finished PID 115 on CORE 0
+Time 427: Sent PID 115 to DISK 0
+Time 427: Pulling PID 110 off of CPU queue...
+Time 427: Sent PID 110 to CORE 0
+Time 427: Received PID 115 on DISK 0
+Time 427: Received PID 110 on CORE 0
+Time 428: Finished PID 110 on CORE 0
+Time 428: Sent PID 110 to DISK 1
+Time 428: Pulling PID 200 off of CPU queue...
+Time 428: Sent PID 200 to CORE 0
+Time 428: Received PID 110 on DISK 1
+Time 428: Received PID 200 on CORE 0
+Time 428: PID 272 enters system
+Time 428: Pushed PID 272 to CPU queue
+Time 428: PID 299 enters system
+Time 428: Pushed PID 299 to CPU queue
+Time 428: PID 392 enters system
+Time 428: Pushed PID 392 to CPU queue
+Time 428: PID 378 enters system
+Time 428: Pushed PID 378 to CPU queue
+Time 428: PID 333 enters system
+Time 428: Pushed PID 333 to CPU queue
+Time 428: Finished PID 115 on DISK 0
+Time 428: PID 115 enters system
+Time 428: Pushed PID 115 to CPU queue
+Time 439: Finished PID 200 on CORE 0
+Time 439: Sent PID 200 to DISK 0
+Time 439: Pulling PID 140 off of CPU queue...
+Time 439: Sent PID 140 to CORE 0
+Time 439: Received PID 200 on DISK 0
+Time 439: Received PID 140 on CORE 0
+Time 439: PID 277 enters system
+Time 439: Pushed PID 277 to CPU queue
+Time 439: PID 319 enters system
+Time 439: Pushed PID 319 to CPU queue
+Time 439: PID 393 enters system
+Time 439: Pushed PID 393 to CPU queue
+Time 439: Finished PID 200 on DISK 0
+Time 439: PID 200 enters system
+Time 439: Pushed PID 200 to CPU queue
+Time 439: Finished PID 110 on DISK 1
+Time 439: PID 110 enters system
+Time 439: Pushed PID 110 to CPU queue
+Time 439: PID 291 enters system
+Time 439: Pushed PID 291 to CPU queue
+Time 449: Finished PID 140 on CORE 0
+Time 449: Pulling PID 108 off of CPU queue...
+Time 449: Sent PID 108 to CORE 0
+Time 449: PID 389 enters system
+Time 449: Pushed PID 389 to CPU queue
+Time 449: PID 140 exits system
+Time 449: Received PID 108 on CORE 0
+Time 449: PID 313 enters system
+Time 449: Pushed PID 313 to CPU queue
+Time 454: Finished PID 108 on CORE 0
+Time 454: Sent PID 108 to DISK 0
+Time 454: Pulling PID 178 off of CPU queue...
+Time 454: Sent PID 178 to CORE 0
+Time 454: Received PID 108 on DISK 0
+Time 454: Received PID 178 on CORE 0
+Time 454: PID 345 enters system
+Time 454: Pushed PID 345 to CPU queue
+Time 454: PID 326 enters system
+Time 454: Pushed PID 326 to CPU queue
+Time 454: PID 312 enters system
+Time 454: Pushed PID 312 to CPU queue
+Time 454: PID 397 enters system
+Time 454: Pushed PID 397 to CPU queue
+Time 454: PID 413 enters system
+Time 454: Pushed PID 413 to CPU queue
+Time 454: PID 308 enters system
+Time 454: Pushed PID 308 to CPU queue
+Time 454: Finished PID 108 on DISK 0
+Time 454: PID 108 enters system
+Time 454: Pushed PID 108 to CPU queue
+Time 467: Finished PID 178 on CORE 0
+Time 467: Sent PID 178 to DISK 0
+Time 467: Pulling PID 219 off of CPU queue...
+Time 467: Sent PID 219 to CORE 0
+Time 467: Received PID 178 on DISK 0
+Time 467: PID 410 enters system
+Time 467: Pushed PID 410 to CPU queue
+Time 467: Received PID 219 on CORE 0
+Time 467: PID 355 enters system
+Time 467: Pushed PID 355 to CPU queue
+Time 467: PID 386 enters system
+Time 467: Pushed PID 386 to CPU queue
+Time 467: PID 311 enters system
+Time 467: Pushed PID 311 to CPU queue
+Time 467: PID 422 enters system
+Time 467: Pushed PID 422 to CPU queue
+Time 467: PID 374 enters system
+Time 467: Pushed PID 374 to CPU queue
+Time 467: PID 341 enters system
+Time 467: Pushed PID 341 to CPU queue
+Time 467: PID 390 enters system
+Time 467: Pushed PID 390 to CPU queue
+Time 474: Finished PID 219 on CORE 0
+Time 474: Sent PID 219 to DISK 1
+Time 474: Pulling PID 107 off of CPU queue...
+Time 474: Sent PID 107 to CORE 0
+Time 474: Received PID 219 on DISK 1
+Time 474: PID 377 enters system
+Time 474: Pushed PID 377 to CPU queue
+Time 474: Received PID 107 on CORE 0
+Time 477: Finished PID 107 on CORE 0
+Time 477: Pushed PID 107 to DISK 0 queue
+Time 477: Pulling PID 133 off of CPU queue...
+Time 477: Sent PID 133 to CORE 0
+Time 477: Received PID 133 on CORE 0
+Time 478: Finished PID 133 on CORE 0
+Time 478: Pushed PID 133 to DISK 1 queue
+Time 478: Pulling PID 190 off of CPU queue...
+Time 478: Sent PID 190 to CORE 0
+Time 478: Received PID 190 on CORE 0
+Time 478: PID 407 enters system
+Time 478: Pushed PID 407 to CPU queue
+Time 478: PID 339 enters system
+Time 478: Pushed PID 339 to CPU queue
+Time 478: Finished PID 178 on DISK 0
+Time 478: Pulling PID 107 off of DISK 0 queue...
+Time 478: Sent PID 107 to DISK 0
+Time 478: Received PID 107 on DISK 0
+Time 478: PID 178 enters system
+Time 478: Pushed PID 178 to CPU queue
+Time 478: PID 408 enters system
+Time 478: Pushed PID 408 to CPU queue
+Time 478: PID 365 enters system
+Time 478: Pushed PID 365 to CPU queue
+Time 488: Finished PID 190 on CORE 0
+Time 488: Pushed PID 190 to DISK 0 queue
+Time 488: Pulling PID 5 off of CPU queue...
+Time 488: Sent PID 5 to CORE 0
+Time 488: Received PID 5 on CORE 0
+Time 488: PID 424 enters system
+Time 488: Pushed PID 424 to CPU queue
+Time 488: PID 435 enters system
+Time 488: Pushed PID 435 to CPU queue
+Time 488: PID 373 enters system
+Time 488: Pushed PID 373 to CPU queue
+Time 488: Finished PID 219 on DISK 1
+Time 488: Pulling PID 133 off of DISK 1 queue...
+Time 488: Sent PID 133 to DISK 1
+Time 488: Received PID 133 on DISK 1
+Time 488: PID 219 enters system
+Time 488: Pushed PID 219 to CPU queue
+Time 494: Finished PID 5 on CORE 0
+Time 494: Pushed PID 5 to DISK 1 queue
+Time 494: Pulling PID 160 off of CPU queue...
+Time 494: Sent PID 160 to CORE 0
+Time 494: Received PID 160 on CORE 0
+Time 494: PID 338 enters system
+Time 494: Pushed PID 338 to CPU queue
+Time 494: Finished PID 107 on DISK 0
+Time 494: Pulling PID 190 off of DISK 0 queue...
+Time 494: Sent PID 190 to DISK 0
+Time 494: Received PID 190 on DISK 0
+Time 494: PID 107 enters system
+Time 494: Pushed PID 107 to CPU queue
+Time 500: Finished PID 160 on CORE 0
+Time 500: Pushed PID 160 to DISK 0 queue
+Time 500: Pulling PID 135 off of CPU queue...
+Time 500: Sent PID 135 to CORE 0
+Time 500: Received PID 135 on CORE 0
+Time 500: PID 353 enters system
+Time 500: Pushed PID 353 to CPU queue
+Time 500: PID 440 enters system
+Time 500: Pushed PID 440 to CPU queue
+Time 500: PID 470 enters system
+Time 500: Pushed PID 470 to CPU queue
+Time 500: PID 437 enters system
+Time 500: Pushed PID 437 to CPU queue
+Time 500: PID 442 enters system
+Time 500: Pushed PID 442 to CPU queue
+Time 500: PID 383 enters system
+Time 500: Pushed PID 383 to CPU queue
+Time 500: Finished PID 133 on DISK 1
+Time 500: Pulling PID 5 off of DISK 1 queue...
+Time 500: Sent PID 5 to DISK 1
+Time 500: Received PID 5 on DISK 1
+Time 500: PID 133 enters system
+Time 500: Pushed PID 133 to CPU queue
+Time 500: Finished PID 5 on DISK 1
+Time 500: PID 5 enters system
+Time 500: Pushed PID 5 to CPU queue
+Time 500: PID 450 enters system
+Time 500: Pushed PID 450 to CPU queue
+Time 500: PID 351 enters system
+Time 500: Pushed PID 351 to CPU queue
+Time 500: PID 352 enters system
+Time 500: Pushed PID 352 to CPU queue
+Time 500: PID 354 enters system
+Time 500: Pushed PID 354 to CPU queue
+Time 500: PID 342 enters system
+Time 500: Pushed PID 342 to CPU queue
+Time 513: Finished PID 135 on CORE 0
+Time 513: Sent PID 135 to DISK 1
+Time 513: Pulling PID 100 off of CPU queue...
+Time 513: Sent PID 100 to CORE 0
+Time 513: Received PID 135 on DISK 1
+Time 513: Received PID 100 on CORE 0
+Time 513: Finished PID 190 on DISK 0
+Time 513: Pulling PID 160 off of DISK 0 queue...
+Time 513: Sent PID 160 to DISK 0
+Time 513: Received PID 160 on DISK 0
+Time 513: PID 190 enters system
+Time 513: Pushed PID 190 to CPU queue
+Time 513: PID 420 enters system
+Time 513: Pushed PID 420 to CPU queue
+Time 513: PID 418 enters system
+Time 513: Pushed PID 418 to CPU queue
+Time 513: Finished PID 135 on DISK 1
+Time 513: PID 135 enters system
+Time 513: Pushed PID 135 to CPU queue
+Time 513: PID 504 enters system
+Time 513: Pushed PID 504 to CPU queue
+Time 513: Finished PID 160 on DISK 0
+Time 513: PID 160 enters system
+Time 513: Pushed PID 160 to CPU queue
+Time 513: PID 385 enters system
+Time 513: Pushed PID 385 to CPU queue
+Time 525: Finished PID 100 on CORE 0
+Time 525: Pulling PID 218 off of CPU queue...
+Time 525: Sent PID 218 to CORE 0
+Time 525: PID 428 enters system
+Time 525: Pushed PID 428 to CPU queue
+Time 525: PID 100 exits system
+Time 525: Received PID 218 on CORE 0
+Time 525: PID 419 enters system
+Time 525: Pushed PID 419 to CPU queue
+Time 525: PID 357 enters system
+Time 525: Pushed PID 357 to CPU queue
+Time 525: PID 398 enters system
+Time 525: Pushed PID 398 to CPU queue
+Time 525: PID 438 enters system
+Time 525: Pushed PID 438 to CPU queue
+Time 525: PID 409 enters system
+Time 525: Pushed PID 409 to CPU queue
+Time 525: PID 391 enters system
+Time 525: Pushed PID 391 to CPU queue
+Time 525: PID 502 enters system
+Time 525: Pushed PID 502 to CPU queue
+Time 536: Finished PID 218 on CORE 0
+Time 536: Sent PID 218 to DISK 0
+Time 536: Pulling PID 177 off of CPU queue...
+Time 536: Sent PID 177 to CORE 0
+Time 536: Received PID 218 on DISK 0
+Time 536: Received PID 177 on CORE 0
+Time 536: PID 436 enters system
+Time 536: Pushed PID 436 to CPU queue
+Time 536: PID 495 enters system
+Time 536: Pushed PID 495 to CPU queue
+Time 536: PID 480 enters system
+Time 536: Pushed PID 480 to CPU queue
+Time 536: PID 475 enters system
+Time 536: Pushed PID 475 to CPU queue
+Time 542: Finished PID 177 on CORE 0
+Time 542: Sent PID 177 to DISK 1
+Time 542: Pulling PID 150 off of CPU queue...
+Time 542: Sent PID 150 to CORE 0
+Time 542: Received PID 177 on DISK 1
+Time 542: Received PID 150 on CORE 0
+Time 542: Finished PID 218 on DISK 0
+Time 542: PID 218 enters system
+Time 542: Pushed PID 218 to CPU queue
+Time 542: PID 522 enters system
+Time 542: Pushed PID 522 to CPU queue
+Time 542: PID 514 enters system
+Time 542: Pushed PID 514 to CPU queue
+Time 542: PID 388 enters system
+Time 542: Pushed PID 388 to CPU queue
+Time 548: Finished PID 150 on CORE 0
+Time 548: Sent PID 150 to DISK 0
+Time 548: Pulling PID 206 off of CPU queue...
+Time 548: Sent PID 206 to CORE 0
+Time 548: Received PID 150 on DISK 0
+Time 548: Received PID 206 on CORE 0
+Time 548: PID 453 enters system
+Time 548: Pushed PID 453 to CPU queue
+Time 554: Finished PID 206 on CORE 0
+Time 554: Pushed PID 206 to DISK 0 queue
+Time 554: Pulling PID 148 off of CPU queue...
+Time 554: Sent PID 148 to CORE 0
+Time 554: Received PID 148 on CORE 0
+Time 554: PID 471 enters system
+Time 554: Pushed PID 471 to CPU queue
+Time 554: PID 528 enters system
+Time 554: Pushed PID 528 to CPU queue
+Time 556: Finished PID 148 on CORE 0
+Time 556: Pulling PID 147 off of CPU queue...
+Time 556: Sent PID 147 to CORE 0
+Time 556: PID 448 enters system
+Time 556: Pushed PID 448 to CPU queue
+Time 556: PID 148 exits system
+Time 556: Received PID 147 on CORE 0
+Time 556: PID 458 enters system
+Time 556: Pushed PID 458 to CPU queue
+Time 556: PID 541 enters system
+Time 556: Pushed PID 541 to CPU queue
+Time 556: PID 491 enters system
+Time 556: Pushed PID 491 to CPU queue
+Time 556: PID 446 enters system
+Time 556: Pushed PID 446 to CPU queue
+Time 559: Finished PID 147 on CORE 0
+Time 559: Pushed PID 147 to DISK 1 queue
+Time 559: Pulling PID 210 off of CPU queue...
+Time 559: Sent PID 210 to CORE 0
+Time 559: PID 527 enters system
+Time 559: Pushed PID 527 to CPU queue
+Time 559: Received PID 210 on CORE 0
+Time 559: PID 465 enters system
+Time 559: Pushed PID 465 to CPU queue
+Time 559: Finished PID 150 on DISK 0
+Time 559: Pulling PID 206 off of DISK 0 queue...
+Time 559: Sent PID 206 to DISK 0
+Time 559: Received PID 206 on DISK 0
+Time 559: PID 150 enters system
+Time 559: Pushed PID 150 to CPU queue
+Time 559: PID 411 enters system
+Time 559: Pushed PID 411 to CPU queue
+Time 559: Finished PID 177 on DISK 1
+Time 559: Pulling PID 147 off of DISK 1 queue...
+Time 559: Sent PID 147 to DISK 1
+Time 559: Received PID 147 on DISK 1
+Time 559: PID 177 enters system
+Time 559: Pushed PID 177 to CPU queue
+Time 559: PID 464 enters system
+Time 559: Pushed PID 464 to CPU queue
+Time 559: PID 425 enters system
+Time 559: Pushed PID 425 to CPU queue
+Time 563: Finished PID 210 on CORE 0
+Time 563: Pushed PID 210 to DISK 0 queue
+Time 563: Pulling PID 186 off of CPU queue...
+Time 563: Sent PID 186 to CORE 0
+Time 563: Received PID 186 on CORE 0
+Time 563: PID 539 enters system
+Time 563: Pushed PID 539 to CPU queue
+Time 567: Finished PID 186 on CORE 0
+Time 567: Pushed PID 186 to DISK 1 queue
+Time 567: Pulling PID 254 off of CPU queue...
+Time 567: Sent PID 254 to CORE 0
+Time 567: Received PID 254 on CORE 0
+Time 567: Finished PID 147 on DISK 1
+Time 567: Pulling PID 186 off of DISK 1 queue...
+Time 567: Sent PID 186 to DISK 1
+Time 567: Received PID 186 on DISK 1
+Time 567: PID 147 enters system
+Time 567: Pushed PID 147 to CPU queue
+Time 567: PID 494 enters system
+Time 567: Pushed PID 494 to CPU queue
+Time 567: PID 451 enters system
+Time 567: Pushed PID 451 to CPU queue
+Time 567: Finished PID 206 on DISK 0
+Time 567: Pulling PID 210 off of DISK 0 queue...
+Time 567: Sent PID 210 to DISK 0
+Time 567: Received PID 210 on DISK 0
+Time 567: PID 206 enters system
+Time 567: Pushed PID 206 to CPU queue
+Time 567: PID 430 enters system
+Time 567: Pushed PID 430 to CPU queue
+Time 567: PID 515 enters system
+Time 567: Pushed PID 515 to CPU queue
+Time 567: PID 449 enters system
+Time 567: Pushed PID 449 to CPU queue
+Time 579: Finished PID 254 on CORE 0
+Time 579: Pushed PID 254 to DISK 0 queue
+Time 579: Pulling PID 194 off of CPU queue...
+Time 579: Sent PID 194 to CORE 0
+Time 579: PID 483 enters system
+Time 579: Pushed PID 483 to CPU queue
+Time 579: Received PID 194 on CORE 0
+Time 579: PID 501 enters system
+Time 579: Pushed PID 501 to CPU queue
+Time 579: Finished PID 186 on DISK 1
+Time 579: PID 186 enters system
+Time 579: Pushed PID 186 to CPU queue
+Time 579: PID 476 enters system
+Time 579: Pushed PID 476 to CPU queue
+Time 579: PID 525 enters system
+Time 579: Pushed PID 525 to CPU queue
+Time 579: Finished PID 210 on DISK 0
+Time 579: Pulling PID 254 off of DISK 0 queue...
+Time 579: Sent PID 254 to DISK 0
+Time 579: Received PID 254 on DISK 0
+Time 579: PID 210 enters system
+Time 579: Pushed PID 210 to CPU queue
+Time 587: Finished PID 194 on CORE 0
+Time 587: Sent PID 194 to DISK 1
+Time 587: Pulling PID 141 off of CPU queue...
+Time 587: Sent PID 141 to CORE 0
+Time 587: Received PID 194 on DISK 1
+Time 587: Received PID 141 on CORE 0
+Time 587: PID 487 enters system
+Time 587: Pushed PID 487 to CPU queue
+Time 587: PID 503 enters system
+Time 587: Pushed PID 503 to CPU queue
+Time 587: PID 490 enters system
+Time 587: Pushed PID 490 to CPU queue
+Time 587: PID 439 enters system
+Time 587: Pushed PID 439 to CPU queue
+Time 587: PID 531 enters system
+Time 587: Pushed PID 531 to CPU queue
+Time 587: Finished PID 254 on DISK 0
+Time 587: PID 254 enters system
+Time 587: Pushed PID 254 to CPU queue
+Time 595: Finished PID 141 on CORE 0
+Time 595: Pulling PID 149 off of CPU queue...
+Time 595: Sent PID 149 to CORE 0
+Time 595: PID 550 enters system
+Time 595: Pushed PID 550 to CPU queue
+Time 595: PID 141 exits system
+Time 595: Received PID 149 on CORE 0
+Time 595: PID 549 enters system
+Time 595: Pushed PID 549 to CPU queue
+Time 595: Finished PID 194 on DISK 1
+Time 595: PID 194 enters system
+Time 595: Pushed PID 194 to CPU queue
+Time 595: PID 532 enters system
+Time 595: Pushed PID 532 to CPU queue
+Time 595: PID 516 enters system
+Time 595: Pushed PID 516 to CPU queue
+Time 595: PID 540 enters system
+Time 595: Pushed PID 540 to CPU queue
+Time 595: PID 593 enters system
+Time 595: Pushed PID 593 to CPU queue
+Time 595: PID 505 enters system
+Time 595: Pushed PID 505 to CPU queue
+Time 595: PID 469 enters system
+Time 595: Pushed PID 469 to CPU queue
+Time 606: Finished PID 149 on CORE 0
+Time 606: Sent PID 149 to DISK 0
+Time 606: Pulling PID 39 off of CPU queue...
+Time 606: Sent PID 39 to CORE 0
+Time 606: Received PID 149 on DISK 0
+Time 606: PID 492 enters system
+Time 606: Pushed PID 492 to CPU queue
+Time 606: Received PID 39 on CORE 0
+Time 606: PID 452 enters system
+Time 606: Pushed PID 452 to CPU queue
+Time 606: PID 604 enters system
+Time 606: Pushed PID 604 to CPU queue
+Time 608: Finished PID 39 on CORE 0
+Time 608: Sent PID 39 to DISK 1
+Time 608: Pulling PID 220 off of CPU queue...
+Time 608: Sent PID 220 to CORE 0
+Time 608: Received PID 39 on DISK 1
+Time 608: Received PID 220 on CORE 0
+Time 608: PID 623 enters system
+Time 608: Pushed PID 623 to CPU queue
+Time 608: PID 499 enters system
+Time 608: Pushed PID 499 to CPU queue
+Time 608: PID 454 enters system
+Time 608: Pushed PID 454 to CPU queue
+Time 608: PID 518 enters system
+Time 608: Pushed PID 518 to CPU queue
+Time 608: PID 538 enters system
+Time 608: Pushed PID 538 to CPU queue
+Time 608: PID 519 enters system
+Time 608: Pushed PID 519 to CPU queue
+Time 608: Finished PID 39 on DISK 1
+Time 608: PID 39 enters system
+Time 608: Pushed PID 39 to CPU queue
+Time 621: Finished PID 220 on CORE 0
+Time 621: Sent PID 220 to DISK 1
+Time 621: Pulling PID 265 off of CPU queue...
+Time 621: Sent PID 265 to CORE 0
+Time 621: Received PID 220 on DISK 1
+Time 621: Received PID 265 on CORE 0
+Time 621: PID 569 enters system
+Time 621: Pushed PID 569 to CPU queue
+Time 621: PID 617 enters system
+Time 621: Pushed PID 617 to CPU queue
+Time 621: Finished PID 149 on DISK 0
+Time 621: PID 149 enters system
+Time 621: Pushed PID 149 to CPU queue
+Time 621: PID 567 enters system
+Time 621: Pushed PID 567 to CPU queue
+Time 621: PID 506 enters system
+Time 621: Pushed PID 506 to CPU queue
+Time 621: PID 530 enters system
+Time 621: Pushed PID 530 to CPU queue
+Time 621: PID 533 enters system
+Time 621: Pushed PID 533 to CPU queue
+Time 621: Finished PID 220 on DISK 1
+Time 621: PID 220 enters system
+Time 621: Pushed PID 220 to CPU queue
+Time 632: Finished PID 265 on CORE 0
+Time 632: Sent PID 265 to DISK 0
+Time 632: Pulling PID 205 off of CPU queue...
+Time 632: Sent PID 205 to CORE 0
+Time 632: Received PID 265 on DISK 0
+Time 632: Received PID 205 on CORE 0
+Time 632: PID 474 enters system
+Time 632: Pushed PID 474 to CPU queue
+Time 632: PID 529 enters system
+Time 632: Pushed PID 529 to CPU queue
+Time 632: PID 640 enters system
+Time 632: Pushed PID 640 to CPU queue
+Time 632: PID 521 enters system
+Time 632: Pushed PID 521 to CPU queue
+Time 632: PID 600 enters system
+Time 632: Pushed PID 600 to CPU queue
+Time 638: Finished PID 205 on CORE 0
+Time 638: Sent PID 205 to DISK 1
+Time 638: Pulling PID 245 off of CPU queue...
+Time 638: Sent PID 245 to CORE 0
+Time 638: Received PID 205 on DISK 1
+Time 638: Received PID 245 on CORE 0
+Time 638: PID 555 enters system
+Time 638: Pushed PID 555 to CPU queue
+Time 638: Finished PID 265 on DISK 0
+Time 638: PID 265 enters system
+Time 638: Pushed PID 265 to CPU queue
+Time 638: PID 621 enters system
+Time 638: Pushed PID 621 to CPU queue
+Time 638: PID 571 enters system
+Time 638: Pushed PID 571 to CPU queue
+Time 638: PID 618 enters system
+Time 638: Pushed PID 618 to CPU queue
+Time 638: PID 565 enters system
+Time 638: Pushed PID 565 to CPU queue
+Time 638: PID 597 enters system
+Time 638: Pushed PID 597 to CPU queue
+Time 638: PID 493 enters system
+Time 638: Pushed PID 493 to CPU queue
+Time 645: Finished PID 245 on CORE 0
+Time 645: Sent PID 245 to DISK 0
+Time 645: Pulling PID 221 off of CPU queue...
+Time 645: Sent PID 221 to CORE 0
+Time 645: Received PID 245 on DISK 0
+Time 645: Received PID 221 on CORE 0
+Time 645: PID 666 enters system
+Time 645: Pushed PID 666 to CPU queue
+Time 645: PID 643 enters system
+Time 645: Pushed PID 643 to CPU queue
+Time 647: Finished PID 221 on CORE 0
+Time 647: Pushed PID 221 to DISK 0 queue
+Time 647: Pulling PID 286 off of CPU queue...
+Time 647: Sent PID 286 to CORE 0
+Time 647: Received PID 286 on CORE 0
+Time 655: Finished PID 286 on CORE 0
+Time 655: Pushed PID 286 to DISK 1 queue
+Time 655: Pulling PID 77 off of CPU queue...
+Time 655: Sent PID 77 to CORE 0
+Time 655: Received PID 77 on CORE 0
+Time 655: Finished PID 205 on DISK 1
+Time 655: Pulling PID 286 off of DISK 1 queue...
+Time 655: Sent PID 286 to DISK 1
+Time 655: Received PID 286 on DISK 1
+Time 655: PID 205 enters system
+Time 655: Pushed PID 205 to CPU queue
+Time 655: Finished PID 245 on DISK 0
+Time 655: Pulling PID 221 off of DISK 0 queue...
+Time 655: Sent PID 221 to DISK 0
+Time 655: Received PID 221 on DISK 0
+Time 655: PID 245 enters system
+Time 655: Pushed PID 245 to CPU queue
+Time 655: PID 619 enters system
+Time 655: Pushed PID 619 to CPU queue
+Time 655: PID 655 enters system
+Time 655: Pushed PID 655 to CPU queue
+Time 655: PID 576 enters system
+Time 655: Pushed PID 576 to CPU queue
+Time 655: PID 652 enters system
+Time 655: Pushed PID 652 to CPU queue
+Time 655: PID 575 enters system
+Time 655: Pushed PID 575 to CPU queue
+Time 655: PID 548 enters system
+Time 655: Pushed PID 548 to CPU queue
+Time 655: Finished PID 221 on DISK 0
+Time 655: PID 221 enters system
+Time 655: Pushed PID 221 to CPU queue
+Time 655: PID 558 enters system
+Time 655: Pushed PID 558 to CPU queue
+Time 655: PID 606 enters system
+Time 655: Pushed PID 606 to CPU queue
+Time 655: PID 591 enters system
+Time 655: Pushed PID 591 to CPU queue
+Time 655: PID 566 enters system
+Time 655: Pushed PID 566 to CPU queue
+Time 665: Finished PID 77 on CORE 0
+Time 665: Pulling PID 247 off of CPU queue...
+Time 665: Sent PID 247 to CORE 0
+Time 665: PID 77 exits system
+Time 665: Received PID 247 on CORE 0
+Time 666: Finished PID 247 on CORE 0
+Time 666: Sent PID 247 to DISK 0
+Time 666: Pulling PID 228 off of CPU queue...
+Time 666: Sent PID 228 to CORE 0
+Time 666: Received PID 247 on DISK 0
+Time 666: Received PID 228 on CORE 0
+Time 666: PID 580 enters system
+Time 666: Pushed PID 580 to CPU queue
+Time 666: PID 585 enters system
+Time 666: Pushed PID 585 to CPU queue
+Time 666: Finished PID 286 on DISK 1
+Time 666: PID 286 enters system
+Time 666: Pushed PID 286 to CPU queue
+Time 666: PID 562 enters system
+Time 666: Pushed PID 562 to CPU queue
+Time 666: PID 581 enters system
+Time 666: Pushed PID 581 to CPU queue
+Time 666: PID 636 enters system
+Time 666: Pushed PID 636 to CPU queue
+Time 679: Finished PID 228 on CORE 0
+Time 679: Sent PID 228 to DISK 1
+Time 679: Pulling PID 215 off of CPU queue...
+Time 679: Sent PID 215 to CORE 0
+Time 679: Received PID 228 on DISK 1
+Time 679: Received PID 215 on CORE 0
+Time 679: PID 665 enters system
+Time 679: Pushed PID 665 to CPU queue
+Time 679: PID 559 enters system
+Time 679: Pushed PID 559 to CPU queue
+Time 679: PID 667 enters system
+Time 679: Pushed PID 667 to CPU queue
+Time 679: PID 674 enters system
+Time 679: Pushed PID 674 to CPU queue
+Time 679: PID 676 enters system
+Time 679: Pushed PID 676 to CPU queue
+Time 679: Finished PID 247 on DISK 0
+Time 679: PID 247 enters system
+Time 679: Pushed PID 247 to CPU queue
+Time 679: PID 630 enters system
+Time 679: Pushed PID 630 to CPU queue
+Time 679: PID 634 enters system
+Time 679: Pushed PID 634 to CPU queue
+Time 679: PID 713 enters system
+Time 679: Pushed PID 713 to CPU queue
+Time 679: PID 719 enters system
+Time 679: Pushed PID 719 to CPU queue
+Time 679: PID 632 enters system
+Time 679: Pushed PID 632 to CPU queue
+Time 679: PID 547 enters system
+Time 679: Pushed PID 547 to CPU queue
+Time 679: PID 599 enters system
+Time 679: Pushed PID 599 to CPU queue
+Time 690: Finished PID 215 on CORE 0
+Time 690: Sent PID 215 to DISK 0
+Time 690: Pulling PID 279 off of CPU queue...
+Time 690: Sent PID 279 to CORE 0
+Time 690: Received PID 215 on DISK 0
+Time 690: Received PID 279 on CORE 0
+Time 690: PID 675 enters system
+Time 690: Pushed PID 675 to CPU queue
+Time 690: PID 598 enters system
+Time 690: Pushed PID 598 to CPU queue
+Time 690: PID 687 enters system
+Time 690: Pushed PID 687 to CPU queue
+Time 690: PID 592 enters system
+Time 690: Pushed PID 592 to CPU queue
+Time 690: PID 730 enters system
+Time 690: Pushed PID 730 to CPU queue
+Time 690: PID 677 enters system
+Time 690: Pushed PID 677 to CPU queue
+Time 690: PID 648 enters system
+Time 690: Pushed PID 648 to CPU queue
+Time 690: PID 631 enters system
+Time 690: Pushed PID 631 to CPU queue
+Time 690: Finished PID 228 on DISK 1
+Time 690: PID 228 enters system
+Time 690: Pushed PID 228 to CPU queue
+Time 690: PID 602 enters system
+Time 690: Pushed PID 602 to CPU queue
+Time 690: PID 649 enters system
+Time 690: Pushed PID 649 to CPU queue
+Time 700: Finished PID 279 on CORE 0
+Time 700: Pulling PID 94 off of CPU queue...
+Time 700: Sent PID 94 to CORE 0
+Time 700: PID 279 exits system
+Time 700: Received PID 94 on CORE 0
+Time 700: Finished PID 215 on DISK 0
+Time 700: PID 215 enters system
+Time 700: Pushed PID 215 to CPU queue
+Time 700: PID 582 enters system
+Time 700: Pushed PID 582 to CPU queue
+Time 700: PID 633 enters system
+Time 700: Pushed PID 633 to CPU queue
+Time 700: PID 712 enters system
+Time 700: Pushed PID 712 to CPU queue
+Time 700: PID 628 enters system
+Time 700: Pushed PID 628 to CPU queue
+Time 700: PID 564 enters system
+Time 700: Pushed PID 564 to CPU queue
+Time 700: PID 711 enters system
+Time 700: Pushed PID 711 to CPU queue
+Time 700: PID 607 enters system
+Time 700: Pushed PID 607 to CPU queue
+Time 700: PID 663 enters system
+Time 700: Pushed PID 663 to CPU queue
+Time 700: PID 735 enters system
+Time 700: Pushed PID 735 to CPU queue
+Time 700: PID 751 enters system
+Time 700: Pushed PID 751 to CPU queue
+Time 709: Finished PID 94 on CORE 0
+Time 709: Sent PID 94 to DISK 0
+Time 709: Pulling PID 207 off of CPU queue...
+Time 709: Sent PID 207 to CORE 0
+Time 709: Received PID 94 on DISK 0
+Time 709: Received PID 207 on CORE 0
+Time 709: PID 729 enters system
+Time 709: Pushed PID 729 to CPU queue
+Time 709: PID 758 enters system
+Time 709: Pushed PID 758 to CPU queue
+Time 709: PID 661 enters system
+Time 709: Pushed PID 661 to CPU queue
+Time 709: PID 721 enters system
+Time 709: Pushed PID 721 to CPU queue
+Time 717: Finished PID 207 on CORE 0
+Time 717: Pulling PID 264 off of CPU queue...
+Time 717: Sent PID 264 to CORE 0
+Time 717: PID 207 exits system
+Time 717: Received PID 264 on CORE 0
+Time 717: PID 678 enters system
+Time 717: Pushed PID 678 to CPU queue
+Time 717: PID 774 enters system
+Time 717: Pushed PID 774 to CPU queue
+Time 717: PID 753 enters system
+Time 717: Pushed PID 753 to CPU queue
+Time 721: Finished PID 264 on CORE 0
+Time 721: Sent PID 264 to DISK 1
+Time 721: Pulling PID 258 off of CPU queue...
+Time 721: Sent PID 258 to CORE 0
+Time 721: Received PID 264 on DISK 1
+Time 721: Received PID 258 on CORE 0
+Time 721: PID 690 enters system
+Time 721: Pushed PID 690 to CPU queue
+Time 721: PID 612 enters system
+Time 721: Pushed PID 612 to CPU queue
+Time 721: PID 650 enters system
+Time 721: Pushed PID 650 to CPU queue
+Time 721: PID 660 enters system
+Time 721: Pushed PID 660 to CPU queue
+Time 721: PID 691 enters system
+Time 721: Pushed PID 691 to CPU queue
+Time 721: PID 777 enters system
+Time 721: Pushed PID 777 to CPU queue
+Time 721: Finished PID 94 on DISK 0
+Time 721: PID 94 enters system
+Time 721: Pushed PID 94 to CPU queue
+Time 721: PID 752 enters system
+Time 721: Pushed PID 752 to CPU queue
+Time 721: PID 642 enters system
+Time 721: Pushed PID 642 to CPU queue
+Time 721: PID 620 enters system
+Time 721: Pushed PID 620 to CPU queue
+Time 727: Finished PID 258 on CORE 0
+Time 727: Sent PID 258 to DISK 0
+Time 727: Pulling PID 261 off of CPU queue...
+Time 727: Sent PID 261 to CORE 0
+Time 727: Received PID 258 on DISK 0
+Time 727: Received PID 261 on CORE 0
+Time 727: PID 608 enters system
+Time 727: Pushed PID 608 to CPU queue
+Time 727: PID 688 enters system
+Time 727: Pushed PID 688 to CPU queue
+Time 727: PID 664 enters system
+Time 727: Pushed PID 664 to CPU queue
+Time 727: PID 733 enters system
+Time 727: Pushed PID 733 to CPU queue
+Time 735: Finished PID 261 on CORE 0
+Time 735: Pushed PID 261 to DISK 0 queue
+Time 735: Pulling PID 237 off of CPU queue...
+Time 735: Sent PID 237 to CORE 0
+Time 735: Received PID 237 on CORE 0
+Time 735: PID 792 enters system
+Time 735: Pushed PID 792 to CPU queue
+Time 735: Finished PID 264 on DISK 1
+Time 735: PID 264 enters system
+Time 735: Pushed PID 264 to CPU queue
+Time 735: PID 768 enters system
+Time 735: Pushed PID 768 to CPU queue
+Time 735: PID 696 enters system
+Time 735: Pushed PID 696 to CPU queue
+Time 735: PID 626 enters system
+Time 735: Pushed PID 626 to CPU queue
+Time 735: PID 744 enters system
+Time 735: Pushed PID 744 to CPU queue
+Time 735: PID 807 enters system
+Time 735: Pushed PID 807 to CPU queue
+Time 735: PID 635 enters system
+Time 735: Pushed PID 635 to CPU queue
+Time 735: PID 714 enters system
+Time 735: Pushed PID 714 to CPU queue
+Time 735: PID 683 enters system
+Time 735: Pushed PID 683 to CPU queue
+Time 735: Finished PID 258 on DISK 0
+Time 735: Pulling PID 261 off of DISK 0 queue...
+Time 735: Sent PID 261 to DISK 0
+Time 735: Received PID 261 on DISK 0
+Time 735: PID 258 enters system
+Time 735: Pushed PID 258 to CPU queue
+Time 735: Finished PID 261 on DISK 0
+Time 735: PID 261 enters system
+Time 735: Pushed PID 261 to CPU queue
+Time 735: PID 715 enters system
+Time 735: Pushed PID 715 to CPU queue
+Time 735: PID 651 enters system
+Time 735: Pushed PID 651 to CPU queue
+Time 735: PID 776 enters system
+Time 735: Pushed PID 776 to CPU queue
+Time 735: PID 653 enters system
+Time 735: Pushed PID 653 to CPU queue
+Time 735: PID 734 enters system
+Time 735: Pushed PID 734 to CPU queue
+Time 748: Finished PID 237 on CORE 0
+Time 748: Sent PID 237 to DISK 0
+Time 748: Pulling PID 212 off of CPU queue...
+Time 748: Sent PID 212 to CORE 0
+Time 748: Received PID 237 on DISK 0
+Time 748: Received PID 212 on CORE 0
+Time 748: PID 747 enters system
+Time 748: Pushed PID 747 to CPU queue
+Time 748: PID 759 enters system
+Time 748: Pushed PID 759 to CPU queue
+Time 748: PID 782 enters system
+Time 748: Pushed PID 782 to CPU queue
+Time 748: PID 718 enters system
+Time 748: Pushed PID 718 to CPU queue
+Time 754: Finished PID 212 on CORE 0
+Time 754: Sent PID 212 to DISK 1
+Time 754: Pulling PID 303 off of CPU queue...
+Time 754: Sent PID 303 to CORE 0
+Time 754: Received PID 212 on DISK 1
+Time 754: PID 689 enters system
+Time 754: Pushed PID 689 to CPU queue
+Time 754: Received PID 303 on CORE 0
+Time 754: PID 746 enters system
+Time 754: Pushed PID 746 to CPU queue
+Time 754: PID 805 enters system
+Time 754: Pushed PID 805 to CPU queue
+Time 754: PID 808 enters system
+Time 754: Pushed PID 808 to CPU queue
+Time 754: PID 763 enters system
+Time 754: Pushed PID 763 to CPU queue
+Time 754: PID 685 enters system
+Time 754: Pushed PID 685 to CPU queue
+Time 754: PID 829 enters system
+Time 754: Pushed PID 829 to CPU queue
+Time 754: PID 732 enters system
+Time 754: Pushed PID 732 to CPU queue
+Time 754: PID 742 enters system
+Time 754: Pushed PID 742 to CPU queue
+Time 754: PID 669 enters system
+Time 754: Pushed PID 669 to CPU queue
+Time 754: PID 717 enters system
+Time 754: Pushed PID 717 to CPU queue
+Time 754: PID 781 enters system
+Time 754: Pushed PID 781 to CPU queue
+Time 754: PID 812 enters system
+Time 754: Pushed PID 812 to CPU queue
+Time 754: PID 769 enters system
+Time 754: Pushed PID 769 to CPU queue
+Time 754: Finished PID 212 on DISK 1
+Time 754: PID 212 enters system
+Time 754: Pushed PID 212 to CPU queue
+Time 754: Finished PID 237 on DISK 0
+Time 754: PID 237 enters system
+Time 754: Pushed PID 237 to CPU queue
+Time 754: PID 803 enters system
+Time 754: Pushed PID 803 to CPU queue
+Time 754: PID 842 enters system
+Time 754: Pushed PID 842 to CPU queue
+Time 754: PID 686 enters system
+Time 754: Pushed PID 686 to CPU queue
+Time 754: PID 750 enters system
+Time 754: Pushed PID 750 to CPU queue
+Time 767: Finished PID 303 on CORE 0
+Time 767: Pulling PID 260 off of CPU queue...
+Time 767: Sent PID 260 to CORE 0
+Time 767: PID 780 enters system
+Time 767: Pushed PID 780 to CPU queue
+Time 767: PID 303 exits system
+Time 767: Received PID 260 on CORE 0
+Time 767: PID 821 enters system
+Time 767: Pushed PID 821 to CPU queue
+Time 767: PID 831 enters system
+Time 767: Pushed PID 831 to CPU queue
+Time 767: PID 775 enters system
+Time 767: Pushed PID 775 to CPU queue
+Time 767: PID 748 enters system
+Time 767: Pushed PID 748 to CPU queue
+Time 767: PID 811 enters system
+Time 767: Pushed PID 811 to CPU queue
+Time 767: PID 710 enters system
+Time 767: Pushed PID 710 to CPU queue
+Time 767: PID 697 enters system
+Time 767: Pushed PID 697 to CPU queue
+Time 774: Finished PID 260 on CORE 0
+Time 774: Sent PID 260 to DISK 0
+Time 774: Pulling PID 294 off of CPU queue...
+Time 774: Sent PID 294 to CORE 0
+Time 774: Received PID 260 on DISK 0
+Time 774: Received PID 294 on CORE 0
+Time 774: PID 824 enters system
+Time 774: Pushed PID 824 to CPU queue
+Time 774: PID 743 enters system
+Time 774: Pushed PID 743 to CPU queue
+Time 774: PID 806 enters system
+Time 774: Pushed PID 806 to CPU queue
+Time 774: PID 859 enters system
+Time 774: Pushed PID 859 to CPU queue
+Time 781: Finished PID 294 on CORE 0
+Time 781: Sent PID 294 to DISK 1
+Time 781: Pulling PID 287 off of CPU queue...
+Time 781: Sent PID 287 to CORE 0
+Time 781: Received PID 294 on DISK 1
+Time 781: PID 853 enters system
+Time 781: Pushed PID 853 to CPU queue
+Time 781: Received PID 287 on CORE 0
+Time 781: PID 828 enters system
+Time 781: Pushed PID 828 to CPU queue
+Time 781: PID 705 enters system
+Time 781: Pushed PID 705 to CPU queue
+Time 781: PID 749 enters system
+Time 781: Pushed PID 749 to CPU queue
+Time 784: Finished PID 287 on CORE 0
+Time 784: Pulling PID 293 off of CPU queue...
+Time 784: Sent PID 293 to CORE 0
+Time 784: PID 287 exits system
+Time 784: Received PID 293 on CORE 0
+Time 784: PID 826 enters system
+Time 784: Pushed PID 826 to CPU queue
+Time 784: PID 845 enters system
+Time 784: Pushed PID 845 to CPU queue
+Time 784: PID 850 enters system
+Time 784: Pushed PID 850 to CPU queue
+Time 784: PID 720 enters system
+Time 784: Pushed PID 720 to CPU queue
+Time 784: PID 740 enters system
+Time 784: Pushed PID 740 to CPU queue
+Time 784: Finished PID 260 on DISK 0
+Time 784: PID 260 enters system
+Time 784: Pushed PID 260 to CPU queue
+Time 794: Finished PID 293 on CORE 0
+Time 794: Sent PID 293 to DISK 0
+Time 794: Pulling PID 213 off of CPU queue...
+Time 794: Sent PID 213 to CORE 0
+Time 794: Received PID 293 on DISK 0
+Time 794: Received PID 213 on CORE 0
+Time 794: PID 797 enters system
+Time 794: Pushed PID 797 to CPU queue
+Time 794: PID 833 enters system
+Time 794: Pushed PID 833 to CPU queue
+Time 794: Finished PID 294 on DISK 1
+Time 794: PID 294 enters system
+Time 794: Pushed PID 294 to CPU queue
+Time 794: PID 709 enters system
+Time 794: Pushed PID 709 to CPU queue
+Time 794: PID 761 enters system
+Time 794: Pushed PID 761 to CPU queue
+Time 794: PID 818 enters system
+Time 794: Pushed PID 818 to CPU queue
+Time 794: PID 876 enters system
+Time 794: Pushed PID 876 to CPU queue
+Time 794: PID 834 enters system
+Time 794: Pushed PID 834 to CPU queue
+Time 794: PID 866 enters system
+Time 794: Pushed PID 866 to CPU queue
+Time 801: Finished PID 213 on CORE 0
+Time 801: Pulling PID 321 off of CPU queue...
+Time 801: Sent PID 321 to CORE 0
+Time 801: PID 213 exits system
+Time 801: Received PID 321 on CORE 0
+Time 801: PID 791 enters system
+Time 801: Pushed PID 791 to CPU queue
+Time 801: Finished PID 293 on DISK 0
+Time 801: PID 293 enters system
+Time 801: Pushed PID 293 to CPU queue
+Time 801: PID 819 enters system
+Time 801: Pushed PID 819 to CPU queue
+Time 801: PID 841 enters system
+Time 801: Pushed PID 841 to CPU queue
+Time 801: PID 862 enters system
+Time 801: Pushed PID 862 to CPU queue
+Time 811: Finished PID 321 on CORE 0
+Time 811: Sent PID 321 to DISK 0
+Time 811: Pulling PID 217 off of CPU queue...
+Time 811: Sent PID 217 to CORE 0
+Time 811: Received PID 321 on DISK 0
+Time 811: PID 844 enters system
+Time 811: Pushed PID 844 to CPU queue
+Time 811: Received PID 217 on CORE 0
+Time 811: PID 760 enters system
+Time 811: Pushed PID 760 to CPU queue
+Time 811: PID 886 enters system
+Time 811: Pushed PID 886 to CPU queue
+Time 811: PID 804 enters system
+Time 811: Pushed PID 804 to CPU queue
+Time 811: PID 762 enters system
+Time 811: Pushed PID 762 to CPU queue
+Time 815: Finished PID 217 on CORE 0
+Time 815: Sent PID 217 to DISK 1
+Time 815: Pulling PID 278 off of CPU queue...
+Time 815: Sent PID 278 to CORE 0
+Time 815: Received PID 217 on DISK 1
+Time 815: Received PID 278 on CORE 0
+Time 815: PID 813 enters system
+Time 815: Pushed PID 813 to CPU queue
+Time 815: Finished PID 321 on DISK 0
+Time 815: PID 321 enters system
+Time 815: Pushed PID 321 to CPU queue
+Time 819: Finished PID 278 on CORE 0
+Time 819: Pulling PID 246 off of CPU queue...
+Time 819: Sent PID 246 to CORE 0
+Time 819: PID 790 enters system
+Time 819: Pushed PID 790 to CPU queue
+Time 819: PID 865 enters system
+Time 819: Pushed PID 865 to CPU queue
+Time 819: PID 278 exits system
+Time 819: Received PID 246 on CORE 0
+Time 820: Finished PID 246 on CORE 0
+Time 820: Sent PID 246 to DISK 0
+Time 820: Pulling PID 263 off of CPU queue...
+Time 820: Sent PID 263 to CORE 0
+Time 820: Received PID 246 on DISK 0
+Time 820: Received PID 263 on CORE 0
+Time 820: PID 832 enters system
+Time 820: Pushed PID 832 to CPU queue
+Time 820: PID 764 enters system
+Time 820: Pushed PID 764 to CPU queue
+Time 820: PID 937 enters system
+Time 820: Pushed PID 937 to CPU queue
+Time 820: PID 870 enters system
+Time 820: Pushed PID 870 to CPU queue
+Time 823: Finished PID 263 on CORE 0
+Time 823: Pulling PID 233 off of CPU queue...
+Time 823: Sent PID 233 to CORE 0
+Time 823: PID 263 exits system
+Time 823: Received PID 233 on CORE 0
+Time 823: PID 765 enters system
+Time 823: Pushed PID 765 to CPU queue
+Time 823: PID 830 enters system
+Time 823: Pushed PID 830 to CPU queue
+Time 823: Finished PID 217 on DISK 1
+Time 823: PID 217 enters system
+Time 823: Pushed PID 217 to CPU queue
+Time 823: PID 779 enters system
+Time 823: Pushed PID 779 to CPU queue
+Time 823: PID 840 enters system
+Time 823: Pushed PID 840 to CPU queue
+Time 823: Finished PID 246 on DISK 0
+Time 823: PID 246 enters system
+Time 823: Pushed PID 246 to CPU queue
+Time 823: PID 741 enters system
+Time 823: Pushed PID 741 to CPU queue
+Time 823: PID 905 enters system
+Time 823: Pushed PID 905 to CPU queue
+Time 829: Finished PID 233 on CORE 0
+Time 829: Sent PID 233 to DISK 0
+Time 829: Pulling PID 130 off of CPU queue...
+Time 829: Sent PID 130 to CORE 0
+Time 829: Received PID 233 on DISK 0
+Time 829: Received PID 130 on CORE 0
+Time 829: PID 798 enters system
+Time 829: Pushed PID 798 to CPU queue
+Time 829: PID 767 enters system
+Time 829: Pushed PID 767 to CPU queue
+Time 833: Finished PID 130 on CORE 0
+Time 833: Sent PID 130 to DISK 1
+Time 833: Pulling PID 292 off of CPU queue...
+Time 833: Sent PID 292 to CORE 0
+Time 833: Received PID 130 on DISK 1
+Time 833: Received PID 292 on CORE 0
+Time 833: PID 827 enters system
+Time 833: Pushed PID 827 to CPU queue
+Time 833: PID 810 enters system
+Time 833: Pushed PID 810 to CPU queue
+Time 833: PID 778 enters system
+Time 833: Pushed PID 778 to CPU queue
+Time 833: PID 929 enters system
+Time 833: Pushed PID 929 to CPU queue
+Time 833: PID 897 enters system
+Time 833: Pushed PID 897 to CPU queue
+Time 833: PID 914 enters system
+Time 833: Pushed PID 914 to CPU queue
 Time 833: PID 884 enters system
 Time 833: Pushed PID 884 to CPU queue
-Time 833: PID 742 enters system
-Time 833: Pushed PID 742 to CPU queue
-Time 833: PID 746 enters system
-Time 833: Pushed PID 746 to CPU queue
-Time 833: PID 876 enters system
-Time 833: Pushed PID 876 to CPU queue
-Time 833: PID 762 enters system
-Time 833: Pushed PID 762 to CPU queue
-Time 841: Finished PID 290 on CORE 0
-Time 841: Sent PID 290 to DISK 1
-Time 841: Pulling PID 306 off of CPU queue...
-Time 841: Sent PID 306 to CORE 0
-Time 841: Received PID 290 on DISK 1
-Time 841: PID 788 enters system
-Time 841: Pushed PID 788 to CPU queue
-Time 841: Received PID 306 on CORE 0
-Time 841: PID 811 enters system
-Time 841: Pushed PID 811 to CPU queue
-Time 841: PID 850 enters system
-Time 841: Pushed PID 850 to CPU queue
-Time 841: Finished PID 272 on DISK 0
-Time 841: PID 272 enters system
-Time 841: Pushed PID 272 to CPU queue
-Time 841: PID 910 enters system
-Time 841: Pushed PID 910 to CPU queue
-Time 841: PID 825 enters system
-Time 841: Pushed PID 825 to CPU queue
-Time 841: PID 790 enters system
-Time 841: Pushed PID 790 to CPU queue
-Time 841: PID 882 enters system
-Time 841: Pushed PID 882 to CPU queue
-Time 841: PID 832 enters system
-Time 841: Pushed PID 832 to CPU queue
-Time 841: PID 804 enters system
-Time 841: Pushed PID 804 to CPU queue
-Time 841: PID 852 enters system
-Time 841: Pushed PID 852 to CPU queue
-Time 854: Finished PID 306 on CORE 0
-Time 854: Sent PID 306 to DISK 0
-Time 854: Pulling PID 294 off of CPU queue...
-Time 854: Sent PID 294 to CORE 0
-Time 854: Received PID 306 on DISK 0
-Time 854: Received PID 294 on CORE 0
-Time 854: PID 818 enters system
-Time 854: Pushed PID 818 to CPU queue
-Time 854: Finished PID 290 on DISK 1
-Time 854: PID 290 enters system
-Time 854: Pushed PID 290 to CPU queue
-Time 854: PID 771 enters system
-Time 854: Pushed PID 771 to CPU queue
-Time 854: PID 837 enters system
-Time 854: Pushed PID 837 to CPU queue
-Time 854: PID 851 enters system
-Time 854: Pushed PID 851 to CPU queue
-Time 854: PID 796 enters system
-Time 854: Pushed PID 796 to CPU queue
-Time 854: PID 772 enters system
-Time 854: Pushed PID 772 to CPU queue
-Time 854: PID 923 enters system
-Time 854: Pushed PID 923 to CPU queue
-Time 854: PID 894 enters system
-Time 854: Pushed PID 894 to CPU queue
-Time 854: PID 874 enters system
-Time 854: Pushed PID 874 to CPU queue
-Time 854: PID 938 enters system
-Time 854: Pushed PID 938 to CPU queue
-Time 854: PID 877 enters system
-Time 854: Pushed PID 877 to CPU queue
-Time 854: PID 784 enters system
-Time 854: Pushed PID 784 to CPU queue
-Time 863: Finished PID 294 on CORE 0
-Time 863: Pulling PID 229 off of CPU queue...
-Time 863: Sent PID 229 to CORE 0
-Time 863: PID 294 exits system
-Time 863: Received PID 229 on CORE 0
-Time 864: Finished PID 229 on CORE 0
-Time 864: Pulling PID 304 off of CPU queue...
-Time 864: Sent PID 304 to CORE 0
-Time 864: PID 229 exits system
-Time 864: Received PID 304 on CORE 0
-Time 864: PID 942 enters system
-Time 864: Pushed PID 942 to CPU queue
-Time 864: PID 899 enters system
-Time 864: Pushed PID 899 to CPU queue
-Time 864: PID 808 enters system
-Time 864: Pushed PID 808 to CPU queue
-Time 864: PID 829 enters system
-Time 864: Pushed PID 829 to CPU queue
-Time 864: Finished PID 306 on DISK 0
-Time 864: PID 306 enters system
-Time 864: Pushed PID 306 to CPU queue
-Time 864: PID 916 enters system
-Time 864: Pushed PID 916 to CPU queue
-Time 864: PID 892 enters system
-Time 864: Pushed PID 892 to CPU queue
-Time 864: PID 915 enters system
-Time 864: Pushed PID 915 to CPU queue
-Time 864: PID 816 enters system
-Time 864: Pushed PID 816 to CPU queue
-Time 864: PID 864 enters system
-Time 864: Pushed PID 864 to CPU queue
-Time 864: PID 904 enters system
-Time 864: Pushed PID 904 to CPU queue
-Time 864: PID 903 enters system
-Time 864: Pushed PID 903 to CPU queue
-Time 875: Finished PID 304 on CORE 0
-Time 875: Sent PID 304 to DISK 0
-Time 875: Pulling PID 92 off of CPU queue...
-Time 875: Sent PID 92 to CORE 0
-Time 875: Received PID 304 on DISK 0
-Time 875: PID 866 enters system
-Time 875: Pushed PID 866 to CPU queue
-Time 875: Received PID 92 on CORE 0
-Time 875: PID 883 enters system
-Time 875: Pushed PID 883 to CPU queue
-Time 875: PID 950 enters system
-Time 875: Pushed PID 950 to CPU queue
+Time 833: PID 783 enters system
+Time 833: Pushed PID 783 to CPU queue
+Time 839: Finished PID 292 on CORE 0
+Time 839: Pulling PID 309 off of CPU queue...
+Time 839: Sent PID 309 to CORE 0
+Time 839: PID 887 enters system
+Time 839: Pushed PID 887 to CPU queue
+Time 839: PID 292 exits system
+Time 839: Received PID 309 on CORE 0
+Time 839: Finished PID 233 on DISK 0
+Time 839: PID 233 enters system
+Time 839: Pushed PID 233 to CPU queue
+Time 839: PID 869 enters system
+Time 839: Pushed PID 869 to CPU queue
+Time 843: Finished PID 309 on CORE 0
+Time 843: Sent PID 309 to DISK 0
+Time 843: Pulling PID 232 off of CPU queue...
+Time 843: Sent PID 232 to CORE 0
+Time 843: Received PID 309 on DISK 0
+Time 843: Received PID 232 on CORE 0
+Time 843: PID 939 enters system
+Time 843: Pushed PID 939 to CPU queue
+Time 843: PID 784 enters system
+Time 843: Pushed PID 784 to CPU queue
+Time 843: Finished PID 130 on DISK 1
+Time 843: PID 130 enters system
+Time 843: Pushed PID 130 to CPU queue
+Time 843: PID 898 enters system
+Time 843: Pushed PID 898 to CPU queue
+Time 843: PID 968 enters system
+Time 843: Pushed PID 968 to CPU queue
+Time 843: PID 980 enters system
+Time 843: Pushed PID 980 to CPU queue
+Time 843: PID 930 enters system
+Time 843: Pushed PID 930 to CPU queue
+Time 843: PID 889 enters system
+Time 843: Pushed PID 889 to CPU queue
+Time 843: PID 976 enters system
+Time 843: Pushed PID 976 to CPU queue
+Time 843: PID 873 enters system
+Time 843: Pushed PID 873 to CPU queue
+Time 843: PID 796 enters system
+Time 843: Pushed PID 796 to CPU queue
+Time 843: PID 927 enters system
+Time 843: Pushed PID 927 to CPU queue
+Time 848: Finished PID 232 on CORE 0
+Time 848: Pulling PID 284 off of CPU queue...
+Time 848: Sent PID 284 to CORE 0
+Time 848: PID 232 exits system
+Time 848: Received PID 284 on CORE 0
+Time 848: PID 926 enters system
+Time 848: Pushed PID 926 to CPU queue
+Time 848: PID 882 enters system
+Time 848: Pushed PID 882 to CPU queue
+Time 848: PID 789 enters system
+Time 848: Pushed PID 789 to CPU queue
+Time 848: PID 861 enters system
+Time 848: Pushed PID 861 to CPU queue
+Time 848: PID 879 enters system
+Time 848: Pushed PID 879 to CPU queue
+Time 848: PID 820 enters system
+Time 848: Pushed PID 820 to CPU queue
+Time 848: PID 924 enters system
+Time 848: Pushed PID 924 to CPU queue
+Time 848: PID 863 enters system
+Time 848: Pushed PID 863 to CPU queue
+Time 856: Finished PID 284 on CORE 0
+Time 856: Sent PID 284 to DISK 1
+Time 856: Pulling PID 320 off of CPU queue...
+Time 856: Sent PID 320 to CORE 0
+Time 856: Received PID 284 on DISK 1
+Time 856: Received PID 320 on CORE 0
+Time 856: PID 977 enters system
+Time 856: Pushed PID 977 to CPU queue
+Time 856: PID 928 enters system
+Time 856: Pushed PID 928 to CPU queue
+Time 856: PID 896 enters system
+Time 856: Pushed PID 896 to CPU queue
+Time 859: Finished PID 320 on CORE 0
+Time 859: Pushed PID 320 to DISK 0 queue
+Time 859: Pulling PID 322 off of CPU queue...
+Time 859: Sent PID 322 to CORE 0
+Time 859: Received PID 322 on CORE 0
+Time 859: PID 916 enters system
+Time 859: Pushed PID 916 to CPU queue
+Time 859: PID 958 enters system
+Time 859: Pushed PID 958 to CPU queue
+Time 859: PID 877 enters system
+Time 859: Pushed PID 877 to CPU queue
+Time 859: Finished PID 309 on DISK 0
+Time 859: Pulling PID 320 off of DISK 0 queue...
+Time 859: Sent PID 320 to DISK 0
+Time 859: Received PID 320 on DISK 0
+Time 859: PID 309 enters system
+Time 859: Pushed PID 309 to CPU queue
+Time 859: PID 938 enters system
+Time 859: Pushed PID 938 to CPU queue
+Time 859: PID 966 enters system
+Time 859: Pushed PID 966 to CPU queue
+Time 859: PID 967 enters system
+Time 859: Pushed PID 967 to CPU queue
+Time 859: PID 946 enters system
+Time 859: Pushed PID 946 to CPU queue
+Time 866: Finished PID 322 on CORE 0
+Time 866: Pulling PID 329 off of CPU queue...
+Time 866: Sent PID 329 to CORE 0
+Time 866: PID 322 exits system
+Time 866: Received PID 329 on CORE 0
+Time 866: PID 953 enters system
+Time 866: Pushed PID 953 to CPU queue
+Time 866: Finished PID 284 on DISK 1
+Time 866: PID 284 enters system
+Time 866: Pushed PID 284 to CPU queue
+Time 866: PID 995 enters system
+Time 866: Pushed PID 995 to CPU queue
+Time 866: Finished PID 320 on DISK 0
+Time 866: PID 320 enters system
+Time 866: Pushed PID 320 to CPU queue
+Time 866: PID 912 enters system
+Time 866: Pushed PID 912 to CPU queue
+Time 866: PID 843 enters system
+Time 866: Pushed PID 843 to CPU queue
+Time 866: PID 851 enters system
+Time 866: Pushed PID 851 to CPU queue
+Time 866: PID 959 enters system
+Time 866: Pushed PID 959 to CPU queue
+Time 866: PID 885 enters system
+Time 866: Pushed PID 885 to CPU queue
+Time 866: PID 871 enters system
+Time 866: Pushed PID 871 to CPU queue
+Time 875: Finished PID 329 on CORE 0
+Time 875: Pulling PID 165 off of CPU queue...
+Time 875: Sent PID 165 to CORE 0
+Time 875: PID 329 exits system
+Time 875: Received PID 165 on CORE 0
+Time 875: PID 993 enters system
+Time 875: Pushed PID 993 to CPU queue
+Time 875: PID 911 enters system
+Time 875: Pushed PID 911 to CPU queue
 Time 875: PID 945 enters system
 Time 875: Pushed PID 945 to CPU queue
-Time 875: PID 898 enters system
-Time 875: Pushed PID 898 to CPU queue
-Time 875: PID 871 enters system
-Time 875: Pushed PID 871 to CPU queue
-Time 875: PID 900 enters system
-Time 875: Pushed PID 900 to CPU queue
-Time 875: PID 895 enters system
-Time 875: Pushed PID 895 to CPU queue
-Time 875: PID 948 enters system
-Time 875: Pushed PID 948 to CPU queue
-Time 886: Finished PID 92 on CORE 0
-Time 886: Pulling PID 203 off of CPU queue...
-Time 886: Sent PID 203 to CORE 0
-Time 886: PID 92 exits system
-Time 886: Received PID 203 on CORE 0
-Time 886: PID 893 enters system
-Time 886: Pushed PID 893 to CPU queue
-Time 886: PID 985 enters system
-Time 886: Pushed PID 985 to CPU queue
-Time 886: PID 970 enters system
-Time 886: Pushed PID 970 to CPU queue
-Time 888: Finished PID 203 on CORE 0
-Time 888: Pulling PID 230 off of CPU queue...
-Time 888: Sent PID 230 to CORE 0
-Time 888: PID 203 exits system
-Time 888: Received PID 230 on CORE 0
-Time 888: PID 809 enters system
-Time 888: Pushed PID 809 to CPU queue
-Time 888: PID 932 enters system
-Time 888: Pushed PID 932 to CPU queue
-Time 888: PID 931 enters system
-Time 888: Pushed PID 931 to CPU queue
-Time 888: PID 836 enters system
-Time 888: Pushed PID 836 to CPU queue
-Time 888: PID 964 enters system
-Time 888: Pushed PID 964 to CPU queue
-Time 888: PID 933 enters system
-Time 888: Pushed PID 933 to CPU queue
-Time 888: PID 920 enters system
-Time 888: Pushed PID 920 to CPU queue
-Time 888: PID 914 enters system
-Time 888: Pushed PID 914 to CPU queue
-Time 888: Finished PID 304 on DISK 0
-Time 888: PID 304 enters system
-Time 888: Pushed PID 304 to CPU queue
-Time 888: PID 824 enters system
-Time 888: Pushed PID 824 to CPU queue
-Time 888: PID 839 enters system
-Time 888: Pushed PID 839 to CPU queue
-Time 895: Finished PID 230 on CORE 0
-Time 895: Pulling PID 295 off of CPU queue...
-Time 895: Sent PID 295 to CORE 0
-Time 895: PID 230 exits system
-Time 895: Received PID 295 on CORE 0
-Time 895: PID 998 enters system
-Time 895: Pushed PID 998 to CPU queue
-Time 895: PID 859 enters system
-Time 895: Pushed PID 859 to CPU queue
-Time 895: PID 901 enters system
-Time 895: Pushed PID 901 to CPU queue
-Time 895: PID 997 enters system
-Time 895: Pushed PID 997 to CPU queue
-Time 895: PID 842 enters system
-Time 895: Pushed PID 842 to CPU queue
-Time 895: PID 873 enters system
-Time 895: Pushed PID 873 to CPU queue
-Time 895: PID 838 enters system
-Time 895: Pushed PID 838 to CPU queue
-Time 895: PID 887 enters system
-Time 895: Pushed PID 887 to CPU queue
-Time 895: PID 952 enters system
-Time 895: Pushed PID 952 to CPU queue
-Time 895: PID 969 enters system
-Time 895: Pushed PID 969 to CPU queue
-Time 895: PID 1009 enters system
-Time 895: Pushed PID 1009 to CPU queue
-Time 907: Finished PID 295 on CORE 0
-Time 907: Pulling PID 317 off of CPU queue...
-Time 907: Sent PID 317 to CORE 0
-Time 907: PID 295 exits system
-Time 907: Received PID 317 on CORE 0
-Time 907: PID 924 enters system
-Time 907: Pushed PID 924 to CPU queue
-Time 907: PID 921 enters system
-Time 907: Pushed PID 921 to CPU queue
-Time 907: PID 963 enters system
-Time 907: Pushed PID 963 to CPU queue
-Time 907: PID 863 enters system
-Time 907: Pushed PID 863 to CPU queue
-Time 907: PID 929 enters system
-Time 907: Pushed PID 929 to CPU queue
-Time 907: PID 1020 enters system
-Time 907: Pushed PID 1020 to CPU queue
-Time 907: PID 885 enters system
-Time 907: Pushed PID 885 to CPU queue
-Time 915: Finished PID 317 on CORE 0
-Time 915: Pulling PID 168 off of CPU queue...
-Time 915: Sent PID 168 to CORE 0
-Time 915: PID 317 exits system
-Time 915: Received PID 168 on CORE 0
-Time 915: PID 999 enters system
-Time 915: Pushed PID 999 to CPU queue
-Time 915: PID 991 enters system
-Time 915: Pushed PID 991 to CPU queue
-Time 915: PID 867 enters system
-Time 915: Pushed PID 867 to CPU queue
-Time 915: PID 951 enters system
-Time 915: Pushed PID 951 to CPU queue
-Time 915: PID 1034 enters system
-Time 915: Pushed PID 1034 to CPU queue
-Time 915: PID 937 enters system
-Time 915: Pushed PID 937 to CPU queue
-Time 915: PID 1023 enters system
-Time 915: Pushed PID 1023 to CPU queue
-Time 915: PID 990 enters system
-Time 915: Pushed PID 990 to CPU queue
-Time 926: Finished PID 168 on CORE 0
-Time 926: Sent PID 168 to DISK 0
-Time 926: Pulling PID 338 off of CPU queue...
-Time 926: Sent PID 338 to CORE 0
-Time 926: Received PID 168 on DISK 0
-Time 926: Received PID 338 on CORE 0
-Time 926: PID 1025 enters system
-Time 926: Pushed PID 1025 to CPU queue
-Time 926: PID 896 enters system
-Time 926: Pushed PID 896 to CPU queue
-Time 926: PID 959 enters system
-Time 926: Pushed PID 959 to CPU queue
-Time 926: PID 967 enters system
-Time 926: Pushed PID 967 to CPU queue
-Time 926: PID 881 enters system
-Time 926: Pushed PID 881 to CPU queue
-Time 926: PID 988 enters system
-Time 926: Pushed PID 988 to CPU queue
-Time 926: PID 949 enters system
-Time 926: Pushed PID 949 to CPU queue
-Time 926: Finished PID 168 on DISK 0
-Time 926: PID 168 enters system
-Time 926: Pushed PID 168 to CPU queue
-Time 926: PID 1030 enters system
-Time 926: Pushed PID 1030 to CPU queue
-Time 926: PID 1033 enters system
-Time 926: Pushed PID 1033 to CPU queue
-Time 926: PID 918 enters system
-Time 926: Pushed PID 918 to CPU queue
-Time 926: PID 934 enters system
-Time 926: Pushed PID 934 to CPU queue
-Time 926: PID 987 enters system
-Time 926: Pushed PID 987 to CPU queue
-Time 926: PID 917 enters system
-Time 926: Pushed PID 917 to CPU queue
-Time 926: PID 1046 enters system
-Time 926: Pushed PID 1046 to CPU queue
-Time 938: Finished PID 338 on CORE 0
-Time 938: Sent PID 338 to DISK 0
-Time 938: Pulling PID 237 off of CPU queue...
-Time 938: Sent PID 237 to CORE 0
-Time 938: Received PID 338 on DISK 0
-Time 938: Received PID 237 on CORE 0
-Time 938: PID 982 enters system
-Time 938: Pushed PID 982 to CPU queue
-Time 938: PID 981 enters system
-Time 938: Pushed PID 981 to CPU queue
-Time 938: PID 935 enters system
-Time 938: Pushed PID 935 to CPU queue
-Time 938: PID 965 enters system
-Time 938: Pushed PID 965 to CPU queue
-Time 938: PID 922 enters system
-Time 938: Pushed PID 922 to CPU queue
-Time 938: PID 1035 enters system
-Time 938: Pushed PID 1035 to CPU queue
-Time 938: PID 902 enters system
-Time 938: Pushed PID 902 to CPU queue
-Time 938: PID 1018 enters system
-Time 938: Pushed PID 1018 to CPU queue
-Time 938: PID 909 enters system
-Time 938: Pushed PID 909 to CPU queue
-Time 938: Finished PID 338 on DISK 0
-Time 938: PID 338 enters system
-Time 938: Pushed PID 338 to CPU queue
-Time 950: Finished PID 237 on CORE 0
-Time 950: Sent PID 237 to DISK 0
-Time 950: Pulling PID 263 off of CPU queue...
-Time 950: Sent PID 263 to CORE 0
-Time 950: Received PID 237 on DISK 0
-Time 950: Received PID 263 on CORE 0
-Time 950: PID 1015 enters system
-Time 950: Pushed PID 1015 to CPU queue
-Time 952: Finished PID 263 on CORE 0
-Time 952: Sent PID 263 to DISK 1
-Time 952: Pulling PID 140 off of CPU queue...
-Time 952: Sent PID 140 to CORE 0
-Time 952: Received PID 263 on DISK 1
-Time 952: Received PID 140 on CORE 0
-Time 952: PID 1073 enters system
-Time 952: Pushed PID 1073 to CPU queue
-Time 952: PID 979 enters system
-Time 952: Pushed PID 979 to CPU queue
-Time 952: PID 966 enters system
-Time 952: Pushed PID 966 to CPU queue
-Time 952: PID 1010 enters system
-Time 952: Pushed PID 1010 to CPU queue
-Time 952: Finished PID 237 on DISK 0
-Time 952: PID 237 enters system
-Time 952: Pushed PID 237 to CPU queue
-Time 952: PID 989 enters system
-Time 952: Pushed PID 989 to CPU queue
-Time 952: PID 962 enters system
-Time 952: Pushed PID 962 to CPU queue
-Time 952: PID 1017 enters system
-Time 952: Pushed PID 1017 to CPU queue
-Time 952: Finished PID 263 on DISK 1
-Time 952: PID 263 enters system
-Time 952: Pushed PID 263 to CPU queue
-Time 961: Finished PID 140 on CORE 0
-Time 961: Sent PID 140 to DISK 0
-Time 961: Pulling PID 265 off of CPU queue...
-Time 961: Sent PID 265 to CORE 0
-Time 961: Received PID 140 on DISK 0
-Time 961: Received PID 265 on CORE 0
-Time 961: PID 986 enters system
-Time 961: Pushed PID 986 to CPU queue
-Time 961: PID 1070 enters system
-Time 961: Pushed PID 1070 to CPU queue
-Time 961: PID 1003 enters system
-Time 961: Pushed PID 1003 to CPU queue
-Time 961: PID 961 enters system
-Time 961: Pushed PID 961 to CPU queue
-Time 961: PID 930 enters system
-Time 961: Pushed PID 930 to CPU queue
-Time 964: Finished PID 265 on CORE 0
-Time 964: Sent PID 265 to DISK 1
-Time 964: Pulling PID 350 off of CPU queue...
-Time 964: Sent PID 350 to CORE 0
-Time 964: Received PID 265 on DISK 1
-Time 964: PID 936 enters system
-Time 964: Pushed PID 936 to CPU queue
-Time 964: Received PID 350 on CORE 0
-Time 964: PID 1078 enters system
-Time 964: Pushed PID 1078 to CPU queue
-Time 964: PID 1076 enters system
-Time 964: Pushed PID 1076 to CPU queue
-Time 964: PID 1002 enters system
-Time 964: Pushed PID 1002 to CPU queue
-Time 964: Finished PID 265 on DISK 1
-Time 964: PID 265 enters system
-Time 964: Pushed PID 265 to CPU queue
-Time 964: PID 971 enters system
-Time 964: Pushed PID 971 to CPU queue
-Time 972: Finished PID 350 on CORE 0
-Time 972: Sent PID 350 to DISK 1
-Time 972: Pulling PID 269 off of CPU queue...
-Time 972: Sent PID 269 to CORE 0
-Time 972: Received PID 350 on DISK 1
-Time 972: Received PID 269 on CORE 0
-Time 972: PID 1069 enters system
-Time 972: Pushed PID 1069 to CPU queue
-Time 972: PID 954 enters system
-Time 972: Pushed PID 954 to CPU queue
-Time 972: PID 1071 enters system
-Time 972: Pushed PID 1071 to CPU queue
-Time 972: Finished PID 140 on DISK 0
-Time 972: PID 140 enters system
-Time 972: Pushed PID 140 to CPU queue
-Time 972: PID 1106 enters system
-Time 972: Pushed PID 1106 to CPU queue
-Time 972: PID 980 enters system
-Time 972: Pushed PID 980 to CPU queue
-Time 972: PID 1001 enters system
-Time 972: Pushed PID 1001 to CPU queue
-Time 972: PID 947 enters system
-Time 972: Pushed PID 947 to CPU queue
-Time 972: PID 944 enters system
-Time 972: Pushed PID 944 to CPU queue
-Time 972: PID 953 enters system
-Time 972: Pushed PID 953 to CPU queue
-Time 978: Finished PID 269 on CORE 0
-Time 978: Sent PID 269 to DISK 0
-Time 978: Pulling PID 298 off of CPU queue...
-Time 978: Sent PID 298 to CORE 0
-Time 978: Received PID 269 on DISK 0
-Time 978: PID 1000 enters system
-Time 978: Pushed PID 1000 to CPU queue
-Time 978: Received PID 298 on CORE 0
-Time 978: PID 1029 enters system
-Time 978: Pushed PID 1029 to CPU queue
-Time 978: PID 1054 enters system
-Time 978: Pushed PID 1054 to CPU queue
-Time 978: PID 968 enters system
-Time 978: Pushed PID 968 to CPU queue
-Time 978: PID 972 enters system
-Time 978: Pushed PID 972 to CPU queue
-Time 978: PID 1067 enters system
-Time 978: Pushed PID 1067 to CPU queue
-Time 978: PID 995 enters system
-Time 978: Pushed PID 995 to CPU queue
-Time 978: Finished PID 269 on DISK 0
-Time 978: PID 269 enters system
-Time 978: Pushed PID 269 to CPU queue
-Time 985: Finished PID 298 on CORE 0
-Time 985: Sent PID 298 to DISK 0
-Time 985: Pulling PID 239 off of CPU queue...
-Time 985: Sent PID 239 to CORE 0
-Time 985: Received PID 298 on DISK 0
-Time 985: PID 1044 enters system
-Time 985: Pushed PID 1044 to CPU queue
-Time 985: PID 1024 enters system
-Time 985: Pushed PID 1024 to CPU queue
-Time 985: Received PID 239 on CORE 0
-Time 985: PID 1089 enters system
-Time 985: Pushed PID 1089 to CPU queue
-Time 985: PID 1086 enters system
-Time 985: Pushed PID 1086 to CPU queue
-Time 985: PID 1043 enters system
-Time 985: Pushed PID 1043 to CPU queue
-Time 985: Finished PID 350 on DISK 1
-Time 985: PID 350 enters system
-Time 985: Pushed PID 350 to CPU queue
-Time 985: PID 1049 enters system
-Time 985: Pushed PID 1049 to CPU queue
-Time 985: PID 1048 enters system
-Time 985: Pushed PID 1048 to CPU queue
-Time 985: PID 1077 enters system
-Time 985: Pushed PID 1077 to CPU queue
-Time 992: Finished PID 239 on CORE 0
-Time 992: Sent PID 239 to DISK 1
-Time 992: Pulling PID 87 off of CPU queue...
-Time 992: Sent PID 87 to CORE 0
-Time 992: Received PID 239 on DISK 1
-Time 992: Received PID 87 on CORE 0
-Time 992: PID 1032 enters system
-Time 992: Pushed PID 1032 to CPU queue
-Time 992: PID 1112 enters system
-Time 992: Pushed PID 1112 to CPU queue
-Time 992: PID 1134 enters system
-Time 992: Pushed PID 1134 to CPU queue
-Time 992: PID 1147 enters system
-Time 992: Pushed PID 1147 to CPU queue
-Time 996: Finished PID 87 on CORE 0
-Time 996: Pushed PID 87 to DISK 0 queue
-Time 996: Pulling PID 343 off of CPU queue...
-Time 996: Sent PID 343 to CORE 0
-Time 996: Received PID 343 on CORE 0
-Time 996: PID 1093 enters system
-Time 996: Pushed PID 1093 to CPU queue
-Time 996: PID 1057 enters system
-Time 996: Pushed PID 1057 to CPU queue
-Time 996: PID 1037 enters system
-Time 996: Pushed PID 1037 to CPU queue
-Time 996: PID 1065 enters system
-Time 996: Pushed PID 1065 to CPU queue
-Time 996: Finished PID 298 on DISK 0
-Time 996: Pulling PID 87 off of DISK 0 queue...
-Time 996: Sent PID 87 to DISK 0
-Time 996: Received PID 87 on DISK 0
-Time 996: PID 298 enters system
-Time 996: Pushed PID 298 to CPU queue
-Time 996: PID 1045 enters system
-Time 996: Pushed PID 1045 to CPU queue
-Time 996: Finished PID 239 on DISK 1
-Time 996: PID 239 enters system
-Time 996: Pushed PID 239 to CPU queue
-Time 996: PID 1140 enters system
-Time 996: Pushed PID 1140 to CPU queue
-Time 996: PID 1145 enters system
-Time 996: Pushed PID 1145 to CPU queue
-Time 996: PID 1016 enters system
-Time 996: Pushed PID 1016 to CPU queue
-Time 996: PID 1135 enters system
-Time 996: Pushed PID 1135 to CPU queue
-Time 996: PID 1008 enters system
-Time 996: Pushed PID 1008 to CPU queue
-Time 996: Finished PID 87 on DISK 0
-Time 996: PID 87 enters system
-Time 996: Pushed PID 87 to CPU queue
-Time 996: PID 1128 enters system
-Time 996: Pushed PID 1128 to CPU queue
-Time 996: PID 1039 enters system
-Time 996: Pushed PID 1039 to CPU queue
-Time 996: PID 1095 enters system
-Time 996: Pushed PID 1095 to CPU queue
-Time 996: PID 1144 enters system
-Time 996: Pushed PID 1144 to CPU queue
-Time 996: PID 984 enters system
-Time 996: Pushed PID 984 to CPU queue
-Time 996: PID 1019 enters system
-Time 996: Pushed PID 1019 to CPU queue
-Time 996: PID 1091 enters system
-Time 996: Pushed PID 1091 to CPU queue
-Time 1008: Finished PID 343 on CORE 0
-Time 1008: Sent PID 343 to DISK 0
-Time 1008: Pulling PID 333 off of CPU queue...
-Time 1008: Sent PID 333 to CORE 0
-Time 1008: Exiting simulation
+Time 875: PID 864 enters system
+Time 875: Pushed PID 864 to CPU queue
+Time 875: PID 913 enters system
+Time 875: Pushed PID 913 to CPU queue
+Time 880: Finished PID 165 on CORE 0
+Time 880: Sent PID 165 to DISK 0
+Time 880: Pulling PID 302 off of CPU queue...
+Time 880: Sent PID 302 to CORE 0
+Time 880: Received PID 165 on DISK 0
+Time 880: Received PID 302 on CORE 0
+Time 880: PID 1023 enters system
+Time 880: Pushed PID 1023 to CPU queue
+Time 880: PID 979 enters system
+Time 880: Pushed PID 979 to CPU queue
+Time 880: PID 986 enters system
+Time 880: Pushed PID 986 to CPU queue
+Time 880: PID 838 enters system
+Time 880: Pushed PID 838 to CPU queue
+Time 880: PID 904 enters system
+Time 880: Pushed PID 904 to CPU queue
+Time 880: PID 902 enters system
+Time 880: Pushed PID 902 to CPU queue
+Time 880: PID 925 enters system
+Time 880: Pushed PID 925 to CPU queue
+Time 880: PID 878 enters system
+Time 880: Pushed PID 878 to CPU queue
+Time 880: PID 888 enters system
+Time 880: Pushed PID 888 to CPU queue
+Time 880: PID 1067 enters system
+Time 880: Pushed PID 1067 to CPU queue
+Time 880: PID 943 enters system
+Time 880: Pushed PID 943 to CPU queue
+Time 880: Finished PID 165 on DISK 0
+Time 880: PID 165 enters system
+Time 880: Pushed PID 165 to CPU queue
+Time 880: PID 936 enters system
+Time 880: Pushed PID 936 to CPU queue
+Time 891: Finished PID 302 on CORE 0
+Time 891: Sent PID 302 to DISK 0
+Time 891: Pulling PID 253 off of CPU queue...
+Time 891: Sent PID 253 to CORE 0
+Time 891: Received PID 302 on DISK 0
+Time 891: Received PID 253 on CORE 0
+Time 891: PID 1028 enters system
+Time 891: Pushed PID 1028 to CPU queue
+Time 891: PID 997 enters system
+Time 891: Pushed PID 997 to CPU queue
+Time 891: PID 910 enters system
+Time 891: Pushed PID 910 to CPU queue
+Time 891: PID 868 enters system
+Time 891: Pushed PID 868 to CPU queue
+Time 891: PID 906 enters system
+Time 891: Pushed PID 906 to CPU queue
+Time 891: PID 895 enters system
+Time 891: Pushed PID 895 to CPU queue
+Time 891: PID 852 enters system
+Time 891: Pushed PID 852 to CPU queue
+Time 891: PID 857 enters system
+Time 891: Pushed PID 857 to CPU queue
+Time 891: PID 1063 enters system
+Time 891: Pushed PID 1063 to CPU queue
+Time 896: Finished PID 253 on CORE 0
+Time 896: Sent PID 253 to DISK 1
+Time 896: Pulling PID 315 off of CPU queue...
+Time 896: Sent PID 315 to CORE 0
+Time 896: Received PID 253 on DISK 1
+Time 896: PID 955 enters system
+Time 896: Pushed PID 955 to CPU queue
+Time 896: Received PID 315 on CORE 0
+Time 896: PID 999 enters system
+Time 896: Pushed PID 999 to CPU queue
+Time 896: Finished PID 302 on DISK 0
+Time 896: PID 302 enters system
+Time 896: Pushed PID 302 to CPU queue
+Time 897: Finished PID 315 on CORE 0
+Time 897: Sent PID 315 to DISK 0
+Time 897: Pulling PID 346 off of CPU queue...
+Time 897: Sent PID 346 to CORE 0
+Time 897: Received PID 315 on DISK 0
+Time 897: Received PID 346 on CORE 0
+Time 897: PID 1054 enters system
+Time 897: Pushed PID 1054 to CPU queue
+Time 897: PID 1014 enters system
+Time 897: Pushed PID 1014 to CPU queue
+Time 897: PID 860 enters system
+Time 897: Pushed PID 860 to CPU queue
+Time 897: PID 987 enters system
+Time 897: Pushed PID 987 to CPU queue
+Time 897: PID 867 enters system
+Time 897: Pushed PID 867 to CPU queue
+Time 897: PID 1017 enters system
+Time 897: Pushed PID 1017 to CPU queue
+Time 897: PID 934 enters system
+Time 897: Pushed PID 934 to CPU queue
+Time 897: PID 875 enters system
+Time 897: Pushed PID 875 to CPU queue
+Time 897: PID 1085 enters system
+Time 897: Pushed PID 1085 to CPU queue
+Time 897: PID 1044 enters system
+Time 897: Pushed PID 1044 to CPU queue
+Time 897: Finished PID 315 on DISK 0
+Time 897: PID 315 enters system
+Time 897: Pushed PID 315 to CPU queue
+Time 897: PID 1019 enters system
+Time 897: Pushed PID 1019 to CPU queue
+Time 897: Finished PID 253 on DISK 1
+Time 897: PID 253 enters system
+Time 897: Pushed PID 253 to CPU queue
+Time 908: Finished PID 346 on CORE 0
+Time 908: Sent PID 346 to DISK 0
+Time 908: Pulling PID 170 off of CPU queue...
+Time 908: Sent PID 170 to CORE 0
+Time 908: Received PID 346 on DISK 0
+Time 908: Received PID 170 on CORE 0
+Time 908: PID 1031 enters system
+Time 908: Pushed PID 1031 to CPU queue
+Time 908: PID 996 enters system
+Time 908: Pushed PID 996 to CPU queue
+Time 908: PID 890 enters system
+Time 908: Pushed PID 890 to CPU queue
+Time 908: PID 1061 enters system
+Time 908: Pushed PID 1061 to CPU queue
+Time 908: PID 1002 enters system
+Time 908: Pushed PID 1002 to CPU queue
+Time 912: Finished PID 170 on CORE 0
+Time 912: Sent PID 170 to DISK 1
+Time 912: Pulling PID 328 off of CPU queue...
+Time 912: Sent PID 328 to CORE 0
+Time 912: Received PID 170 on DISK 1
+Time 912: Received PID 328 on CORE 0
+Time 912: PID 1090 enters system
+Time 912: Pushed PID 1090 to CPU queue
+Time 912: PID 1106 enters system
+Time 912: Pushed PID 1106 to CPU queue
+Time 912: PID 1084 enters system
+Time 912: Pushed PID 1084 to CPU queue
+Time 912: PID 921 enters system
+Time 912: Pushed PID 921 to CPU queue
+Time 912: PID 1128 enters system
+Time 912: Pushed PID 1128 to CPU queue
+Time 920: Finished PID 328 on CORE 0
+Time 920: Pushed PID 328 to DISK 0 queue
+Time 920: Pulling PID 271 off of CPU queue...
+Time 920: Sent PID 271 to CORE 0
+Time 920: Received PID 271 on CORE 0
+Time 920: PID 922 enters system
+Time 920: Pushed PID 922 to CPU queue
+Time 920: PID 1030 enters system
+Time 920: Pushed PID 1030 to CPU queue
+Time 920: PID 994 enters system
+Time 920: Pushed PID 994 to CPU queue
+Time 922: Finished PID 271 on CORE 0
+Time 922: Pushed PID 271 to DISK 1 queue
+Time 922: Pulling PID 57 off of CPU queue...
+Time 922: Sent PID 57 to CORE 0
+Time 922: Received PID 57 on CORE 0
+Time 922: PID 1132 enters system
+Time 922: Pushed PID 1132 to CPU queue
+Time 922: PID 981 enters system
+Time 922: Pushed PID 981 to CPU queue
+Time 922: PID 1006 enters system
+Time 922: Pushed PID 1006 to CPU queue
+Time 922: Finished PID 170 on DISK 1
+Time 922: Pulling PID 271 off of DISK 1 queue...
+Time 922: Sent PID 271 to DISK 1
+Time 922: Received PID 271 on DISK 1
+Time 922: PID 170 enters system
+Time 922: Pushed PID 170 to CPU queue
+Time 922: PID 1095 enters system
+Time 922: Pushed PID 1095 to CPU queue
+Time 922: PID 1107 enters system
+Time 922: Pushed PID 1107 to CPU queue
+Time 922: PID 1124 enters system
+Time 922: Pushed PID 1124 to CPU queue
+Time 922: Finished PID 346 on DISK 0
+Time 922: Pulling PID 328 off of DISK 0 queue...
+Time 922: Sent PID 328 to DISK 0
+Time 922: Received PID 328 on DISK 0
+Time 922: PID 346 enters system
+Time 922: Pushed PID 346 to CPU queue
+Time 922: PID 1012 enters system
+Time 922: Pushed PID 1012 to CPU queue
+Time 922: PID 1075 enters system
+Time 922: Pushed PID 1075 to CPU queue
+Time 922: PID 1021 enters system
+Time 922: Pushed PID 1021 to CPU queue
+Time 933: Finished PID 57 on CORE 0
+Time 933: Pushed PID 57 to DISK 0 queue
+Time 933: Pulling PID 340 off of CPU queue...
+Time 933: Sent PID 340 to CORE 0
+Time 933: Finished PID 271 on DISK 1
+Time 933: Received PID 340 on CORE 0
+Time 933: PID 271 enters system
+Time 933: Pushed PID 271 to CPU queue
+Time 933: PID 998 enters system
+Time 933: Pushed PID 998 to CPU queue
+Time 933: PID 1029 enters system
+Time 933: Pushed PID 1029 to CPU queue
+Time 933: PID 972 enters system
+Time 933: Pushed PID 972 to CPU queue
+Time 933: PID 1053 enters system
+Time 933: Pushed PID 1053 to CPU queue
+Time 933: PID 965 enters system
+Time 933: Pushed PID 965 to CPU queue
+Time 933: PID 1103 enters system
+Time 933: Pushed PID 1103 to CPU queue
+Time 933: PID 947 enters system
+Time 933: Pushed PID 947 to CPU queue
+Time 933: PID 1086 enters system
+Time 933: Pushed PID 1086 to CPU queue
+Time 933: Finished PID 328 on DISK 0
+Time 933: Pulling PID 57 off of DISK 0 queue...
+Time 933: Sent PID 57 to DISK 0
+Time 933: Received PID 57 on DISK 0
+Time 933: PID 328 enters system
+Time 933: Pushed PID 328 to CPU queue
+Time 933: PID 1065 enters system
+Time 933: Pushed PID 1065 to CPU queue
+Time 933: PID 1161 enters system
+Time 933: Pushed PID 1161 to CPU queue
+Time 933: PID 1104 enters system
+Time 933: Pushed PID 1104 to CPU queue
+Time 943: Finished PID 340 on CORE 0
+Time 943: Pulling PID 3 off of CPU queue...
+Time 943: Sent PID 3 to CORE 0
+Time 943: PID 1142 enters system
+Time 943: Pushed PID 1142 to CPU queue
+Time 943: PID 340 exits system
+Time 943: Received PID 3 on CORE 0
+Time 943: PID 1005 enters system
+Time 943: Pushed PID 1005 to CPU queue
+Time 943: PID 1022 enters system
+Time 943: Pushed PID 1022 to CPU queue
+Time 943: PID 1121 enters system
+Time 943: Pushed PID 1121 to CPU queue
+Time 943: PID 1018 enters system
+Time 943: Pushed PID 1018 to CPU queue
+Time 943: Finished PID 57 on DISK 0
+Time 943: PID 57 enters system
+Time 943: Pushed PID 57 to CPU queue
+Time 948: Finished PID 3 on CORE 0
+Time 948: Sent PID 3 to DISK 0
+Time 948: Pulling PID 262 off of CPU queue...
+Time 948: Sent PID 262 to CORE 0
+Time 948: Received PID 3 on DISK 0
+Time 948: PID 1149 enters system
+Time 948: Pushed PID 1149 to CPU queue
+Time 948: Received PID 262 on CORE 0
+Time 948: PID 1176 enters system
+Time 948: Pushed PID 1176 to CPU queue
+Time 948: PID 1194 enters system
+Time 948: Pushed PID 1194 to CPU queue
+Time 948: PID 1091 enters system
+Time 948: Pushed PID 1091 to CPU queue
+Time 948: PID 1183 enters system
+Time 948: Pushed PID 1183 to CPU queue
+Time 948: PID 948 enters system
+Time 948: Pushed PID 948 to CPU queue
+Time 948: Finished PID 3 on DISK 0
+Time 948: PID 3 enters system
+Time 948: Pushed PID 3 to CPU queue
+Time 948: PID 1158 enters system
+Time 948: Pushed PID 1158 to CPU queue
+Time 948: PID 1125 enters system
+Time 948: Pushed PID 1125 to CPU queue
+Time 948: PID 973 enters system
+Time 948: Pushed PID 973 to CPU queue
+Time 948: PID 1069 enters system
+Time 948: Pushed PID 1069 to CPU queue
+Time 959: Finished PID 262 on CORE 0
+Time 959: Sent PID 262 to DISK 0
+Time 959: Pulling PID 314 off of CPU queue...
+Time 959: Sent PID 314 to CORE 0
+Time 959: Received PID 262 on DISK 0
+Time 959: PID 1064 enters system
+Time 959: Pushed PID 1064 to CPU queue
+Time 959: Received PID 314 on CORE 0
+Time 959: PID 1020 enters system
+Time 959: Pushed PID 1020 to CPU queue
+Time 959: PID 1066 enters system
+Time 959: Pushed PID 1066 to CPU queue
+Time 959: PID 1112 enters system
+Time 959: Pushed PID 1112 to CPU queue
+Time 959: PID 975 enters system
+Time 959: Pushed PID 975 to CPU queue
+Time 959: PID 1100 enters system
+Time 959: Pushed PID 1100 to CPU queue
+Time 959: PID 1174 enters system
+Time 959: Pushed PID 1174 to CPU queue
+Time 959: PID 1082 enters system
+Time 959: Pushed PID 1082 to CPU queue
+Time 959: PID 1083 enters system
+Time 959: Pushed PID 1083 to CPU queue
+Time 959: PID 1156 enters system
+Time 959: Pushed PID 1156 to CPU queue
+Time 968: Finished PID 314 on CORE 0
+Time 968: Sent PID 314 to DISK 1
+Time 968: Pulling PID 301 off of CPU queue...
+Time 968: Sent PID 301 to CORE 0
+Time 968: Received PID 314 on DISK 1
+Time 968: PID 1033 enters system
+Time 968: Pushed PID 1033 to CPU queue
+Time 968: Received PID 301 on CORE 0
+Time 968: PID 1193 enters system
+Time 968: Pushed PID 1193 to CPU queue
+Time 968: PID 1222 enters system
+Time 968: Pushed PID 1222 to CPU queue
+Time 968: PID 1204 enters system
+Time 968: Pushed PID 1204 to CPU queue
+Time 968: PID 1027 enters system
+Time 968: Pushed PID 1027 to CPU queue
+Time 968: PID 1214 enters system
+Time 968: Pushed PID 1214 to CPU queue
+Time 968: PID 1016 enters system
+Time 968: Pushed PID 1016 to CPU queue
+Time 968: Finished PID 262 on DISK 0
+Time 968: PID 262 enters system
+Time 968: Pushed PID 262 to CPU queue
+Time 968: PID 1011 enters system
+Time 968: Pushed PID 1011 to CPU queue
+Time 968: PID 992 enters system
+Time 968: Pushed PID 992 to CPU queue
+Time 968: PID 1045 enters system
+Time 968: Pushed PID 1045 to CPU queue
+Time 980: Finished PID 301 on CORE 0
+Time 980: Sent PID 301 to DISK 0
+Time 980: Pulling PID 270 off of CPU queue...
+Time 980: Sent PID 270 to CORE 0
+Time 980: Received PID 301 on DISK 0
+Time 980: PID 1234 enters system
+Time 980: Pushed PID 1234 to CPU queue
+Time 980: Received PID 270 on CORE 0
+Time 980: PID 1040 enters system
+Time 980: Pushed PID 1040 to CPU queue
+Time 980: PID 1051 enters system
+Time 980: Pushed PID 1051 to CPU queue
+Time 980: PID 1060 enters system
+Time 980: Pushed PID 1060 to CPU queue
+Time 980: PID 1219 enters system
+Time 980: Pushed PID 1219 to CPU queue
+Time 980: PID 1050 enters system
+Time 980: Pushed PID 1050 to CPU queue
+Time 980: PID 1203 enters system
+Time 980: Pushed PID 1203 to CPU queue
+Time 980: PID 1052 enters system
+Time 980: Pushed PID 1052 to CPU queue
+Time 980: PID 1058 enters system
+Time 980: Pushed PID 1058 to CPU queue
+Time 980: PID 1236 enters system
+Time 980: Pushed PID 1236 to CPU queue
+Time 980: PID 1116 enters system
+Time 980: Pushed PID 1116 to CPU queue
+Time 980: Finished PID 314 on DISK 1
+Time 980: PID 314 enters system
+Time 980: Pushed PID 314 to CPU queue
+Time 980: PID 1127 enters system
+Time 980: Pushed PID 1127 to CPU queue
+Time 980: PID 1122 enters system
+Time 980: Pushed PID 1122 to CPU queue
+Time 980: PID 1032 enters system
+Time 980: Pushed PID 1032 to CPU queue
+Time 990: Finished PID 270 on CORE 0
+Time 990: Sent PID 270 to DISK 1
+Time 990: Pulling PID 375 off of CPU queue...
+Time 990: Sent PID 375 to CORE 0
+Time 990: Received PID 270 on DISK 1
+Time 990: PID 1108 enters system
+Time 990: Pushed PID 1108 to CPU queue
+Time 990: Received PID 375 on CORE 0
+Time 990: PID 1068 enters system
+Time 990: Pushed PID 1068 to CPU queue
+Time 990: PID 1170 enters system
+Time 990: Pushed PID 1170 to CPU queue
+Time 990: PID 1105 enters system
+Time 990: Pushed PID 1105 to CPU queue
+Time 990: PID 1015 enters system
+Time 990: Pushed PID 1015 to CPU queue
+Time 990: Finished PID 301 on DISK 0
+Time 990: PID 301 enters system
+Time 990: Pushed PID 301 to CPU queue
+Time 990: PID 1077 enters system
+Time 990: Pushed PID 1077 to CPU queue
+Time 990: PID 1196 enters system
+Time 990: Pushed PID 1196 to CPU queue
+Time 990: PID 1101 enters system
+Time 990: Pushed PID 1101 to CPU queue
+Time 990: PID 1092 enters system
+Time 990: Pushed PID 1092 to CPU queue
+Time 995: Finished PID 375 on CORE 0
+Time 995: Pulling PID 327 off of CPU queue...
+Time 995: Sent PID 327 to CORE 0
+Time 995: PID 1039 enters system
+Time 995: Pushed PID 1039 to CPU queue
+Time 995: PID 375 exits system
+Time 995: Received PID 327 on CORE 0
+Time 995: PID 1232 enters system
+Time 995: Pushed PID 1232 to CPU queue
+Time 995: PID 1034 enters system
+Time 995: Pushed PID 1034 to CPU queue
+Time 995: Finished PID 270 on DISK 1
+Time 995: PID 270 enters system
+Time 995: Pushed PID 270 to CPU queue
+Time 995: PID 1157 enters system
+Time 995: Pushed PID 1157 to CPU queue
+Time 995: PID 1135 enters system
+Time 995: Pushed PID 1135 to CPU queue
+Time 995: PID 1089 enters system
+Time 995: Pushed PID 1089 to CPU queue
+Time 995: PID 1206 enters system
+Time 995: Pushed PID 1206 to CPU queue
+Time 995: PID 1046 enters system
+Time 995: Pushed PID 1046 to CPU queue
+Time 1003: Finished PID 327 on CORE 0
+Time 1003: Sent PID 327 to DISK 0
+Time 1003: Pulling PID 344 off of CPU queue...
+Time 1003: Sent PID 344 to CORE 0
+Time 1003: Exiting simulation
 
 =========
 ==STATS==
 =========
 
 ==Simulation==
-Exit time: 1008
-Processes introduced: 1214
-Processes killed: 51
+Exit time: 1003
+Processes introduced: 1302
+Processes killed: 43
 
 ==Utilization==
 CORE 0: 100.000000%
 
-DISK 0: 67.559525%
-DISK 1: 32.738094%
+DISK 0: 76.470589%
+DISK 1: 46.360916%
 
 ==Response Time==
 CORE 0: Max 13, Avg 7
 
 DISK 0: Max 20, Avg 12
-DISK 1: Max 19, Avg 11
+DISK 1: Max 20, Avg 13
 
 ==Throughput== (jobs per tick)
-CORE 0: 0.134921
+CORE 0: 0.141575
 
-DISK 0: 0.054563
-DISK 1: 0.028770
+DISK 0: 0.062812
+DISK 1: 0.034895
 
 ==Queue Sizes== (Avg. per access)
-Event: Max 89, Avg: 1.926689
-CPU: Max 498, Avg: 1.193182
+Event: Max 103, Avg: 1.920891
+CPU: Max 534, Avg: 1.194864
 DISK 0: 2.000000
 DISK 1: 2.000000
 
 ==========
 ==CONFIG==
 ==========
-SEED 100
+SEED 1100
 INIT_TIME 0
 FIN_TIME 1000
 ARRIVE_MIN 20

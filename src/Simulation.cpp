@@ -221,7 +221,9 @@ void Simulation::handle_cpu_exit(Event e) {
 
 	//simulate CPU running some program (time placeholder)
 	//advance time based on process CPU time
-	this->clock->step(e.process->cpuTime);
+	if(this->numCores == 1) {
+		this->clock->step(e.process->cpuTime);
+	}
 
 	this->get_core(e.process->targetComponentID)->complete_job();
 
@@ -335,4 +337,5 @@ void Simulation::process_from_queue() {
 		default:
 			debug("Unhandled case for event type "+std::to_string(e.type));
 	}
+	if(this->numCores > 1) this->clock->step();
 }
