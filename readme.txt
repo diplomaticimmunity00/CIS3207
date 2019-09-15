@@ -7,6 +7,8 @@ Due date: 16 September 2019
 
 
 Overview
+
+
 This program simulates the way processes are handled by a computer system comprised of a combination of CPU cores and storage 
 disks. The arrivals and departures of these processes to and from each component are abstracted into events. The random arrival 
 and departure of events drive the simulation as they would in a real computer system.
@@ -55,6 +57,8 @@ process is inserted into the event queue after each process is recognized by the
 
 
 System Overview
+
+
 The basic structure of the simulation is as follows:
 * 1. A process enters the system
    * From here the process is assigned a free core and is dispatched to that core via the EQ (Event Queue)
