@@ -47,6 +47,9 @@ struct Config {
 
 		if(config.is_open()) {
 			while(getline(config,line)) {
+				if(find(line,'#') == 0) {
+                    continue;
+                }
 				confString += line + "\n";
 			}
 			return confString;
