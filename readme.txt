@@ -7,14 +7,19 @@ Due date: 16 September 2019
 
 
 Overview
-This program simulates the way processes are handled by a computer system comprised of a combination of CPU cores and storage disks. The arrivals and departures of these processes to and from each component are abstracted into events. The random arrival and departure of events drive the simulation as they would in a real computer system.
+This program simulates the way processes are handled by a computer system comprised of a combination of CPU cores and storage 
+disks. The arrivals and departures of these processes to and from each component are abstracted into events. The random arrival 
+and departure of events drive the simulation as they would in a real computer system.
 
 
 Data Structures
 
 
 Clock
-This program uses an arbitrary time unit to represent relative time spent by a process on each component of the system as well as assign event priority. If there is only a single core in the simulation, the program's global clock is advanced whenever a process completes execution on a CPU. Otherwise, the clock is advanced by one unit per completion of the event-handling loop to simulate parallelism between cores (see Component). 
+This program uses an arbitrary time unit to represent relative time spent by a process on each component of the system as well as
+assign event priority. If there is only a single core in the simulation, the program's global clock is advanced whenever a 
+process completes execution on a CPU. Otherwise, the clock is advanced by one unit per completion of the event-handling loop to 
+simulate parallelism between cores (see Component). 
 
 
 Process
@@ -24,7 +29,9 @@ each respective component type and will change as the process moves through the 
 
 
 Event
-An event represents a process moving through the system. Events have a type, a process, and a time associated with them. An event’s type determines how it is handled by the event handler. An event's time is used as a priority in the event queue with lower times being processed first.
+An event represents a process moving through the system. Events have a type, a process, and a time associated with them. An
+event’s type determines how it is handled by the event handler. An event's time is used as a priority in the event queue with
+lower times being processed first.
 
 
 Component
@@ -37,11 +44,14 @@ with one another.
 
 
 Config
-A config is a struct which can read values from the config.ini file distributed with the program and make them accessible to the Simulation. In this manner the parameters and initial conditions of the simulation can be easily modified.
+A config is a struct which can read values from the config.ini file distributed with the program and make them accessible to the 
+Simulation. In this manner the parameters and initial conditions of the simulation can be easily modified.
 
 
 Simulation
-A simulation is a struct that allows different parts of the system to interact with one another. The simulation provides event handling and distributes jobs between the components in the simulation. To simulate a constant creation of new processes, a new process is inserted into the event queue after each process is recognized by the system in the form of a system arrival event.
+A simulation is a struct that allows different parts of the system to interact with one another. The simulation provides event 
+handling and distributes jobs between the components in the simulation. To simulate a constant creation of new processes, a new
+process is inserted into the event queue after each process is recognized by the system in the form of a system arrival event.
 
 
 System Overview
@@ -56,8 +66,10 @@ The basic structure of the simulation is as follows:
 * 3. The process has a random (configured) change to exit the system here OR begin IO on a disk
    * If the process exits the system, it is reinserted into the EQ as a system exit event
    * If the process begins I/O, it is reinserted into the EQ as a disk arrival event
-   * The process as assigned a random (configured) I/O time between its arrival and completion and sent to the first free disk or the disk with the smallest queue 
+   * The process as assigned a random (configured) I/O time between its arrival and completion and sent to the first free disk or 
+   the disk with the smallest queue 
 * 4. After completing I/O, the process is reinserted into the event queue
    * The process is reinserted into the EQ as a system arrival event
-Note There are features in this program that are out of the scope of the assignment. They were added out of my own interest and for the sake of working on this project in the future.
+Note There are features in this program that are out of the scope of the assignment. They were added out of my own interest and
+for the sake of working on this project in the future.
 Thank you for reading!
