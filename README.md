@@ -6,5 +6,5 @@ This program simulates the way processes are handled by a computer system compri
 
 Modify the values in the config.ini file to change the parameters and inital conditions of the simulation.
 
-Config tests can be found in [RUNS.txt](https://github.com/tuh37046/CIS3207/blob/master/runs.txt) <br>
+See [RUNS.txt](https://github.com/tuh37046/CIS3207/blob/master/runs.txt) for config tests<br>
 See [readme.pdf](https://github.com/tuh37046/CIS3207/blob/master/readme.pdf) for more information
