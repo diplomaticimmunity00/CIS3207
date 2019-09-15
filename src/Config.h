@@ -60,6 +60,7 @@ struct Config {
 		std::string line;
 		std::ifstream f(filename);
 		//order in config file matters - must match order in enum
+		//errors will NOT be produced and system may function normally despite reading incorrect values
 		if(f.is_open()) {
 			while(getline(f,line)) {
 				if(find(line,'#') == 0) {
