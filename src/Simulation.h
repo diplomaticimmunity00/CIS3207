@@ -153,7 +153,7 @@ struct Simulation {
 		
 		for(int i=0;i<this->numDisks;i++) {
 			testDisk = this->get_disk(i);
-			debug("DISK "+std::to_string(testDisk->id) + ": "+std::to_string(testDisk->get_average_queue_size()),false);
+			debug("DISK "+std::to_string(testDisk->id) + ": Max "+std::to_string(this->maxQueueSize) +", Avg: " +std::to_string(testDisk->get_average_queue_size()),false);
 		}
 	}
 
