@@ -70,6 +70,7 @@ The basic structure of the simulation is as follows:
    the disk with the smallest queue 
 * 4. After completing I/O, the process is reinserted into the event queue
    * The process is reinserted into the EQ as a system arrival event
+   
 Note There are features in this program that are out of the scope of the assignment. They were added out of my own interest and
 for the sake of working on this project in the future.
 Thank you for reading!
