@@ -8,3 +8,7 @@ Modify the values in the config.ini file to change the parameters and inital con
 
 See [RUNS.txt](https://github.com/tuh37046/CIS3207/blob/master/runs.txt) for config tests<br>
 See [readme.pdf](https://github.com/tuh37046/CIS3207/blob/master/readme.pdf) for more information
+
+
+Garrett Bowser
+Kwatny CIS3207 Fall 2019
