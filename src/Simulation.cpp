@@ -249,7 +249,7 @@ void Simulation::handle_cpu_exit(Event e) {
 
 	if(!this->cpuQueue.empty()) {
 
-		//Wwen cpu finishes, pull next process off queue
+		//when cpu finishes, pull next process off queue
 		Event nextProcessInQueue = cpuQueue.front();
 		this->CPUdequeue();
 
