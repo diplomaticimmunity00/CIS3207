@@ -232,7 +232,7 @@ Relevant statistics such as utilization, and maximum queue size are all signific
 It is important to note that as a consequence of taking more time to service processes, the disks are
 able to service fewer total processes which causes a decline in throughput for both devices.
 
-In the final we will modify the quit probability.
+In the final trial we will modify the quit probability.
 
 **********
  Trial 5
