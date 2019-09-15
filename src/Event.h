@@ -16,11 +16,13 @@ enum EventType {
 		SIMULATION_FINISH,
 };
 
+/*	defunct
 enum ProcessStatus {
 	PROCESS_EXECUTING,
 	PROCESS_IO,
 	PROCESS_FINISHED
 };
+*/
 
 struct Process {
 
@@ -28,7 +30,7 @@ struct Process {
 	int targetComponentID;
 	int cpuTime;
 	int ioTime;
-	ProcessStatus status;
+	//ProcessStatus status;
 
 	Process();
 
