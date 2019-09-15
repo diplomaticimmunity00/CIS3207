@@ -7,4 +7,4 @@ This program simulates the way processes are handled by a computer system compri
 Modify the values in the config.ini file to change the parameters and inital conditions of the simulation.
 
 **Config tests can be found in RUNS.txt <br>
-See readme.pdf for more information
+See readme.pdf for more information**
