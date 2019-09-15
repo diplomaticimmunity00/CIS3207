@@ -10,5 +10,5 @@ See [RUNS.txt](https://github.com/tuh37046/CIS3207/blob/master/runs.txt) for con
 See [readme.pdf](https://github.com/tuh37046/CIS3207/blob/master/readme.pdf) for more information
 
 
-Garrett Bowser
+Garrett Bowser <br>
 Kwatny CIS3207 Fall 2019
