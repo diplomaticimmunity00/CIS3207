@@ -1,13 +1,10 @@
-# CIS3207 Assignment 1: Discrete Event Simulator
+# Kwatny CIS3207 Fall 2019
 
-This program simulates the way processes are handled by a computer system comprised of a combination of CPU cores and storage disks. The arrivals and departures of these processes to and from each component are abstracted into events. The random arrival and departure of events drive the simulation as they would in a real computer system.
+## Projects
 
-## Usage
+[Discrete Event Simulator](https://github.com/tuh37046/CIS3207/tree/master/P1_Discrete_Event_Simulator) <br>
 
-Modify the values in the config.ini file to change the parameters and inital conditions of the simulation.
-
-See [RUNS.txt](https://github.com/tuh37046/CIS3207/blob/master/runs.txt) for config tests<br>
-See [README.pdf](https://github.com/tuh37046/CIS3207/blob/master/README.pdf) for more information
+[myShell](https://github.com/tuh37046/CIS3207/tree/master/P2_myShell) 
 
 
 Garrett Bowser <br>
