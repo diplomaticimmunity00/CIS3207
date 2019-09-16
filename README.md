@@ -1,6 +1,4 @@
-#  CIS3207 Intro Systems Programming & Operating Systems
-
-## Projects
+#  CIS3207: Intro Systems Prog & Oper Systems
 
 [Discrete Event Simulator](https://github.com/tuh37046/CIS3207/tree/master/P1_Discrete_Event_Simulator)
 [myShell](https://github.com/tuh37046/CIS3207/tree/master/P2_myShell) 
