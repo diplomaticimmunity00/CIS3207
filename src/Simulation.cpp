@@ -50,7 +50,7 @@ void Simulation::enqueue(EventType e) {
     if(this->eventQueue.size() > this->maxQueueSize) {
         this->maxQueueSize = this->eventQueue.size();
     }
-	_e.time = this->clock->get_ticks() + this->config->get_range(ARRIVE_MIN,ARRIVE_MAX); //Placeholder
+	_e.time = this->clock->get_ticks() + this->config->get_range(ARRIVE_MIN,ARRIVE_MAX);
 	this->eventQueue.push(_e);
 }
 
