@@ -137,7 +137,8 @@ void Simulation::start() {
 }
 
 void Simulation::dispatch_job(Event e,ComponentType type,int id) {
-	//creates a new event for process arrival at CPU
+	
+	//creates a new event for process arrival at a component
 
 	switch(type) {
 		case COMPONENT_CPU: {
