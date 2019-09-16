@@ -2,7 +2,7 @@
 
 ## Projects
 
-[Discrete Event Simulator](https://github.com/tuh37046/CIS3207/tree/master/P1_Discrete_Event_Simulator) <br>
+[Discrete Event Simulator](https://github.com/tuh37046/CIS3207/tree/master/P1_Discrete_Event_Simulator)
 
 [myShell](https://github.com/tuh37046/CIS3207/tree/master/P2_myShell) 
 
