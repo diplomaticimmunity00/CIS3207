@@ -25,9 +25,6 @@ void Component::receive_job(Event e) {
 	this->free = false;
 }
 
-void Component::complete_job() {
-}
-
 void Disk::complete_job() {
     sim.debug("Finished PID "+std::to_string(this->job.process->id)+" on "+componentMap.at(this->type)+" "+std::to_string(this->id));
     this->totalUsageTime = this->totalUsageTime + this->job.process->ioTime;

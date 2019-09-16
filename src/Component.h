@@ -50,8 +50,8 @@ struct Component {
 	bool inline is_free() {return this->free;}
 	void inline lock() {this->free = false;}
 
-	virtual void receive_job(Event);
-	virtual void complete_job();
+	void receive_job(Event);
+	virtual void complete_job() {}
 
 	Component(ComponentType,int);
 
