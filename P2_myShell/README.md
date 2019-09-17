@@ -1,10 +1,6 @@
-#  CIS3207: Intro Systems Prog & Oper Systems
+# CIS3207 Project 2: myshell
 
-**Project 1**: [Discrete Event Simulator](https://github.com/tuh37046/CIS3207/tree/master/P1_Discrete_Event_Simulator)
-<br>
-**Project 2**: [myShell](https://github.com/tuh37046/CIS3207/tree/master/P2_myShell) 
-
+This program is a basic featured shell called myshell.
 
 Garrett Bowser <br>
 Kwatny CIS3207 Fall 2019
-************************
