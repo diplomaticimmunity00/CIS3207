@@ -1,0 +1,16 @@
+Project 2: Design and Implement a Simple Unix-like shell
+
+Basic shell design:
+
+1. Tokenize input into a vector
+2. Parse input tokens and verify validity
+3. If step 2 was successful, execute command
+
+4. Shell must execute executables
+	4a. PATH is the place that your shell looks for executables
+
+5. Must handle output redirection (<, >, |)
+6. Also background operation
+
+7. Built in commands:
+	7a. cd, cld, dir, environ, 
