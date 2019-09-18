@@ -6,14 +6,20 @@
 
 //command funcs
 
-//ls
-std::string lsFunc(const std::vector<std::string>&);
+//cd
+std::string cdFunc(const std::vector<std::string>&);
+//exit
 std::string quitFunc(const std::vector<std::string>&);
+//echo
+std::string echoFunc(const std::vector<std::string>&);
+//pwd
+std::string pwdFunc(const std::vector<std::string>&);
+
 
 struct Command {
 
 	//whether or not command is internal to shell or an external executable
-	bool internal;
+	int minArgs;
 	const std::string name;
 	
 	//call function for internal commands
@@ -22,6 +28,6 @@ struct Command {
 	const std::string executable;
 
 	Command();
-	Command(bool _internal,const std::string& _name, std::string (*_func)(const std::vector<std::string>&)): internal(_internal), name(_name), func(_func) {}
+	Command(int _minArgs,const std::string& _name, std::string (*_func)(const std::vector<std::string>&)): minArgs(_minArgs), name(_name), func(_func) {}
 
 };

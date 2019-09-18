@@ -13,7 +13,16 @@ struct Shell {
 	bool running;
 	std::vector<Command*> cmdList;
 
-	std::string env = "/"
+	//Environment variables
+	std::string ps = "myshell> ";
+
+	std::string root = "/";
+	std::string cwd = "/";
+
+	void prompt_input(std::string &input) {
+		std::cout << this->ps << std::flush;
+		std::getline(std::cin,input);
+	}
 
 	std::string parse_input(const std::string&);
 
