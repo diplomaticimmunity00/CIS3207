@@ -13,6 +13,8 @@ struct Shell {
 	bool running;
 	std::vector<Command*> cmdList;
 
+	std::string env = "/"
+
 	std::string parse_input(const std::string&);
 
 	//return command by name or nullptr

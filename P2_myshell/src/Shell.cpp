@@ -3,7 +3,8 @@
 
 Shell::Shell() {
 	this->running = true;
-	this->cmdList = { new Command(true,"ls",lsFunc)
+	this->cmdList = { 	new Command(true,"ls",lsFunc),
+						new Command(true,"exit",quitFunc),
                 //commands go here
     };
 }
@@ -17,7 +18,7 @@ Command* Shell::get_command(const std::string& name) {
 	return nullptr;
 }
 
-//tokenize
+//tokenize and run command function or execute
 std::string Shell::parse_input(const std::string &user_input) {
     std::vector<std::string> tokenized = split(user_input,' ');
     std::string cmd = tokenized.at(0);
@@ -28,5 +29,5 @@ std::string Shell::parse_input(const std::string &user_input) {
 		return testCommand->func(tokenized);
 	}
 
-    return cmd;
+    return cmd + ": command not found";
 }

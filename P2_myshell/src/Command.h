@@ -8,6 +8,7 @@
 
 //ls
 std::string lsFunc(const std::vector<std::string>&);
+std::string quitFunc(const std::vector<std::string>&);
 
 struct Command {
 
