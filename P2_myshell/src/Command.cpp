@@ -18,8 +18,9 @@ std::string catFunc(const std::vector<std::string> &args) {
 		exit(0);
 	} else if(pid > 0) {
 		//parent
+		//wait for child to terminate then return
 		int status;
-		wait(&status);
+		waitpid(pid,&status,0);
 		return "";
 	} else {
 		return "Fork failed";
