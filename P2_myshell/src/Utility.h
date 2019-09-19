@@ -8,6 +8,9 @@ void print(T info) {
 	std::cout << info << std::endl;
 }
 
+//file_to_string
+std::string file_to_string(const std::string &filename);
+
 //get vector elements within range 1 starting at index 2
 std::vector<std::string> sub_vec(const std::vector<std::string>&,int,int);
 

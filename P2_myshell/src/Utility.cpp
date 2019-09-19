@@ -1,5 +1,23 @@
 #include "Utility.h"
 
+#include <fstream>
+
+std::string file_to_string(const std::string &filename) {
+	std::ifstream f(filename);
+	std::string line;
+	std::string fileContents;
+
+	if(!f.is_open()) {
+		return "Error opening file";
+	}
+
+	while(std::getline(f,line)) {
+		fileContents += line + "\n";
+	}
+	return fileContents;
+
+}
+
 std::vector<std::string> sub_vec(const std::vector<std::string> &v, int start, int end) {
 	std::vector<std::string> subv;
 	for(int i=start;i<end;i++) {

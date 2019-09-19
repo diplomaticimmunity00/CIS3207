@@ -7,6 +7,7 @@ Shell::Shell() {
 						new Command(0,"exit",quitFunc),
 						new Command(0,"echo",echoFunc),
 						new Command(0,"pwd",pwdFunc),
+						new Command(1,"cat",catFunc),
                 //commands go here
     };
 }

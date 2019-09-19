@@ -1,9 +1,30 @@
 #include <iostream>
 #include <dirent.h>
+#include <unistd.h>
+#include <sys/wait.h>
 
 #include "Command.h"
 #include "Utility.h"
 #include "Common.h"
+
+std::string catFunc(const std::vector<std::string> &args) {
+	pid_t pid = fork();
+	if(pid == 0) {
+		//child
+		char *fn = args.at(0).c_str();
+		char* argv[3] = {"ls",fn,0};
+		char* env[1] = {0};
+		int exerr = execve("exec/cat",argv,env);
+		exit(0);
+	} else if(pid > 0) {
+		//parent
+		int status;
+		wait(&status);
+		return "";
+	} else {
+		return "Fork failed";
+	}
+}
 
 std::string pwdFunc(const std::vector<std::string> &args) {
 	return myshell.cwd+"\n";
@@ -17,10 +38,10 @@ std::string cdFunc(const std::vector<std::string> &args) {
 
 	std::string testPath = args.at(0);
 	
-	//try searching directories in cwd
-	DIR *d = opendir((myshell.cwd + testPath).c_str());
+	//check relative path
+	DIR *d = opendir((myshell.cwd + "/" + testPath).c_str());
 
-	if(!d) {
+	if(!d or testPath[0] == '/') {
 		//otherwise check absolute path
 		DIR *dabs = opendir(testPath.c_str());
 		if(!dabs) {
@@ -30,7 +51,7 @@ std::string cdFunc(const std::vector<std::string> &args) {
 		}
 	} else {
 		//path specified was relative
-		myshell.cwd += testPath;
+		myshell.cwd += "/" + testPath;
 	}
 
 	return "";
@@ -41,7 +62,6 @@ std::string echoFunc(const std::vector<std::string> &args) {
 }
 
 std::string quitFunc(const std::vector<std::string> &args) {
-	//std::system("./exec/hi");
 	myshell.running = false;
     return "Exiting\n";
 }
