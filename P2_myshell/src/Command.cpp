@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include <dirent.h>
 #include <unistd.h>
 #include <sys/wait.h>
@@ -12,9 +13,8 @@ std::string catFunc(const std::vector<std::string> &args) {
 	if(pid == 0) {
 		//child
 		char *fn = args.at(0).c_str();
-		char* argv[3] = {"ls",fn,0};
-		char* env[1] = {0};
-		int exerr = execve("exec/cat",argv,env);
+		char* argv[3] = {"",fn,0};
+		int exerr = execvp("exec/cat",argv);
 		exit(0);
 	} else if(pid > 0) {
 		//parent
@@ -58,8 +58,15 @@ std::string cdFunc(const std::vector<std::string> &args) {
 	return "";
 }
 
+std::string clearFunc(const std::vector<std::string> &args) {
+	for(int i=0;i<50;i++) {
+		print("\n");
+	}
+	return "";
+}
+
 std::string echoFunc(const std::vector<std::string> &args) {
-	return join(sub_vec(args,1,args.size()),' ')+"\n";
+	return join(args,' ')+"\n";
 }
 
 std::string quitFunc(const std::vector<std::string> &args) {
