@@ -27,7 +27,7 @@ struct Shell {
 	std::string parse_input(const std::string&);
 
 	//return command by name or nullptr
-	Command* get_command(const std::string&);
+	Command* find_command(const std::string&);
 
 	Shell();	
 
