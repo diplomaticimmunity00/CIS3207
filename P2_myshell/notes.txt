@@ -1,5 +1,11 @@
 Project 2: Design and Implement a Simple Unix-like shell
 
+Shells parse the input and determine what it is that you want to do.
+
+File descriptors:
+	File descriptor table has all the information about files or devices that are used by all the processes on the system
+	
+
 Basic shell design:
 
 1. Tokenize input into a vector
@@ -14,3 +20,9 @@ Basic shell design:
 
 7. Built in commands:
 	7a. cd, cld, dir, environ, 
+
+Shell must errorcheck all system calls
+
+Shell does NOT need to handle multiple types of commands on the same line
+
+

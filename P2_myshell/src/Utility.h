@@ -1,3 +1,5 @@
+#pragma once
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -19,3 +21,5 @@ std::vector<std::string> split(const std::string&,char);
 
 //conjoin vector elements into string separated by char
 std::string join(const std::vector<std::string>&,char);
+
+std::string convert(char* old);

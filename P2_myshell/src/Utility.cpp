@@ -49,3 +49,14 @@ std::string join(const std::vector<std::string> &v, char token) {
 
 	return word.substr(0,word.size()-1);
 }
+
+std::string convert(char* old) {
+	std::string newstring;
+	char c = old[0];
+	int i = 0;
+	while(c != 0) {
+		c = old[++i];
+		newstring += c;
+	}
+	return newstring;
+}

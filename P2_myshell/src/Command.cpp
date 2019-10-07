@@ -28,40 +28,32 @@ std::string catFunc(const std::vector<std::string> &args) {
 }
 
 std::string pwdFunc(const std::vector<std::string> &args) {
-	return myshell.cwd+"\n";
+	std::string wd = convert(get_current_dir_name());
+	if(wd[0] != '/') wd = "/"+wd;
+	return wd + "\n";
 }
 
 std::string cdFunc(const std::vector<std::string> &args) {
 	if(args.size() == 0) {
-		myshell.cwd = myshell.root;
+		chdir(myshell.root.c_str());
 		return "";
 	}
 
 	std::string testPath = args.at(0);
 	
-	//check relative path
-	DIR *d = opendir((myshell.cwd + "/" + testPath).c_str());
+	DIR *d = opendir(testPath.c_str());
 
-	if(!d or testPath[0] == '/') {
-		//otherwise check absolute path
-		DIR *dabs = opendir(testPath.c_str());
-		if(!dabs) {
-			return testPath + ": directory not found\n";
-		} else {
-			myshell.cwd = testPath;
-		}
-	} else {
-		//path specified was relative
-		myshell.cwd += "/" + testPath;
+	if(!d) {
+		return testPath + ": directory not found\n";
 	}
 
+	chdir(testPath.c_str());
 	return "";
+
 }
 
 std::string clearFunc(const std::vector<std::string> &args) {
-	for(int i=0;i<50;i++) {
-		print("\n");
-	}
+	print("\033[H\033[2J");	
 	return "";
 }
 
@@ -72,4 +64,19 @@ std::string echoFunc(const std::vector<std::string> &args) {
 std::string quitFunc(const std::vector<std::string> &args) {
 	myshell.running = false;
     return "Exiting\n";
+}
+
+std::string pauseFunc(const std::vector<std::string>&) {
+	print("Press enter to continue...");
+	std::string x;
+	std::getline(std::cin,x);
+	return "";
+}
+
+std::string dirFunc(const std::vector<std::string>&) {
+	return "PLACEHOLDER\n";
+}
+
+std::string environFunc(const std::vector<std::string>&) {
+	return getenv("USER");
 }

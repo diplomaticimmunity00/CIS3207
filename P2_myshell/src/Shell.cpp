@@ -10,6 +10,9 @@ Shell::Shell() {
 						new Command(0,{"pwd"},pwdFunc),
 						new Command(1,{"cat"},catFunc),
 						new Command(0,{"clear"},clearFunc),
+						new Command(0,{"pause"},pauseFunc),
+						new Command(0,{"dir","ls"},dirFunc),
+						new Command(0,{"environ"},environFunc),
 						
     };
 }
@@ -43,6 +46,5 @@ std::string Shell::parse_input(const std::string &user_input) {
 		}
 		return testCommand->func(tokenized);
 	}
-
     return cmd + ": command not found\n";
 }

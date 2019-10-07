@@ -5,6 +5,7 @@
 #include <string>
 
 #include "Command.h"
+#include "Utility.h"
 
 std::string parse_input(const std::string&);
 
@@ -29,6 +30,12 @@ struct Shell {
 	//return command by name or nullptr
 	Command* find_command(const std::string&);
 
-	Shell();	
+	Shell();
+
+	~Shell() {
+		for(int i=0;i<this->cmdList.size();i++) {
+			delete this->cmdList.at(i);
+		}
+	}
 
 };
