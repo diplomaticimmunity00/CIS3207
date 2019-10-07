@@ -24,6 +24,8 @@ std::string catFunc(const std::vector<std::string>&);
 std::string pauseFunc(const std::vector<std::string>&);
 //environ
 std::string environFunc(const std::vector<std::string>&);
+//help
+std::string helpFunc(const std::vector<std::string>&);
 
 struct Command {
 

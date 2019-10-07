@@ -6,6 +6,7 @@ Shell::Shell() {
 							//minArgs,name,function
 	this->cmdList = { 	new Command(0,{"cd"},cdFunc),
 						new Command(0,{"exit","quit"},quitFunc),
+						new Command(0,{"help"},helpFunc),
 						new Command(0,{"echo"},echoFunc),
 						new Command(0,{"pwd"},pwdFunc),
 						new Command(1,{"cat"},catFunc),

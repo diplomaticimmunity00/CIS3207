@@ -44,7 +44,7 @@ std::string cdFunc(const std::vector<std::string> &args) {
 	DIR *d = opendir(testPath.c_str());
 
 	if(!d) {
-		return testPath + ": directory not found\n";
+		return testPath + ": error opening directory\n";
 	}
 
 	chdir(testPath.c_str());
@@ -57,6 +57,10 @@ std::string clearFunc(const std::vector<std::string> &args) {
 	return "";
 }
 
+std::string helpFunc(const std::vector<std::string> &args) {
+    return "PLACEHOLDER\n";
+}
+
 std::string echoFunc(const std::vector<std::string> &args) {
 	return join(args,' ')+"\n";
 }
@@ -66,17 +70,33 @@ std::string quitFunc(const std::vector<std::string> &args) {
     return "Exiting\n";
 }
 
-std::string pauseFunc(const std::vector<std::string>&) {
+std::string pauseFunc(const std::vector<std::string> &args) {
 	print("Press enter to continue...");
 	std::string x;
 	std::getline(std::cin,x);
 	return "";
 }
 
-std::string dirFunc(const std::vector<std::string>&) {
-	return "PLACEHOLDER\n";
+std::string dirFunc(const std::vector<std::string> &args) {
+	DIR *d;
+	if(args.size() == 0) {
+		d = opendir(get_current_dir_name());
+	}
+	else {
+		d = opendir(args.at(0).c_str());
+	}
+	if(!d) {
+		return args.at(0) + ": error opening directory\n";
+	}
+	dirent *file;
+	std::string contents;
+	while( (file = readdir(d)) != NULL) {
+		if(file->d_name[0] == '.') continue;
+		contents += convert(file->d_name) + ' ';
+	}
+	return contents + "\n";
 }
 
-std::string environFunc(const std::vector<std::string>&) {
+std::string environFunc(const std::vector<std::string> &args) {
 	return getenv("USER");
 }

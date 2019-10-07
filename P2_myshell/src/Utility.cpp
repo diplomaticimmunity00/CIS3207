@@ -55,7 +55,7 @@ std::string convert(char* old) {
 	char c = old[0];
 	int i = 0;
 	while(c != 0) {
-		c = old[++i];
+		c = old[i++];
 		newstring += c;
 	}
 	return newstring;

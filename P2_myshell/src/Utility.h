@@ -22,4 +22,5 @@ std::vector<std::string> split(const std::string&,char);
 //conjoin vector elements into string separated by char
 std::string join(const std::vector<std::string>&,char);
 
+//converts old string to new string
 std::string convert(char* old);
