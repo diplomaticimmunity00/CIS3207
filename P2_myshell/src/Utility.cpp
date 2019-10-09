@@ -60,3 +60,27 @@ std::string convert(char* old) {
 	}
 	return newstring;
 }
+
+int find(const std::vector<std::string> &args,const std::string &token) {
+	for(int i=0;i<args.size();i++) {
+		if(args.at(i) == token) {
+			return i;
+		}
+	}
+	return -1;
+}
+
+int rfind(const std::vector<std::string> &args,const std::string &token) {
+    for(int i=args.size()-1;i>=0;i--) {
+        if(args.at(i) == token) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+
+bool file_exists(const std::string &filename) {
+	std::ifstream file(filename);
+	return (file.is_open())? 1:0;
+}

@@ -1,10 +1,14 @@
 #include "Shell.h"
 #include "Utility.h"
+#include <unistd.h>
+#include <fstream>
+#include <sys/stat.h>
+#include <fcntl.h>
 
 Shell::Shell() {
 	this->running = true;
 							//minArgs,name,function
-	this->cmdList = { 	new Command(0,{"cd"},cdFunc),
+	this->cmdList = {	new Command(0,{"cd"},cdFunc),
 						new Command(0,{"exit","quit"},quitFunc),
 						new Command(0,{"help"},helpFunc),
 						new Command(0,{"echo"},echoFunc),
@@ -15,7 +19,7 @@ Shell::Shell() {
 						new Command(0,{"dir","ls"},dirFunc),
 						new Command(0,{"environ"},environFunc),
 						
-    };
+	};
 }
 
 Command* Shell::find_command(const std::string& name) {
@@ -30,22 +34,63 @@ Command* Shell::find_command(const std::string& name) {
 }
 
 //tokenize and run command function or execute
-std::string Shell::parse_input(const std::string &user_input) {
-    std::vector<std::string> tokenized = split(user_input,' ');
-    std::string cmd = tokenized.at(0);
-
-	//remove command from tokenized arguments
-	tokenized = sub_vec(tokenized,1,tokenized.size());
+void Shell::parse_input(const std::string &user_input) {
+	std::string cmdReturn;
+	std::vector<std::string> tokenized = split(user_input,' ');
+	std::string cmd = tokenized.at(0);
 
 	Command* testCommand = this->find_command(cmd);
+
+	int old_fd,new_fd;
+	
+	//get index in argument vector of last redirect token
+	//subsequent tokens are ignored
+	short append = rfind(tokenized,">>");
+	short create = rfind(tokenized,">");
+	//choose which token comes last in the argument vector
+	//	treat everything between the command and that token as arguments
+	int output_redir = (append > create)? append : create;
+
+	//If output is redirected
+	//	duplicate stdout
+	//	replace with output file fd in process fd table
+	//	close duplicate file
+	//	replace stdout after command finishes
+	if(output_redir >= 0) {
+		old_fd = dup(1);
+		if(output_redir == append) {
+			new_fd = open(tokenized.at(output_redir+1).c_str(),O_RDWR|O_CREAT|O_APPEND,S_IRWXU);
+		} else {
+            new_fd = open(tokenized.at(output_redir+1).c_str(),O_RDWR|O_CREAT|O_TRUNC,S_IRWXU);
+		}
+
+		dup2(new_fd,1);
+		close(new_fd);
+	}
+
+	int arg_finish = (output_redir < 0)? tokenized.size() : output_redir;
+
+	//remove command from tokenized arguments and
+	//terminate arguments after redirect token
+    tokenized = sub_vec(tokenized,1,arg_finish);
 
 	if(testCommand != nullptr) {
 		if(tokenized.size() < testCommand->minArgs) {
 			//user has not supplied enough arguments
 			//error message should be command specific
-			return "CMD_ARG_ERROR_STR\n";
+			cmdReturn = "CMD_ARG_ERROR_STR\n";
+		} else {
+			cmdReturn = testCommand->func(tokenized);
 		}
-		return testCommand->func(tokenized);
+	} else {
+		cmdReturn = cmd + ": command not found\n";
 	}
-    return cmd + ": command not found\n";
+
+	std::cout << cmdReturn << std::flush;
+
+	if(output_redir >= 0) {
+		dup2(old_fd,1);
+		close(old_fd);
+	}
+
 }

@@ -25,7 +25,7 @@ struct Shell {
 		std::getline(std::cin,input);
 	}
 
-	std::string parse_input(const std::string&);
+	void parse_input(const std::string&);
 
 	//return command by name or nullptr
 	Command* find_command(const std::string&);

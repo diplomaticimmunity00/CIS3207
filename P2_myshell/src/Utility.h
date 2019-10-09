@@ -24,3 +24,11 @@ std::string join(const std::vector<std::string>&,char);
 
 //converts old string to new string
 std::string convert(char* old);
+
+//finds index of string in args
+int find(const std::vector<std::string>&,const std::string&);
+//reverse find
+int rfind(const std::vector<std::string>&,const std::string&);
+
+
+bool file_exists(const std::string&);

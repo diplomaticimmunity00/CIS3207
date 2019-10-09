@@ -10,7 +10,7 @@ int main(int argc, char** argv) {
 
 	while(myshell.running) {
 		myshell.prompt_input(input);
-		std::cout << myshell.parse_input(input) << std::flush;
+		myshell.parse_input(input);
 	}
 
 	return 0;
