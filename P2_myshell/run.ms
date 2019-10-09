@@ -1,0 +1,2 @@
+echo FILE
+STOP

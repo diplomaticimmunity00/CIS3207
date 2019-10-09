@@ -18,10 +18,10 @@ struct Shell {
 	std::string ps = "myshell> ";
 
 	std::string root = "/";
-	std::string cwd = "/";
+	std::vector<std::string> paths = {"/bin/","/usr/bin/"};
 
-	void prompt_input(std::string &input) {
-		std::cout << this->ps << std::flush;
+	void prompt_input(std::string &input,bool read_from_file) {
+		if(!read_from_file) std::cout << this->ps << std::flush;
 		std::getline(std::cin,input);
 	}
 

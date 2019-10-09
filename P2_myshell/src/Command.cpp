@@ -8,7 +8,8 @@
 #include "Utility.h"
 #include "Common.h"
 
-std::string catFunc(const std::vector<std::string> &args) {
+//defunct
+/*std::string catFunc(const std::vector<std::string> &args) {
 	pid_t pid = fork();
 	if(pid == 0) {
 		//child
@@ -25,7 +26,7 @@ std::string catFunc(const std::vector<std::string> &args) {
 	} else {
 		return "Fork failed";
 	}
-}
+}*/
 
 std::string pwdFunc(const std::vector<std::string> &args) {
 	std::string wd = convert(get_current_dir_name());
@@ -100,3 +101,14 @@ std::string dirFunc(const std::vector<std::string> &args) {
 std::string environFunc(const std::vector<std::string> &args) {
 	return getenv("USER");
 }
+
+std::string stopFunc(const std::vector<std::string> &args) {
+	if(reading_from_file) {
+		dup2(cin_fd,0);
+		close(cin_fd);
+		reading_from_file = false;
+		exit(0);
+	}
+	return "";
+}
+

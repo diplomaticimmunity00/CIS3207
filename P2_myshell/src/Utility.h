@@ -30,5 +30,9 @@ int find(const std::vector<std::string>&,const std::string&);
 //reverse find
 int rfind(const std::vector<std::string>&,const std::string&);
 
-
+//check if file exists
 bool file_exists(const std::string&);
+
+//populate char array with vector
+void populate(char**,const std::vector<std::string>&);
+

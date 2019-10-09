@@ -84,3 +84,11 @@ bool file_exists(const std::string &filename) {
 	std::ifstream file(filename);
 	return (file.is_open())? 1:0;
 }
+
+void populate(char* argv[],const std::vector<std::string> &v) {
+	int i=0;
+	for(i;i<v.size();i++) {
+		argv[i+1] = v.at(i).c_str();
+	}
+	argv[i+1] = 0;
+}

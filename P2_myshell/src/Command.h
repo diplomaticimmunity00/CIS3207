@@ -19,13 +19,15 @@ std::string pwdFunc(const std::vector<std::string>&);
 //clear
 std::string clearFunc(const std::vector<std::string>&);
 //cat
-std::string catFunc(const std::vector<std::string>&);
+//std::string catFunc(const std::vector<std::string>&);
 //pause
 std::string pauseFunc(const std::vector<std::string>&);
 //environ
 std::string environFunc(const std::vector<std::string>&);
 //help
 std::string helpFunc(const std::vector<std::string>&);
+//restore standard input
+std::string stopFunc(const std::vector<std::string>&);
 
 struct Command {
 

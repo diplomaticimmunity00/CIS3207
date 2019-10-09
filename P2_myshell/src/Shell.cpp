@@ -1,8 +1,10 @@
 #include "Shell.h"
 #include "Utility.h"
+
 #include <unistd.h>
 #include <fstream>
 #include <sys/stat.h>
+#include <sys/wait.h>
 #include <fcntl.h>
 
 Shell::Shell() {
@@ -13,11 +15,12 @@ Shell::Shell() {
 						new Command(0,{"help"},helpFunc),
 						new Command(0,{"echo"},echoFunc),
 						new Command(0,{"pwd"},pwdFunc),
-						new Command(1,{"cat"},catFunc),
+						//new Command(1,{"cat"},catFunc),
 						new Command(0,{"clear"},clearFunc),
 						new Command(0,{"pause"},pauseFunc),
-						new Command(0,{"dir","ls"},dirFunc),
+						new Command(0,{"dir"},dirFunc),
 						new Command(0,{"environ"},environFunc),
+						new Command(0,{"STOP"},stopFunc),
 						
 	};
 }
@@ -61,7 +64,7 @@ void Shell::parse_input(const std::string &user_input) {
 		if(output_redir == append) {
 			new_fd = open(tokenized.at(output_redir+1).c_str(),O_RDWR|O_CREAT|O_APPEND,S_IRWXU);
 		} else {
-            new_fd = open(tokenized.at(output_redir+1).c_str(),O_RDWR|O_CREAT|O_TRUNC,S_IRWXU);
+			new_fd = open(tokenized.at(output_redir+1).c_str(),O_RDWR|O_CREAT|O_TRUNC,S_IRWXU);
 		}
 
 		dup2(new_fd,1);
@@ -72,7 +75,7 @@ void Shell::parse_input(const std::string &user_input) {
 
 	//remove command from tokenized arguments and
 	//terminate arguments after redirect token
-    tokenized = sub_vec(tokenized,1,arg_finish);
+	tokenized = sub_vec(tokenized,1,arg_finish);
 
 	if(testCommand != nullptr) {
 		if(tokenized.size() < testCommand->minArgs) {
@@ -83,7 +86,37 @@ void Shell::parse_input(const std::string &user_input) {
 			cmdReturn = testCommand->func(tokenized);
 		}
 	} else {
-		cmdReturn = cmd + ": command not found\n";
+		//if executable exists in shell path
+		char* execname;
+		execname = cmd.c_str();
+		if(access(execname,X_OK)) {
+	    	for(int i=0;i<this->paths.size();i++) {
+				execname = (this->paths.at(i)+cmd).c_str();
+				if(!access(execname,X_OK)) {
+					break;
+				}
+			}
+		}
+		if(!access(execname,X_OK)) {
+			pid_t pid = fork();
+			if(pid == 0) {
+				//child
+				char* argv[2+tokenized.size()];
+            	populate(argv,tokenized);
+            	argv[0] = execname;
+				int exerr = execvp(execname,argv);
+				exit(0);
+			} else if(pid > 0) {
+				//parent
+				//wait for child to terminate then return
+				int status;
+				waitpid(pid,&status,0);
+			} else {
+				std::cerr <<  "An error has occurred" << std::endl;
+			}
+		} else {
+			cmdReturn = cmd + ": command not found\n";
+		}
 	}
 
 	std::cout << cmdReturn << std::flush;
