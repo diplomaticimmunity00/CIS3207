@@ -8,25 +8,6 @@
 #include "Utility.h"
 #include "Common.h"
 
-//defunct
-/*std::string catFunc(const std::vector<std::string> &args) {
-	pid_t pid = fork();
-	if(pid == 0) {
-		//child
-		char *fn = args.at(0).c_str();
-		char* argv[3] = {"",fn,0};
-		int exerr = execvp("exec/cat",argv);
-		exit(0);
-	} else if(pid > 0) {
-		//parent
-		//wait for child to terminate then return
-		int status;
-		waitpid(pid,&status,0);
-		return "";
-	} else {
-		return "Fork failed";
-	}
-}*/
 
 std::string pwdFunc(const std::vector<std::string> &args) {
 	std::string wd = convert(get_current_dir_name());
@@ -68,7 +49,7 @@ std::string echoFunc(const std::vector<std::string> &args) {
 
 std::string quitFunc(const std::vector<std::string> &args) {
 	myshell.running = false;
-    return "Exiting\n";
+    return "";
 }
 
 std::string pauseFunc(const std::vector<std::string> &args) {
@@ -99,7 +80,7 @@ std::string dirFunc(const std::vector<std::string> &args) {
 }
 
 std::string environFunc(const std::vector<std::string> &args) {
-	return getenv("USER");
+	return convert(getenv("USER"))+"\n";
 }
 
 std::string stopFunc(const std::vector<std::string> &args) {
@@ -107,8 +88,11 @@ std::string stopFunc(const std::vector<std::string> &args) {
 		dup2(cin_fd,0);
 		close(cin_fd);
 		reading_from_file = false;
-		exit(0);
+		if(running_script) exit(0);
+		target_command = "";
 	}
+    dup2(stdout_fd,1);
+    close(stdout_fd);
 	return "";
 }
 

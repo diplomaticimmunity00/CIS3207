@@ -16,9 +16,10 @@ int main(int argc, char** argv) {
 			exit(1);
 		}
 		reading_from_file = true;
+		running_script = true;
 		char *filename = argv[1];
 		cin_fd = dup(0);
-		int new_fd = open(argv[1],O_RDONLY);
+		int new_fd = open(filename,O_RDONLY);
 		dup2(new_fd,0);
 		close(new_fd);
 	}
