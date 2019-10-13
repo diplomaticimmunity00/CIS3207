@@ -11,6 +11,7 @@
 
 Shell::Shell() {
 	this->running = true;
+	this->set_prompt_string();
 							//minArgs,name,function
 	this->cmdList = {	new Command(0,{"cd"},cdFunc),
 						new Command(0,{"exit","quit"},quitFunc),
@@ -22,6 +23,7 @@ Shell::Shell() {
 						new Command(0,{"dir"},dirFunc),
 						new Command(0,{"environ"},environFunc),
 						new Command(0,{"STOP"},stopFunc),
+						new Command(0,{"path"},pathFunc),
 						
 	};
 }
@@ -54,6 +56,8 @@ void Shell::parse_input(const std::string &user_input) {
 		cmd = tokenized.at(0);
 	}
 
+	//strip whitespace from command;
+	cmd = strip(cmd);
 
 	Command* testCommand = this->find_command(cmd);
 
@@ -62,24 +66,105 @@ void Shell::parse_input(const std::string &user_input) {
 	short input = rfind(tokenized,"<");
 	short append = rfind(tokenized,">>");
 	short truncate = rfind(tokenized,">");
-	short pipe = rfind(tokenized,"|");
+	short pipe_index = rfind(tokenized,"|");
+	short background_run = rfind(tokenized,"&");
 
 	//choose which token comes last in the argument vector
 	//	treat everything between the command and that token as arguments
 	int output_redir = (append > truncate)? append : truncate;
-	int input_redir = (input > pipe)? input : pipe;
+	int input_redir = (input > pipe_index)? input : pipe_index;
+
+	if(background_run > 0) {
+		int last_token_index = 0;
+		for(int i=0;i<tokenized.size();i++) {
+			if(tokenized.at(i) == "&") {
+				int pid = fork();
+				if(pid == 0) {
+					this->parse_input(join(sub_vec(tokenized,last_token_index,i),' '));
+					exit(0);
+				} else if(pid > 0) {
+					//don't wait for processes to finish
+					last_token_index = i+1;
+				} else {
+					std::cerr << "Fork failed" << std::endl;
+				}
+			}
+		}
+		if(tokenized.at(tokenized.size()-1) != "&") {
+			int pid = fork();
+			if(pid == 0) {
+				this->parse_input(join(sub_vec(tokenized,background_run+1,tokenized.size()),' '));
+				exit(0);
+			} else if(pid > 0) {
+				//don't wait for processes to finish
+			} else {
+				std::cerr << "Fork failed" << std::endl;
+			}
+		}
+		return;
+	}
+
+	//If a pipe is used in the command
+	if(pipe_index > 0) {
+		int pipe_fds[2];
+		if(pipe(pipe_fds) < 0) {
+			std::cerr << "Pipe failed" << std::endl;
+		}
+		int new_stdin = pipe_fds[0];
+		int new_stdout = pipe_fds[1];
+
+		int pid = fork();
+
+		if(pid == 0) {
+			close(new_stdin);
+			dup2(new_stdout,1);
+			//run the first command and send the output to the pipe, exit
+			this->parse_input(join(sub_vec(tokenized,0,pipe_index),' '));
+			exit(0);
+		} else if(pid > 0) {
+			//wait for pipe to fill up with output from child 1
+			waitpid(pid,NULL,0);
+		} else {
+			std::cerr << "Pipe failed" << std::endl;
+		}
+
+		int pid2 = fork();
+
+		if(pid2 == 0) {
+			close(new_stdout);
+			dup2(new_stdin,0);
+			this->parse_input(join(sub_vec(tokenized,pipe_index+1,tokenized.size()),' '));
+			exit(0);
+		} else if(pid2 > 0) {
+			close(new_stdin);close(new_stdout);
+			waitpid(pid2,NULL,0);
+		} else {
+			std::cerr << "Pipe failed" << std::endl;
+		
+		}
+		
+		restore_stdout();
+		return;
+	}
 
 	//If input is redirected
 	// read inputs from source file 
 	// until stop command
 	if(input_redir > 0) {
-		reading_from_file = true;
-		target_command = cmd;
-        char *filename = tokenized.at(input_redir+1).c_str();
-        cin_fd = dup(0);
-        int new_stdin = open(filename,O_RDONLY);
-        dup2(new_stdin,0);
-        close(new_stdin);
+		std::string fn = tokenized.at(input_redir+1);
+		if(!verify(fn)) {
+			cmd = "echo";
+			tokenized = {"echo","Error, file "+fn+" not formatted for myshell or doesn't exist"};
+			input_redir = -1;
+		} else {
+			reading_from_file = true;
+			target_command = cmd;
+			char *filename = tokenized.at(input_redir+1).c_str();
+			cin_fd = dup(0);
+			int new_stdin = open(filename,O_RDONLY);
+			dup2(new_stdin,0);
+			close(new_stdin);
+		}
 	}
 
 	//If output is redirected
@@ -100,7 +185,7 @@ void Shell::parse_input(const std::string &user_input) {
 		close(new_stdout);
 	}
 
-	if(input_redir >= 0) return;
+	if(reading_from_file and input_redir >= 0) return;
 
 	//remove command from tokenized arguments and
 	//terminate arguments after redirect token
@@ -142,7 +227,9 @@ void Shell::parse_input(const std::string &user_input) {
 				//wait for child to terminate then return
 				int status;
 				//Check if program was background executed here
-				waitpid(pid,&status,0);
+				if(background_run == -1) {
+					waitpid(pid,&status,0);
+				}
 			} else {
 				std::cerr <<  "An error has occurred" << std::endl;
 			}

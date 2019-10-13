@@ -30,6 +30,7 @@ std::string cdFunc(const std::vector<std::string> &args) {
 	}
 
 	chdir(testPath.c_str());
+	myshell.set_prompt_string();
 	return "";
 
 }
@@ -80,7 +81,13 @@ std::string dirFunc(const std::vector<std::string> &args) {
 }
 
 std::string environFunc(const std::vector<std::string> &args) {
-	return convert(getenv("USER"))+"\n";
+	std::vector<std::string> envVars = {"USER"};
+	std::string envString = "";
+	for(int i=0;i<envVars.size();i++) {
+		envString += envVars.at(i) + ": " + convert(getenv(envVars.at(i).c_str())) + "\n";
+	}
+	envString += "PATH: "+join(myshell.paths,':') + '\n';
+	return envString;
 }
 
 std::string stopFunc(const std::vector<std::string> &args) {
@@ -91,8 +98,18 @@ std::string stopFunc(const std::vector<std::string> &args) {
 		if(running_script) exit(0);
 		target_command = "";
 	}
-    dup2(stdout_fd,1);
-    close(stdout_fd);
+	int test_stdout = dup(1);
+	if(stdout_fd != test_stdout) {
+    	dup2(stdout_fd,1);
+	}
+	close(test_stdout);
 	return "";
+}
+std::string pathFunc(const std::vector<std::string> &args) {
+	myshell.paths = args;
+	if(args.size() == 0) {
+		return "Unset path\n";
+	}
+	return "Set path = "+join(args,':') + "\n";
 }
 

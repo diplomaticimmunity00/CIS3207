@@ -3,6 +3,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <unistd.h>
 
 #include "Command.h"
 #include "Utility.h"
@@ -15,7 +16,7 @@ struct Shell {
 	std::vector<Command*> cmdList;
 
 	//Environment variables
-	std::string ps = "myshell> ";
+	std::string ps;
 
 	std::string root = "/";
 	std::vector<std::string> paths = {"/bin/","/usr/bin/"};
@@ -29,6 +30,14 @@ struct Shell {
 
 	//return command by name or nullptr
 	Command* find_command(const std::string&);
+
+	void set_prompt_string() {
+		std::string shellname = "myshell";
+		std::string dir = get_current_dir_name();
+		std::string token = ">";
+
+		this->ps = shellname + ":"+dir+token + " ";
+	}
 
 	Shell();
 

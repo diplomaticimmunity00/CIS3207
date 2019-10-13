@@ -1,4 +1,7 @@
 #include "Utility.h"
+#include <unistd.h>
+
+#include "Common.h"
 
 #include <fstream>
 
@@ -27,18 +30,18 @@ std::vector<std::string> sub_vec(const std::vector<std::string> &v, int start, i
 }
 
 std::vector<std::string> split(const std::string& s,char token) {
-    std::string word = "";
-    std::vector<std::string> v;
-    for(int i=0;i<s.size();i++) {
-        if(s[i] == token) {
-            v.push_back(word);
-            word = "";
-        } else {
-            word += s[i];
-        }
-    }
-    v.push_back(word);
-    return v;
+	std::string word = "";
+	std::vector<std::string> v;
+	for(int i=0;i<s.size();i++) {
+		if(s[i] == token) {
+			v.push_back(word);
+			word = "";
+		} else {
+			word += s[i];
+		}
+	}
+	v.push_back(word);
+	return v;
 }
 
 std::string join(const std::vector<std::string> &v, char token) {
@@ -70,13 +73,23 @@ int find(const std::vector<std::string> &args,const std::string &token) {
 	return -1;
 }
 
+int find(const std::string &s, const std::string &token) {
+	int index;
+	for(int i=0;i<s.size();i++) {
+		if(s.substr(i,token.size()) == token) {
+			return i;
+		}
+	}
+	return -1;
+}
+
 int rfind(const std::vector<std::string> &args,const std::string &token) {
-    for(int i=args.size()-1;i>=0;i--) {
-        if(args.at(i) == token) {
-            return i;
-        }
-    }
-    return -1;
+	for(int i=args.size()-1;i>=0;i--) {
+		if(args.at(i) == token) {
+			return i;
+		}
+	}
+	return -1;
 }
 
 
@@ -91,4 +104,27 @@ void populate(char* argv[],const std::vector<std::string> &v) {
 		argv[i+1] = v.at(i).c_str();
 	}
 	argv[i+1] = 0;
+}
+
+bool verify(const std::string &filename) {
+	std::string contents = file_to_string(filename);
+	return find(contents,"STOP") != -1;
+}
+
+bool restore_stdout() {
+	int test_stdout = dup(1);
+    if(stdout_fd != test_stdout) {
+       	dup2(stdout_fd,1);
+    }
+    close(test_stdout);
+}
+
+std::string strip(const std::string &s) {
+	std::string newString = "";
+	for(int i=0;i<s.size();i++) {
+		if(s[i] != ' ') {
+			newString += s[i];
+		}
+	}
+	return newString;
 }

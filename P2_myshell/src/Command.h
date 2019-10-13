@@ -28,6 +28,8 @@ std::string environFunc(const std::vector<std::string>&);
 std::string helpFunc(const std::vector<std::string>&);
 //restore standard input
 std::string stopFunc(const std::vector<std::string>&);
+//set path
+std::string pathFunc(const std::vector<std::string>&);
 
 struct Command {
 

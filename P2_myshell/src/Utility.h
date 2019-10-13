@@ -27,6 +27,8 @@ std::string convert(char* old);
 
 //finds index of string in args
 int find(const std::vector<std::string>&,const std::string&);
+int find(const std::string&,const std::string&);
+
 //reverse find
 int rfind(const std::vector<std::string>&,const std::string&);
 
@@ -36,3 +38,11 @@ bool file_exists(const std::string&);
 //populate char array with vector
 void populate(char**,const std::vector<std::string>&);
 
+//verify that file will work with shell
+bool verify(const std::string &filename);
+
+//restore stdout
+bool restore_stdout();
+
+//strip whitespace
+std::string strip(const std::string&);
