@@ -23,10 +23,6 @@ file in its path that it has permission to run. If so, the shell forks and runs 
 more information on how commands are parsed.
 
 
-
-
-
-
 Command
 The shell uses a Command data structure to handle built-in commands. Commands have a minimum argument count, a string vector of 
 aliases, and a call function that is sent a list of arguments when the command is run. The shell checks each built-in Command’s
