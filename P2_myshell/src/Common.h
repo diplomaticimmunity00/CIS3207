@@ -9,6 +9,8 @@ extern bool reading_from_file;
 
 #include "Shell.h"
 
+extern int script_line;
+extern char* filename;
 extern int stdout_fd;
-extern int cin_fd;
+extern int stdin_fd;
 extern Shell myshell;

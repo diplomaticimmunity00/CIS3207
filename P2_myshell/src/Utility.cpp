@@ -1,5 +1,8 @@
 #include "Utility.h"
 #include <unistd.h>
+#include <unistd.h>
+#include <sys/stat.h>
+#include <fcntl.h>
 
 #include "Common.h"
 
@@ -34,8 +37,10 @@ std::vector<std::string> split(const std::string& s,char token) {
 	std::vector<std::string> v;
 	for(int i=0;i<s.size();i++) {
 		if(s[i] == token) {
-			v.push_back(word);
-			word = "";
+			if(word != "") {
+				v.push_back(word);
+				word = "";
+			}
 		} else {
 			word += s[i];
 		}
@@ -108,16 +113,37 @@ void populate(char* argv[],const std::vector<std::string> &v) {
 
 bool verify(const std::string &filename) {
 	std::string contents = file_to_string(filename);
-	return find(contents,"STOP") != -1;
+	return find(contents,"STOP") >= 0;
 }
 
 bool restore_stdout() {
 	int test_stdout = dup(1);
-    if(stdout_fd != test_stdout) {
-       	dup2(stdout_fd,1);
-    }
-    close(test_stdout);
+	if(stdout_fd != test_stdout) {
+		dup2(stdout_fd,1);
+	}
+	close(test_stdout);
 }
+
+bool restore_stdin() {
+	//reopen script file and advance to previous line
+	if(running_script) {
+        int new_fd = open(filename,O_RDONLY);
+        dup2(new_fd,0);
+        close(new_fd);
+		std::string f;
+		for(int i=0;i<script_line;i++) {
+			std::getline(std::cin,f);
+		}
+	} else {
+		int test_stdin = dup(0);
+		if(stdin_fd != test_stdin) {
+			dup2(stdin_fd,0);
+		}
+		close(test_stdin);
+	}
+}
+
+
 
 std::string strip(const std::string &s) {
 	std::string newString = "";

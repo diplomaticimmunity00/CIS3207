@@ -1,0 +1,48 @@
+=========================================================
+Garrett Bowser
+CIS3207 Section 04
+Project 2: myshell
+Due date: 14 October 2019
+=========================================================
+
+NAME:
+		myshell - A linux shell
+
+USAGE: 	./myshell			Start shell
+		./myshell [file]	Run commands found in file
+
+COMMANDS:
+	cd [directory]: Change current directory or print working directory if left blank
+	dir [dirname]: 	Print contents of dirname or working directory if left blank
+	exit:	--		Close the shell
+	echo [string]:	Print string to standard output
+	pwd:	--		Print current directory
+	clear:	--		Clear the terminal window
+	pause:	--		Pause shell until return is pressed
+	environ:		Print shell environment variables
+	help:	--		Print this text file
+	STOP:	--		Terminate input file or shell script (limited usage)
+	path [d1 d2..]:	Set shell path to d1:d2:..
+
+
+FEATURES:
+	Output redirection (>,>>):
+		Usage:
+			myshell> command arg1 arg2 > file.txt 
+			(create and/or clear file.txt and fill with output of command)
+			myshell> command arg1 arg2 >> file.txt
+			(create and file.txt and append output of command to end of file)
+	Input redirection (<):
+		Usage:
+			myshell> command arg1 arg2 < file.txt
+			(run "command arg1 arg2 [line] for each line in file.txt)
+	Piping (|):
+		Usage:
+			myshell> command1 arg1 arg2 | command2
+			(send output of command1 arg1 arg2 to input of command2)
+
+	Background processing (&):
+		Usage:
+			myshell> command1 arg1 arg2 & command2
+			(run command1 arg1 arg2 but don't wait for it to finish before running command2)
+		

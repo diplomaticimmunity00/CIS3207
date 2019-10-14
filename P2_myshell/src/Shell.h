@@ -19,6 +19,7 @@ struct Shell {
 	std::string ps;
 
 	std::string root = "/";
+	std::string shell = convert(get_current_dir_name())+"/myshell";
 	std::vector<std::string> paths = {"/bin/","/usr/bin/"};
 
 	void prompt_input(std::string &input,bool read_from_file) {

@@ -17,19 +17,24 @@ std::string pwdFunc(const std::vector<std::string> &args) {
 
 std::string cdFunc(const std::vector<std::string> &args) {
 	if(args.size() == 0) {
-		chdir(myshell.root.c_str());
-		return "";
+		//if no arguments were provided
+		// print cwd
+		return pwdFunc({});
 	}
 
 	std::string testPath = args.at(0);
 	
+	//check if directory exists
 	DIR *d = opendir(testPath.c_str());
 
 	if(!d) {
 		return testPath + ": error opening directory\n";
 	}
 
+	//if directory exists, change directory
 	chdir(testPath.c_str());
+	char *cwd = ("PWD="+testPath).c_str();
+	putenv(cwd);
 	myshell.set_prompt_string();
 	return "";
 
@@ -41,7 +46,8 @@ std::string clearFunc(const std::vector<std::string> &args) {
 }
 
 std::string helpFunc(const std::vector<std::string> &args) {
-    return "PLACEHOLDER\n";
+	myshell.parse_input("more readme");
+    return "";
 }
 
 std::string echoFunc(const std::vector<std::string> &args) {
@@ -86,25 +92,23 @@ std::string environFunc(const std::vector<std::string> &args) {
 	for(int i=0;i<envVars.size();i++) {
 		envString += envVars.at(i) + ": " + convert(getenv(envVars.at(i).c_str())) + "\n";
 	}
-	envString += "PATH: "+join(myshell.paths,':') + '\n';
+	envString += "PATH: "+join(myshell.paths,':')+"\nPWD: "+convert(get_current_dir_name())+"\nSHELL: "+myshell.shell+ '\n';
 	return envString;
 }
 
 std::string stopFunc(const std::vector<std::string> &args) {
+	//reached the end of a script or text file
+	restore_stdin();
+	restore_stdout();
 	if(reading_from_file) {
-		dup2(cin_fd,0);
-		close(cin_fd);
 		reading_from_file = false;
-		if(running_script) exit(0);
 		target_command = "";
+	} else if(running_script) {
+		exit(0);
 	}
-	int test_stdout = dup(1);
-	if(stdout_fd != test_stdout) {
-    	dup2(stdout_fd,1);
-	}
-	close(test_stdout);
 	return "";
 }
+
 std::string pathFunc(const std::vector<std::string> &args) {
 	myshell.paths = args;
 	if(args.size() == 0) {

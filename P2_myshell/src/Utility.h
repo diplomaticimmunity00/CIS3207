@@ -44,5 +44,9 @@ bool verify(const std::string &filename);
 //restore stdout
 bool restore_stdout();
 
+//restore stdin
+bool restore_stdin();
+
+
 //strip whitespace
 std::string strip(const std::string&);
