@@ -7,8 +7,8 @@ Myshell is a small, semi-featured linux shell.  Myshell is capable of creating c
 well background/parallel processing. It uses linux system calls and includes linux-like built-in functions. 
 
 
-See [readme](https://github.com/tuh37046/CIS3207/blob/master/P2_myshell/readme) for usage<br>
-See [OVERVIEW.pdf](https://github.com/tuh37046/CIS3207/blob/master/P2_myshell/OVERVIEW.pdf) for more information
+See [readme](https://github.com/tuh37046/CIS3207/blob/master/P2_myshell/readme) for usage information<br>
+See [OVERVIEW.pdf](https://github.com/tuh37046/CIS3207/blob/master/P2_myshell/OVERVIEW.pdf) for more details
 
 
 Garrett Bowser <br>
