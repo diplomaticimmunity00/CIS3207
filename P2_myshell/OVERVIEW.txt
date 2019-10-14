@@ -1,15 +1,9 @@
 ﻿________________
-
-
 Garrett Bowser
 CIS3207 Section 04
 Project 2: myshell
 Due date: 14 October 2019
 ________________
-
-
-
-
 
 
 Overview
