@@ -1,0 +1,9 @@
+Creates a server and client, server verifies spelling for client
+Uses threads, locks, condition variables etc
+
+Only one thread accepts connections and produces sockets
+Worker threads consume sockets from connection queue
+Uses connection queue
+Uses signals and condition variables
+Main thread sleeps if it has no connections
+Must have log queue
