@@ -1,6 +1,6 @@
 import os,sys
 
-exec_name = "myshell"
+exec_name = "checker"
 
 makestr = ""
 binstr = ""
@@ -15,7 +15,7 @@ for filename in bins:
     if bins.count(filename) > 1:
         binstr += "src/{0}.h".format(filename)
         hasheader = True
-    binstr += "\n\tg++ -fpermissive -std=c++11 -c src/{0}.cpp -o bin/{0}.o\n\n".format(filename)
+    binstr += "\n\tg++ -fpermissive -std=c++11 -c src/{0}.cpp -lpthread -o bin/{0}.o\n\n".format(filename)
 
 makestr = exec_name+": "
 
@@ -27,7 +27,7 @@ for filename in bins:
 
 
 makestr += "bin/"+' bin/'.join(binlist)
-makestr += "\n\tg++ -std=c++11 -fpermissive "+"bin/"+' bin/'.join(binlist)+" -o "+exec_name
+makestr += "\n\tg++ -std=c++11 -fpermissive "+"bin/"+' bin/'.join(binlist)+" -lpthread -o "+exec_name
 
 f = open("makefile","w+")
 f.write(makestr+"\n\n"+binstr)
