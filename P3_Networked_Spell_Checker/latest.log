@@ -1,0 +1,50 @@
+Oct/31/2019(Thu)18:34:36 : Starting server...
+Oct/31/2019(Thu)18:34:36 : Listening on 8888...
+Oct/31/2019(Thu)18:34:37 : Received connection
+Oct/31/2019(Thu)18:34:37 : Signaling a thread...
+ -SERVICING SOCKET 4 FROM THREAD 1
+Oct/31/2019(Thu)18:34:40 : Received connection
+Oct/31/2019(Thu)18:34:40 : Signaling a thread...
+ -SERVICING SOCKET 5 FROM THREAD 2
+Oct/31/2019(Thu)18:34:42 : Received connection
+Oct/31/2019(Thu)18:34:42 : Signaling a thread...
+ -SERVICING SOCKET 6 FROM THREAD 3
+ -Received word from socket 4
+ -Received word from socket 4
+ -Received word from socket 4
+ -Received word from socket 4
+ -Received disconnect from socket 4
+ -CLOSING SOCKET 4
+ -Received word from socket 5
+ -Received disconnect from socket 5
+ -CLOSING SOCKET 5
+ -Received word from socket 6
+ -Received disconnect from socket 6
+ -CLOSING SOCKET 6
+Oct/31/2019(Thu)18:58:30 : Received connection
+Oct/31/2019(Thu)18:58:30 : Signaling a thread...
+ -SERVICING SOCKET 7 FROM THREAD 4
+Oct/31/2019(Thu)18:58:31 : Received connection
+Oct/31/2019(Thu)18:58:31 : Signaling a thread...
+ -SERVICING SOCKET 4 FROM THREAD 1
+Oct/31/2019(Thu)18:58:32 : Received connection
+Oct/31/2019(Thu)18:58:32 : Signaling a thread...
+ -SERVICING SOCKET 5 FROM THREAD 2
+ -Received word from socket 7
+ -Received word from socket 4
+ -Received word from socket 4
+ -Received word from socket 5
+ -Received word from socket 5
+ -Received word from socket 4
+ -Received word from socket 7
+ -Received word from socket 4
+ -Received word from socket 5
+ -Received word from socket 5
+ -Received word from socket 7
+ -Received disconnect from socket 7
+ -CLOSING SOCKET 7
+ -Received word from socket 4
+ -Received disconnect from socket 4
+ -CLOSING SOCKET 4
+ -Received word from socket 5
+ -CLOSING SOCKET 5

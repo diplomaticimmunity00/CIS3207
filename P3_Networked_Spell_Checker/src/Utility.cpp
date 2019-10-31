@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include <fstream>
+#include <ctime>
 
 void init_dictionary(const std::string& filename) {
 	std::ifstream words(filename);
@@ -9,6 +10,12 @@ void init_dictionary(const std::string& filename) {
 	while(std::getline(words,newWord)) {
 		dict.insert(newWord);
 	}
+}
+
+void clear_log() {
+    std::ofstream log(logfile);
+    log << "";
+    log.close();
 }
 
 std::string convert(char* old) {
@@ -44,7 +51,7 @@ int find(const std::vector<char> &v, char c) {
 std::string strip(const std::string &s) {
 	std::string newString = "";
 	for(int i=0;i<s.size();i++) {
-		if(s[i] != ' ') newString += s[i];
+		if(s[i] != ' ' and s[i] != '\t') newString += s[i];
 	}
 	return newString;
 }
@@ -57,6 +64,17 @@ bool isdigit(const std::string& s) {
 		}
 	}
 	return true;
+}
+
+char* get_timestamp() {
+
+    time_t now = time(0);
+	char* timestamp;
+    tm *local_time = localtime(&now);
+
+    strftime(timestamp,32,"%b/%d/%Y(%a)%H:%M:%S",local_time);
+	return timestamp;
+
 }
 
 bool file_exists(const std::string &filename) {

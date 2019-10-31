@@ -17,6 +17,8 @@
 #define DEFAULT_PORT 8888
 #define DEFAULT_DICTIONARY "words.txt"
 
+void start_log_thread();
+
 int main(int argc, char** argv) {
 
 	for(int i=1;i<argc;i++) {
@@ -37,15 +39,20 @@ int main(int argc, char** argv) {
 		}
 	}
 
+	clear_log();
+
 	init_dictionary(dictionaryFile);
 	
+	start_log_thread();
 	workers.activate();
-	while(!workers.ready);
+	//while(!workers.ready);
 
 	pthread_mutex_init(&socketLock,NULL);
 
 	//pthread_cond_init(&fill,NULL);
 	//pthread_cond_init(&empty,NULL);
+
+	print("Starting server...");
 
 	int new_socket, c;
 	struct sockaddr_in server, client;
@@ -53,7 +60,7 @@ int main(int argc, char** argv) {
 	int socket_desc = socket(AF_INET, SOCK_STREAM,0);
 
 	if(socket_desc == -1) {
-		std::cout << "SOCK ERROR" << std::endl;
+		print("SOCK ERROR");
 		exit(0);
 	}
 
@@ -61,20 +68,20 @@ int main(int argc, char** argv) {
 	server.sin_addr.s_addr = INADDR_ANY;
 	server.sin_port = htons(port);
 	if(bind(socket_desc, (struct sockaddr*)&server, sizeof(server)) < 0) {
-		std::cout << "ERROR BINDING" << std::endl;
+		print("ERROR BINDING");
 		exit(0);
 	}
 
 	listen(socket_desc, 3);
 
-	std::cout << "Listening on " << ntohs(server.sin_port) << "..." << std::endl;
+	print("Listening on " + std::to_string(ntohs(server.sin_port)) + "...");
 
 	while(1) {
 		c = sizeof(struct sockaddr_in);
 		new_socket = accept(socket_desc, (struct sockaddr*)&client, (socklen_t*)&c);
-		std::cout << "Received connection" << std::endl;
+		print("Received connection");
 		if(new_socket < 0) {
-			std::cout << "CONNECTION ERROR" << std::endl;
+			print("CONNECTION ERROR");
 			exit(0);
 		}
 		std::string occupied = std::to_string(workers.occupied_threads());
