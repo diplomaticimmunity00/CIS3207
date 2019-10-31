@@ -12,89 +12,40 @@
 #include <mutex>
 
 #include "Utility.h"
+#include "Thread.h"
 
-#define THREADS 3
+#define DEFAULT_PORT 8888
+#define DEFAULT_DICTIONARY "words.txt"
 
-std::queue<int> socketQueue;
-pthread_mutex_t socketLock;
+int main(int argc, char** argv) {
 
-pthread_cond_t fill;
-pthread_cond_t empty = PTHREAD_COND_INITIALIZER;
+	for(int i=1;i<argc;i++) {
+		if(isdigit(convert(argv[i]))) {
+			if(port < 0) port=std::stoi(argv[i]);
+		} else {
+			dictionaryFile = convert(argv[i]);
+		}
+	}
 
-void work_from_queue();
+	if(port < 0) port = DEFAULT_PORT;
 
-void spawn_threads() {
-	pthread_t threads[THREADS];
-	for(size_t i=0;i<THREADS;i++) {
-		if(pthread_create(&threads[i],NULL,work_from_queue,NULL) != 0) {
-			std::cout << "Failed to create thread" << std::endl;
+	if(!file_exists(dictionaryFile)) {
+		dictionaryFile = DEFAULT_DICTIONARY;
+		if(!file_exists(dictionaryFile)) {
+			print("Error: Dictionary not found, exiting");
 			exit(0);
 		}
 	}
-}
 
-void close_socket(int socket) {
-	char* hello = "Closing connection to server\n";
-    send(socket , hello , strlen(hello) , 0 );
-    close(socket);
-    std::cout << "Closing socket " << socket << std::endl;
-}
-
-int pop_socket_queue() {
-	//pthread_mutex_lock(&socketLock);
-    int new_socket = socketQueue.front();
-	socketQueue.pop();
-	//pthread_mutex_unlock(&socketLock);
-	return new_socket;
-}
-
-void push_socket_queue(int socket) {
-	socketQueue.push(socket);
-	pthread_cond_signal(&fill);
-}
-
-void work_from_queue() {
-
-	std::string message = "";
-    std::string check;
-    char buffer[1024] = {0};
-	int new_socket = 100;
-
-	while(1) {
-		//wait until a socket is available
-		pthread_mutex_lock(&socketLock);
-		while(socketQueue.empty()) {
-			pthread_cond_wait(&fill,&socketLock);
-		}
-
-		new_socket = pop_socket_queue();
-		pthread_cond_signal(&empty);
-		pthread_mutex_unlock(&socketLock);
-		print("SERVICING SOCKET "+std::to_string(new_socket)+" FROM THREAD "+std::to_string(pthread_self()));
-		while(read(new_socket,buffer,1024) >= 0) {
-			message = strip(convert(buffer));
-			message = message.substr(0,find(message,'\n'));
-			if(dict.find(message) != dict.end()) {
-				check = "\r" + message + " OK\n";
-			} else {
-				check = "\r" + message + " MISSPELLED\n";
-			}
-			send(new_socket, check.c_str(), strlen(check.c_str()), 0);
-		}
-		print("CLOSING SOCKET "+std::to_string(new_socket));
-		close_socket(new_socket);
-	}
-}
-
-int main() {
-
-	init_dictionary();
-	spawn_threads();
+	init_dictionary(dictionaryFile);
+	
+	workers.activate();
+	while(!workers.ready);
 
 	pthread_mutex_init(&socketLock,NULL);
 
-	pthread_cond_init(&fill,NULL);
-	pthread_cond_init(&empty,NULL);
+	//pthread_cond_init(&fill,NULL);
+	//pthread_cond_init(&empty,NULL);
 
 	int new_socket, c;
 	struct sockaddr_in server, client;
@@ -108,7 +59,7 @@ int main() {
 
 	server.sin_family = AF_INET;
 	server.sin_addr.s_addr = INADDR_ANY;
-	server.sin_port = htons(8888);
+	server.sin_port = htons(port);
 	if(bind(socket_desc, (struct sockaddr*)&server, sizeof(server)) < 0) {
 		std::cout << "ERROR BINDING" << std::endl;
 		exit(0);
@@ -126,9 +77,20 @@ int main() {
 			std::cout << "CONNECTION ERROR" << std::endl;
 			exit(0);
 		}
-		char* hello = "Connected to server!\nBegin sending words...\n";
-    	send(new_socket , hello , strlen(hello) , 0 );
+		std::string occupied = std::to_string(workers.occupied_threads());
+		std::string total = std::to_string(workers.size);
+		std::string greeting = "Connected to server! ("+occupied+"/"+total+")\n";
+		char* hello = greeting.c_str();
+		send(new_socket , hello , strlen(hello) , 0 );
 		push_socket_queue(new_socket);
+		print("Signaling a thread...");
+		pthread_cond_signal(&fill);
+		if(!workers.has_free_thread()) {
+			print("All threads occupied, notifying client");
+			char* wait = "Waiting for a slot to open...\n";
+			send(new_socket , wait , strlen(wait) , 0 );
+		}
 	}
+	print("Server closing");
 	return 0;
 }
