@@ -1,5 +1,10 @@
 #pragma once
 
+#define NUM_WORKERS 4
+#define DEFAULT_PORT 8888
+#define DEFAULT_DICTIONARY "words.txt"
+#define SOCKETS_MAX 4
+
 #include <queue>
 #include <unordered_set>
 #include <pthread.h>
@@ -15,6 +20,8 @@ extern std::queue<std::string> printQueue;
 
 extern pthread_mutex_t printLock;
 extern pthread_mutex_t socketLock;
+
+extern unsigned int count;
 
 extern std::string logfile;
 

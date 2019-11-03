@@ -13,9 +13,7 @@
 
 #include "Utility.h"
 #include "Thread.h"
-
-#define DEFAULT_PORT 8888
-#define DEFAULT_DICTIONARY "words.txt"
+#include "Common.h"
 
 void start_log_thread();
 
@@ -76,6 +74,11 @@ int main(int argc, char** argv) {
 
 	print("Listening on " + std::to_string(ntohs(server.sin_port)) + "...");
 
+	//socket queue must be at least large
+	//enough to contain the number of
+	//workers on the server
+	int max_sockets = std::max(SOCKETS_MAX,NUM_WORKERS);
+
 	while(1) {
 		c = sizeof(struct sockaddr_in);
 		new_socket = accept(socket_desc, (struct sockaddr*)&client, (socklen_t*)&c);
@@ -84,11 +87,25 @@ int main(int argc, char** argv) {
 			print("CONNECTION ERROR");
 			exit(0);
 		}
+
+		pthread_mutex_lock(&socketLock);
+
+		//if server is overloaded by
+		//exhaustion of queue space a connection
+		//will be made but no information
+		//will be sent to client
+		while(count == max_sockets) {
+			pthread_cond_wait(&empty,&socketLock);
+		}
+
+		//greeting
 		std::string occupied = std::to_string(workers.occupied_threads());
 		std::string total = std::to_string(workers.size);
 		std::string greeting = "Connected to server! ("+occupied+"/"+total+")\n";
 		char* hello = greeting.c_str();
 		send(new_socket , hello , strlen(hello) , 0 );
+
+		//add socket to queue
 		push_socket_queue(new_socket);
 		print("Signaling a thread...");
 		pthread_cond_signal(&fill);
@@ -97,6 +114,7 @@ int main(int argc, char** argv) {
 			char* wait = "Waiting for a slot to open...\n";
 			send(new_socket , wait , strlen(wait) , 0 );
 		}
+		pthread_mutex_unlock(&socketLock);
 	}
 	print("Server closing");
 	return 0;

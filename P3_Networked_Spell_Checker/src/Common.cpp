@@ -1,11 +1,6 @@
 #include "Common.h"
 #include "Thread.h"
 
-#define NUM_WORKERS 4
-#define DEFAULT_PORT 8888
-#define DEFAULT_DICTIONARY "words.txt"
-#define SOCKETS_MAX 50
-
 #include <queue>
 #include <unordered_set>
 
@@ -15,6 +10,8 @@ std::queue<std::string> printQueue;
 std::queue<int> socketQueue;
 pthread_mutex_t socketLock;
 pthread_mutex_t printLock;
+
+unsigned int count = 0;
 
 Spool workers = Spool(NUM_WORKERS);
 pthread_cond_t fill = PTHREAD_COND_INITIALIZER;

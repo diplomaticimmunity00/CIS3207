@@ -31,6 +31,7 @@ int pop_socket_queue() {
 	//pthread_mutex_lock(&socketLock);
 	int new_socket = socketQueue.front();
 	socketQueue.pop();
+	count--;
 	//pthread_mutex_unlock(&socketLock);
 	return new_socket;
 }
@@ -48,12 +49,11 @@ void await_socket(int &socket,Worker* w) {
 	//wait until a socket is available
 	pthread_mutex_lock(&socketLock);
 	w->occupied = false;
-	while(socketQueue.empty()) {
+	while(socketQueue.empty() or count == 0) {
 		//print("Sleeping thread "+std::to_string(w->id)+"...");
 		pthread_cond_wait(&fill,&socketLock);
 	}
-	socket = socketQueue.front();
-	socketQueue.pop();
+	socket = pop_socket_queue();
 	pthread_cond_signal(&empty);
 	w->occupied = true;
 	pthread_mutex_unlock(&socketLock);
@@ -64,7 +64,6 @@ void await_job(std::string &line) {
 	//wait until a socket is available
 	pthread_mutex_lock(&printLock);
 	while(printQueue.empty()) {
-		//print("Sleeping thread "+std::to_string(w->id)+"...");
 		pthread_cond_wait(&fillJobs,&printLock);
 	}
 	line = pop_print_queue();
@@ -74,14 +73,11 @@ void await_job(std::string &line) {
 
 
 void push_socket_queue(int socket) {
-	pthread_mutex_lock(&socketLock);
 	socketQueue.push(socket);
-	pthread_mutex_unlock(&socketLock);
+	count++;
 }
 
 void write_to_log(std::string line) {
-
-	//print(line);return;
 
 	std::ofstream log(logfile,std::ios_base::app);
 	if(!log.is_open()) {
@@ -141,6 +137,9 @@ void Worker::work_from_queue() {
 			send(new_socket, check.c_str(), strlen(check.c_str()), 0);
 		}
 		close_socket(new_socket);
+		pthread_mutex_lock(&socketLock);
+		pthread_cond_signal(&empty);
+		pthread_mutex_unlock(&socketLock);
 	}
 }
 
