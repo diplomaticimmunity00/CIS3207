@@ -39,16 +39,12 @@ int main(int argc, char** argv) {
 
 	clear_log();
 
+	//read words into dictionary
 	init_dictionary(dictionaryFile);
 	
+	//start threads
 	start_log_thread();
 	workers.activate();
-	//while(!workers.ready);
-
-	pthread_mutex_init(&socketLock,NULL);
-
-	//pthread_cond_init(&fill,NULL);
-	//pthread_cond_init(&empty,NULL);
 
 	print("Starting server...");
 
@@ -101,17 +97,18 @@ int main(int argc, char** argv) {
 		//greeting
 		std::string occupied = std::to_string(workers.occupied_threads());
 		std::string total = std::to_string(workers.size);
-		std::string greeting = "Connected to server! ("+occupied+"/"+total+")\n";
+		std::string greeting = "SERV Connected to server! ("+occupied+"/"+total+")\n";
 		char* hello = greeting.c_str();
 		send(new_socket , hello , strlen(hello) , 0 );
 
 		//add socket to queue
 		push_socket_queue(new_socket);
 		print("Signaling a thread...");
+		//and wake a thread
 		pthread_cond_signal(&fill);
 		if(!workers.has_free_thread()) {
 			print("All threads occupied, notifying client");
-			char* wait = "Waiting for a slot to open...\n";
+			char* wait = "SERV Waiting for a slot to open...\n";
 			send(new_socket , wait , strlen(wait) , 0 );
 		}
 		pthread_mutex_unlock(&socketLock);

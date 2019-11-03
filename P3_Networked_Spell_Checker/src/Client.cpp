@@ -12,6 +12,7 @@
 #include <chrono>
 #include <thread>
 
+#include <queue>
 #include <vector>
 #include <pthread.h>
 #include <mutex>
@@ -22,8 +23,8 @@
 #include "Thread.h"
 #include "Common.h"
 
-#define NUM_CLIENTS 10
-#define WORDS_MAX 120
+#define NUM_CLIENTS 5
+#define WORDS_MAX 100
 
 void clear_client_log() {
     std::ofstream log("client.log");
@@ -44,8 +45,13 @@ void write_log(const std::string &s) {
 }
 
 pthread_t client_spool[NUM_CLIENTS];
+int connections[NUM_CLIENTS];
 
+std::queue<std::string> client_log_queue;
 pthread_mutex_t clientLock;
+
+pthread_cond_t clientLogFill;
+pthread_cond_t clientLogEmpty;
 
 std::vector<std::string> client_dict;
 
@@ -57,64 +63,113 @@ void init_client_dictionary(const std::string& filename) {
 	}
 }
 
-void client_routine() {
+void push_client_log_queue(const std::string &line) {
+	pthread_mutex_lock(&clientLock);
+    client_log_queue.push(line);
+    pthread_cond_signal(&clientLogFill);
+    pthread_mutex_unlock(&clientLock);
+}
+
+int new_connection() {
+	int socket_desc = socket(AF_INET, SOCK_STREAM,0);
+
+    struct addrinfo server_info, *res;
+    int socket_fd;
+
+    memset(&server_info, 0, sizeof server_info);
+    server_info.ai_family = AF_UNSPEC;
+    server_info.ai_socktype = SOCK_STREAM;
+
+    getaddrinfo("127.0.0.1", "8888", &server_info, &res);
+
+    socket_fd = socket(res->ai_family, res->ai_socktype, res->ai_protocol);
+
+    connect(socket_fd, res->ai_addr, res->ai_addrlen);	
+	return socket_fd;
+}
+
+void client_routine(int socket_fd) {
 
 	int wordcount = random()%WORDS_MAX;
 
-	print("Starting client...");
+	push_client_log_queue("Starting client with wordcount "+std::to_string(wordcount)+"...\n");
 
-	int new_socket, c;
-	struct sockaddr_in server, client;
-
-	int socket_desc = socket(AF_INET, SOCK_STREAM,0);
-
-	struct addrinfo hints, *res;
-	int sockfd;
-
-	// first, load up address structs with getaddrinfo():
-
-	memset(&hints, 0, sizeof hints);
-	hints.ai_family = AF_UNSPEC;
-	hints.ai_socktype = SOCK_STREAM;
-
-	getaddrinfo("127.0.0.1", "8888", &hints, &res);
-
-	sockfd = socket(res->ai_family, res->ai_socktype, res->ai_protocol);
-
-	connect(sockfd, res->ai_addr, res->ai_addrlen);
-
-	if(socket_desc == -1) {
-		print("SOCK ERROR");
+	if(socket_fd == -1) {
+		std::cout << "Connection error, exiting" << std::endl;
 		exit(0);
 	}
 	
 	char* word;
 	char buffer[1024] = {0};
+	std::string logstr = "";
 	for(int i=0;i<wordcount;i++) {
+
+		
 		word = (client_dict.at(random()%client_dict.size())+"\n").c_str();
-		send(sockfd,word,strlen(word),0);
+		if(send(socket_fd,word,strlen(word),0) < 0) std::cout << "ERROR" << std::endl;
 
-		//if(random()%2 == 1) std::this_thread::sleep_for(std::chrono::milliseconds(10));
+		//defunct
 
-		pthread_mutex_lock(&clientLock);
-		if(0) {
-			write_log("Server disconnected");
-			pthread_mutex_unlock(&clientLock);
+		/*if(read(socket_fd,buffer,1024) <= 0) {
+			push_client_log_queue("Client "+std::to_string(socket_fd)+": Server disconnected");
+			pthread_cond_signal(&clientLogFill);
+			close(socket_fd);
 			return;
 		} else {
-			write_log("Client "+std::to_string(sockfd)+": "+convert(word));
+			std::string reply(buffer);
+			if(reply.find("SERV") == std::string::npos) {
+			*/
+			std::string w(word);
+			logstr = "Client "+std::to_string(socket_fd)+": "+w;
+			/*
+			} else {
+				continue;
+			}
 		}
+		*/
+		push_client_log_queue(logstr);
+
+		pthread_mutex_lock(&clientLock);
+		pthread_cond_signal(&clientLogFill);
 		pthread_mutex_unlock(&clientLock);
+		std::this_thread::sleep_for(std::chrono::milliseconds(100));
 	}
 
+	//close connection remotely
 	word = "0\n";
-    send(sockfd,word,strlen(word),0);
-	close(sockfd);
+    if(send(socket_fd,word,strlen(word),0) < 0) std::cout << "ERROR" << std::endl;
+	return;
+}
+
+void client_log_thread_routine() {
+	std::string line = "";
+	while(1) {
+		pthread_mutex_lock(&clientLock);
+		while(client_log_queue.empty()) {
+			pthread_cond_wait(&clientLogFill,&clientLock);
+		}
+		line = client_log_queue.front();
+		client_log_queue.pop();
+		pthread_mutex_unlock(&clientLock);
+		write_log(line);
+	}
 }
 
 void spawn_threads () {
+	//log thread
+	
 	for(size_t i=0;i<NUM_CLIENTS;i++) {
-		if(pthread_create(&client_spool[i],NULL,client_routine,NULL) != 0) {
+		connections[i] = new_connection();
+		std::this_thread::sleep_for(std::chrono::milliseconds(300));
+	}
+
+	pthread_t logThread;
+	if(pthread_create(&logThread,NULL,client_log_thread_routine,NULL) != 0) {
+            std::cout << "Failed to create thread" << std::endl;
+            exit(0);
+    }
+	for(size_t i=0;i<NUM_CLIENTS;i++) {
+		if(pthread_create(&client_spool[i],NULL,client_routine,connections[i]) != 0) {
 			std::cout << "Failed to create thread" << std::endl;
 			exit(0);
 		}
@@ -122,12 +177,18 @@ void spawn_threads () {
 }
 
 int main(int argc, char** argv) {
+
+	srand(time(NULL));
+
+	std::cout << "Simulating " << NUM_CLIENTS << " clients..." << std::endl;
+
 	clear_client_log();
 	init_client_dictionary("words.txt");
 	spawn_threads();
 	for(int i=0;i<NUM_CLIENTS;i++) {
 		pthread_join(client_spool[i],NULL);
+		std::cout << "Client " << i+1 << " finished" << std::endl;
 	}
-	print("Clients finished");
+	push_client_log_queue("Clients finished\n");
 	return 0;
 }

@@ -1,5 +1,5 @@
-checker: bin/Utility.o bin/Main.o bin/Thread.o bin/Common.o
-	g++ -std=c++11 -fpermissive bin/Utility.o bin/Main.o bin/Thread.o bin/Common.o -lpthread -o checker
+server: bin/Utility.o bin/Main.o bin/Thread.o bin/Common.o
+	g++ -std=c++11 -fpermissive bin/Utility.o bin/Main.o bin/Thread.o bin/Common.o -lpthread -o server
 
 bin/Utility.o: src/Utility.cpp src/Utility.h
 	g++ -fpermissive -std=c++11 -c src/Utility.cpp -lpthread -o bin/Utility.o

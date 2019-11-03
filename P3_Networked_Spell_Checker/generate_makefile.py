@@ -1,11 +1,11 @@
 import os,sys
 
-exec_name = "checker"
+exec_name = "server"
 
 makestr = ""
 binstr = ""
 
-bins = [src.split(".")[0] for src in os.listdir("src/") if ".swp" not in src]
+bins = [src.split(".")[0] for src in os.listdir("src/") if ".swp" not in src and "Client" not in src]
 
 for filename in bins:
     hasheader = False

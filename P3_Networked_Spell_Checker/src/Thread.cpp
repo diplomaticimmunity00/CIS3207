@@ -28,19 +28,15 @@ void close_socket(int socket) {
 }
 
 int pop_socket_queue() {
-	//pthread_mutex_lock(&socketLock);
 	int new_socket = socketQueue.front();
 	socketQueue.pop();
 	count--;
-	//pthread_mutex_unlock(&socketLock);
 	return new_socket;
 }
 
 std::string pop_print_queue() {
-	//pthread_mutex_lock(&printLock);
 	std::string line = printQueue.front();
 	printQueue.pop();
-	//pthread_mutex_unlock(&printLock);
 	return line;
 }
 
@@ -50,9 +46,10 @@ void await_socket(int &socket,Worker* w) {
 	pthread_mutex_lock(&socketLock);
 	w->occupied = false;
 	while(socketQueue.empty() or count == 0) {
-		//print("Sleeping thread "+std::to_string(w->id)+"...");
 		pthread_cond_wait(&fill,&socketLock);
 	}
+	//notify man thread we've taken a socket
+	//off the queue
 	socket = pop_socket_queue();
 	pthread_cond_signal(&empty);
 	w->occupied = true;
@@ -116,8 +113,11 @@ void Worker::work_from_queue() {
 	while(1) {
 		//wait until a socket is available
 		await_socket(new_socket,this);
+		//once we have a socket, 
+		//start accepting words until 0
+		//or client disconnect
 		push_print_queue("SERVICING SOCKET "+std::to_string(new_socket)+" FROM THREAD "+std::to_string(this->id));
-		char* accepted = "Begin sending words!\n";
+		char* accepted = "SERV Begin sending words!\n";
 		send(new_socket, accepted, strlen(accepted), 0 );
 		while(read(new_socket,buffer,1024) > 0) {
 			push_print_queue("Received word from socket "+std::to_string(new_socket));
@@ -125,7 +125,7 @@ void Worker::work_from_queue() {
 			message = message.substr(0,find(message,'\n'));
 			if(message == "0") {
 				push_print_queue("Received disconnect from socket "+std::to_string(new_socket));
-				char* goodbye = "Closed connection to server.\nGoodbye!\n";
+				char* goodbye = "SERV Closed connection to server.\nGoodbye!\n";
 				send(new_socket, goodbye, strlen(goodbye), 0 );
 				break;
 			}
