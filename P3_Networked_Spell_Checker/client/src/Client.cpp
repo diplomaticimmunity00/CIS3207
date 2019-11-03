@@ -19,10 +19,6 @@
 
 #include <fstream>
 
-#include "Utility.h"
-#include "Thread.h"
-#include "Common.h"
-
 #define NUM_CLIENTS 5
 #define WORDS_MAX 100
 
@@ -98,7 +94,7 @@ void client_routine(int socket_fd) {
 		std::cout << "Connection error, exiting" << std::endl;
 		exit(0);
 	}
-	
+
 	char* word;
 	char buffer[1024] = {0};
 	std::string logstr = "";
@@ -107,7 +103,6 @@ void client_routine(int socket_fd) {
 		
 		word = (client_dict.at(random()%client_dict.size())+"\n").c_str();
 		if(send(socket_fd,word,strlen(word),0) < 0) std::cout << "ERROR" << std::endl;
-
 		//defunct
 
 		/*if(read(socket_fd,buffer,1024) <= 0) {
@@ -128,7 +123,6 @@ void client_routine(int socket_fd) {
 		}
 		*/
 		push_client_log_queue(logstr);
-
 		pthread_mutex_lock(&clientLock);
 		pthread_cond_signal(&clientLogFill);
 		pthread_mutex_unlock(&clientLock);
@@ -155,10 +149,10 @@ void client_log_thread_routine() {
 	}
 }
 
-void spawn_threads () {
+void spawn_threads() {
 	//log thread
 	
-	for(size_t i=0;i<NUM_CLIENTS;i++) {
+	for(int i=0;i<NUM_CLIENTS;i++) {
 		connections[i] = new_connection();
 		std::this_thread::sleep_for(std::chrono::milliseconds(300));
 	}
@@ -168,7 +162,7 @@ void spawn_threads () {
             std::cout << "Failed to create thread" << std::endl;
             exit(0);
     }
-	for(size_t i=0;i<NUM_CLIENTS;i++) {
+	for(int i=0;i<NUM_CLIENTS;i++) {
 		if(pthread_create(&client_spool[i],NULL,client_routine,connections[i]) != 0) {
 			std::cout << "Failed to create thread" << std::endl;
 			exit(0);
