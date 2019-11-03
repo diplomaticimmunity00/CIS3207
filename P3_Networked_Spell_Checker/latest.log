@@ -1,617 +1,264 @@
-Nov/03/2019(Sun)18:26:48 : Starting server...
-Nov/03/2019(Sun)18:26:48 : Listening on 8888...
-Nov/03/2019(Sun)18:26:49 : Received connection
-Nov/03/2019(Sun)18:26:49 : Signaling a thread...
+Nov/03/2019(Sun)18:58:55 : Starting server...
+Nov/03/2019(Sun)18:58:55 : Listening on 8888...
+Nov/03/2019(Sun)18:58:56 : Received connection
+Nov/03/2019(Sun)18:58:56 : Signaling a thread...
  -SERVICING SOCKET 4 FROM THREAD 1
-Nov/03/2019(Sun)18:26:49 : Received connection
-Nov/03/2019(Sun)18:26:49 : Signaling a thread...
+Nov/03/2019(Sun)18:58:56 : Received connection
+Nov/03/2019(Sun)18:58:56 : Signaling a thread...
  -SERVICING SOCKET 5 FROM THREAD 2
-Nov/03/2019(Sun)18:26:50 : Received connection
-Nov/03/2019(Sun)18:26:50 : Signaling a thread...
+Nov/03/2019(Sun)18:58:56 : Received connection
+Nov/03/2019(Sun)18:58:56 : Signaling a thread...
  -SERVICING SOCKET 6 FROM THREAD 3
-Nov/03/2019(Sun)18:26:50 : Received connection
-Nov/03/2019(Sun)18:26:50 : Signaling a thread...
+Nov/03/2019(Sun)18:58:57 : Received connection
+Nov/03/2019(Sun)18:58:57 : Signaling a thread...
  -SERVICING SOCKET 7 FROM THREAD 4
-Nov/03/2019(Sun)18:26:50 : Received connection
-Nov/03/2019(Sun)18:26:50 : Signaling a thread...
-Nov/03/2019(Sun)18:26:50 : All threads occupied, notifying client
- -CLOSING SOCKET 5
- -CLOSING SOCKET 6
- -SERVICING SOCKET 8 FROM THREAD 2
- -CLOSING SOCKET 4
- -CLOSING SOCKET 7
- -CLOSING SOCKET 8
-Nov/03/2019(Sun)18:27:14 : Received connection
-Nov/03/2019(Sun)18:27:14 : Signaling a thread...
- -SERVICING SOCKET 9 FROM THREAD 3
-Nov/03/2019(Sun)18:27:15 : Received connection
-Nov/03/2019(Sun)18:27:15 : Signaling a thread...
- -SERVICING SOCKET 4 FROM THREAD 1
-Nov/03/2019(Sun)18:27:15 : Received connection
-Nov/03/2019(Sun)18:27:15 : Signaling a thread...
- -SERVICING SOCKET 5 FROM THREAD 2
-Nov/03/2019(Sun)18:27:15 : Received connection
-Nov/03/2019(Sun)18:27:15 : Signaling a thread...
- -SERVICING SOCKET 6 FROM THREAD 4
-Nov/03/2019(Sun)18:27:16 : Received connection
-Nov/03/2019(Sun)18:27:16 : Signaling a thread...
-Nov/03/2019(Sun)18:27:16 : All threads occupied, notifying client
- -CLOSING SOCKET 4
- -CLOSING SOCKET 9
- -SERVICING SOCKET 7 FROM THREAD 1
- -CLOSING SOCKET 7
- -CLOSING SOCKET 5
- -CLOSING SOCKET 6
-Nov/03/2019(Sun)18:27:54 : Received connection
-Nov/03/2019(Sun)18:27:54 : Signaling a thread...
- -SERVICING SOCKET 8 FROM THREAD 3
-Nov/03/2019(Sun)18:27:54 : Received connection
-Nov/03/2019(Sun)18:27:54 : Signaling a thread...
- -SERVICING SOCKET 4 FROM THREAD 1
-Nov/03/2019(Sun)18:27:54 : Received connection
-Nov/03/2019(Sun)18:27:54 : Signaling a thread...
- -SERVICING SOCKET 5 FROM THREAD 2
-Nov/03/2019(Sun)18:27:55 : Received connection
-Nov/03/2019(Sun)18:27:55 : Signaling a thread...
- -SERVICING SOCKET 6 FROM THREAD 4
-Nov/03/2019(Sun)18:27:55 : Received connection
-Nov/03/2019(Sun)18:27:55 : Signaling a thread...
-Nov/03/2019(Sun)18:27:55 : All threads occupied, notifying client
- -CLOSING SOCKET 5
- -SERVICING SOCKET 7 FROM THREAD 2
- -CLOSING SOCKET 6
- -CLOSING SOCKET 4
- -CLOSING SOCKET 8
- -CLOSING SOCKET 7
-Nov/03/2019(Sun)18:30:02 : Received connection
-Nov/03/2019(Sun)18:30:02 : Signaling a thread...
- -SERVICING SOCKET 9 FROM THREAD 4
-Nov/03/2019(Sun)18:30:02 : Received connection
-Nov/03/2019(Sun)18:30:02 : Signaling a thread...
- -SERVICING SOCKET 4 FROM THREAD 1
-Nov/03/2019(Sun)18:30:02 : Received connection
-Nov/03/2019(Sun)18:30:02 : Signaling a thread...
- -SERVICING SOCKET 5 FROM THREAD 3
-Nov/03/2019(Sun)18:30:02 : Received connection
-Nov/03/2019(Sun)18:30:02 : Signaling a thread...
- -SERVICING SOCKET 6 FROM THREAD 2
-Nov/03/2019(Sun)18:30:03 : Received connection
-Nov/03/2019(Sun)18:30:03 : Signaling a thread...
-Nov/03/2019(Sun)18:30:03 : All threads occupied, notifying client
- -CLOSING SOCKET 4
- -CLOSING SOCKET 9
- -SERVICING SOCKET 7 FROM THREAD 4
- -CLOSING SOCKET 7
- -CLOSING SOCKET 6
- -CLOSING SOCKET 5
-Nov/03/2019(Sun)18:30:29 : Received connection
-Nov/03/2019(Sun)18:30:29 : Signaling a thread...
- -SERVICING SOCKET 8 FROM THREAD 4
-Nov/03/2019(Sun)18:30:30 : Received connection
-Nov/03/2019(Sun)18:30:30 : Signaling a thread...
- -SERVICING SOCKET 4 FROM THREAD 1
-Nov/03/2019(Sun)18:30:30 : Received connection
-Nov/03/2019(Sun)18:30:30 : Signaling a thread...
- -SERVICING SOCKET 5 FROM THREAD 2
-Nov/03/2019(Sun)18:30:30 : Received connection
-Nov/03/2019(Sun)18:30:30 : Signaling a thread...
- -SERVICING SOCKET 6 FROM THREAD 3
-Nov/03/2019(Sun)18:30:31 : Received connection
-Nov/03/2019(Sun)18:30:31 : Signaling a thread...
-Nov/03/2019(Sun)18:30:31 : All threads occupied, notifying client
- -CLOSING SOCKET 5
- -CLOSING SOCKET 6
- -SERVICING SOCKET 7 FROM THREAD 2
- -CLOSING SOCKET 7
- -CLOSING SOCKET 8
- -CLOSING SOCKET 4
-Nov/03/2019(Sun)18:30:57 : Received connection
-Nov/03/2019(Sun)18:30:57 : Signaling a thread...
- -SERVICING SOCKET 9 FROM THREAD 3
-Nov/03/2019(Sun)18:30:58 : Received connection
-Nov/03/2019(Sun)18:30:58 : Signaling a thread...
- -SERVICING SOCKET 4 FROM THREAD 2
-Nov/03/2019(Sun)18:30:58 : Received connection
-Nov/03/2019(Sun)18:30:58 : Signaling a thread...
- -SERVICING SOCKET 5 FROM THREAD 4
-Nov/03/2019(Sun)18:30:58 : Received connection
-Nov/03/2019(Sun)18:30:58 : Signaling a thread...
- -SERVICING SOCKET 6 FROM THREAD 1
-Nov/03/2019(Sun)18:30:59 : Received connection
-Nov/03/2019(Sun)18:30:59 : Signaling a thread...
-Nov/03/2019(Sun)18:30:59 : All threads occupied, notifying client
- -CLOSING SOCKET 6
- -SERVICING SOCKET 7 FROM THREAD 1
- -CLOSING SOCKET 9
- -CLOSING SOCKET 7
- -CLOSING SOCKET 5
- -CLOSING SOCKET 4
-Nov/03/2019(Sun)18:31:20 : Received connection
-Nov/03/2019(Sun)18:31:20 : Signaling a thread...
- -SERVICING SOCKET 8 FROM THREAD 3
-Nov/03/2019(Sun)18:31:21 : Received connection
-Nov/03/2019(Sun)18:31:21 : Signaling a thread...
- -SERVICING SOCKET 4 FROM THREAD 1
-Nov/03/2019(Sun)18:31:21 : Received connection
-Nov/03/2019(Sun)18:31:21 : Signaling a thread...
- -SERVICING SOCKET 5 FROM THREAD 4
-Nov/03/2019(Sun)18:31:21 : Received connection
-Nov/03/2019(Sun)18:31:21 : Signaling a thread...
- -SERVICING SOCKET 6 FROM THREAD 2
-Nov/03/2019(Sun)18:31:21 : Received connection
-Nov/03/2019(Sun)18:31:21 : Signaling a thread...
-Nov/03/2019(Sun)18:31:21 : All threads occupied, notifying client
- -CLOSING SOCKET 6
- -CLOSING SOCKET 5
- -CLOSING SOCKET 4
- -SERVICING SOCKET 7 FROM THREAD 4
- -CLOSING SOCKET 7
- -CLOSING SOCKET 8
-Nov/03/2019(Sun)18:31:33 : Received connection
-Nov/03/2019(Sun)18:31:33 : Signaling a thread...
- -SERVICING SOCKET 9 FROM THREAD 1
-Nov/03/2019(Sun)18:31:33 : Received connection
-Nov/03/2019(Sun)18:31:33 : Signaling a thread...
- -SERVICING SOCKET 4 FROM THREAD 4
-Nov/03/2019(Sun)18:31:33 : Received connection
-Nov/03/2019(Sun)18:31:33 : Signaling a thread...
- -SERVICING SOCKET 5 FROM THREAD 3
-Nov/03/2019(Sun)18:31:34 : Received connection
-Nov/03/2019(Sun)18:31:34 : Signaling a thread...
- -SERVICING SOCKET 6 FROM THREAD 2
-Nov/03/2019(Sun)18:31:34 : Received connection
-Nov/03/2019(Sun)18:31:34 : Signaling a thread...
-Nov/03/2019(Sun)18:31:34 : All threads occupied, notifying client
- -Received word from socket 4
- -Received disconnect from socket 4
- -CLOSING SOCKET 4
- -SERVICING SOCKET 7 FROM THREAD 4
- -CLOSING SOCKET 7
- -CLOSING SOCKET 5
- -CLOSING SOCKET 9
- -CLOSING SOCKET 6
-Nov/03/2019(Sun)18:31:40 : Received connection
-Nov/03/2019(Sun)18:31:40 : Signaling a thread...
- -SERVICING SOCKET 8 FROM THREAD 4
-Nov/03/2019(Sun)18:31:40 : Received connection
-Nov/03/2019(Sun)18:31:40 : Signaling a thread...
- -SERVICING SOCKET 4 FROM THREAD 3
-Nov/03/2019(Sun)18:31:40 : Received connection
-Nov/03/2019(Sun)18:31:40 : Signaling a thread...
- -SERVICING SOCKET 5 FROM THREAD 1
-Nov/03/2019(Sun)18:31:40 : Received connection
-Nov/03/2019(Sun)18:31:40 : Signaling a thread...
- -SERVICING SOCKET 6 FROM THREAD 2
-Nov/03/2019(Sun)18:31:41 : Received connection
-Nov/03/2019(Sun)18:31:41 : Signaling a thread...
-Nov/03/2019(Sun)18:31:41 : All threads occupied, notifying client
- -CLOSING SOCKET 4
- -SERVICING SOCKET 7 FROM THREAD 3
- -CLOSING SOCKET 8
- -CLOSING SOCKET 7
- -CLOSING SOCKET 5
- -CLOSING SOCKET 6
-Nov/03/2019(Sun)18:32:27 : Received connection
-Nov/03/2019(Sun)18:32:27 : Signaling a thread...
- -SERVICING SOCKET 9 FROM THREAD 4
-Nov/03/2019(Sun)18:32:28 : Received connection
-Nov/03/2019(Sun)18:32:28 : Signaling a thread...
- -SERVICING SOCKET 4 FROM THREAD 3
-Nov/03/2019(Sun)18:32:28 : Received connection
-Nov/03/2019(Sun)18:32:28 : Signaling a thread...
- -SERVICING SOCKET 5 FROM THREAD 1
-Nov/03/2019(Sun)18:32:28 : Received connection
-Nov/03/2019(Sun)18:32:28 : Signaling a thread...
- -SERVICING SOCKET 6 FROM THREAD 2
-Nov/03/2019(Sun)18:32:29 : Received connection
-Nov/03/2019(Sun)18:32:29 : Signaling a thread...
-Nov/03/2019(Sun)18:32:29 : All threads occupied, notifying client
- -CLOSING SOCKET 6
- -CLOSING SOCKET 4
- -CLOSING SOCKET 5
- -SERVICING SOCKET 7 FROM THREAD 3
- -CLOSING SOCKET 7
- -CLOSING SOCKET 9
-Nov/03/2019(Sun)18:32:42 : Received connection
-Nov/03/2019(Sun)18:32:42 : Signaling a thread...
- -SERVICING SOCKET 8 FROM THREAD 1
-Nov/03/2019(Sun)18:32:43 : Received connection
-Nov/03/2019(Sun)18:32:43 : Signaling a thread...
- -SERVICING SOCKET 4 FROM THREAD 3
-Nov/03/2019(Sun)18:32:43 : Received connection
-Nov/03/2019(Sun)18:32:43 : Signaling a thread...
- -SERVICING SOCKET 5 FROM THREAD 4
-Nov/03/2019(Sun)18:32:43 : Received connection
-Nov/03/2019(Sun)18:32:43 : Signaling a thread...
- -SERVICING SOCKET 6 FROM THREAD 2
-Nov/03/2019(Sun)18:32:44 : Received connection
-Nov/03/2019(Sun)18:32:44 : Signaling a thread...
-Nov/03/2019(Sun)18:32:44 : All threads occupied, notifying client
- -CLOSING SOCKET 6
- -CLOSING SOCKET 5
- -CLOSING SOCKET 4
- -SERVICING SOCKET 7 FROM THREAD 3
- -CLOSING SOCKET 8
- -CLOSING SOCKET 7
-Nov/03/2019(Sun)18:33:26 : Received connection
-Nov/03/2019(Sun)18:33:26 : Signaling a thread...
- -SERVICING SOCKET 9 FROM THREAD 1
-Nov/03/2019(Sun)18:33:26 : Received connection
-Nov/03/2019(Sun)18:33:26 : Signaling a thread...
- -SERVICING SOCKET 4 FROM THREAD 4
-Nov/03/2019(Sun)18:33:26 : Received connection
-Nov/03/2019(Sun)18:33:26 : Signaling a thread...
- -SERVICING SOCKET 5 FROM THREAD 3
-Nov/03/2019(Sun)18:33:27 : Received connection
-Nov/03/2019(Sun)18:33:27 : Signaling a thread...
- -SERVICING SOCKET 6 FROM THREAD 2
-Nov/03/2019(Sun)18:33:27 : Received connection
-Nov/03/2019(Sun)18:33:27 : Signaling a thread...
-Nov/03/2019(Sun)18:33:27 : All threads occupied, notifying client
- -CLOSING SOCKET 6
- -CLOSING SOCKET 5
- -SERVICING SOCKET 7 FROM THREAD 2
- -CLOSING SOCKET 9
- -CLOSING SOCKET 4
- -CLOSING SOCKET 7
-Nov/03/2019(Sun)18:33:41 : Received connection
-Nov/03/2019(Sun)18:33:41 : Signaling a thread...
- -SERVICING SOCKET 8 FROM THREAD 3
-Nov/03/2019(Sun)18:33:41 : Received connection
-Nov/03/2019(Sun)18:33:41 : Signaling a thread...
- -SERVICING SOCKET 4 FROM THREAD 1
-Nov/03/2019(Sun)18:33:41 : Received connection
-Nov/03/2019(Sun)18:33:41 : Signaling a thread...
- -SERVICING SOCKET 5 FROM THREAD 4
-Nov/03/2019(Sun)18:33:41 : Received connection
-Nov/03/2019(Sun)18:33:41 : Signaling a thread...
- -SERVICING SOCKET 6 FROM THREAD 2
-Nov/03/2019(Sun)18:33:42 : Received connection
-Nov/03/2019(Sun)18:33:42 : Signaling a thread...
-Nov/03/2019(Sun)18:33:42 : All threads occupied, notifying client
- -CLOSING SOCKET 6
- -CLOSING SOCKET 5
- -CLOSING SOCKET 8
- -SERVICING SOCKET 7 FROM THREAD 3
- -CLOSING SOCKET 7
- -CLOSING SOCKET 4
-Nov/03/2019(Sun)18:33:57 : Received connection
-Nov/03/2019(Sun)18:33:57 : Signaling a thread...
- -SERVICING SOCKET 9 FROM THREAD 3
-Nov/03/2019(Sun)18:33:58 : Received connection
-Nov/03/2019(Sun)18:33:58 : Signaling a thread...
- -SERVICING SOCKET 4 FROM THREAD 4
-Nov/03/2019(Sun)18:33:58 : Received connection
-Nov/03/2019(Sun)18:33:58 : Signaling a thread...
- -SERVICING SOCKET 5 FROM THREAD 2
-Nov/03/2019(Sun)18:33:58 : Received connection
-Nov/03/2019(Sun)18:33:58 : Signaling a thread...
- -SERVICING SOCKET 6 FROM THREAD 1
-Nov/03/2019(Sun)18:33:59 : Received connection
-Nov/03/2019(Sun)18:33:59 : Signaling a thread...
-Nov/03/2019(Sun)18:33:59 : All threads occupied, notifying client
- -CLOSING SOCKET 5
- -CLOSING SOCKET 9
- -SERVICING SOCKET 7 FROM THREAD 3
- -CLOSING SOCKET 4
- -CLOSING SOCKET 6
- -CLOSING SOCKET 7
-Nov/03/2019(Sun)18:35:27 : Received connection
-Nov/03/2019(Sun)18:35:27 : Signaling a thread...
- -SERVICING SOCKET 8 FROM THREAD 2
-Nov/03/2019(Sun)18:35:27 : Received connection
-Nov/03/2019(Sun)18:35:27 : Signaling a thread...
- -SERVICING SOCKET 4 FROM THREAD 1
-Nov/03/2019(Sun)18:35:27 : Received connection
-Nov/03/2019(Sun)18:35:27 : Signaling a thread...
- -SERVICING SOCKET 5 FROM THREAD 3
-Nov/03/2019(Sun)18:35:28 : Received connection
-Nov/03/2019(Sun)18:35:28 : Signaling a thread...
- -SERVICING SOCKET 6 FROM THREAD 4
-Nov/03/2019(Sun)18:35:28 : Received connection
-Nov/03/2019(Sun)18:35:28 : Signaling a thread...
-Nov/03/2019(Sun)18:35:28 : All threads occupied, notifying client
+Nov/03/2019(Sun)18:58:57 : Received connection
+Nov/03/2019(Sun)18:58:57 : Signaling a thread...
+Nov/03/2019(Sun)18:58:57 : All threads occupied, notifying client
  -Received word from socket 4
  -Received word from socket 6
- -Received word from socket 8
  -Received word from socket 5
- -Received word from socket 4
+ -Received word from socket 7
  -Received word from socket 6
- -Received word from socket 8
- -Received word from socket 5
- -Received word from socket 6
- -Received word from socket 8
- -Received word from socket 5
  -Received word from socket 4
- -Received word from socket 6
- -Received word from socket 8
  -Received word from socket 5
+ -Received word from socket 7
+ -Received word from socket 6
  -Received word from socket 4
- -Received word from socket 8
+ -Received word from socket 7
  -Received word from socket 5
  -Received word from socket 6
  -Received word from socket 4
- -Received word from socket 8
+ -Received word from socket 7
  -Received word from socket 5
- -Received word from socket 6
- -Received word from socket 5
- -Received word from socket 8
  -Received word from socket 4
- -Received word from socket 8
+ -Received word from socket 5
  -Received word from socket 6
+ -Received word from socket 7
+ -Received word from socket 7
+ -Received word from socket 6
+ -Received word from socket 5
+ -Received word from socket 4
+ -Received word from socket 5
+ -Received word from socket 4
+ -Received word from socket 6
+ -Received word from socket 7
+ -Received word from socket 5
+ -Received word from socket 6
+ -Received word from socket 7
+ -Received word from socket 4
+ -Received word from socket 6
+ -Received word from socket 5
+ -Received word from socket 7
  -Received word from socket 4
  -Received word from socket 5
  -Received word from socket 6
  -Received word from socket 4
+ -Received word from socket 7
  -Received word from socket 5
- -Received word from socket 8
+ -Received word from socket 6
+ -Received word from socket 7
+ -Received word from socket 4
+ -Received word from socket 5
+ -Received word from socket 6
+ -Received word from socket 7
+ -Received word from socket 4
+ -Received word from socket 5
+ -Received word from socket 6
+ -Received word from socket 4
+ -Received word from socket 7
+ -Received word from socket 5
+ -Received word from socket 7
+ -Received word from socket 4
+ -Received word from socket 6
+ -Received word from socket 7
+ -Received word from socket 5
+ -Received word from socket 4
+ -Received word from socket 6
+ -Received word from socket 5
+ -Received word from socket 7
+ -Received word from socket 4
+ -Received word from socket 6
+ -Received word from socket 5
+ -Received word from socket 7
+ -Received word from socket 4
+ -Received word from socket 6
+ -Received word from socket 7
+ -Received word from socket 5
+ -Received word from socket 4
+ -Received word from socket 6
+ -Received word from socket 5
+ -Received word from socket 4
+ -Received word from socket 6
+ -Received word from socket 7
+ -Received word from socket 5
+ -Received word from socket 4
+ -Received word from socket 7
+ -Received word from socket 6
+ -Received word from socket 5
+ -Received word from socket 4
+ -Received word from socket 6
+ -Received word from socket 7
+ -Received word from socket 6
+ -Received word from socket 4
+ -Received word from socket 7
+ -Received word from socket 5
+ -Received word from socket 6
+ -Received word from socket 4
+ -Received word from socket 7
+ -Received word from socket 5
+ -Received word from socket 6
+ -Received word from socket 4
+ -Received word from socket 7
+ -Received word from socket 5
+ -Received word from socket 6
+ -Received word from socket 4
+ -Received word from socket 7
+ -Received word from socket 5
+ -Received word from socket 6
+ -Received word from socket 4
+ -Received word from socket 7
+ -Received word from socket 5
+ -Received word from socket 4
+ -Received word from socket 6
+ -Received word from socket 7
+ -Received word from socket 5
+ -Received word from socket 4
+ -Received word from socket 6
+ -Received word from socket 7
+ -Received word from socket 5
+ -Received word from socket 6
+ -Received word from socket 4
+ -Received word from socket 5
+ -Received word from socket 7
+ -Received word from socket 4
+ -Received word from socket 6
+ -Received word from socket 7
+ -Received word from socket 5
+ -Received word from socket 4
+ -Received word from socket 6
+ -Received word from socket 5
+ -Received word from socket 6
+ -Received word from socket 5
+ -Received word from socket 7
+ -Received word from socket 4
+ -Received word from socket 4
+ -Received word from socket 5
+ -Received word from socket 7
+ -Received word from socket 6
+ -Received word from socket 4
+ -Received word from socket 5
+ -Received word from socket 7
+ -Received word from socket 6
+ -Received word from socket 4
+ -Received word from socket 5
+ -Received word from socket 7
+ -Received word from socket 6
+ -Received word from socket 4
+ -Received word from socket 7
+ -Received word from socket 5
+ -Received word from socket 6
+ -Received word from socket 5
+ -Received word from socket 7
+ -Received word from socket 6
+ -Received word from socket 4
+ -Received word from socket 6
+ -Received word from socket 5
+ -Received word from socket 7
+ -Received word from socket 4
+ -Received word from socket 4
+ -Received word from socket 5
+ -Received word from socket 6
+ -Received word from socket 7
+ -Received word from socket 5
+ -Received word from socket 4
+ -Received word from socket 7
+ -Received word from socket 6
+ -Received word from socket 6
+ -Received word from socket 5
+ -Received word from socket 4
+ -Received word from socket 7
+ -Received word from socket 6
+ -Received word from socket 4
+ -Received word from socket 7
+ -Received word from socket 5
+ -Received word from socket 5
+ -Received word from socket 4
+ -Received word from socket 7
+ -Received word from socket 6
+ -Received word from socket 4
+ -Received word from socket 7
+ -Received word from socket 6
+ -Received word from socket 5
+ -Received word from socket 7
+ -Received word from socket 6
+ -Received word from socket 4
+ -Received word from socket 5
+ -Received word from socket 5
+ -Received word from socket 7
+ -Received word from socket 4
+ -Received word from socket 6
+ -Received word from socket 5
+ -Received word from socket 6
+ -Received word from socket 4
+ -Received word from socket 7
+ -Received word from socket 7
+ -Received word from socket 5
  -Received word from socket 6
  -Received disconnect from socket 6
+ -Received word from socket 4
  -CLOSING SOCKET 6
- -SERVICING SOCKET 7 FROM THREAD 4
- -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 5
- -Received word from socket 8
- -Received word from socket 7
- -Received word from socket 4
+ -SERVICING SOCKET 8 FROM THREAD 3
  -Received word from socket 8
  -Received word from socket 4
- -Received word from socket 8
- -Received word from socket 5
- -Received word from socket 7
- -Received word from socket 4
- -Received word from socket 8
- -Received word from socket 7
- -Received word from socket 5
- -Received word from socket 4
- -Received word from socket 8
- -Received word from socket 8
- -Received word from socket 4
- -Received word from socket 5
- -Received word from socket 7
- -Received word from socket 7
- -Received word from socket 5
- -Received word from socket 8
- -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 5
- -Received word from socket 4
- -Received word from socket 8
- -Received word from socket 7
- -Received word from socket 8
- -Received word from socket 4
- -Received word from socket 5
- -Received word from socket 7
- -Received word from socket 8
- -Received word from socket 4
- -Received word from socket 5
- -Received word from socket 7
- -Received word from socket 8
  -Received word from socket 5
  -Received word from socket 8
  -Received word from socket 7
  -Received word from socket 4
  -Received word from socket 8
  -Received word from socket 5
- -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 8
- -Received word from socket 5
- -Received word from socket 7
- -Received word from socket 4
- -Received word from socket 8
- -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 5
- -Received word from socket 8
- -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 5
- -Received word from socket 8
- -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 5
- -Received word from socket 8
- -Received word from socket 4
- -Received word from socket 5
- -Received word from socket 7
- -Received word from socket 8
- -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 5
- -Received word from socket 8
- -Received word from socket 4
- -Received word from socket 5
- -Received word from socket 7
- -Received word from socket 8
- -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 5
- -Received word from socket 8
- -Received word from socket 5
- -Received word from socket 7
- -Received word from socket 4
- -Received word from socket 8
- -Received word from socket 7
- -Received word from socket 5
- -Received word from socket 4
- -Received word from socket 8
- -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 5
- -Received word from socket 8
- -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 5
- -Received word from socket 8
- -Received word from socket 4
- -Received word from socket 5
- -Received word from socket 7
- -Received word from socket 8
- -Received word from socket 4
- -Received word from socket 5
- -Received word from socket 7
- -Received word from socket 8
- -Received word from socket 4
- -Received word from socket 5
- -Received word from socket 7
- -Received word from socket 8
- -Received word from socket 4
- -Received word from socket 5
- -Received word from socket 7
- -Received word from socket 8
- -Received word from socket 7
- -Received word from socket 5
- -Received word from socket 4
- -Received word from socket 8
- -Received word from socket 7
- -Received word from socket 5
- -Received word from socket 4
- -Received word from socket 8
- -Received word from socket 7
- -Received word from socket 4
- -Received word from socket 5
- -Received word from socket 8
- -Received word from socket 7
- -Received word from socket 5
- -Received word from socket 4
- -Received word from socket 8
- -Received word from socket 4
- -Received word from socket 5
- -Received word from socket 7
- -Received word from socket 8
- -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 8
- -Received word from socket 5
- -Received word from socket 7
- -Received word from socket 4
- -Received word from socket 8
- -Received word from socket 5
- -Received word from socket 7
- -Received word from socket 4
- -Received word from socket 8
- -Received word from socket 5
- -Received word from socket 7
- -Received word from socket 4
- -Received word from socket 8
- -Received word from socket 5
- -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 5
- -Received word from socket 8
- -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 5
- -Received word from socket 4
- -Received word from socket 8
  -Received word from socket 7
  -Received word from socket 7
  -Received word from socket 5
  -Received word from socket 4
  -Received word from socket 8
  -Received word from socket 5
- -Received word from socket 8
  -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 8
- -Received word from socket 5
- -Received word from socket 7
- -Received word from socket 8
- -Received word from socket 5
  -Received word from socket 8
  -Received word from socket 7
- -Received word from socket 4
  -Received word from socket 5
  -Received word from socket 4
  -Received word from socket 7
+ -Received word from socket 8
+ -Received word from socket 7
+ -Received disconnect from socket 7
  -Received word from socket 5
+ -CLOSING SOCKET 7
  -Received word from socket 8
  -Received word from socket 4
  -Received word from socket 5
- -Received word from socket 7
  -Received word from socket 8
  -Received word from socket 4
- -Received word from socket 7
+ -Received word from socket 4
  -Received word from socket 5
  -Received word from socket 8
  -Received word from socket 4
- -Received word from socket 7
+ -Received word from socket 8
+ -Received word from socket 5
+ -Received word from socket 4
+ -Received word from socket 8
+ -Received word from socket 5
+ -Received word from socket 4
+ -Received word from socket 8
+ -Received word from socket 5
+ -Received word from socket 4
+ -Received word from socket 8
+ -Received word from socket 5
+ -Received word from socket 4
+ -Received word from socket 5
  -Received word from socket 8
  -Received disconnect from socket 8
  -CLOSING SOCKET 8
- -Received word from socket 5
- -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 5
- -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 5
- -Received word from socket 4
- -Received word from socket 5
- -Received word from socket 7
- -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 5
- -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 5
- -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 5
- -Received word from socket 4
- -Received word from socket 5
- -Received word from socket 7
- -Received word from socket 5
- -Received word from socket 7
- -Received word from socket 4
- -Received word from socket 5
- -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 5
- -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 5
- -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 7
- -Received word from socket 5
- -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 5
- -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 4
- -Received word from socket 5
- -Received word from socket 7
- -Received word from socket 5
- -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 5
- -Received word from socket 4
- -Received word from socket 5
- -Received word from socket 7
- -Received word from socket 7
- -Received word from socket 5
- -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 4
- -Received word from socket 5
- -Received word from socket 5
- -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 7
- -Received word from socket 4
- -Received word from socket 5
- -Received word from socket 5
- -Received word from socket 4
- -Received word from socket 7
- -Received disconnect from socket 7
- -CLOSING SOCKET 7
- -Received word from socket 5
  -Received word from socket 4
  -Received word from socket 5
  -Received word from socket 4
@@ -626,483 +273,14 @@ Nov/03/2019(Sun)18:35:28 : All threads occupied, notifying client
  -Received word from socket 5
  -Received word from socket 4
  -Received word from socket 5
- -Received word from socket 4
  -Received word from socket 4
  -Received word from socket 5
  -Received disconnect from socket 5
  -CLOSING SOCKET 5
  -Received word from socket 4
- -Received disconnect from socket 4
- -CLOSING SOCKET 4
-Nov/03/2019(Sun)18:36:05 : Received connection
-Nov/03/2019(Sun)18:36:05 : Signaling a thread...
- -SERVICING SOCKET 9 FROM THREAD 2
-Nov/03/2019(Sun)18:36:05 : Received connection
-Nov/03/2019(Sun)18:36:05 : Signaling a thread...
- -SERVICING SOCKET 4 FROM THREAD 4
-Nov/03/2019(Sun)18:36:05 : Received connection
-Nov/03/2019(Sun)18:36:05 : Signaling a thread...
- -SERVICING SOCKET 5 FROM THREAD 3
-Nov/03/2019(Sun)18:36:06 : Received connection
-Nov/03/2019(Sun)18:36:06 : Signaling a thread...
- -SERVICING SOCKET 6 FROM THREAD 1
-Nov/03/2019(Sun)18:36:06 : Received connection
-Nov/03/2019(Sun)18:36:06 : Signaling a thread...
-Nov/03/2019(Sun)18:36:06 : All threads occupied, notifying client
- -Received word from socket 4
- -Received word from socket 5
- -Received word from socket 6
- -Received word from socket 9
- -Received word from socket 4
- -Received word from socket 5
- -Received word from socket 6
- -Received word from socket 9
- -Received word from socket 4
- -Received word from socket 5
- -Received disconnect from socket 5
- -CLOSING SOCKET 5
- -SERVICING SOCKET 7 FROM THREAD 3
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 9
- -Received word from socket 6
- -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 9
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 4
- -Received word from socket 9
- -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 9
- -Received word from socket 4
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 9
- -Received word from socket 6
- -Received word from socket 7
  -Received word from socket 4
  -Received word from socket 4
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 9
  -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 9
- -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 9
- -Received disconnect from socket 9
- -CLOSING SOCKET 9
- -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 4
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 4
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 4
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 4
- -Received word from socket 4
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 4
- -Received word from socket 4
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 4
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 4
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 4
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 4
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 4
- -Received word from socket 6
- -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 4
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 4
- -Received word from socket 6
- -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 4
- -Received word from socket 6
- -Received word from socket 4
- -Received word from socket 7
- -Received word from socket 6
  -Received word from socket 4
  -Received disconnect from socket 4
  -CLOSING SOCKET 4
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 7
- -Received disconnect from socket 7
- -CLOSING SOCKET 7
- -Received word from socket 6
- -Received word from socket 6
- -Received word from socket 6
- -Received word from socket 6
- -Received word from socket 6
- -Received word from socket 6
- -Received word from socket 6
- -Received word from socket 6
- -Received word from socket 6
- -Received word from socket 6
- -Received word from socket 6
- -Received word from socket 6
- -Received word from socket 6
- -Received word from socket 6
- -Received word from socket 6
- -Received word from socket 6
- -Received word from socket 6
- -Received disconnect from socket 6
- -CLOSING SOCKET 6
-Nov/03/2019(Sun)18:36:38 : Received connection
-Nov/03/2019(Sun)18:36:38 : Signaling a thread...
- -SERVICING SOCKET 8 FROM THREAD 2
-Nov/03/2019(Sun)18:36:38 : Received connection
-Nov/03/2019(Sun)18:36:38 : Signaling a thread...
- -SERVICING SOCKET 4 FROM THREAD 4
-Nov/03/2019(Sun)18:36:39 : Received connection
-Nov/03/2019(Sun)18:36:39 : Signaling a thread...
- -SERVICING SOCKET 5 FROM THREAD 3
-Nov/03/2019(Sun)18:36:39 : Received connection
-Nov/03/2019(Sun)18:36:39 : Signaling a thread...
- -SERVICING SOCKET 6 FROM THREAD 1
-Nov/03/2019(Sun)18:36:39 : Received connection
-Nov/03/2019(Sun)18:36:39 : Signaling a thread...
-Nov/03/2019(Sun)18:36:39 : All threads occupied, notifying client
- -Received word from socket 4
- -Received word from socket 8
- -Received word from socket 5
- -Received word from socket 6
- -Received word from socket 8
- -Received word from socket 5
- -Received word from socket 4
- -Received word from socket 6
- -Received word from socket 8
- -Received word from socket 5
- -Received word from socket 6
- -Received word from socket 4
- -Received word from socket 8
- -Received word from socket 6
- -Received word from socket 5
- -Received word from socket 4
- -Received word from socket 5
- -Received word from socket 8
- -Received word from socket 6
- -Received word from socket 4
- -Received word from socket 4
- -Received word from socket 5
- -Received word from socket 8
- -Received word from socket 6
- -Received word from socket 5
- -Received word from socket 8
- -Received word from socket 6
- -Received word from socket 4
- -Received word from socket 5
- -Received word from socket 8
- -Received word from socket 6
- -Received word from socket 4
- -Received word from socket 5
- -Received word from socket 8
- -Received word from socket 6
- -Received word from socket 4
- -Received word from socket 5
- -Received word from socket 8
- -Received word from socket 6
- -Received word from socket 4
- -Received word from socket 5
- -Received word from socket 4
- -Received word from socket 6
- -Received word from socket 8
- -Received word from socket 5
- -Received word from socket 4
- -Received word from socket 6
- -Received word from socket 5
- -Received word from socket 4
- -Received word from socket 8
- -Received word from socket 6
- -Received word from socket 4
- -Received word from socket 8
- -Received word from socket 6
- -Received word from socket 5
- -Received word from socket 4
- -Received word from socket 6
- -Received word from socket 8
- -Received word from socket 5
- -Received word from socket 4
- -Received word from socket 6
- -Received word from socket 8
- -Received word from socket 5
- -Received word from socket 4
- -Received word from socket 6
- -Received word from socket 8
- -Received word from socket 5
- -Received word from socket 4
- -Received word from socket 8
- -Received word from socket 6
- -Received word from socket 4
- -Received word from socket 6
- -Received word from socket 8
- -Received word from socket 5
- -Received word from socket 4
- -Received word from socket 8
- -Received word from socket 5
- -Received word from socket 6
- -Received word from socket 4
- -Received word from socket 8
- -Received word from socket 5
- -Received word from socket 6
- -Received word from socket 4
- -Received word from socket 5
- -Received word from socket 8
- -Received word from socket 6
- -Received word from socket 4
- -Received word from socket 8
- -Received word from socket 6
- -Received word from socket 5
- -Received word from socket 5
- -Received word from socket 4
- -Received word from socket 8
- -Received word from socket 6
- -Received word from socket 4
- -Received word from socket 8
- -Received word from socket 5
- -Received word from socket 6
- -Received word from socket 4
- -Received word from socket 8
- -Received word from socket 5
- -Received word from socket 6
- -Received word from socket 8
- -Received word from socket 5
- -Received word from socket 4
- -Received word from socket 6
- -Received word from socket 8
- -Received word from socket 5
- -Received word from socket 6
- -Received word from socket 4
- -Received word from socket 8
- -Received word from socket 5
- -Received word from socket 4
- -Received word from socket 6
- -Received word from socket 8
- -Received word from socket 4
- -Received word from socket 5
- -Received word from socket 6
- -Received word from socket 8
- -Received word from socket 6
- -Received word from socket 4
- -Received disconnect from socket 4
- -CLOSING SOCKET 4
- -SERVICING SOCKET 7 FROM THREAD 4
- -Received word from socket 5
- -Received word from socket 7
- -Received word from socket 8
- -Received word from socket 5
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 8
- -Received word from socket 5
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 5
- -Received word from socket 8
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 5
- -Received word from socket 8
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 5
- -Received word from socket 8
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 6
- -Received word from socket 5
- -Received word from socket 7
- -Received word from socket 8
- -Received word from socket 8
- -Received word from socket 5
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 8
- -Received word from socket 7
- -Received word from socket 5
- -Received word from socket 6
- -Received word from socket 8
- -Received disconnect from socket 8
- -Received word from socket 5
- -CLOSING SOCKET 8
- -Received word from socket 6
- -Received word from socket 7
- -Received word from socket 5
- -Received word from socket 6
- -Received word from socket 7
- -Received disconnect from socket 7
- -CLOSING SOCKET 7
- -Received word from socket 5
- -Received word from socket 6
- -Received word from socket 5
- -Received word from socket 5
- -Received word from socket 6
- -Received word from socket 5
- -Received word from socket 6
- -Received word from socket 5
- -Received word from socket 6
- -Received word from socket 5
- -Received word from socket 6
- -Received word from socket 5
- -Received word from socket 5
- -Received word from socket 6
- -Received word from socket 5
- -Received word from socket 6
- -Received word from socket 5
- -Received word from socket 6
- -Received word from socket 6
- -Received word from socket 5
- -Received word from socket 5
- -Received word from socket 6
- -Received word from socket 6
- -Received word from socket 5
- -Received word from socket 6
- -Received word from socket 5
- -Received word from socket 6
- -Received word from socket 5
- -Received word from socket 5
- -Received word from socket 6
- -Received word from socket 6
- -Received word from socket 5
- -Received word from socket 5
- -Received word from socket 6
- -Received word from socket 6
- -Received word from socket 5
- -Received word from socket 5
- -Received word from socket 6
- -Received word from socket 6
- -Received word from socket 5
- -Received word from socket 6
- -Received word from socket 5
- -Received word from socket 6
- -Received word from socket 5
- -Received word from socket 5
- -Received word from socket 6
- -Received word from socket 5
- -Received word from socket 6
- -Received word from socket 6
- -Received word from socket 5
- -Received word from socket 6
- -Received word from socket 5
- -Received word from socket 5
- -Received word from socket 6
- -Received word from socket 5
- -Received disconnect from socket 5
- -CLOSING SOCKET 5
- -Received word from socket 6
- -Received word from socket 6
- -Received word from socket 6
- -Received word from socket 6
- -Received word from socket 6
- -Received word from socket 6
- -Received word from socket 6
- -Received disconnect from socket 6
- -CLOSING SOCKET 6

@@ -80,7 +80,10 @@ int new_connection() {
 
     socket_fd = socket(res->ai_family, res->ai_socktype, res->ai_protocol);
 
-    connect(socket_fd, res->ai_addr, res->ai_addrlen);	
+    if(connect(socket_fd, res->ai_addr, res->ai_addrlen) < 0) {
+		std::cout << "Connection error, exiting" << std::endl;
+		exit(0);
+	}	
 	return socket_fd;
 }
 
