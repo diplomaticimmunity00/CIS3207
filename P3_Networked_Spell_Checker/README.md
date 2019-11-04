@@ -6,7 +6,23 @@ over a given port and verifies that submitted words are spelled correctly. The s
 can accept multiple simultaneous connections. The client executable provided with this program 
 simulates connections from several clients. 
 
-See [readme](https://github.com/tuh37046/CIS3207/blob/master/P2_myshell/readme) for usage information<br>
+See [readme](https://github.com/tuh37046/CIS3207/blob/P3_Networked_Spell_Checker/readme) for more information<br>
+
+## Usage
+
+Run the server with its default dictionary and port with:<br>
+`./server`
+
+Use words from `new_dict.txt`<br>
+`./server new_dict.txt`
+
+Run the server on port 1738<br>
+`./server 1738`
+
+Or both!<br>
+`./server new_dict.txt 1738`<br>
+`./server 1738 new_dict.txt`<br>
+
 
 
 Garrett Bowser <br>
