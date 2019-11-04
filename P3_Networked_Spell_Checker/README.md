@@ -6,7 +6,7 @@ over a given port and verifies that submitted words are spelled correctly. The s
 can accept multiple simultaneous connections. The client executable provided with this program 
 simulates connections from several clients. 
 
-See [readme](https://github.com/tuh37046/CIS3207/blob/P3_Networked_Spell_Checker/readme.pdf) for more information<br>
+See [readme](https://github.com/tuh37046/CIS3207/blob/master/P3_Networked_Spell_Checker/readme.pdf) for more information<br>
 
 ## Usage
 
