@@ -7,7 +7,7 @@ can accept multiple simultaneous connections. The client executable provided wit
 simulates connections from several clients. 
 
 See [readme](https://github.com/tuh37046/CIS3207/blob/master/P3_Networked_Spell_Checker/readme.pdf) for more information<br>
-See the [client]https://github.com/tuh37046/CIS3207/tree/master/P3_Networked_Spell_Checker/client) component of this project<br>
+See the [client](https://github.com/tuh37046/CIS3207/tree/master/P3_Networked_Spell_Checker/client) component of this project<br>
 
 ## Usage
 
