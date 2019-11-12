@@ -45,7 +45,7 @@ void await_socket(int &socket,Worker* w) {
 	//wait until a socket is available
 	pthread_mutex_lock(&socketLock);
 	w->occupied = false;
-	while(socketQueue.empty() or count == 0) {
+	while(count == 0) {
 		pthread_cond_wait(&fill,&socketLock);
 	}
 	//notify man thread we've taken a socket

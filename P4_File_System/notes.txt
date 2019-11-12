@@ -1,0 +1,30 @@
+Due Date: Dec 5
+
+Filesystems store and manage persistent storage
+Directories are structured like a tree
+Must:
+	-Create directories
+	-Remove directories
+	-Create files
+	-Remove files
+	-Open files
+	-Close files
+	-Navigate through virtual directory hierarchy	
+
+Uses a virtual disk image file
+	-Where do files go
+		-Split vdi into blocks
+		-512 block size
+		-Non-congiguous blocks can hold a single file
+		-Tracks location of a file and a starting block
+			-Posix data, etc.
+
+Problems:
+	Needs a unified strategy for managing blocks
+		-E.g hello.txt starts at block 3
+			-How do I know if I need more blocks
+			-How to identify next block
+			-Put next block at the end of each block
+
+File metadata struct
+
