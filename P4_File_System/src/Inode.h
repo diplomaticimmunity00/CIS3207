@@ -6,11 +6,12 @@
 
 struct Inode {
 
-	int id;
-	short int isValid;
-	short int isFile;
-	int blocks_allocated;
-	std::string name;
+	int id; //unique (static) inode ID
+	short int isValid = 0; //currently represents a real file
+	short int isFile = 0; //file or directory
+
+	int blocks_allocated = 0; //number of blocks allocated to this file
+	std::string name; //filename
 
 	int direct_blocks[DIRECT_BLOCKS];
 	

@@ -19,12 +19,31 @@ void print(T t) {
 	
 }
 
+void clear_buffer(char*,size_t);
+
+template <class T>
+int find(const std::vector<T> &v, const T &t) {
+	for(int i=0;i<v.size();i++) {
+		if(v.at(i) == t) return i;
+	}
+	return -1;
+}
+
+template <class T>
+int remove(std::vector<T> &v, const T &t) {
+	for(int i=0;i<v.size();i++) {
+		if(v.at(i) == t) v.erase(v.begin()+i);
+		return i;
+	}
+	return -1;
+}
+
+
 std::vector<std::string> split(char c,const std::string&);
 
 std::string convert(char*);
 
 int find(const std::string&,char);
-int find(const std::vector<char>&, char);
 
 std::string strip(const std::string&);
 

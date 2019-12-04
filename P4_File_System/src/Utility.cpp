@@ -1,8 +1,17 @@
 #include "Utility.h"
+#include "disk.h"
+
 #include <string>
 #include <vector>
 #include <fstream>
 #include <ctime>
+#include <string.h>
+#include <unistd.h>
+#include <iostream>
+#include <fstream>
+#include <stdlib.h>
+#include <stdio.h>
+#include <fcntl.h>
 
 void clear_log(const std::string &filename) {
     std::ofstream log(filename);
@@ -37,21 +46,17 @@ int find(const std::string &s, char c) {
     return -1;
 }
 
-int find(const std::vector<char> &v, char c) {
-	for(int i=0;i<v.size();i++) {
-		if(v.at(i) == c) {
-			return i;
-		}
-	}
-	return -1;
-}
-
 std::string strip(const std::string &s) {
 	std::string newString = "";
 	for(int i=0;i<s.size();i++) {
 		if(s[i] != ' ' and s[i] != '\t') newString += s[i];
 	}
 	return newString;
+}
+
+void clear_buffer(char *buf,size_t nbyte) {
+	int fd = open("/dev/zero", O_RDONLY);
+	read(fd, buf, nbyte);
 }
 
 bool isdigit(const std::string& s) {
