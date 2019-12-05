@@ -6,6 +6,7 @@
 
 #include "disk.h"
 #include "Common.h"
+#include "Utility.h"
 
 /******************************************************************************/
 // active = 0;  /* is the virtual disk open (active) */
@@ -72,7 +73,7 @@ int close_disk() {
   return 0;
 }
 
-int block_write(int block, char *buf) {
+int block_write(int block, char *buf,int offset=0) {
   if (!active) {
     fprintf(stderr, "block_write: disk not active\n");
     return -1;
@@ -83,7 +84,7 @@ int block_write(int block, char *buf) {
     return -1;
   }
 
-  if (lseek(handle, block * BLOCK_SIZE, SEEK_SET) < 0) {
+  if (lseek(handle, (block * BLOCK_SIZE)+offset, SEEK_SET) < 0) {
     perror("block_write: failed to lseek");
     return -1;
   }

@@ -1,11 +1,13 @@
 #pragma once
 #define FILE_MAX 256
 #define OPEN_FILE_MAX 64
-#define DIRECT_BLOCKS 12
+#define DIRECT_BLOCKS 24
 #include <vector>
 #include <map>
 
 #include "Inode.h"
+
+extern std::string cwd;
 
 extern int active;
 extern int handle;

@@ -3,6 +3,7 @@
 #include "Filesys.h"
 #include "Utility.h"
 #include "Common.h"
+#include "disk.h"
 
 int main(int argc, char** argv) {
 
@@ -20,18 +21,35 @@ int main(int argc, char** argv) {
 	fs_create("test2.txt");
 	fs_create("test3.txt");
 
-	int fd = fs_open("test3.txt");
+	int fd1 = fs_open("test1.txt");
 
-	// write string to test3.txt
-	char buffer[32] = "TESTTESTTSETTSETTSETTESTSET";
-	fs_write(fd,buffer,32);
+	// write string to files
+	char buffer1[128] = "cooltest";
+	fs_write(fd1,buffer1,128);
+	fs_write(fd1,buffer1,128);
+	fs_write(fd1,buffer1,128);
 
-	//read string from test3.txt
-	char contents[32];
-	clear_buffer(contents,32);
-	fs_read(fd,contents,32);
+	fs_truncate(fd1,5);
 
+	// for(int i=0;i<100;i++) {
+		// for(int j=0;j<100;j++) {
+			// buffer1[j] = (char)i;
+		// }
+		// fs_write(fd1,buffer1,BLOCK_SIZE*2);
+	// }
+
+	char contents[BLOCK_SIZE*5];
+	clear_buffer(contents,BLOCK_SIZE*5);
+	fs_read(fd1,contents,BLOCK_SIZE*5);
 	print(contents);
+	// sprintf(buffer1,"%s%s%s",buffer1,buffer1,buffer1);
+	
+	//delete file contents and inode
+	fs_close(fd1);
+
+	//exit(0);
+
+	// fs_delete("test3.txt");
 
 	//write new inode table to disk
 	umount_fs("vsda");

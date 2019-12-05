@@ -19,7 +19,9 @@ void print(T t) {
 	
 }
 
+int truesize(char*,size_t);
 void clear_buffer(char*,size_t);
+void buffer_erase(char*,size_t,int);
 
 template <class T>
 int find(const std::vector<T> &v, const T &t) {

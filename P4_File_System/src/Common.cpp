@@ -1,5 +1,7 @@
 #include "Common.h"
 
+std::string cwd = "/";
+
 int active = 0;
 int handle;
 

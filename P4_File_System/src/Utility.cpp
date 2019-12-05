@@ -46,6 +46,29 @@ int find(const std::string &s, char c) {
     return -1;
 }
 
+void buffer_erase(char* buffer,size_t len,int i) {
+	char tbuffer[len];
+	clear_buffer(tbuffer,len);
+	int index=0;
+	for(int j=0;j<len;j++) {
+		if(j >= i) {
+			tbuffer[index] = buffer[j];
+			index++;
+		}
+	}
+	for(int j=0;j<len;j++) {
+		buffer[j] = tbuffer[j];
+	}
+}
+
+int truesize(char* buffer,size_t size) {
+	int bytes = 0;
+	for(int i=0;i<size;i++) {
+		if(buffer[i] != '\0') bytes++;
+	}
+	return bytes;
+}
+
 std::string strip(const std::string &s) {
 	std::string newString = "";
 	for(int i=0;i<s.size();i++) {
@@ -57,6 +80,7 @@ std::string strip(const std::string &s) {
 void clear_buffer(char *buf,size_t nbyte) {
 	int fd = open("/dev/zero", O_RDONLY);
 	read(fd, buf, nbyte);
+	close(fd);
 }
 
 bool isdigit(const std::string& s) {
