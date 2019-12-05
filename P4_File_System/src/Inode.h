@@ -12,6 +12,8 @@ struct Inode {
 	int size = 0; //size on disk;
 	short int isValid = 0; //currently represents a real file
 	short int isFile = 0; //file or directory
+	int parent = -1;
+	int children = 0;
 
 	int pointer = 0; //file pointer (cursor)
 
@@ -19,7 +21,7 @@ struct Inode {
 	std::string name; //filename
 
 	//maps filenames to inode (file) indicies in inode table
-	std::map<std::string,int> contents;
+	int contents[FILE_MAX];
 
 	int direct_blocks[DIRECT_BLOCKS];
 	
@@ -29,5 +31,6 @@ struct Inode {
 
 	Inode() {
 		for(int i=0;i<DIRECT_BLOCKS;i++) direct_blocks[i] = -1;
+		for(int i=0;i<DIR_CONTENTS_MAX;i++) contents[i] = -1;
 	}
 };

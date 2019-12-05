@@ -2,6 +2,7 @@
 #define FILE_MAX 256
 #define OPEN_FILE_MAX 64
 #define DIRECT_BLOCKS 24
+#define DIR_CONTENTS_MAX 24
 #include <vector>
 #include <map>
 
