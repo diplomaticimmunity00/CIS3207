@@ -1,14 +1,11 @@
-fs: bin/Utility.o bin/Filesys.o bin/Block.o bin/Main.o bin/Inode.o bin/Common.o bin/disk.o
-	g++ -std=c++11 -fpermissive bin/Utility.o bin/Filesys.o bin/Block.o bin/Main.o bin/Inode.o bin/Common.o bin/disk.o -lpthread -o fs
+fs: bin/Utility.o bin/Filesys.o bin/Main.o bin/Inode.o bin/Common.o bin/disk.o
+	g++ -std=c++11 -fpermissive bin/Utility.o bin/Filesys.o bin/Main.o bin/Inode.o bin/Common.o bin/disk.o -lpthread -o fs
 
 bin/Utility.o: src/Utility.cpp src/Utility.h
 	g++ -fpermissive -std=c++11 -c src/Utility.cpp -lpthread -o bin/Utility.o
 
 bin/Filesys.o: src/Filesys.cpp src/Filesys.h
 	g++ -fpermissive -std=c++11 -c src/Filesys.cpp -lpthread -o bin/Filesys.o
-
-bin/Block.o: src/Block.cpp src/Block.h
-	g++ -fpermissive -std=c++11 -c src/Block.cpp -lpthread -o bin/Block.o
 
 bin/Main.o: src/Main.cpp 
 	g++ -fpermissive -std=c++11 -c src/Main.cpp -lpthread -o bin/Main.o

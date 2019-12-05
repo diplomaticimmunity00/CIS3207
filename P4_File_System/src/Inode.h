@@ -9,19 +9,18 @@ struct Inode {
 
 	int id; //unique (static) inode ID
 			// represents location in inode table +1
-	int size = 0; //size on disk;
+	int size = 0; 		//size on disk;
 	short int isValid = 0; //currently represents a real file
 	short int isFile = 0; //file or directory
 	int parent = -1;
 	int children = 0;
 
-	int pointer = 0; //file pointer (cursor)
+	int pointer = 0; 		//file pointer (cursor)
 
 	int blocks_allocated = 0; //number of blocks allocated to this file
-	std::string name; //filename
+	std::string name; 		//path
 
-	//maps filenames to inode (file) indicies in inode table
-	int contents[FILE_MAX];
+	int contents[FILE_MAX]; //indicies of inodes contained in this directory 
 
 	int direct_blocks[DIRECT_BLOCKS];
 	

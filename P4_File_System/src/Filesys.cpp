@@ -189,6 +189,12 @@ int fs_delete(const std::string &path) {
 		return -1;
 	}
 	Inode* inode = inode_table.at(file_inode_index);
+	for(auto &e: file_table) {
+		if(inode_table.at(e.second)->name == inode->name) {
+			print("fs_delete: Cannot delete open file "+inode->name+", aborting.");
+			return -1;
+		}
+	}
 	int freed_blocks = free_blocks(file_inode_index);
 	inode->blocks_allocated = 0;
 	inode->isValid = 0;
@@ -273,12 +279,10 @@ std::string get_file_name_by_fd(int fd) {
 
 int get_first_free_block() {
 	char buffer[BLOCK_SIZE];
-	char tbuffer[BLOCK_SIZE];
-	clear_buffer(tbuffer,BLOCK_SIZE);
 	for(int i=inode_table_offset;i<DISK_BLOCKS;i++) {
 		block_read(i,buffer);
 		//if block is empty/unmodified
-		if(strncmp(buffer,tbuffer,BLOCK_SIZE) == 0) {
+		if(truesize(buffer,BLOCK_SIZE) == 0) {
 			print("FOUND FREE BLOCK "+std::to_string(i));
 			return i;
 		}
@@ -288,7 +292,7 @@ int get_first_free_block() {
 }
 
 int allocate_new_block(Inode *inode) {
-
+	//allocates first free block to inode
 	if(inode->blocks_allocated == DIRECT_BLOCKS) {
 		print("allocate_new_block: Maximum block limit reached for file "+inode->name+", aborting.");
 		return -1;
@@ -300,7 +304,6 @@ int allocate_new_block(Inode *inode) {
 		return -1;
 	}
 
-	//allocate indirect blocks here
 	inode->direct_blocks[inode->blocks_allocated] = block;
 	inode->blocks_allocated++;
 	print("allocated new block "+std::to_string(block)+" to inode "+std::to_string(inode->id));
@@ -337,7 +340,7 @@ int fs_write(int fd, char *buf, size_t nbytes) {
 
 	block_read(active_block,blockContent);
 
-	print("ATTEMPTING TO WRITE "+std::to_string(truesize(write_buffer,nbytes)) + " BYTES TO BLOCK WITH SIZE "+std::to_string(truesize(blockContent,BLOCK_SIZE)));
+	print("ATTEMPTING TO WRITE "+std::to_string(truesize(write_buffer,nbytes)) + " BYTES TO BLOCK "+std::to_string(active_block)+" WITH SIZE "+std::to_string(truesize(blockContent,BLOCK_SIZE)));
 
 
 	//write what we can to the current block
@@ -372,7 +375,7 @@ int fs_write(int fd, char *buf, size_t nbytes) {
 	print("wrote "+std::to_string(required_bytes)+" bytes to block "+std::to_string(active_block)+" for file "+get_file_name_by_fd(fd));
 
 	inode->size += required_bytes;
-	inode->pointer = inode->size;
+	inode->pointer = inode->size%BLOCK_SIZE;
 	print("NEW FILESIZE: "+std::to_string(inode->size));
 	print("NEW BLOCK COUNT: "+std::to_string(inode->blocks_allocated));
 	return required_bytes;
@@ -417,6 +420,7 @@ int fs_truncate(int fd, size_t len) {
 	//writes null characters over last len bytes of file
 	Inode *inode = inode_table.at(get_file_index_by_fd(fd));
 	if(len > fs_get_filesize(fd) or len < 0) return -1;
+	print("Truncating file "+inode->name+" to "+std::to_string(len)+" bytes");
 	char buffer[inode->size-len];
 	clear_buffer(buffer,inode->size-len);
 	inode->pointer = len;
