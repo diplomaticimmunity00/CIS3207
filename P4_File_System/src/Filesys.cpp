@@ -242,7 +242,10 @@ int fs_mkdir(const std::string &path) {
 }
 
 int mount_fs(const std::string &diskname) {
-	open_disk("vsda");
+	if(open_disk("vsda") < 0) {
+		print("Error opening disk "+diskname);
+		return -1;
+	}
 	read_inode_table_from_vdisk();
 	print("Successfully mounted "+diskname);
 	return 0;
@@ -251,6 +254,7 @@ int mount_fs(const std::string &diskname) {
 int umount_fs(const std::string &diskname) {
 	if(active == 0) {
 		print("umount_fs: No disk mounted");
+		return -1;
 	}
 	write_inode_table_to_vdisk();
 	close_disk();
