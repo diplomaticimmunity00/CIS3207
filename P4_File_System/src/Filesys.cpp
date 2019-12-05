@@ -60,6 +60,7 @@ int write_inode_table_to_vdisk() {
 			if(inode->isFile) print("Writing inode for file "+inode->name+" to disk at inode "+std::to_string(inode->id));
 			if(!inode->isFile) print("Writing inode for directory "+inode->name+" to disk at inode "+std::to_string(inode->id));
 		}
+		//concatenate all inode data into a token delineated string
 		sprintf(buffer,"%s|%s",buffer,std::to_string(inode->id).c_str());
 		sprintf(buffer,"%s|%s",buffer,std::to_string(inode->size).c_str());
 		sprintf(buffer,"%s|%s",buffer,std::to_string(inode->parent).c_str());
@@ -78,6 +79,7 @@ int write_inode_table_to_vdisk() {
 				sprintf(buffer,"%s|%s",buffer,std::to_string(inode->contents[i]).c_str());	
 			}
 		}
+		//write inode string to vdisk
 		block_write(block+inode_table_offset,buffer);
 	}
 	print("done writing inode data to disk. wrote "+std::to_string(valid_files)+" files.");
@@ -149,13 +151,18 @@ int fs_create(const std::string &path) {
 	}
 	int good_index = get_first_free_inode();
 	Inode* parent_inode = inode_table.at(dir_index);
+	if(parent_inode->children == DIR_CONTENTS_MAX) {
+		print("fs_create: Directory "+parent_inode->name+" full, aborting");
+		return -1;
+	}
+	parent_inode->contents[parent_inode->children] = good_index;
+	parent_inode->children++;
 	Inode* inode = inode_table.at(good_index);
 	inode->parent = dir_index;
 	inode->isFile = 1;
 	inode->isValid = 1;
 	inode->name = dir+filename;
-	parent_inode->contents[parent_inode->children] = good_index;
-	parent_inode->children++;
+	
 	print("Created file "+inode->name);
 	return 0;
 }
@@ -218,14 +225,19 @@ int fs_mkdir(const std::string &path) {
 	int good_index = get_first_free_inode();
 
 	Inode* parent_inode = inode_table.at(dir_index);
+	if(parent_inode->children == DIR_CONTENTS_MAX) {
+		print("fs_mkdir: Directory "+parent_inode->name+" full, aborting");
+		return -1;
+	}
+	parent_inode->contents[parent_inode->children] = good_index;
+	parent_inode->children++;
 	Inode* inode = inode_table.at(good_index);
 	inode->isFile = 0;
 	inode->isValid = 1;
 	inode->parent = dir_index;
 	inode->name = dir+filename;
 	print("Created directory "+inode->name);
-	parent_inode->contents[parent_inode->children] = good_index;
-	parent_inode->children++;
+	
 	return 0;
 }
 
