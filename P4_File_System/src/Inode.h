@@ -23,10 +23,6 @@ struct Inode {
 	int contents[FILE_MAX]; //indicies of inodes contained in this directory 
 
 	int direct_blocks[DIRECT_BLOCKS];
-	
-	int indirect_pointer_block = -1;
-	int double_indirect_pointer_block = -1;
-	int triple_indirect_pointer_block = -1;
 
 	Inode() {
 		for(int i=0;i<DIRECT_BLOCKS;i++) direct_blocks[i] = -1;

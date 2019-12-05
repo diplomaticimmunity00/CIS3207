@@ -69,9 +69,6 @@ int write_inode_table_to_vdisk() {
 		sprintf(buffer,"%s|%s",buffer,std::to_string(inode->isValid).c_str());
 		sprintf(buffer,"%s|%s",buffer,std::to_string(inode->blocks_allocated).c_str());
 		sprintf(buffer,"%s|%s",buffer,inode->name.c_str());
-		sprintf(buffer,"%s|%s",buffer,std::to_string(inode->indirect_pointer_block).c_str());
-		sprintf(buffer,"%s|%s",buffer,std::to_string(inode->double_indirect_pointer_block).c_str());
-		sprintf(buffer,"%s|%s",buffer,std::to_string(inode->triple_indirect_pointer_block).c_str());
 		if(inode->isFile) {
 			for(int i=0;i<DIRECT_BLOCKS;i++) {
 				sprintf(buffer,"%s|%s",buffer,std::to_string(inode->direct_blocks[i]).c_str());	
@@ -106,20 +103,17 @@ int read_inode_table_from_vdisk() {
 		inode->isValid = std::stoi(inode_data.at(7));
 		inode->blocks_allocated = std::stoi(inode_data.at(8));
 		inode->name = inode_data.at(9);
-		inode->indirect_pointer_block = std::stoi(inode_data.at(10));
-		inode->double_indirect_pointer_block = std::stoi(inode_data.at(11));
-		inode->triple_indirect_pointer_block = std::stoi(inode_data.at(12));
 		
 		if(inode->isValid == 1) {
 			valid_files++;
 			if(inode->isFile) {
 				for(int i=0;i<DIRECT_BLOCKS;i++) {
-					inode->direct_blocks[i] = std::stoi(inode_data.at(13+i));
+					inode->direct_blocks[i] = std::stoi(inode_data.at(10+i));
 				}
 				print("Finished reading inode data for file "+inode->name+" at inode "+std::to_string(inode->id));	
 			} else {
 				for(int i=0;i<DIR_CONTENTS_MAX;i++) {
-					inode->contents[i] = std::stoi(inode_data.at(12+i));
+					inode->contents[i] = std::stoi(inode_data.at(10+i));
 				}
 				print("Finished reading inode data for directory "+inode->name+" at inode "+std::to_string(inode->id));
 			}
