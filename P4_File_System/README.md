@@ -1,30 +1,14 @@
-# CIS3207 Project 3: Networked Spell Checker 
+# CIS3207 Project 4: Simple File System
 
 ## Overview
-This is a server/client for a networked spell checker. The server listens for connections
-over a given port and verifies that submitted words are spelled correctly. The server
-can accept multiple simultaneous connections. The client executable provided with this program 
-simulates connections from several clients. 
+This project is a simple, inode-based file system. It writes inode structures to a virtual disk and is able to reconstruct them from the disk them after changes have been made.  It supports a small directory hierarchy, the creation, truncation, and deletion of files and directories, among other things. It uses a block size of 4096 bytes and supports a total of 16384 blocks.
 
 See [readme](https://github.com/tuh37046/CIS3207/blob/master/P3_Networked_Spell_Checker/readme.pdf) for more information<br>
 See the [client](https://github.com/tuh37046/CIS3207/tree/master/P3_Networked_Spell_Checker/client) component of this project<br>
 
 ## Usage
 
-Run the server with its default dictionary and port with:<br>
-`./server`<br>
-
-Use words from `new_dict.txt`<br>
-`./server new_dict.txt`<br>
-
-
-Run the server on port 1738<br>
-`./server 1738`<br>
-
-
-Or both!<br>
-`./server new_dict.txt 1738`<br>
-`./server 1738 new_dict.txt`<br>
+Execute the `fs` executable with `./fs`. Tests are included in the executable.
 
 
 
